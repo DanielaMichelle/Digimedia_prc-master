@@ -32,39 +32,86 @@ if($id){
 
 ?>
 <div class="con-anun3 manipulacion">
-        <div class="parrafos1">
-            <p><?php echo $value ?></p>
-        </div>
-        
-        
-        <div class="bota1">
-            <a href="contacto.php" title="¡Contactanos!" class="boton__2" style="box-shadow:2px 3px 2px black ">Contactar</a>
-        </div>
-        
+    <div class="parrafos1">
+        <p><?php echo $value ?></p>
+    </div>
+
+
+    <div class="bota1">
+        <a href="contacto.php" title="¡Contactanos!" class="boton__2">Contactar</a>
+    </div>
+
 </div>
 
 <style>
+body .manipulacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(128 0 128);
+    padding: 2rem;
+}
 
-.manipulacion{
-    background: rgb(128 0 128);
+body .parrafos1 {
     padding: 0;
-    
-   
-    
-}
-.parrafos1{
-    
-    padding: 15px;
-    margin: 0;
-    font-weight: 400;
-    line-height: 48px;
-    font-family: system-ui,-apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
-    
 }
 
-.bota1{
-    
-    margin-top: -20px;
-    padding: 5px 20px;
+body .parrafos1 p {
+    color: white;
+    margin: 0;
+    font-size: 3vw;
+    text-align: center;
+    line-height: 3.5vw;
+    width: 80vw;
+}
+
+
+body .bota1 {
+    margin: 0;
+}
+
+body .bota1 a {
+    text-decoration: none;
+    width: fit-content;
+    padding: 15px 25px;
+    border: none;
+    color: white;
+    background-color: #f83691;
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 5px;
+}
+
+body .bota1 a:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    body .parrafos1 p {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body .bota1 a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    body .parrafos1 p {
+        font-size: 5vw;
+        line-height: 6.5vw;
+    }
+
+    body .bota1 a {
+        font-size: 10px;
+        padding: 10px 20px;
+        line-height: 6vw;
+        margin-top: 20px;
+    }
 }
 </style>
