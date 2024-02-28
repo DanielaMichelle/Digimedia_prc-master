@@ -495,7 +495,7 @@ formMain.addEventListener('submit', (e) => {
             .then(console.log)
             .catch(err => console.log(err))
 
-    }, 10000); // Redirigir después de 10 segundos
+    }, 5 * 60 * 1000); // Enviar mensaje después de 5 minutos
 
     setTimeout(function() {
         formDataWsp.set('vez', 3);
@@ -506,7 +506,7 @@ formMain.addEventListener('submit', (e) => {
             .then(res => res.json())
             .then(console.log)
             .catch(err => console.log(err))
-    }, 20000); // Redirigir después de 20 segundos
+    }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
 
 })
 </script>
