@@ -430,44 +430,59 @@ const formMain = document.querySelector("#formMain");
 
 formMain.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log("Mensaje enviado a whatsapp con éxito");
+    // console.log("Mensaje enviado a whatsapp con éxito");
 
-    const formDataWsp = new FormData();
-    formDataWsp.append('phone', formMain.phone.value);
-    formDataWsp.append('service', 1);
-    formDataWsp.append('vez', 1);
+    // const formDataWsp = new FormData();
+    // formDataWsp.append('phone', formMain.phone.value);
+    // formDataWsp.append('service', 1);
+    // formDataWsp.append('vez', 1);
 
-    fetch('./public/message/whatsapp_servicios.php', {
+    // fetch('./public/message/whatsapp_servicios.php', {
+    //         method: 'POST',
+    //         body: formDataWsp
+    //     })
+    //     .then(res => res.json())
+    //     .then(console.log)
+    //     .catch(err => console.log(err))
+
+
+    // setTimeout(function() {
+    //     formDataWsp.set('vez', 2);
+    //     fetch('./public/message/whatsapp_servicios.php', {
+    //             method: 'POST',
+    //             body: formDataWsp
+    //         })
+    //         .then(res => res.json())
+    //         .then(console.log)
+    //         .catch(err => console.log(err))
+
+    // }, 5 * 60 * 1000); // Enviar mensaje después de 5 minutos
+
+    // setTimeout(function() {
+    //     formDataWsp.set('vez', 3);
+    //     fetch('./public/message/whatsapp_servicios.php', {
+    //             method: 'POST',
+    //             body: formDataWsp
+    //         })
+    //         .then(res => res.json())
+    //         .then(console.log)
+    //         .catch(err => console.log(err))
+    // }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
+
+    // CORREO
+    const formDataCorreo = new FormData()
+    formDataCorreo.append('email', formMain.email.value);
+    formDataCorreo.append('title', formMain.name.value);
+    formDataCorreo.append('subject', `Bienvenid@ ${formMain.name.value}`)
+    formDataCorreo.append('vez', 1);
+
+    fetch('./public/message/email_servicios.php', {
             method: 'POST',
-            body: formDataWsp
+            body: formDataCorreo
         })
         .then(res => res.json())
         .then(console.log)
         .catch(err => console.log(err))
-
-
-    setTimeout(function() {
-        formDataWsp.set('vez', 2);
-        fetch('./public/message/whatsapp_servicios.php', {
-                method: 'POST',
-                body: formDataWsp
-            })
-            .then(res => res.json())
-            .then(console.log)
-            .catch(err => console.log(err))
-
-    }, 5 * 60 * 1000); // Enviar mensaje después de 5 minutos
-
-    setTimeout(function() {
-        formDataWsp.set('vez', 3);
-        fetch('./public/message/whatsapp_servicios.php', {
-                method: 'POST',
-                body: formDataWsp
-            })
-            .then(res => res.json())
-            .then(console.log)
-            .catch(err => console.log(err))
-    }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
 
 })
 </script>

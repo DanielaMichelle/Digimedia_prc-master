@@ -1,5 +1,5 @@
 <?php
-    define('HOST', 'localhost');
+    define('HOST', 'localhost:82');
     define('NAME', 'root');
     define('PASS', '');
-    define('DB', 'digi');
+    define('DB', 'digimediamkt');
