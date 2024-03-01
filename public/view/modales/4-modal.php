@@ -361,7 +361,8 @@
                         <p class="err-msg"></p>
                     </div>
                 </div>
-                <button type="submit" class="go-button" name="submit">¡Sé la diferencia!</button>
+                <input  type="text" value="<?php echo $_GET["id"];?>" name="id_ser" hidden/>
+                <button type="submit" class="go-button" name="submit" onclick="sendGmail('formMain')">¡Sé la diferencia!</button>
             </form>
 
 

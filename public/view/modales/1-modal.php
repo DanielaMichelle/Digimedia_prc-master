@@ -326,7 +326,8 @@
                         <p class="err-msg"></p>
                     </div>
                 </div>
-                <button type="submit" class="go-button" name="submit">¡EMPIEZA YA!</button>
+                <input  type="text" value="<?php echo $_GET["id"];?>" name="id_ser" hidden/>
+                <button type="submit" class="go-button" name="submit" onclick="sendGmail('formMain')">¡EMPIEZA YA!</button>
             </form>
 
             <figure class="modal-main-image">

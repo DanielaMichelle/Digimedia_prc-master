@@ -417,7 +417,8 @@
                 <input type="text" class="form-control" placeholder="Ingresar Correo" name="email" id="email">
                 <p class="err-msg"></p>
             </div>
-            <button type="submit" class="go-button" name="submit">¡Crea impacto!</button>
+            <input  type="text" value="<?php echo $_GET["id"];?>" name="id_ser" hidden/>
+            <button type="submit" class="go-button" name="submit" onclick="sendGmail('formMain')">¡Crea impacto!</button>
         </form>
     </div>
     <div class="desktop-contact inactive">

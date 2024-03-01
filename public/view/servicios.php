@@ -39,6 +39,7 @@
         if(is_file("./public/view/modales/{$servicio}-modal.php")) require_once "./public/view/modales/{$servicio}-modal.php";
         else require_once "./public/view/modales/1-modal.php"; 
     ?>
+    <script src="./public/js/recibirFormGmail.js"></script>
 
     <section class="contenedor_rd_sls_">
         <div class="container">
