@@ -26,8 +26,8 @@ header('Content-Type: text/html; charset=utf-8');
         "¡POTENCIA TU NEGOCIO DIGITAL CON DIGIMEDIA!  📈",
         "¡CRECE TU NEGOCIO CON DIGIMEDIA!📈",
         "¡DESTACA TU NEGOCIO DIGITAL CON DIGIMEDIA!🙌🏼"],
-        ["¡FORTALECE TU PRESENCIA EN LÍNEA 💻!","¡INNOVA EN TUS ESTRATEGIAS DIGITALES!",
-        "¡SUMÉRGETE EN EL MUNDO DIGITAL! 📱","¡MARCA LA DIFERENCIA! 😉"],
+        ["¡FORTALECE TU PRESENCIA EN LÍNEA 💻!","¡SUMÉRGETE EN EL MUNDO DIGITAL! 📱","¡INNOVA EN TUS ESTRATEGIAS DIGITALES!",
+        "¡MARCA LA DIFERENCIA! 😉"],
         ["¡MAXIMIZA TU PRESENCIA ONLINE! 💻 ","¡AUMENTA TU PRESENCIA EN LAS REDES Y CONQUISTA NUEVAS AUDIENCIAS CON NOSOTROS! 💻🚀",
         "¡Aprovecha los beneficios del mundo digital! 👩🏻‍💻🖥","¡TEN UNA IDENTIDAD ÚNICA! 😉"]];
     
