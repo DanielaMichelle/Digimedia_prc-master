@@ -6,8 +6,8 @@
 
     require_once('./ultramsg.class.php');
 
-    $token      ="gc1e82fuaqq7r1s6"; // Ultramsg.com token
-    $instance_id="instance79397"; // Ultramsg.com instance id
+    $token      ="rvlk929udnufiqci"; // Ultramsg.com token
+    $instance_id="instance79854"; // Ultramsg.com instance id
     $client     = new UltraMsg\WhatsAppApi($token,$instance_id);
 
     $phone      = $_POST['phone'];

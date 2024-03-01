@@ -392,9 +392,10 @@ function datos() {
 
 
     if (nombreInput.value != '' && telefonoValido && emailValido) {
-        alert("Todos los campos son correctos.");
-        modalContainer.style.display = 'none'; //////////////////////////////////////////////
+        alert("Campos completados exitosamente.");
+        modalContainer.style.display = 'none'; 
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
+        envioDatosWhatsApp();
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
 }
@@ -424,14 +425,10 @@ function enviandoDatosServer(form) {
         .then(console.log)
         .catch(err => console.log(err))
 }
-</script>
 
-<script>
-const formMain = document.querySelector("#formMain");
+function envioDatosWhatsApp(){
+    const formMain = document.querySelector("#formMain");
 
-formMain.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log("Mensaje enviado a whatsapp con éxito");
 
     const formDataWsp = new FormData();
     formDataWsp.append('phone', formMain.phone.value);
@@ -469,6 +466,6 @@ formMain.addEventListener('submit', (e) => {
             .then(console.log)
             .catch(err => console.log(err))
     }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
+}
 
-})
 </script>

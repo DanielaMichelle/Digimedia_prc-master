@@ -463,14 +463,10 @@ function enviandoDatosServer(form) {
         .then(console.log)
         .catch(err => console.log(err))
 }
-</script>
 
-<script>
-const formMain = document.querySelector("#formMain");
+function envioDatosWhatsApp(){
+    const formMain = document.querySelector("#formMain");
 
-formMain.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log("Mensaje enviado a whatsapp con éxito");
 
     const formDataWsp = new FormData();
     formDataWsp.append('phone', formMain.phone.value);
@@ -509,5 +505,5 @@ formMain.addEventListener('submit', (e) => {
             .catch(err => console.log(err))
     }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
 
-})
+}
 </script>
