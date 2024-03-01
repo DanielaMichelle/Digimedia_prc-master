@@ -469,8 +469,7 @@ function envioDatosWhatsApp(){
     }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
 }
 
-</script>
-<script>
+
 function sendGmail() {
   var formulario_gmail = document.getElementById("#formMain");
 

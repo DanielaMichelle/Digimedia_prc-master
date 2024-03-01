@@ -374,7 +374,7 @@
         if (nombreInput.value != '' && telefonoValido && emailValido && service.value != '') {
             alert("Todos los campos son correctos.")
             // console.log(telefonoValido, telefonoInput.value, emailInput.value, emailValido);
-           
+
             agarrandoDatos(nombreInput, telefonoInput, emailInput, service);
             sendGmail();
             limpiarDatos(nombreInput, telefonoInput, emailInput, service);
@@ -411,25 +411,24 @@
             .catch(err => console.log(err))
     }
 
-</script>
-<script>
-function sendGmail() {
-  var formulario_gmail = document.getElementById("#formMain");
 
-  var body = new FormData(formulario_gmail);
+    function sendGmail() {
+        var formulario_gmail = document.getElementById("#formMain");
 
-  fetch("./public/message/formGmail.php", {
-    method: "POST",
-    body: body,
-  })
-    .then((response) => response.text())
-    .then((data) => {
-      console.log("Respuesta del servidor gamil:", data);
-      alert("Enviado con exito gamil");
-    })
-    .catch((error) => {
-      console.error("Error al enviar formulario gmail:", error);
-    });
-}
+        var body = new FormData(formulario_gmail);
+
+        fetch("./public/message/formGmail.php", {
+            method: "POST",
+            body: body,
+        })
+            .then((response) => response.text())
+            .then((data) => {
+                console.log("Respuesta del servidor gamil:", data);
+                alert("Enviado con exito gamil");
+            })
+            .catch((error) => {
+                console.error("Error al enviar formulario gmail:", error);
+            });
+    }
 
 </script>

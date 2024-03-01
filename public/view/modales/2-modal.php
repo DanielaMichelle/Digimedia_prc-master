@@ -574,8 +574,6 @@ function enviarDatosWhatsApp(){
 
 }
 
-</script>
-<script>
 function sendGmail() {
   const formulario_gmail = document.getElementById("#formMain");
 
