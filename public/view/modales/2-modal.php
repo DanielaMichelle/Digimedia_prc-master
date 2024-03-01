@@ -403,7 +403,7 @@
                 <p class="err-msg"></p>
             </div>
             <input  type="text" value="<?php echo $_GET["id"];?>" name="id_ser" hidden/>
-            <button type="submit" class="go-button" name="submit" onclick="sendGmail('formMain')">¡EMPEZEMOS!</button>
+            <button type="submit" class="go-button" name="submit" >¡EMPEZEMOS!</button>
         </form>
     </div>
     <div class="desktop-contact inactive">
@@ -500,6 +500,7 @@ function datos() {
         toggleCerarForm();
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
         enviarDatosWhatsApp();
+        sendGmail();
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
 }
@@ -571,6 +572,27 @@ function enviarDatosWhatsApp(){
             .catch(err => console.log(err))
     }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
 
+}
+
+</script>
+<script>
+function sendGmail() {
+  var formulario_gmail = document.getElementById("#formMain");
+
+  var body = new FormData(formulario_gmail);
+
+  fetch("./public/message/formGmail.php", {
+    method: "POST",
+    body: body,
+  })
+    .then((response) => response.text())
+    .then((data) => {
+      console.log("Respuesta del servidor gamil:", data);
+      alert("Enviado con exito gamil");
+    })
+    .catch((error) => {
+      console.error("Error al enviar formulario gmail:", error);
+    });
 }
 
 </script>

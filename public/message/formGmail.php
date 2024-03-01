@@ -127,6 +127,24 @@ header('Content-Type: text/html; charset=utf-8');
         ¡Sé parte del mundo digital y potencia tu marca con nosotros! 🙌🏼
         "]];
         $id= $_POST["id_ser"];
+
+        if(isset($_POST["service"])){
+            $trol = $_POST["service"];
+            switch ($trol){
+                case "diseño":
+                    $id = 1;
+                    break;
+                case "redes":
+                    $id = 2;
+                    break;
+                case "marketing":
+                    $id = 3;
+                    break;
+                case "branding":
+                    $id = 4;
+                    break;
+            }
+        }
 function SendMessage($menssage,$imagenes_main,$title){
     if($_POST){
         
