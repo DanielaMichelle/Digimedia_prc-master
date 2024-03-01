@@ -46,7 +46,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/Digimedia_prc-master/public/view/secciones-admin/contenido-redes.php">Explotar
+                    <a class="nav-link" href="/Digimedia_prc-master/public/view/secciones-admin/person-campanas.php">Explotar
                         el contenido de las redes</a>
                 </li>
 
@@ -56,7 +56,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link"
-                        href="/Digimedia_prc-master/public/view/secciones-admin/diseñar-camino-futuro.php">Disenar tu camino
+                        href="/Digimedia_prc-master/public/view/secciones-admin/disenar-camino-futuro.php">Disenar tu camino
                         para el futuro</a>
                 </li>
 
