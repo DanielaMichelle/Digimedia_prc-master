@@ -471,7 +471,7 @@ function envioDatosWhatsApp(){
 
 
 function sendGmail() {
-  var formulario_gmail = document.getElementById("#formMain");
+  var formulario_gmail = document.getElementById("formMain");
 
   var body = new FormData(formulario_gmail);
 

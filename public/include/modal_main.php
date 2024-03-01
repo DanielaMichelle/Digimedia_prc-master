@@ -413,7 +413,7 @@
 
 
     function sendGmail() {
-        var formulario_gmail = document.getElementById("#formMain");
+        var formulario_gmail = document.getElementById("formMain");
 
         var body = new FormData(formulario_gmail);
 
@@ -423,7 +423,7 @@
         })
             .then((response) => response.text())
             .then((data) => {
-                console.log("Respuesta del servidor gamil:", data);
+                console.log("Respuesta del servidor gmail:", data);
                 alert("Enviado con exito gamil");
             })
             .catch((error) => {
