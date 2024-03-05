@@ -413,9 +413,9 @@
 
 
     function sendGmail() {
-        var formulario_gmail = document.getElementById("formMain");
+        const formulario_gmail = document.getElementById("formMain");
 
-        var body = new FormData(formulario_gmail);
+        const body = new FormData(formulario_gmail);
 
         fetch("./public/message/formGmail.php", {
             method: "POST",
