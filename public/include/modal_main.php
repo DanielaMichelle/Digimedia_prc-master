@@ -391,7 +391,7 @@
 
 
     function agarrandoDatos(nombre, telefono, email, service) {
-        const form = new FormData("");
+        const form = new FormData();
         form.append('nombre', nombre.value)
         form.append('telefono', telefono.value)
         form.append('email', email.value)
@@ -413,9 +413,9 @@
 
 
     function sendGmail() {
-        const formulario_gmail = document.getElementById("formMain");
+        var formulario_gmail = document.getElementById("formMain");
 
-        const body = new FormData(formulario_gmail);
+        var body = new FormData(formulario_gmail);
 
         fetch("./public/message/formGmail.php", {
             method: "POST",
@@ -423,7 +423,7 @@
         })
             .then((response) => response.text())
             .then((data) => {
-                console.log("Respuesta del servidor gmail:", data);
+                console.log("Respuesta del servidor gamil:", data);
                 alert("Enviado con exito gamil");
             })
             .catch((error) => {
