@@ -402,8 +402,8 @@
                 <input type="text" class="form-control" placeholder="Ingresar Correo" name="email" id="email">
                 <p class="err-msg"></p>
             </div>
-            <input  type="text" value="<?php echo $_GET["id"];?>" name="id_ser" hidden/>
-            <button type="submit" class="go-button" name="submit" >¡EMPEZEMOS!</button>
+            <input type="text" value="<?php echo $_GET["id"];?>" name="id_ser" hidden />
+            <button type="submit" class="go-button" name="submit">¡EMPEZEMOS!</button>
         </form>
     </div>
     <div class="desktop-contact inactive">
@@ -419,7 +419,7 @@
 </div>
 
 
-
+<script src="./public/js/mensajesWhatsapp.js"></script>
 <script>
 //const desktopContact = document.querySelector('.desktop-contact');
 const contenedorForm = document.querySelector('.contenedor-form');
@@ -499,9 +499,8 @@ function datos() {
         alert("Todos los campos son correctos.");
         toggleCerarForm();
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
-        enviarDatosWhatsApp();
+        envioDatosWhatsApp();
         sendGmail();
-        sendWsApi();
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
 }
@@ -533,103 +532,30 @@ function enviandoDatosServer(form) {
         .catch(err => console.log(err))
 }
 
-function enviarDatosWhatsApp(){
-    const formMain = document.querySelector("#formMain");
-
-    const formDataWsp = new FormData();
-    formDataWsp.append('phone', formMain.phone.value);
-    formDataWsp.append('service', 2);
-    formDataWsp.append('vez', 1);
-
-    fetch('./public/message/whatsapp_servicios.php', {
-            method: 'POST',
-            body: formDataWsp
-        })
-        .then(res => res.json())
-        .then(console.log)
-        .catch(err => console.log(err))
-
-
-    setTimeout(function() {
-        formDataWsp.set('vez', 2);
-        fetch('./public/message/whatsapp_servicios.php', {
-                method: 'POST',
-                body: formDataWsp
-            })
-            .then(res => res.json())
-            .then(console.log)
-            .catch(err => console.log(err))
-
-    }, 5 * 60 * 1000); // Enviar mensaje después de 5 minutos
-
-    setTimeout(function() {
-        formDataWsp.set('vez', 3);
-        fetch('./public/message/whatsapp_servicios.php', {
-                method: 'POST',
-                body: formDataWsp
-            })
-            .then(res => res.json())
-            .then(console.log)
-            .catch(err => console.log(err))
-    }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
-
+function envioDatosWhatsApp() {
+    sendWsApi(mensajesWtsp[1][0], imagenesWtsp[1][0]);
+    setTimeout(() => sendWsApi(mensajesWtsp[1][1], imagenesWtsp[1][1]), 5 * 60 *
+        1000); // Enviar mensaje después de 5 minutos
+    setTimeout(() => sendWsApi(mensajesWtsp[1][2], imagenesWtsp[1][2]), 20 * 60 *
+        1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
 }
 
 function sendGmail() {
-  const formulario_gmail = document.getElementById("formMain");
+    const formulario_gmail = document.getElementById("formMain");
 
-  const body = new FormData(formulario_gmail);
+    const body = new FormData(formulario_gmail);
 
-  fetch("./public/message/formGmail.php", {
-    method: "POST",
-    body: body,
-  })
-    .then((response) => response.text())
-    .then((data) => {
-      console.log("Respuesta del servidor gamil:", data);
-      alert("Enviado con exito gamil");
-    })
-    .catch((error) => {
-      console.error("Error al enviar formulario gmail:", error);
-    });
+    fetch("./public/message/formGmail.php", {
+            method: "POST",
+            body: body,
+        })
+        .then((response) => response.text())
+        .then((data) => {
+            console.log("Respuesta del servidor gamil:", data);
+            alert("Enviado con exito gamil");
+        })
+        .catch((error) => {
+            console.error("Error al enviar formulario gmail:", error);
+        });
 }
-
-</script>
-<script>
-
-function sendWsApi() {
-    const formulario = document.getElementById('formMain');
-    const mensaje = "value-modal 2 envio";
-    const phone = "51" + document.getElementById('phone').value;
-    const media = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj72Ga0skRjXoSA4lfHicy1rVJ0kd5DcCKq7Tj8LAhtap-6L4lrRsnoD85TRihXDx1OWE3BdIhRz1j5IJEidAzv1du5Ya5VQBLBAxuGEG9xuK6v4gjpP9jB3dA6otzZXV3j1vxXkdvrpto8i2l3HtzNjmaTWaeX_-Mb0G6jGCifbxBt5Jzyr_fEoZgL7xhQ/s1600/flyer-modal-1-1.jpg";
-
-    const data = {
-        message: mensaje,
-        mediaUrl: media,
-        phone: phone
-    };
-
-    fetch('http://146.190.131.7:3001/send-message', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Hubo un problema al enviar el mensaje.');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Respuesta del servidor:', data);
-        // Aquí puedes hacer algo con la respuesta del servidor, si es necesario
-    })
-    .catch(error => {
-        console.error('Error al enviar el mensaje:', error);
-        // Aquí puedes manejar el error, por ejemplo, mostrar un mensaje de error al usuario
-    });
-}
-
 </script>
