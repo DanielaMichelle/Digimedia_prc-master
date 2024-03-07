@@ -1,14 +1,8 @@
-
-function sendWsApi(mensajeWs, imagenWs) {
-    const formulario = document.getElementById('formMain');
-    const mensaje = mensajeWs;
-    const phone = "51" + document.getElementById('phone').value;
-    const media = imagenWs;
-
+function sendWsApi(mensajeWs, imagenWs, phoneWs) {
     const data = {
-        message: mensaje,
-        mediaUrl: media,
-        phone: phone
+        message: mensajeWs,
+        mediaUrl: imagenWs,
+        phone: phoneWs
     };
 
     fetch('http://146.190.131.7:3001/send-message', {
@@ -22,11 +16,13 @@ function sendWsApi(mensajeWs, imagenWs) {
             if (!response.ok) {
                 throw new Error('Hubo un problema al enviar el mensaje.');
             }
-            return response.json();
+            return response;
         })
-        .then(data => {
-            console.log('Respuesta del servidor:', data);
-            // Aquí puedes hacer algo con la respuesta del servidor, si es necesario
+        .then((response) => {
+            console.log("Respuesta del servidor whatsapp:", response);
+        })
+        .catch(error => {
+            console.error('Error al enviar el mensaje desde API de Whatsapp:', error);
         })
 }
 

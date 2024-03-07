@@ -556,11 +556,18 @@ btnSubmit.addEventListener('click', () => {
 });
 
 function envioDatosWhatsApp() {
-    sendWsApi(mensajesWtsp[2][0], imagenesWtsp[2][0]);
-    setTimeout(() => sendWsApi(mensajesWtsp[2][1], imagenesWtsp[2][1]), 5 * 60 *
-        1000); // Enviar mensaje después de 5 minutos
-    setTimeout(() => sendWsApi(mensajesWtsp[2][2], imagenesWtsp[2][2]), 20 * 60 *
-        1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
+    const phone = "51" + document.getElementById('phone').value;
+
+    sendWsApi(mensajesWtsp[2][0], imagenesWtsp[2][0], phone);
+
+    setTimeout(() => {
+        sendWsApi(mensajesWtsp[2][1], imagenesWtsp[2][1], phone)
+    }, 5 * 60 * 1000); // Enviar mensaje después de 5 minutos
+
+    setTimeout(() => {
+        sendWsApi(mensajesWtsp[2][2], imagenesWtsp[2][2], phone)
+    }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
+
 }
 
 function sendGmail() {
