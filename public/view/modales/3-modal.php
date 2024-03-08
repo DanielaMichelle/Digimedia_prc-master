@@ -406,14 +406,14 @@
             </div>
             <!--//Telefono//-->
             <div class="form-group">
-                <label for="phone">TELEFONO</label>
+                <label for="phone">TELÉFONO</label>
                 <input type="text" class="form-control" placeholder="Ingresar Telefono Personal" name="phone"
                     id="phone">
                 <p class="err-msg"></p>
             </div>
             <!--//Correo//-->
             <div class="form-group">
-                <label for="email">CORREO ELECTRONICO</label>
+                <label for="email">CORREO ELECTRÓNICO</label>
                 <input type="text" class="form-control" placeholder="Ingresar Correo" name="email" id="email">
                 <p class="err-msg"></p>
             </div>

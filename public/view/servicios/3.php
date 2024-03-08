@@ -2,7 +2,7 @@
     <img src="./public/img/marketing_gestion.webp" alt="">
     <div class="container-hero">
         <div>
-            <h1>Marketing y gestion digital A</h1>
+            <h1>Marketing y gestión digital</h1>
         </div>
     </div>
 </section>
