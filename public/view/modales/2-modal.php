@@ -420,6 +420,7 @@
 
 
 <script src="./public/js/mensajesWhatsapp.js"></script>
+
 <script>
 //const desktopContact = document.querySelector('.desktop-contact');
 const contenedorForm = document.querySelector('.contenedor-form');
@@ -427,6 +428,11 @@ const btnCerrar = document.querySelector('.btn-cerrar');
 //const mobile = document.querySelector('.btn-mobile')
 const ocultar = document.querySelector(".ocultar");
 const overflow = document.querySelector(".overflow");
+
+const objRegex = {
+        telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
+        gmail: /^[\w.-]+@gmail\.com$/ //validar la estructura de un correo electrónico
+    };
 
 btnCerrar.addEventListener('click', toggleCerarForm);
 overflow.addEventListener('click', touch_display);
@@ -473,11 +479,6 @@ function validarDatos() {
 }
 
 function datos() {
-    const objRegex = {
-        telefono: /^9\d{2}\s?\d{3}\s?\d{3}$/, //validar que tenga 9 caracteres
-        gmail: /^[\w.-]+@gmail\.com$/ //validar la estructura de un correo electrónico
-    };
-
     const nombreInput = document.getElementById('name');
     const telefonoInput = document.getElementById('phone');
     const emailInput = document.getElementById('email');
@@ -491,7 +492,7 @@ function datos() {
 
     if (nombreInput.value === '') alert('El nombre no debe estar vacio')
 
-    if (!telefonoValido) alert("Debe de haber 9 digitos en el numero de telefono.")
+    if (!telefonoValido) alert("Debe de haber 9 digitos en el numero de telefono y deben de estar los numeros juntos.")
 
     if (!emailValido) alert("Debe de ingresar un correo valido.")
 
@@ -499,7 +500,7 @@ function datos() {
         alert("Todos los campos son correctos.");
         toggleCerarForm();
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
-        envioDatosWhatsApp();
+        envioDatosWhatsApp(telefonoInput.value);
         sendGmail();
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
@@ -532,20 +533,20 @@ function enviandoDatosServer(form) {
         .catch(err => console.log(err))
 }
 
-function envioDatosWhatsApp() {
-    const phone = "51" + document.getElementById('phone').value;
+function envioDatosWhatsApp(num) {
+    const phone = "51" + num;
 
-    sendWsApi(mensajesWtsp[1][0], imagenesWtsp[1][0], phone);
+    sendWsApi(mensajesWtsp[0][0], imagenesWtsp[0][0], phone);
 
     setTimeout(() => {
-        sendWsApi(mensajesWtsp[1][1], imagenesWtsp[1][1], phone)
+        sendWsApi(mensajesWtsp[0][1], imagenesWtsp[0][1], phone)
     }, 5 * 60 * 1000); // Enviar mensaje después de 5 minutos
 
     setTimeout(() => {
-        sendWsApi(mensajesWtsp[1][2], imagenesWtsp[1][2], phone)
+        sendWsApi(mensajesWtsp[0][2], imagenesWtsp[0][2], phone)
     }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
-
 }
+
 
 function sendGmail() {
     const formulario_gmail = document.getElementById("formMain");
@@ -558,8 +559,7 @@ function sendGmail() {
         })
         .then((response) => response.text())
         .then((data) => {
-            console.log("Respuesta del servidor gamil:", data);
-            alert("Enviado con exito gamil");
+            console.log("Respuesta del servidor gmail:", data);
         })
         .catch((error) => {
             console.error("Error al enviar formulario gmail:", error);
