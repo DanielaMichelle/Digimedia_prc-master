@@ -376,8 +376,8 @@ const btnCerrar = document.querySelector('.btn-cerrar');
 const modalContainer = document.querySelector('.modal-main-background')
 
 const objRegex = {
-        telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
-        gmail: /^[\w.-]+@gmail\.com$/ //validar la estructura de un correo electrónico
+    telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
+    gmail: /^[\w.-]+@gmail\.com$/ //validar la estructura de un correo electrónico
 };
 
 
@@ -470,14 +470,14 @@ function enviandoDatosServer(form) {
 function envioDatosWhatsApp(num) {
     const phone = "51" + num;
 
-    sendWsApi(mensajesWtsp[0][0], imagenesWtsp[0][0], phone);
+    sendWsApi(mensajesWtsp[3][0], imagenesWtsp[3][0], phone);
 
     setTimeout(() => {
-        sendWsApi(mensajesWtsp[0][1], imagenesWtsp[0][1], phone)
+        sendWsApi(mensajesWtsp[3][1], imagenesWtsp[3][1], phone)
     }, 5 * 60 * 1000); // Enviar mensaje después de 5 minutos
 
     setTimeout(() => {
-        sendWsApi(mensajesWtsp[0][2], imagenesWtsp[0][2], phone)
+        sendWsApi(mensajesWtsp[3][2], imagenesWtsp[3][2], phone)
     }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
 }
 
