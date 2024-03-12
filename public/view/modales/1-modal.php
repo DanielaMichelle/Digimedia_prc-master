@@ -345,7 +345,7 @@ const btnCerrar = document.querySelector('.btn-cerrar');
 const modalContainer = document.querySelector('.modal-main-background')
 const objRegex = {
         telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
-        gmail: /^[\w.-]+@gmail\.com$/ //validar la estructura de un correo electrónico
+        gmail: /^[\w\.-]+@(gmail|outlook|hotmail)\.com$/ //validar la estructura de un correo electrónico
     };
 
 document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
@@ -431,18 +431,20 @@ function enviandoDatosServer(form) {
 
 function envioDatosWhatsApp(num) {
     const phone = "51" + num;
+    const messageId = Date.now(); // Generar un identificador único basado en la marca de tiempo actual
 
     sendWsApi(mensajesWtsp[0][0], imagenesWtsp[0][0], phone);
 
+    // Primer mensaje enviado, se programa el segundo mensaje después de 5 minutos
     setTimeout(() => {
-        sendWsApi(mensajesWtsp[0][1], imagenesWtsp[0][1], phone)
-    }, 5 * 60 * 1000); // Enviar mensaje después de 5 minutos
-
-    setTimeout(() => {
-        sendWsApi(mensajesWtsp[0][2], imagenesWtsp[0][2], phone)
-    }, 20 * 60 * 1000); // Enviar mensaje después de 15 minutos a partir del último mensaje
-
+        sendWsApi(mensajesWtsp[0][1], imagenesWtsp[0][1], phone);
+        // Programar el tercer mensaje después de 15 minutos a partir del último mensaje
+        setTimeout(() => {
+            sendWsApi(mensajesWtsp[0][2], imagenesWtsp[0][2], phone);
+        }, 8 * 60 * 1000); // 10 minutos después del segundo mensaje
+    }, 5 * 60 * 1000); // 5 minutos después del primer mensaje
 }
+
 
 
 function sendGmail() {

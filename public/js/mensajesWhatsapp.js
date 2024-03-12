@@ -5,7 +5,7 @@ function sendWsApi(mensajeWs, imagenWs, phoneWs) {
         phone: phoneWs
     };
 
-    fetch('http://146.190.131.7:3001/send-message', {
+    fetch('https://danielamij.me/send-message', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
