@@ -328,6 +328,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
 const btnCerrar = document.querySelector('.btn-cerrar');
@@ -393,7 +394,7 @@ function datos() {
         // console.log(telefonoValido, telefonoInput.value, emailInput.value, emailValido);
 
         agarrandoDatos(nombreInput, telefonoInput, emailInput, service);
-        sendGmail();
+        enviarEmailAjax();
         limpiarDatos(nombreInput, telefonoInput, emailInput, service);
     }
 }
@@ -429,22 +430,33 @@ function enviandoDatosServer(form) {
 }
 
 
-function sendGmail() {
-    var formulario_gmail = document.getElementById("formMain");
+function enviarEmailAjax(){
 
-    var body = new FormData(formulario_gmail);
+    const email = document.getElementById('email').value;
+    const service = document.getElementById('service').value;  
 
-    fetch("./public/message/formGmail.php", {
-            method: "POST",
-            body: body,
-        })
-        .then((response) => response.text())
-        .then((data) => {
-            console.log("Respuesta del servidor gamil:", data);
-            alert("Enviado con exito gamil");
-        })
-        .catch((error) => {
-            console.error("Error al enviar formulario gmail:", error);
-        });
+    var datos = new FormData();
+    datos.append("service",service);
+    datos.append("email",email);
+
+
+
+    $.ajax({
+        url:"./public/message/Controller/process.php",
+        method:"POST",
+        data:datos,
+        cache:false,
+        contentType:false,
+        processData:false,
+        success:function(respuesta){
+            console.log("Respuesta",respuesta);
+            if(respuesta.trim().toLowerCase() === "correctocorrectocorrecto"){
+                alert("Email Enviado");
+
+            }else{
+                alert("ocurrio un error "+ respuesta);
+            }
+        }
+    })
 }
 </script>

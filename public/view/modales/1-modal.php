@@ -339,6 +339,7 @@
 </div>
 
 <script src="./public/js/mensajesWhatsapp.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
 const btnCerrar = document.querySelector('.btn-cerrar');
@@ -398,7 +399,7 @@ function datos() {
         modalContainer.style.display = 'none';
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
         envioDatosWhatsApp(telefonoInput.value);
-        sendGmail();
+        enviarEmailAjax();
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
 }
@@ -447,21 +448,36 @@ function envioDatosWhatsApp(num) {
 
 
 
-function sendGmail() {
-    const formulario_gmail = document.getElementById("formMain");
+function enviarEmailAjax(){
+    var queryString = window.location.search;
+    var parametros = new URLSearchParams(queryString);
+    const id_ser = parametros.get('id');
 
-    const body = new FormData(formulario_gmail);
+    const email = document.getElementById('email').value;
+            
 
-    fetch("./public/message/formGmail.php", {
-            method: "POST",
-            body: body,
-        })
-        .then((response) => response.text())
-        .then((data) => {
-            console.log("Respuesta del servidor gmail:", data);
-        })
-        .catch((error) => {
-            console.error("Error al enviar formulario gmail:", error);
-        });
+    var datos = new FormData();
+    datos.append("id_ser",id_ser);
+    datos.append("email",email);
+
+
+
+    $.ajax({
+        url:"./public/message/Controller/process.php",
+        method:"POST",
+        data:datos,
+        cache:false,
+        contentType:false,
+        processData:false,
+        success:function(respuesta){
+            console.log("Respuesta",respuesta);
+            if(respuesta.trim().toLowerCase() === "correctocorrectocorrecto"){
+                alert("Email Enviado");
+
+            }else{
+                alert("ocurrio un error "+ respuesta);
+            }
+        }
+    })
 }
 </script>
