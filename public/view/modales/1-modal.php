@@ -530,6 +530,12 @@ window.onload = function() {
     }
 };
 
+
+
+
+
+
+
 function enviarEmailAjax(){
     var queryString = window.location.search;
     var parametros = new URLSearchParams(queryString);
