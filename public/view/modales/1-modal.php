@@ -295,8 +295,8 @@
 }
 </style>
 
-<div class="modal-main-background">
-    <div class="modal-main">
+<div class="modal-main-background" id="modal-container">
+    <div class="modal-main" id="modal1">
         <figure class="btn-cerrar">
             <i class="fa solid fa-xmark fa-lg"></i>
         </figure>
@@ -345,18 +345,22 @@
 const btnCerrar = document.querySelector('.btn-cerrar');
 const modalContainer = document.querySelector('.modal-main-background')
 const objRegex = {
-        telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
-        gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
-    };
+    telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
+    gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
+};
 
 document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
 
 // Función para mostrar el modal después de 1 segundos
 function mostrarModalDespuesDe5Segundos() {
-    setTimeout(() => {
-        modalContainer.style.display = 'flex';
-        validarDatos();
-    }, 1000); // 1000 milisegundos = 1 segundos
+    if (localStorage.getItem("whatsappData")) {
+        modalContainer.style.display = 'none';
+    } else {
+        setTimeout(() => {
+            modalContainer.style.display = 'flex';
+            validarDatos();
+        }, 1000); // 1000 milisegundos = 1 segundos
+    }
 }
 
 // Agregar evento al botón de cerrar
@@ -392,7 +396,7 @@ function datos() {
     if (!telefonoValido) alert("Debe de haber 9 digitos en el numero de telefono y deben de estar los numeros juntos.")
 
     if (!emailValido) alert("Debe de ingresar un correo valido.")
- 
+
 
     if (nombreInput.value != '' && telefonoValido && emailValido) {
         modalContainer.style.display = 'none';
@@ -431,9 +435,6 @@ function enviandoDatosServer(form) {
 
 
 
-
-
-
 // Función para guardar los datos en el localStorage
 function guardarDatosEnLocalStorage(data) {
     localStorage.setItem("whatsappData", JSON.stringify(data));
@@ -463,8 +464,15 @@ function envioDatosWhatsApp(num) {
     function enviarMensaje(index) {
         sendWsApi(mensajesWtsp[0][index], imagenesWtsp[0][index], phone);
         console.log("Mensaje", index + 1, "enviado.");
-        sentMessages.push({ index, time: new Date().getTime() });
-        guardarDatosEnLocalStorage({ phoneNumber: num, sentMessages: sentMessages });
+        sentMessages.push({
+            index,
+            time: new Date().getTime()
+        });
+        guardarDatosEnLocalStorage({
+            phoneNumber: num,
+            sentMessages: sentMessages
+        });
+
 
         // Si se ha enviado el tercer mensaje, eliminar los datos del localStorage
         if (index === 2) {
@@ -514,8 +522,13 @@ document.getElementById('formMain').addEventListener('submit', function(event) {
 });
 
 
+
+
 // Llamar a la función para enviar los mensajes de WhatsApp cuando se cargue la página
 window.onload = function() {
+
+    console.log(localStorage.getItem("modal1"));
+
     // Obtener el número de teléfono del formulario desde el LocalStorage
     const storedPhoneNumber = obtenerNumeroTelefonoDelLocalStorage();
 
@@ -535,35 +548,34 @@ window.onload = function() {
 
 
 
-
-function enviarEmailAjax(){
+function enviarEmailAjax() {
     var queryString = window.location.search;
     var parametros = new URLSearchParams(queryString);
     const id_ser = parametros.get('id');
 
     const email = document.getElementById('email').value;
-            
+
 
     var datos = new FormData();
-    datos.append("id_ser",id_ser);
-    datos.append("email",email);
+    datos.append("id_ser", id_ser);
+    datos.append("email", email);
 
 
 
     $.ajax({
-        url:"./public/message/Controller/process.php",
-        method:"POST",
-        data:datos,
-        cache:false,
-        contentType:false,
-        processData:false,
-        success:function(respuesta){
-            console.log("Respuesta",respuesta);
-            if(respuesta.trim().toLowerCase() === "correctocorrectocorrecto"){
+        url: "./public/message/Controller/process.php",
+        method: "POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(respuesta) {
+            console.log("Respuesta", respuesta);
+            if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
                 alert("Email Enviado");
 
-            }else{
-                alert("ocurrio un error "+ respuesta);
+            } else {
+                alert("ocurrio un error " + respuesta);
             }
         }
     })

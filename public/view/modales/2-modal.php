@@ -431,9 +431,9 @@ const ocultar = document.querySelector(".ocultar");
 const overflow = document.querySelector(".overflow");
 
 const objRegex = {
-        telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
-        gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
-    };
+    telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
+    gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
+};
 
 
 btnCerrar.addEventListener('click', toggleCerarForm);
@@ -462,11 +462,16 @@ document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
 
 
 function mostrarModalDespuesDe5Segundos() {
-    setTimeout(() => {
-        contenedorForm.style.display = 'flex';
-        overflow.style.display = 'block';
-        validarDatos();
-    }, 1000);
+    if (localStorage.getItem("whatsappData")) {
+        contenedorForm.style.display = 'none';
+        overflow.style.display = 'none';
+    } else {
+        setTimeout(() => {
+            contenedorForm.style.display = 'flex';
+            overflow.style.display = 'block';
+            validarDatos();
+        }, 1000);
+    }
 }
 
 
@@ -564,10 +569,16 @@ function envioDatosWhatsApp(num) {
 
     // Función para enviar un mensaje y actualizar el localStorage
     function enviarMensaje(index) {
-        sendWsApi(mensajesWtsp[0][index], imagenesWtsp[0][index], phone);
+        sendWsApi(mensajesWtsp[1][index], imagenesWtsp[1][index], phone);
         console.log("Mensaje", index + 1, "enviado.");
-        sentMessages.push({ index, time: new Date().getTime() });
-        guardarDatosEnLocalStorage({ phoneNumber: num, sentMessages: sentMessages });
+        sentMessages.push({
+            index,
+            time: new Date().getTime()
+        });
+        guardarDatosEnLocalStorage({
+            phoneNumber: num,
+            sentMessages: sentMessages
+        });
 
         // Si se ha enviado el tercer mensaje, eliminar los datos del localStorage
         if (index === 2) {
@@ -636,34 +647,34 @@ window.onload = function() {
 
 
 
-function enviarEmailAjax(){
+function enviarEmailAjax() {
     var queryString = window.location.search;
     var parametros = new URLSearchParams(queryString);
     const id_ser = parametros.get('id');
 
     const email = document.getElementById('email').value;
-            
+
 
     var datos = new FormData();
-    datos.append("id_ser",id_ser);
-    datos.append("email",email);
+    datos.append("id_ser", id_ser);
+    datos.append("email", email);
 
 
 
     $.ajax({
-        url:"./public/message/Controller/process.php",
-        method:"POST",
-        data:datos,
-        cache:false,
-        contentType:false,
-        processData:false,
-        success:function(respuesta){
-            console.log("Respuesta",respuesta);
-            if(respuesta.trim().toLowerCase() === "correctocorrectocorrecto"){
+        url: "./public/message/Controller/process.php",
+        method: "POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(respuesta) {
+            console.log("Respuesta", respuesta);
+            if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
                 alert("Email Enviado");
 
-            }else{
-                alert("ocurrio un error "+ respuesta);
+            } else {
+                alert("ocurrio un error " + respuesta);
             }
         }
     })
