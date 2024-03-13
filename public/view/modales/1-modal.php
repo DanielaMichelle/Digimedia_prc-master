@@ -346,7 +346,7 @@ const btnCerrar = document.querySelector('.btn-cerrar');
 const modalContainer = document.querySelector('.modal-main-background')
 const objRegex = {
         telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
-        gmail: /^[\w\.-]+@(gmail|outlook|hotmail)\.com$/ //validar la estructura de un correo electrónico
+        gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
     };
 
 document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
@@ -395,7 +395,6 @@ function datos() {
  
 
     if (nombreInput.value != '' && telefonoValido && emailValido) {
-        alert("Campos completados exitosamente.");
         modalContainer.style.display = 'none';
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
         envioDatosWhatsApp(telefonoInput.value);
@@ -430,23 +429,106 @@ function enviandoDatosServer(form) {
         .catch(err => console.log(err))
 }
 
+
+
+
+
+
+// Función para guardar los datos en el localStorage
+function guardarDatosEnLocalStorage(data) {
+    localStorage.setItem("whatsappData", JSON.stringify(data));
+}
+
+// Función para obtener el número de teléfono del localStorage
+function obtenerNumeroTelefonoDelLocalStorage() {
+    const data = localStorage.getItem("whatsappData");
+    return data ? JSON.parse(data).phoneNumber : null;
+}
+
+// Función para obtener los datos del localStorage
+function obtenerDatosDelLocalStorage() {
+    const data = localStorage.getItem("whatsappData");
+    return data ? JSON.parse(data) : null;
+}
+
+// Función para enviar los mensajes de WhatsApp
 function envioDatosWhatsApp(num) {
     const phone = "51" + num;
-    const messageId = Date.now(); // Generar un identificador único basado en la marca de tiempo actual
+    console.log("Iniciando envío de mensajes de WhatsApp para el número:", phone);
 
-    sendWsApi(mensajesWtsp[0][0], imagenesWtsp[0][0], phone);
+    // Definir los intervalos de tiempo entre cada mensaje en milisegundos
+    const intervalos = [0, 5000, 10000]; // Intervalos entre el primer, segundo y tercer mensaje
 
-    // Primer mensaje enviado, se programa el segundo mensaje después de 5 minutos
-    setTimeout(() => {
-        sendWsApi(mensajesWtsp[0][1], imagenesWtsp[0][1], phone);
-        // Programar el tercer mensaje después de 15 minutos a partir del último mensaje
-        setTimeout(() => {
-            sendWsApi(mensajesWtsp[0][2], imagenesWtsp[0][2], phone);
-        }, 8 * 60 * 1000); // 10 minutos después del segundo mensaje
-    }, 5 * 60 * 1000); // 5 minutos después del primer mensaje
+    // Función para enviar un mensaje y actualizar el localStorage
+    function enviarMensaje(index) {
+        sendWsApi(mensajesWtsp[0][index], imagenesWtsp[0][index], phone);
+        console.log("Mensaje", index + 1, "enviado.");
+        sentMessages.push({ index, time: new Date().getTime() });
+        guardarDatosEnLocalStorage({ phoneNumber: num, sentMessages: sentMessages });
+
+        // Si se ha enviado el tercer mensaje, eliminar los datos del localStorage
+        if (index === 2) {
+            console.log("Eliminando localStorage después de enviar todos los mensajes.");
+            localStorage.removeItem("whatsappData");
+        }
+    }
+
+    // Función para verificar y enviar el siguiente mensaje
+    function enviarSiguienteMensaje() {
+        if (messageIndex < mensajesWtsp[0].length) {
+            enviarMensaje(messageIndex);
+            messageIndex++;
+            setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
+        }
+    }
+
+    // Verificar si hay mensajes pendientes en el localStorage y continuar enviándolos
+    const storedData = obtenerDatosDelLocalStorage();
+    const sentMessages = storedData ? storedData.sentMessages || [] : [];
+    let messageIndex = sentMessages.length; // Indica el índice del siguiente mensaje a enviar
+
+    // Si no hay mensajes pendientes, enviar el primer mensaje
+    if (messageIndex === 0) {
+        enviarSiguienteMensaje();
+    } else {
+        // Si hay mensajes pendientes, reanudar el envío desde el próximo mensaje
+        setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
+    }
 }
 
 
+// Evento para controlar el envío del formulario
+document.getElementById('formMain').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar el envío del formulario por defecto
+
+    // Verificar si hay mensajes pendientes en el localStorage
+    const storedData = obtenerDatosDelLocalStorage();
+    const sentMessages = storedData ? storedData.sentMessages || [] : [];
+    if (sentMessages.length < 3) {
+        alert("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
+        return;
+    }
+
+    // Si no hay mensajes pendientes, permitir el envío del formulario
+    this.submit();
+});
+
+
+// Llamar a la función para enviar los mensajes de WhatsApp cuando se cargue la página
+window.onload = function() {
+    // Obtener el número de teléfono del formulario desde el LocalStorage
+    const storedPhoneNumber = obtenerNumeroTelefonoDelLocalStorage();
+
+    // Verificar si se recuperó un número de teléfono válido desde el LocalStorage
+    const storedData = obtenerDatosDelLocalStorage();
+    const sentMessages = storedData ? storedData.sentMessages || [] : [];
+    if (storedPhoneNumber && storedPhoneNumber.trim() !== "" && sentMessages.length < 3) {
+        // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
+        envioDatosWhatsApp(storedPhoneNumber);
+    } else {
+        console.error("Número de teléfono no válido o ya se han enviado los mensajes.");
+    }
+};
 
 function enviarEmailAjax(){
     var queryString = window.location.search;

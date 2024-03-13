@@ -20,7 +20,7 @@ class mainController{
         $this->ema = $em;
         $this->message = $me;
     }*/
-    static public function funcionName($subject,$email, $message){
+    public static function funcionName($subject,$email, $message){
         /*date_default_timezone_set('America/Lima');
         $mail = new PHPMailer;
         $mail->CharSet = 'utf-8';
