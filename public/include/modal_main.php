@@ -333,7 +333,8 @@
 
 <script>
 const btnCerrar = document.querySelector('.btn-cerrar');
-const modalContainer = document.querySelector('.modal-main-background')
+const modalContainer = document.querySelector('.modal-main-background');
+const btnForm = document.querySelector(".go-button");
 
 
 document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
@@ -356,6 +357,11 @@ btnCerrar.addEventListener('click', () => {
     modalContainer.style.display = 'none';
 });
 
+// Agregar evento al botón de envio de formulario
+btnForm.addEventListener('click', () => {
+    console.log("clickeaste");
+    modalContainer.style.display = 'none';
+});
 
 
 //De aqui para abajo validas todos los campos del formulario con expresiones regulares
