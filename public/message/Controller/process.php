@@ -8,21 +8,22 @@ require '../PHPMailer/PHPMailer.php';
 require '../PHPMailer/SMTP.php';
 
 include '../Controller/info_desk.php';
+
 $id= $_POST["id_ser"];
 
 if(isset($_POST["service"])){
     $trol = $_POST["service"];
     switch ($trol){
-        case "diseño":
+        case "0":
             $id = 1;
             break;
-        case "redes":
+        case "1":
             $id = 2;
             break;
-        case "marketing":
+        case "2":
             $id = 3;
             break;
-        case "branding":
+        case "3":
             $id = 4;
             break;
     }

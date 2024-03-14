@@ -569,6 +569,7 @@ function enviarEmailAjax() {
     var datos = new FormData();
     datos.append("service", service);
     datos.append("email", email);
+    datos.append("id_ser", 0);
 
 
 
