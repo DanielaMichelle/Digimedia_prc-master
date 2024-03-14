@@ -541,7 +541,10 @@ small {
   border-radius: 50px;
   text-align: center;
   width: 120px;
-  color: white;
+  color: #000000;
+}
+.boton__2:hover {
+  color: #000000; /* Cambia el color al pasar el cursor sobre el enlace */
 }
 
 .bota1 {
@@ -718,10 +721,13 @@ small {
 
   .boton__2 {
     background-color: #ff0c7d;
-    color: white;
+    color: #000000;
     text-align: center;
     padding: 10px;
     border-radius: 50px;
+  }
+  .boton__2:hover {
+    color: #000000; /* Cambia el color al pasar el cursor sobre el enlace */
   }
 
   .boton__1 {
