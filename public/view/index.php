@@ -149,7 +149,8 @@
         </div>
         <!-- <div class="pt-3"></div> -->
         <div class="bota1">
-            <a href="View/preguntas.php" class="boton__2"
+
+            <a href="contacto.php" class="boton__2"
                 style="box-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;text-decoration: none; 
                 "><b>Contactar</b></a>
         </div>
