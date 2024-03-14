@@ -310,10 +310,10 @@
                     <label for="service">Tipo de servicio</label>
                     <select class="form-control" id="service" name="service">
                         <option value="">Seleccionar</option>
-                        <option value="diseño">Diseño y Desarrollo Web</option>
-                        <option value="redes">Gestión de Redes Sociales</option>
-                        <option value="marketing">Marketing y Gestión Digital</option>
-                        <option value="branding">Branding y Diseño</option>
+                        <option value="0">Diseño y Desarrollo Web</option>
+                        <option value="1">Gestión de Redes Sociales</option>
+                        <option value="2">Marketing y Gestión Digital</option>
+                        <option value="3">Branding y Diseño</option>
                     </select>
                     <p class="err-msg" id="service-error"></p>
                 </div>
@@ -329,6 +329,7 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./public/js/mensajesWhatsapp.js"></script>
 
 <script>
 const btnCerrar = document.querySelector('.btn-cerrar');
@@ -339,10 +340,14 @@ document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
 
 // Función para mostrar el modal después de 1 segundos
 function mostrarModalDespuesDe5Segundos() {
-    setTimeout(() => {
-        modalContainer.style.display = 'flex';
-        validarDatos();
-    }, 1000); // 1000 milisegundos = 1 segundos
+    if (localStorage.getItem("whatsappData")) {
+        modalContainer.style.display = 'none';
+    } else {
+        setTimeout(() => {
+            modalContainer.style.display = 'flex';
+            validarDatos();
+        }, 1000); // 1000 milisegundos = 1 segundos
+    }
 }
 
 // Agregar evento al botón de cerrar
@@ -374,6 +379,7 @@ function datos() {
 
     const telefono = telefonoInput.value.trim();
     const email = emailInput.value.trim();
+    const indexService = document.getElementById("service").value;
 
     const telefonoValido = objRegex.telefono.test(telefono);
     const emailValido = objRegex.gmail.test(email);
@@ -391,9 +397,8 @@ function datos() {
 
     if (nombreInput.value != '' && telefonoValido && emailValido && service.value != '') {
         alert("Todos los campos son correctos.")
-        // console.log(telefonoValido, telefonoInput.value, emailInput.value, emailValido);
-
         agarrandoDatos(nombreInput, telefonoInput, emailInput, service);
+        envioDatosWhatsApp(telefonoInput.value, indexService);
         enviarEmailAjax();
         limpiarDatos(nombreInput, telefonoInput, emailInput, service);
     }
@@ -430,31 +435,151 @@ function enviandoDatosServer(form) {
 }
 
 
-function enviarEmailAjax(){
+
+// Función para guardar los datos en el localStorage
+function guardarDatosEnLocalStorage(data) {
+    localStorage.setItem("whatsappData", JSON.stringify(data));
+}
+
+// Función para obtener el número de teléfono del localStorage
+function obtenerNumeroTelefonoDelLocalStorage() {
+    const data = localStorage.getItem("whatsappData");
+    return data ? JSON.parse(data).phoneNumber : null;
+}
+
+// Función para obtener el index del servicio del localStorage
+function obtenerIndexDelServicioDelLocalStorage() {
+    const data = localStorage.getItem("whatsappData");
+    return data ? JSON.parse(data).service : null;
+}
+
+// Función para obtener los datos del localStorage
+function obtenerDatosDelLocalStorage() {
+    const data = localStorage.getItem("whatsappData");
+    return data ? JSON.parse(data) : null;
+}
+
+// Función para enviar los mensajes de WhatsApp
+function envioDatosWhatsApp(num, indexService) {
+    const phone = "51" + num;
+    console.log("Iniciando envío de mensajes de WhatsApp para el número:", phone);
+
+    // Definir los intervalos de tiempo entre cada mensaje en milisegundos
+    const intervalos = [0, 5000, 10000]; // Intervalos entre el primer, segundo y tercer mensaje
+
+    // Función para enviar un mensaje y actualizar el localStorage
+    function enviarMensaje(index) {
+        sendWsApi(mensajesWtsp[parseInt(indexService)][index], imagenesWtsp[parseInt(indexService)][index], phone);
+        console.log("Mensaje", index + 1, "enviado.");
+        sentMessages.push({
+            index,
+            time: new Date().getTime(),
+        });
+        guardarDatosEnLocalStorage({
+            phoneNumber: num,
+            sentMessages: sentMessages,
+            service: indexService,
+        });
+
+
+        // Si se ha enviado el tercer mensaje, eliminar los datos del localStorage
+        if (index === 2) {
+            console.log("Eliminando localStorage después de enviar todos los mensajes.");
+            localStorage.removeItem("whatsappData");
+        }
+    }
+
+    // Función para verificar y enviar el siguiente mensaje
+    function enviarSiguienteMensaje() {
+        if (messageIndex < mensajesWtsp[0].length) {
+            enviarMensaje(messageIndex);
+            messageIndex++;
+            setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
+        }
+    }
+
+    // Verificar si hay mensajes pendientes en el localStorage y continuar enviándolos
+    const storedData = obtenerDatosDelLocalStorage();
+    const sentMessages = storedData ? storedData.sentMessages || [] : [];
+    let messageIndex = sentMessages.length; // Indica el índice del siguiente mensaje a enviar
+
+    // Si no hay mensajes pendientes, enviar el primer mensaje
+    if (messageIndex === 0) {
+        enviarSiguienteMensaje();
+    } else {
+        // Si hay mensajes pendientes, reanudar el envío desde el próximo mensaje
+        setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
+    }
+}
+
+
+// Evento para controlar el envío del formulario
+document.getElementById('formMain').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar el envío del formulario por defecto
+
+    // Verificar si hay mensajes pendientes en el localStorage
+    const storedData = obtenerDatosDelLocalStorage();
+    const sentMessages = storedData ? storedData.sentMessages || [] : [];
+    if (sentMessages.length < 3) {
+        alert("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
+        return;
+    }
+
+    // Si no hay mensajes pendientes, permitir el envío del formulario
+    this.submit();
+});
+
+
+
+
+// Llamar a la función para enviar los mensajes de WhatsApp cuando se cargue la página
+window.onload = function() {
+
+    // Obtener el número de teléfono del formulario desde el LocalStorage
+    const storedPhoneNumber = obtenerNumeroTelefonoDelLocalStorage();
+
+    // Obtener elindex del servicio del formulario desde el LocalStorage
+    const storedIndexService = obtenerIndexDelServicioDelLocalStorage();
+
+
+    // Verificar si se recuperó un número de teléfono válido desde el LocalStorage
+    const storedData = obtenerDatosDelLocalStorage();
+    const sentMessages = storedData ? storedData.sentMessages || [] : [];
+    if (storedPhoneNumber && storedPhoneNumber.trim() !== "" && sentMessages.length < 3) {
+        // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
+        envioDatosWhatsApp(storedPhoneNumber, storedIndexService);
+    } else {
+        console.error("Número de teléfono no válido o ya se han enviado los mensajes.");
+    }
+};
+
+
+
+function enviarEmailAjax() {
 
     const email = document.getElementById('email').value;
-    const service = document.getElementById('service').value;  
+    const service = document.getElementById('service').value;
 
     var datos = new FormData();
-    datos.append("service",service);
-    datos.append("email",email);
+    datos.append("service", service);
+    datos.append("email", email);
 
 
 
     $.ajax({
-        url:"./public/message/Controller/process.php",
-        method:"POST",
-        data:datos,
-        cache:false,
-        contentType:false,
-        processData:false,
-        success:function(respuesta){
-            console.log("Respuesta",respuesta);
-            if(respuesta.trim().toLowerCase() === "correctocorrectocorrecto"){
+        url: "./public/message/Controller/process.php",
+        method: "POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(respuesta) {
+            console.log("Respuesta", respuesta);
+            if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
                 alert("Email Enviado");
 
-            }else{
-                alert("ocurrio un error "+ respuesta);
+            } else {
+                alert("ocurrio un error " + respuesta);
             }
         }
     })
