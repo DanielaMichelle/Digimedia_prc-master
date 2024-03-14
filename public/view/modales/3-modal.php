@@ -508,7 +508,8 @@ function datos() {
     const telefonoInput = document.getElementById('phone');
     const emailInput = document.getElementById('email');
 
-    const telefono = telefonoInput.value.trim();
+    // Hacer que los 9 números esten juntos
+    const telefono = telefonoInput.value.replace(/\s/g, '');
     const email = emailInput.value.trim();
 
     const telefonoValido = objRegex.telefono.test(telefono);
@@ -517,15 +518,15 @@ function datos() {
 
     if (nombreInput.value === '') alert('El nombre no debe estar vacio')
 
-    if (!telefonoValido) alert("Debe de haber 9 digitos en el numero de telefono y deben de estar los numeros juntos.")
+    if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos")
 
     if (!emailValido) alert("Debe de ingresar un correo valido.")
 
     if (nombreInput.value != '' && telefonoValido && emailValido) {
-        alert("Todos los campos son correctos.")
+        // alert("Todos los campos son correctos.")
         toggleCerarForm();
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
-        envioDatosWhatsApp(telefonoInput.value);
+        envioDatosWhatsApp(telefono);
         enviarEmailAjax();
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
@@ -558,12 +559,10 @@ function enviandoDatosServer(form) {
         .catch(err => console.log(err))
 }
 
-// Agregar evento al botón de submit
-btnSubmit.addEventListener('click', () => {
-    modalContainer.style.display = 'none';
-});
-
-
+// // Agregar evento al botón de submit
+// btnSubmit.addEventListener('click', () => {
+//     modalContainer.style.display = 'none';
+// });
 
 
 
@@ -587,7 +586,7 @@ function obtenerDatosDelLocalStorage() {
 // Función para enviar los mensajes de WhatsApp
 function envioDatosWhatsApp(num) {
     const phone = "51" + num;
-    console.log("Iniciando envío de mensajes de WhatsApp para el número:", phone);
+    console.log("Enviando... mensajes a WhatsApp para el número:", phone);
 
     // Definir los intervalos de tiempo entre cada mensaje en milisegundos
     const intervalos = [0, 5000, 10000]; // Intervalos entre el primer, segundo y tercer mensaje
@@ -643,7 +642,7 @@ document.getElementById('formMain').addEventListener('submit', function(event) {
     // Verificar si hay mensajes pendientes en el localStorage
     const storedData = obtenerDatosDelLocalStorage();
     const sentMessages = storedData ? storedData.sentMessages || [] : [];
-    if (sentMessages.length < 3) {
+    if (sentMessages.length >= 1 && sentMessages.length < 3) {
         alert("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
         return;
     }

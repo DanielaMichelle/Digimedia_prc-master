@@ -384,7 +384,8 @@ function datos() {
     const telefonoInput = document.getElementById('phone');
     const emailInput = document.getElementById('email');
 
-    const telefono = telefonoInput.value.trim();
+    // Hacer que los 9 números esten juntos
+    const telefono = telefonoInput.value.replace(/\s/g, '');
     const email = emailInput.value.trim();
 
     const telefonoValido = objRegex.telefono.test(telefono);
@@ -393,15 +394,16 @@ function datos() {
 
     if (nombreInput.value === '') alert('El nombre no debe estar vacio')
 
-    if (!telefonoValido) alert("Debe de haber 9 digitos en el numero de telefono y deben de estar los numeros juntos.")
+    if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos")
 
     if (!emailValido) alert("Debe de ingresar un correo valido.")
 
 
     if (nombreInput.value != '' && telefonoValido && emailValido) {
+        // alert("Todos los campos son correctos.")
         modalContainer.style.display = 'none';
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
-        envioDatosWhatsApp(telefonoInput.value);
+        envioDatosWhatsApp(telefono);
         enviarEmailAjax();
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
@@ -512,13 +514,14 @@ document.getElementById('formMain').addEventListener('submit', function(event) {
     // Verificar si hay mensajes pendientes en el localStorage
     const storedData = obtenerDatosDelLocalStorage();
     const sentMessages = storedData ? storedData.sentMessages || [] : [];
-    if (sentMessages.length < 3) {
+
+    if (sentMessages.length >= 1 && sentMessages.length < 3) {
         alert("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
         return;
     }
 
     // Si no hay mensajes pendientes, permitir el envío del formulario
-    this.submit();
+    submit();
 });
 
 
