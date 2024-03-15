@@ -137,7 +137,7 @@
         </div>
     </main>
 
-    <script src="../js/preguntas.js"></script>
+    <script src="./public/js/preguntas.js"></script>
     <?php include_once './public/assets/footer.php' ?>
 
 </body>
