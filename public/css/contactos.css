@@ -7,3 +7,38 @@
 .enviar{
     width: 100%;
 }
+
+/* Media query de 768px pra abajo */
+@media (max-width: 768px) {
+    .enviar{
+        width: 96%;
+    }
+
+    .dist label{
+        width: fit-content;
+    }
+}
+
+@media (max-width: 427px) {
+    .enviar{
+        width: 96%;
+    }
+
+    .dist label{
+        width: fit-content;
+    }
+
+    .dist {
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 375px) {
+    .dist {
+        font-size: 3vw;
+    }
+    
+    .dist label {
+        width: min-content;
+    }
+}
