@@ -49,3 +49,22 @@
     display: none;
   }
 }
+.butonSub {
+  text-align: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.btn-login {
+  background: #009bff !important;
+
+  width: 50% !important;
+  margin: 0 !important;
+  position: relative;
+  left: 0 !important;
+}
+@media (max-width: 700px) {
+  .btn-login {
+    width: 70% !important;
+  }
+}
