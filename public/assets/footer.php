@@ -4,7 +4,7 @@
             <div class="row">
 
                 <div class="col-md-5">
-                    <h4><a href="index.php" class="text-white"><img src="./public/img/logo_footer2.webp" class="logoimagen" title="Digimedia!" alt="Logo"></a></h4>
+                    <h4><a href="index.php" class="text-white"><img src="./public/img/logoblanco.png" class="logoimagen" title="Digimedia!" alt="Logo"></a></h4>
                     <ul>
                         <li></li>
                         <p class="p">T&eacute;rminos del servicio</p>
