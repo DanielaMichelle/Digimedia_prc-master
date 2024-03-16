@@ -10,7 +10,7 @@
     margin: auto;
     z-index: 4000;
     background: rgba(0, 155, 255, 0.9);
-    overflow: hidden;
+    
     flex-wrap: wrap;
     justify-content: space-between;
     border-radius: 40px;
@@ -337,10 +337,11 @@
     }
 
     .btn-cerrar {
-        top: 5px;
+        top: -5px;
+        right: -6px;
         z-index: 95000;
-        width: 25px;
-        height: 25px;
+        width: 34px;
+        height: 34px;
     }
 
 
