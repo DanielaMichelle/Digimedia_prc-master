@@ -19,6 +19,8 @@
     <!-- Stylos Css propios -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/1bd2098557.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -150,8 +152,7 @@
         <!-- <div class="pt-3"></div> -->
         <div class="bota1">
 
-            <a href="contacto.php" class="boton__2"
-                style="box-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;text-decoration: none; 
+            <a href="contacto.php" class="boton__2" style="box-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;text-decoration: none; 
                 "><b>Contactar</b></a>
         </div>
         <div class="pt-3"></div>

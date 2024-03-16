@@ -42,7 +42,7 @@ footer ul li {
   width: 36px;
   height: 36px;
   background-color: var(--c-brand);
-  color: lightgrey;
+  color: #f83691;
   border: 2px solid var(--c-brand);
   display: inline-flex;
   align-items: center;
@@ -52,13 +52,22 @@ footer ul li {
 
 .social-icon:hover {
   background-color: lightblue;
-  color: var(--c-brand);
+  color:  lightblue;
+}
+
+.social-icon .fa-brands {
+  color: white; 
+}
+
+.social-icon:hover .fa-brands {
+  color: #f83691; 
 }
 
 a::selection{
   color: white;
   background-color: #f83691;
-}
+} 
+
 p::selection{
   color: white;
   background-color: #f83691;
