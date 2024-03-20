@@ -19,25 +19,45 @@
     <!-- Stylos Css propios -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <?php include_once './public/assets/header.php' ?>
 
+    <!-- Hero -->
     <section class="hero">
-        <img src="./public/img/inicio.webp" alt="hero imagen">
         <div class="container-hero">
-            <div>
+            <div class="hero-text">
                 <h1>¿No sabes por dónde empezar?</h1>
                 <p>Contáctanos e impulsa tu presencia en la web con una <span>asesoría gratuita</span></p>
                 <button class="hero-buttom">Comienza hoy mismo</button>
             </div>
-        </div>
-        <div class="hero-redes-sociales">
-            <a href="#">Red Social</a>
-            <a href="#">Red Social</a>
-            <a href="#">Red Social</a>
-            <a href="#">Red Social</a>
+            <ul class="hero-media">
+                <li class="nav-item">
+                    <a class="social-icon-hero"
+                        href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name"
+                        title="Linkedin!" aria-label="Nuestro Linkedin.."><i id="linkedin-hero-icon"
+                            class="fa-brands fa-linkedin-in fa-2xl"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="social-icon-hero" href="https://www.instagram.com/digimediamkt/" title="Instagram!"
+                        aria-label="Nuestro Instagram.."><i class=" fa-brands fa-instagram fa-2xl"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="social-icon-hero" href="https://www.youtube.com/@digimediamarketing2636" title="Youtube!"
+                        aria-label="Nuestro Youtube.."><i class="fa-brands fa-youtube fa-2xl"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="social-icon-hero" href="https://www.facebook.com/DigiMedia.Marketing1" title="Facebook!"
+                        aria-label="Nuestro Facebook.."><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -150,17 +170,15 @@
         <!-- <div class="pt-3"></div> -->
         <div class="bota1">
 
-            <a href="contacto.php" class="boton__2"
-                style="box-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;text-decoration: none; 
+            <a href="contacto.php" class="boton__2" style="box-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;text-decoration: none; 
                 "><b>Contactar</b></a>
         </div>
         <div class="pt-3"></div>
     </div>
 
     <?php include_once './public/include/section_maps.php' ?>
-
+    <script src="./public/js/interactividad.js"></script>
     <?php include_once './public/assets/footer.php' ?>
-
 </body>
 
 </html>

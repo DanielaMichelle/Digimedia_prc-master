@@ -335,21 +335,17 @@
 const btnCerrar = document.querySelector('.btn-cerrar');
 const modalContainer = document.querySelector('.modal-main-background');
 const btnForm = document.querySelector(".go-button");
+const btnHero = document.querySelector(".hero-buttom");
 
-
-document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
-
-// Función para mostrar el modal después de 1 segundos
-function mostrarModalDespuesDe5Segundos() {
+// Abre el modal al pulsar el botón del hero
+btnHero.addEventListener('click', () => {
     if (localStorage.getItem("whatsappData")) {
         modalContainer.style.display = 'none';
     } else {
-        setTimeout(() => {
-            modalContainer.style.display = 'flex';
-            validarDatos();
-        }, 1000); // 1000 milisegundos = 1 segundos
+        modalContainer.style.display = 'flex';
+        validarDatos();
     }
-}
+});
 
 // Agregar evento al botón de cerrar
 btnCerrar.addEventListener('click', () => {
