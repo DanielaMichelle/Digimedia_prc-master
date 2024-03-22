@@ -1,5 +1,5 @@
 footer {
-  background-color: rgb(8, 134, 236);
+  background: linear-gradient(to right, #4338ed, #fa1d8e);
   padding-top: 80px;
 }
 
@@ -9,7 +9,7 @@ footer h4 {
 }
 
 footer p,
-footer li, 
+footer li,
 footer li a {
   color: rgb(255, 255, 255);
 }
@@ -25,12 +25,12 @@ footer ul li {
 
 .footer-top {
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255, 0.1);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.943);
 }
 
 .footer-bottom {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .footer-bottom a {
@@ -54,16 +54,16 @@ footer ul li {
   color: var(--c-brand);
 }
 
-a::selection{
+a::selection {
   color: white;
   background-color: #f83691;
 }
-p::selection{
+p::selection {
   color: white;
   background-color: #f83691;
 }
 
-h4::selection{
+h4::selection {
   color: white;
   background-color: #f83691;
 }

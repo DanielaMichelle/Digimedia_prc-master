@@ -6,7 +6,7 @@
                 <div class="col-md-5">
                     <h4><a href="index.php" class="text-white"><img src="./public/img/logoblanco.png" class="logoimagen"
                                 title="Digimedia!" alt="Logo"></a></h4>
-                    <ul>
+                    <!--<ul>
                         <li></li>
                         <p class="p">T&eacute;rminos del servicio</p>
                         </li>
@@ -38,7 +38,7 @@
                                 href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name"
                                 title="Linkedin!" aria-label="Nuestro Linkedin.."><i class="bi bi-linkedin"></i></a>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
 
 
