@@ -191,13 +191,13 @@
     }
     
     #slider{
-        border: 1px solid black;
+        
         height: auto;
         position: relative;
         height: 370px;
     }
     #slides{
-        border: 1px solid red;
+        
         padding: 0 30px;
        
         position: relative;
@@ -208,7 +208,7 @@
        
         padding: 0;
         position: relative;
-        border: 1px solid black;
+        
         height: 370px;
         top: -30px;
         
@@ -342,12 +342,14 @@
 }
 .textos h4{
     background: transparent;
+    font-family:"Open Sans", sans-serif;
 }
 .textos p{
     background: transparent;
     position: relative;
     font-size: 1.1vw;
     top: -40px;
+    font-family:"Open Sans", sans-serif;
     
     
 }
@@ -430,6 +432,7 @@
     #slide3:checked ~ #slides .container_grid{
         margin-left: -100%;
     }
+   
    
     #slides .container_grid{
         transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
