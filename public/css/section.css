@@ -83,7 +83,12 @@
 
 .hero .hero-media .social-icon-hero {
   color: #ffffff;
+  
 }
+
+.hero .hero-media .social-icon-hero .fa-brands{
+  font-size: 2rem;
+} 
 
 /* Hero Servicios */
 .hero-servicios .container-hero {
@@ -246,6 +251,13 @@
     margin: 0 auto;
     margin-top: 3rem;
   }
+
+  .hero .hero-media {
+    gap: 8px;
+  }
+  .hero .hero-media .social-icon-hero .fa-brands{
+    font-size: 1rem;
+  } 
 
   /* Hero Redes Sociales */
   .hero .hero-media {
