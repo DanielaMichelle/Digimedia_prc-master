@@ -136,7 +136,7 @@
         font-size: 4.7vw;
     }
     .content_section > p{
-        font-size: 3.2vw;
+        font-size: 3.4vw;
     }
     .firts_section{
         padding: 0 50px;
