@@ -553,22 +553,6 @@ small {
   justify-content: center;
 }
 
-.our-services {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
-  background: #ff0c7d;
-  width: 450px;
-  height: 70px;
-  border-radius: 50px;
-  font-family: avenir-lt-w01_85-heavy1475544, sans-serif;
-}
-
-.our-services b {
-  font-size: 40px;
-  line-height: normal;
-  color: white;
-  padding: 0px 0px 0px 0px;
-  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
-}
 
 .titulo1 {
   color: white;
@@ -619,13 +603,6 @@ small {
   font-size: 20px;
 }
 
-.container-ourservices td {
-  padding-bottom: 25px;
-}
-
-.table-ourservices {
-  margin-top: 30px;
-}
 
 /* -------- Mediaquerys de Bootstrap ---------- 
 -------------------------------------------------*/
@@ -655,16 +632,6 @@ small {
     text-align: center;
   }
 
-  .our-services {
-    height: 60px;
-    width: 80%;
-    padding-top: 10px;
-  }
-
-  .our-services b {
-    font-size: 20px;
-  }
-
   .footer-col {
     width: 100%;
   }
@@ -676,11 +643,6 @@ small {
 
   #d {
     padding-top: 20px;
-  }
-
-  .container-ourservices {
-    display: flex;
-    flex-direction: column;
   }
 
   .con-anun {
@@ -800,13 +762,6 @@ small {
   .parrafos1 p {
     font-size: 17px;
   }
-
-  .table-ourservices {
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
-  }
-
   .ro {
     display: block;
     text-align: center;

@@ -66,99 +66,56 @@
     <!-- modal principal -->
     <?php include_once './public/include/modal_main.php'?>
 
-    <div class="banner-imag">
-        <div class="container">
-            <div class="pt-4"></div>
-            <center>
-                <div class="our-services">
-                    <span>
-                        <div class="pt-2"></div>
-                        <b>Nuestros Servicios</b>
-                    </span>
-                </div>
-            </center>
-            <table class="table-ourservices">
-                <thead>
-                    <th class="col-2"></th>
-                    <th class="col-3"></th>
-                    <th class="col-2"></th>
-                    <th class="col-5"></th>
-                    <th></th>
-                </thead>
-                <tbody>
-                    <tr class="container-ourservices">
-                        <td></td>
-                        <td>
-                            <div class="img_cuadro2">
-                                <a data-testid="linkElement" href="View/ds-web.php" target="_self">
-                                    <img href="View/ds-web.php" loading="lazy" title="Diseño y desarrollo web"
-                                        src="./public/img/ds_web.webp" alt="Img no encontrada.." fetchpriority="high"
-                                        class="img_cuadro1">
-                                </a>
-                                <a href="View/ds-web.php" target="_self">
-                                    <span style="font-size:20px;">
-                                        <center><span class="texto_cuadro1"><b class="texto_cuadro">DISEÑO
-                                                    Y DESARROLLO WEB</b></span>
-                                        </center>
-                                    </span>
-                                </a>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td>
-                            <div class="img_cuadro2">
-                                <a href="View/rd-sociales.php" data-testid="linkElement" target="_self">
-                                    <img loading="lazy" title="Gestion de redes sociales"
-                                        src="./public/img/gestion_redes.webp" alt="Img no encontrada.."
-                                        fetchpriority="high" class="img_cuadro1">
-                                </a>
-                                <a href="View/rd-sociales.php" target="_self">
-                                    <span style="font-size:20px;">
-                                        <center><span class="texto_cuadro1"><b class="texto_cuadro">
-                                                    GESTIÓN DE REDES SOCIALES</b></span></center>
-                                    </span>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="container-ourservices">
-                        <td></td>
-                        <td>
-                            <div class="img_cuadro2">
-                                <a data-testid="linkElement" href="View/marketing-digital.php" target="_self">
-                                    <img href="View/marketing-digital.php" loading="lazy"
-                                        src="./public/img/marketing_gestion.webp" alt="Img no encontrada.."
-                                        title="Marketing y gestion de digital" fetchpriority="high" class="img_cuadro1">
-                                </a>
-                                <a href="View/marketing-digital.php" target="_self">
-                                    <span style="font-size:20px;">
-                                        <center><span class="texto_cuadro1"><b class="texto_cuadro">MARKETING
-                                                    Y GESTIÓN DIGITAL</b></span></center>
-                                    </span>
-                                </a>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td>
-                            <div class="img_cuadro2">
-                                <a data-testid="linkElement" href="View/branding.php" target="_self">
-                                    <img loading="lazy" title="Branding y diseño" src="./public/img/branding.webp"
-                                        alt="Img no encontrada.." fetchpriority="high" class="img_cuadro1">
-                                </a>
-                                <a href="View/branding.php" target="_self">
-                                    <span style="font-size:20px;">
-                                        <center><span class="texto_cuadro1"><b class="texto_cuadro">BRANDING
-                                                    & DISEÑO</b></span></center>
-                                    </span>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="pt-4"></div>
+    <!-- Nuestros Servicios -->
+    <section class="nuestros-servicios">
+        <div class="nuestros-servicios-text">
+            <div class="nuestros-servicios-text-top">
+                <h2>Nuestros Servicios</h2>
+                <p>Digimedia es una empresa de marketing digital, que se enfoca en potenciar tu emprendimiento a nivel
+                    online. Además, le brinda a tu emprendimiento estrategias que ayuden a cumplir los objetivos de
+                    manera eficaz. Somos un grupo de personas comprometidas con el desarrollo de cada marca que nos
+                    contacta.</p>
+            </div>
+            <div class="nuestros-servicios-text-bottom">
+                <span class="nuestros-servicios-text-interactivo">*La creación de una experiencia web óptima mediante la
+                    presentación organizada de contenido.*</span>
+                <figure class="nuestros-servicios-img-interactivo">
+                    <!-- <img src="" alt="">                 -->
+                    <figure>
+            </div>
         </div>
-    </div>
+
+        <div class="nuestros-servicios-secciones">
+            <div class="diseno-desarrollo-web">
+                <h3>Diseño y Desarrollo Web</h3>
+                <a href="servicios/1.php">
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div>
+
+            <div class="diseno-desarrollo-web">
+                <h3>Gestión de Redes Sociales</h3>
+                <a href="servicios/2.php">
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div>
+
+            <div class="diseno-desarrollo-web">
+                <h3>Marketing y Gestión Digital</h3>
+                <a href="servicios/3.php">
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div>
+
+            <div class="diseno-desarrollo-web">
+                <h3>Branding y Diseño</h3>
+                <a href="servicios/4.php">
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+
+    </section>
 
     <?php include_once './public/include/section_message.php' ?>
 
