@@ -123,8 +123,9 @@
 
     </section>
 
-    <?php include_once './public/include/section_message.php' ?>
+    <!-- php include_once './public/include/section_message.php' -->
 
+    <!-- Anuncio contacto -->
     <div class="con-anun3" style="background: linear-gradient(to right,#0199FE,#672BB7);">
         <div class="parrafos1">
             <h5 class="title-go" style="text-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;"><Big><Big>¿Quieres iniciarte en el
