@@ -790,6 +790,153 @@ small {
   }
 }
 
+/* Nuestros Servicios */
+.nuestros-servicios {
+  display: flex;
+  padding: 5rem;
+  gap: 4vw;
+}
+
+.nuestros-servicios-text {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  width: 50%;
+}
+
+.nuestros-servicios-text-top h2 {
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.nuestros-servicios-text-top p {
+  letter-spacing: 2px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+  margin: 8% 0 8% 0;
+}
+
+.nuestros-servicios-text-bottom {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+
+.nuestros-servicios-text-interactivo {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.nuestros-servicios-img-interactivo {
+  width: 100%;
+  height: 18vw;
+  margin-top: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.nuestros-servicios-img-interactivo img {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nuestros-servicios-secciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.nuestros-servicios-secciones .seccion {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-end;
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 22rem;
+  height: 22rem;
+  padding: 6rem 4rem;
+}
+
+.nuestros-servicios-secciones .seccion h3 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 23px;
+  margin-bottom: 1rem;
+}
+
+.nuestros-servicios-secciones .seccion p {
+  display: none;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.nuestros-servicios-secciones .seccion i {
+  font-size: 3rem;
+  color: white;
+  visibility: hidden;
+}
+
+.nuestros-servicios-secciones .marketing-gestion-digital {
+  position: relative;
+  top: -1rem;
+}
+
+.nuestros-servicios-secciones .branding-diseno {
+  position: relative;
+  top: -1rem;
+  left: -1rem;
+}
+
+.nuestros-servicios-secciones .gestion-redes-sociales {
+  position: relative;
+  left: -1rem;
+}
+
+/* Hover nuestros-servicios */
+.nuestros-servicios-secciones .diseno-desarrollo-web:hover {
+  background-image: linear-gradient(to bottom, #088ef7, #3184f0, #457ae8, #546fdf, #6164d5, #785ccf, #8c53c8, #9d49bf, #ba3db4, #d32ea6, #e81b95, #f80681);
+  cursor: pointer;  
+  border: none;
+  z-index: 10;
+}
+
+.nuestros-servicios-secciones .gestion-redes-sociales:hover {
+  background-image: linear-gradient(to bottom, #f4057e, #e0008c, #c8009a, #ab0ba6, #8720af);
+  cursor: pointer; 
+  border: none;
+  z-index: 10;
+}
+
+.nuestros-servicios-secciones .marketing-gestion-digital:hover {
+  background-image: linear-gradient(to bottom, #7329b8, #614cd0, #4967e3, #2c7ff1, #0095fc);
+  cursor: pointer;  
+  border: none;
+  z-index: 10;
+}
+
+.nuestros-servicios-secciones .branding-diseno:hover {
+  background-image: linear-gradient(to bottom, #ff5f28, #ff4c3d, #ff3850, #ff2364, #fe0a77);  cursor: pointer;  
+  border: none;
+}
+
+.nuestros-servicios-secciones .seccion:hover i {
+  visibility: visible;
+}
+
+.nuestros-servicios-secciones .seccion:hover h3 {
+  color: white;
+}
+
 /* MEDIA QUERIE TABLET */
 @media (min-width: 921px) and (max-width: 1200px) {
   .table-contact-message {
@@ -834,5 +981,220 @@ small {
     align-items: center;
     text-align: center;
     margin-bottom: 20px;
+  }
+}
+
+
+@media screen and (max-width: 1301px) {
+  /* Nuestros Servicios */
+  .nuestros-servicios {
+    gap: 3vw;
+    padding: 4rem 2rem 4rem 4rem;
+  }
+
+  .nuestros-servicios-text-top h2 {
+    font-size: 36px;
+  }
+
+  .nuestros-servicios-secciones .seccion {
+    width: 20rem;
+    height: 20rem;
+    padding: 4rem 3rem;
+  }
+}
+
+@media screen and (max-width: 1157px) {
+  /* Nuestros Servicios */
+  .nuestros-servicios-secciones .seccion {
+    width: 18rem;
+    height: 18rem;
+    padding: 5rem 3rem;
+  }
+
+  .nuestros-servicios-secciones .seccion h3 {
+    font-size: 18px;
+  }
+
+  .nuestros-servicios-secciones .seccion i {
+    font-size: 2rem;
+  }
+
+  .nuestros-servicios-text-top p {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 6% 0 6% 0;
+  }
+
+  .nuestros-servicios-text-interactivo {
+    font-size: 21px;
+    line-height: 23px;
+  }
+}
+
+
+@media screen and (max-width: 1041px) {
+  .nuestros-servicios-secciones .seccion {
+    width: 16rem;
+    height: 16rem;
+    padding: 4rem 3rem;
+  }
+
+  .nuestros-servicios-secciones .seccion h3 {
+    font-size: 16px;
+  }
+
+  .nuestros-servicios-text-interactivo {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+
+@media screen and (max-width: 984px) {
+  .nuestros-servicios {
+    flex-direction: column;
+    padding: 4rem 2rem 2rem;
+  }
+
+  .nuestros-servicios-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nuestros-servicios-text-top h2 {
+    font-size: 30px;
+  }
+
+  .nuestros-servicios-text-top p {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .nuestros-servicios-secciones .seccion:hover {
+    padding: 2rem 3rem;
+  }
+
+  .nuestros-servicios-secciones .seccion:hover p  {
+    display: block;
+  }
+
+  .nuestros-servicios-text-bottom {
+    display: none;
+  }
+
+  .nuestros-servicios-text-interactivo {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+
+  .nuestros-servicios-secciones .marketing-gestion-digital {
+    top: 0;
+    left: -2rem;
+  }
+
+  .nuestros-servicios-secciones .branding-diseno {
+    top: 0;
+    left: -3rem;
+  }
+  
+  .nuestros-servicios-secciones .diseno-desarrollo-web {
+    justify-self: flex-end;
+  }
+
+  .nuestros-servicios-secciones .marketing-gestion-digital {
+    top: -1rem;
+    left: 0rem;
+    justify-self: flex-end;
+  }
+
+  .nuestros-servicios-secciones .branding-diseno {
+    top: -1rem;
+    left: -1rem;
+  }
+  
+}
+
+
+@media screen and (max-width: 560px) {
+  .nuestros-servicios {
+    padding: 2rem 2rem 0rem;
+  }
+
+  .nuestros-servicios-secciones {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .nuestros-servicios-text-top h2 {
+    font-size: 24px;
+  }
+
+  .nuestros-servicios-text-top p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .nuestros-servicios-secciones .diseno-desarrollo-web {
+    justify-self: center;
+  }
+
+  .nuestros-servicios-secciones .gestion-redes-sociales {
+    left: 0;
+    justify-self: center;
+    top: -1rem;
+  }
+
+  .nuestros-servicios-secciones .marketing-gestion-digital {
+    top: -2rem;
+    justify-self: center;
+  }
+
+  .nuestros-servicios-secciones .branding-diseno {
+    top: -3rem;
+    left: 0;
+    justify-self: center;
+  }
+
+  .nuestros-servicios-secciones .marketing-gestion-digital:hover {
+    z-index: 10;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .nuestros-servicios-secciones .seccion {
+    width: 12rem;
+    height: 12rem;
+    padding: 3rem 2rem;
+  }
+
+  .nuestros-servicios-secciones .seccion h3 {
+    font-size: 12px;
+  }
+
+  .nuestros-servicios-secciones .seccion i {
+    font-size: 1.1rem;
+  }
+
+  
+  .nuestros-servicios-secciones .seccion:hover h3 {
+    margin-bottom: 4px;
+  }
+
+  .nuestros-servicios-secciones .seccion:hover p {
+    font-size: 8px;
+    margin-bottom: 4px;
+  }
+
+  .nuestros-servicios-text-top h2 {
+    font-size: 20px;
+  }
+
+  .nuestros-servicios-text-top p {
+    font-size: 10px;
+    line-height: 11px;
+    letter-spacing: 1px;
   }
 }
