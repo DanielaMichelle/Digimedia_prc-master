@@ -851,6 +851,7 @@ small {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  height: fit-content;
 }
 
 .nuestros-servicios-secciones .seccion {
@@ -860,9 +861,9 @@ small {
   justify-content: flex-end;
   border-radius: 50%;
   border: 1px solid black;
-  width: 22rem;
-  height: 22rem;
-  padding: 6rem 4rem;
+  width: 20rem;
+  height: 20rem;
+  padding: 4rem 3rem;
 }
 
 .nuestros-servicios-secciones .seccion h3 {
