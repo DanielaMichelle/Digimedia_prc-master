@@ -25,6 +25,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <!-- Fuente Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -77,39 +80,42 @@
                     contacta.</p>
             </div>
             <div class="nuestros-servicios-text-bottom">
-                <span class="nuestros-servicios-text-interactivo">*La creación de una experiencia web óptima mediante la
-                    presentación organizada de contenido.*</span>
+                <span class="nuestros-servicios-text-interactivo"></span>
                 <figure class="nuestros-servicios-img-interactivo">
-                    <!-- <img src="" alt="">                 -->
-                    <figure>
+                    <img src="" alt="desarrollo y diseño web">
+                </figure>
             </div>
         </div>
 
         <div class="nuestros-servicios-secciones">
-            <div class="diseno-desarrollo-web">
+            <div class="seccion diseno-desarrollo-web">
                 <h3>Diseño y Desarrollo Web</h3>
-                <a href="servicios/1.php">
+                <p>*La creación de una experiencia web óptima mediante la presentación organizada de contenido.*</p>
+                <a href="servicios.php?id=1">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
 
-            <div class="diseno-desarrollo-web">
+            <div class="seccion gestion-redes-sociales">
                 <h3>Gestión de Redes Sociales</h3>
-                <a href="servicios/2.php">
+                <p>*La optimización estratégica para impacto, alcance y presencia de una marca.*</p>
+                <a href="servicios.php?id=2">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
 
-            <div class="diseno-desarrollo-web">
+            <div class="seccion marketing-gestion-digital">
                 <h3>Marketing y Gestión Digital</h3>
-                <a href="servicios/3.php">
+                <p>*La ampliación de alcance y fortalecimiento de relaciones con clientes en línea.*</p>
+                <a href="servicios.php?id=3">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
 
-            <div class="diseno-desarrollo-web">
+            <div class="seccion branding-diseno">
                 <h3>Branding y Diseño</h3>
-                <a href="servicios/4.php">
+                <p>*La unión de estos genera experiencias memorables, conexión emocional y diferenciación de otros.*</p>
+                <a href="servicios.php?id=4">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
@@ -117,8 +123,9 @@
 
     </section>
 
-    <?php include_once './public/include/section_message.php' ?>
+    <!-- php include_once './public/include/section_message.php' -->
 
+    <!-- Anuncio contacto -->
     <div class="con-anun3" style="background: linear-gradient(to right,#0199FE,#672BB7);">
         <div class="parrafos1">
             <h5 class="title-go" style="text-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;"><Big><Big>¿Quieres iniciarte en el
