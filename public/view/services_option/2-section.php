@@ -184,10 +184,10 @@
         padding: 0 35px;
     }
     .content_section > h3{
-        font-size: 4.2vw;
+        font-size: 5vw;
     }
     .content_section > p{
-        font-size: 3.2vw;
+        font-size: 4vw;
     }
     
     #slider{
