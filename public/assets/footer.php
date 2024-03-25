@@ -2,7 +2,7 @@
 <footer>
     <div class="footer-top">
         <div class="container">
-            <div class="row">
+            <div class="row row_des">
 
                 <div class="col-md-5">
                     <h4><a href="index.php" class="text-white"><img src="./public/img/logoblanco.png" class="logoimagen"
