@@ -125,7 +125,125 @@
   }
 }
 
-.form {
+/* CONTACTO */
+.contacto {
+  width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.contacto--map__title {
+  text-align: center;
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+.contacto--map__title h2 {
+  color:  rgb(248, 54, 204);
+  font-weight: 600;
+  margin: 0;
+}
+
+.contacto--map__title p {
+  font-style: italic;
+  color: rgb(26, 25, 25);
+  font-size: 22px;
+}
+
+.contacto--map__container {
+  text-align: start;
+}
+
+.contacto--map__container .message {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+.contacto--map__container .map {
+  height: 20rem;
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.contacto--map__container .address {
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.container-form  {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+.container-form .label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(26, 25, 25);
+  margin-left: 1rem;
+}
+
+.container-form .form-control {
+  background-color: #169ff4;
+  color: white;
+  font-weight: 200;
+  border-radius: 50px;
+  height: 40px;
+}
+
+.container-form .form-control::placeholder {
+  color: white;
+  font-weight: 200;
+  padding-left: 1rem;
+}
+
+.container-form #mensaje {
+  height: 8rem;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.container-form #servicio {
+  padding-left: 2rem;
+}
+
+.container-form .dist {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-form .dist input {
+  background-color: #6434d1;
+}
+
+
+.container-form .dist label {
+  color: black;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.container-form .enviar {
+  margin-top: 15px;
+  width: auto;
+  padding: 10px 32px;
+  border: none;
+  background-color: rgb(255 3 127);
+  opacity: 0.7;
+  color: white;
+  transition: 0.7s;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 4px;
+  border-radius: 50px;
+}
+
+
+/* .form {
   margin-top: 80px;
   display: flex;
   background-color: #f5f5f5;
@@ -153,7 +271,7 @@
   opacity: 0.7;
   color: white;
   transition: 0.7s;
-}
+} */
 
 @media screen and (max-width: 1024px) {
   /* Hero Servicios */
