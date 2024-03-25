@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contDigi{
+    width: 100%;
+    height: 250px;
+    background-color: #6f4be8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+.contTextPolitica{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.contTextPolitica .contTextInfoPolitica{
+    width: 80%;
+    height: 500px;
+}
+
+.contTextPolitica .contTextInfoPolitica .spacioDigi{
+    padding-top: 30px;
+}
+
+.contTextPolitica .contTextInfoPolitica .spaceInfoPolitica{
+    padding-top: 30px;
+}
