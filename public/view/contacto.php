@@ -119,7 +119,7 @@
 
                     </div>
 
-                    <div class="pt-3" id="ps"></div>
+                    <div class="" id="ps"></div>
                     <input type="submit" value="Enviar" class="enviar">
                 </form>
             </div>

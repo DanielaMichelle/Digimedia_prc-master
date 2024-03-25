@@ -216,6 +216,11 @@
   flex-direction: column;
 }
 
+.container-form .dist div {
+  display: grid;
+  grid-template-columns: min-content max-content;
+}
+
 .container-form .dist input {
   background-color: #6434d1;
 }
@@ -224,7 +229,7 @@
 .container-form .dist label {
   color: black;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 14px;  
 }
 
 .container-form .enviar {
@@ -242,36 +247,16 @@
   border-radius: 50px;
 }
 
+@media screen and (max-width: 1135px) {
+  /* CONTACTO */
+  .contacto {
+    grid-template-columns: 1fr 1fr;
+  }
 
-/* .form {
-  margin-top: 80px;
-  display: flex;
-  background-color: #f5f5f5;
+  .contacto--map__title {
+    padding-right: 2rem;
+  }
 }
-
-.cont_form_img img {
-  width: 45vw;
-  height: 100vh;
-  object-fit: cover;
-  object-position: center;
-}
-
-.cont_form_data .cont_form_sect {
-  width: 50vw;
-  height: auto;
-  margin-left: 15px;
-}
-
-.enviar {
-  margin-top: 15px;
-  width: 30%;
-  padding: 6px;
-  border: none;
-  background-color: red;
-  opacity: 0.7;
-  color: white;
-  transition: 0.7s;
-} */
 
 @media screen and (max-width: 1024px) {
   /* Hero Servicios */
@@ -329,6 +314,18 @@
   /* Hero Redes Sociales */
   .hero .hero-media {
     padding-right: 10vw;
+  }
+
+  /* Contacto */
+  .contacto {
+    grid-template-columns: 1fr;
+    width: 85%;
+    margin: 8rem auto 2rem;
+    gap: 2rem;
+  }
+
+  .contacto--map__title {
+    padding: 0;
   }
 }
 
@@ -395,6 +392,55 @@
     padding-bottom: 1rem;
   }
 
+  /* Contacto */
+  .container-form #mensaje {
+    height: 6rem;
+  }
+
+  .contacto--map__title p {
+    font-size: 16px;
+  }
+
+  .contacto--map__title h2 {
+    font-size: 24px;
+  }
+
+  .contacto--map__container .message {
+    font-size: 10px;
+  }
+
+  .contacto--map__container .map {
+    height: 10rem;
+  }
+
+  .contacto--map__container .address {
+    font-size: 10px;
+  }
+
+  .container-form .label {
+    font-size: 10px;
+  }
+
+  .container-form .form-control::placeholder {
+    font-size: 12px;
+  }
+
+  .container-form .form-control {
+   font-size: 12px;
+  }
+
+  .container-form #mensaje {
+    padding: 14px;
+  }
+
+  .container-form .dist label {
+    font-size: 10px;
+  }
+
+  .container-form .enviar {
+    margin: 1rem 0 0;
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 375px) {
