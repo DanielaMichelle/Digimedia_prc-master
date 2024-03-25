@@ -10,7 +10,7 @@
 
         <div class="contDigi">
             <div class="contDigiImg">
-                <img src="../logo_footer.webp" alt>
+            <img src="../../img/logo_footer.webp" alt="Img digimedia">
             </div>
             <div class="contText">
                 <h1>Terminos y condiciones</h1>
@@ -87,6 +87,8 @@
 
             </div>
         </div>
+
+        
 
     </body>
 </html>
