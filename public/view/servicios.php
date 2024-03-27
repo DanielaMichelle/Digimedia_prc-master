@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="./public/css/inicio.css">
     <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/footer.css">
-    <link rel="stylesheet" href="./public/css/section.css">
     <link rel="stylesheet" href="./public/css/servicios.css">
+    <link rel="stylesheet" href="./public/css/section.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"

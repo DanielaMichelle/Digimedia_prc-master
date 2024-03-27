@@ -10,14 +10,14 @@
 <section class="con-anun3 anuncio-diseno-desarrollo">
     <h2>Consolida tu presencia web, diseña con nosotros tu página web</h2>
     <div class="bota1">
-        <a href="contacto.php" title="¡Contactanos!" class="boton__2">Incrementa tus ventas</a>
+        <a href="#" title="¡Contactanos!" class="boton__2" onclick="return false;">Incrementa tus ventas</a>
     </div>
 </section>
 
 <script>
 const mensajesDisenoDesarrollo = [{
         mensaje: "Consolida tu presencia web, diseña con nosotros tu página web",
-        mensajeBtn: "incrementa tus ventas",
+        mensajeBtn: "Incrementa tus ventas",
     },
     {
         mensaje: "Transforma tu sitio web en una experiencia única",

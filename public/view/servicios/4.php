@@ -12,7 +12,7 @@
     <h2>Ofrecemos la primera asesoría</h2>
     <span>Gratis</span>
     <div class="bota1">
-        <a href="contacto.php" title="¡Contactanos!" class="boton__2">Incrementa tus ventas</a>
+        <a href="#" title="¡Contactanos!" class="boton__2" onclick="return false;">Incrementa tus ventas</a>
     </div>
 </section>
 
