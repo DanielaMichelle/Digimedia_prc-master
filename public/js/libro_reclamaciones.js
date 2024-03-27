@@ -116,7 +116,7 @@ function limpiarDatos(nombre, apellido, documento, numeroDocumento, email, celul
     servicioContratado.value = "";
     reclamoPerson.value = "";
 
-    checkReclamoForm.value = "";
-    aceptaPoliticaPrivacidad.value = "";
+    checkReclamoForm.checked = false;
+    aceptaPoliticaPrivacidad.checked = false;
 }
 
