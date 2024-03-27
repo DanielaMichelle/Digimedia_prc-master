@@ -101,7 +101,7 @@
                     <div class="dist" id="con">
                         <div>
                             <input type="hidden" name="emailMarck" value="no" id="email">
-                            <input type="checkbox" name="emailMarck" value="si" id="email">
+                            <input class="checkbox" type="checkbox" name="emailMarck" value="si" id="email">
                             <label for="email">Email Marketing</label>
                         </div>
 
@@ -116,7 +116,6 @@
                             <input type="checkbox" name="production" value="si" id="production">
                             <label for="production">Production Process Emails</label>
                         </div>
-
                     </div>
 
                     <div class="" id="ps"></div>
@@ -124,6 +123,8 @@
                 </form>
             </div>
         </div>
+
+
     </section>
 
     <div class="col">
@@ -148,6 +149,28 @@
 
     <?php include_once './public/assets/footer.php' ?>
 
+    <!-- Botones -->
+    <!-- <div class="botones-contacto"> -->
+    <!-- <div class="horario"> -->
+    <!-- <figure> -->
+    <!-- <img src="./public/img/ubicacion.png" alt="ubicacion"> -->
+    <!-- </figure> -->
+    <!-- <div class="horario--text"> -->
+    <!-- <span>Horario</sp> -->
+    <!-- <div class="horario--container"> -->
+    <!-- <div>
+                            <p>Lunes - Viernes</p>
+                            <span>8:00 am - 8:00 pm</span>
+                        </div>
+                        <div>
+                            <p>Lunes - Viernes</p>
+                            <span>8:00 am - 8:00 pm</span>
+                        </div> -->
+    <!-- </div>
+            </div>
+        </div>
+    </div> -->
+    </div>
 
     <script>
     const form = document.querySelector("#formulario");

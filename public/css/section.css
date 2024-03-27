@@ -193,12 +193,14 @@
   font-weight: 200;
   border-radius: 50px;
   height: 40px;
+  padding-left: 2rem;
 }
 
-.container-form .form-control::placeholder {
+.container-form .form-control:focus,
+.container-form .form-control:not(:placeholder-shown),
+.container-form .form-control::placeholder{
+  background-color: #169ff4;
   color: white;
-  font-weight: 200;
-  padding-left: 1rem;
 }
 
 .container-form #mensaje {
@@ -221,11 +223,6 @@
   grid-template-columns: min-content max-content;
 }
 
-.container-form .dist input {
-  background-color: #6434d1;
-}
-
-
 .container-form .dist label {
   color: black;
   letter-spacing: 1px;
@@ -246,6 +243,37 @@
   letter-spacing: 4px;
   border-radius: 50px;
 }
+
+.botones-contacto {
+  width: 20rem;
+  height: 14rem;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  right: 0;
+}
+
+.botones-contacto .horario {
+  background-color: #6a27b5;
+  display: flex;
+}
+
+.botones-contacto .horario figure {
+  border-radius: 50px;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+}
+
+.botones-contacto .horario .horario--text {
+  display: flex;
+  flex-direction: column;
+}
+/* 
+.botones-contacto .horario .horario--text .horario--container {
+
+} */
+
 
 @media screen and (max-width: 1135px) {
   /* CONTACTO */

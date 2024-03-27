@@ -9,8 +9,8 @@ body .anuncio-branding-diseno {
   padding: 2rem;
 }
 
-body .anuncio-diseno-desarrollo p,
-body .anuncio-branding-diseno p {
+body .anuncio-diseno-desarrollo h2,
+body .anuncio-branding-diseno h2 {
   color: white;
   margin: 0;
   font-size: 3vw;
@@ -54,8 +54,8 @@ body .anuncio-branding-diseno .bota1 a:hover {
 
 /* Media Queries */
 @media screen and (max-width: 1024px) {
-  body .anuncio-diseno-desarrollo p,
-  body .anuncio-branding-diseno p,
+  body .anuncio-diseno-desarrollo h2,
+  body .anuncio-branding-diseno h2,
   body .anuncio-branding-diseno span {
     font-size: 3vw;
   }
@@ -69,8 +69,8 @@ body .anuncio-branding-diseno .bota1 a:hover {
 }
 
 @media screen and (max-width: 425px) {
-  body .anuncio-diseno-desarrollo p,
-  body .anuncio-branding-diseno p,
+  body .anuncio-diseno-desarrollo h2,
+  body .anuncio-branding-diseno h2,
   body .anuncio-branding-diseno span {
     font-size: 5vw;
     line-height: 6.5vw;

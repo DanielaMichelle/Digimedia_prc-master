@@ -1,3 +1,5 @@
+
+// PAGINA PRINCIPAL
 // Ciculos de "Nuestros servicios"
 const disenoDesarrolloWebCircle = document.querySelector(".nuestros-servicios .diseno-desarrollo-web");
 const gestionRedesSocialesCircle = document.querySelector(".nuestros-servicios .gestion-redes-sociales");
@@ -40,4 +42,3 @@ if (anchoPagina >= 984) {
 } else {
     constinerServicioMain.style.display = "none";
 }
-

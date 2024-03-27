@@ -4,7 +4,7 @@ $phrase2 = "Aumenta tus ventas con marketing digital.";
 
 $marketing = array($phrase1,$phrase2);
 
-$phrase3 = "Crea contenido de calidad y potencial";
+$phrase3 = "Crea contenido de calidad y potencia tus redes sociales";
 $phrase4 = "Deja que tus redes estén en otro nivel";
 
 $redes = array($phrase3,$phrase4);
@@ -33,7 +33,7 @@ if($id){
 ?>
 <div class="con-anun3 manipulacion">
     <div class="parrafos1">
-        <p><?php echo $value ?></p>
+        <h2><?php echo $value ?></h2>
     </div>
 
 
@@ -57,7 +57,7 @@ body .parrafos1 {
     padding: 0;
 }
 
-body .parrafos1 p {
+body .parrafos1 h2 {
     color: white;
     margin: 0;
     font-size: 3vw;
@@ -90,7 +90,7 @@ body .bota1 a:hover {
 }
 
 @media screen and (max-width: 1024px) {
-    body .parrafos1 p {
+    body .parrafos1 h2 {
         font-size: 3vw;
     }
 }
@@ -102,7 +102,7 @@ body .bota1 a:hover {
 }
 
 @media screen and (max-width: 425px) {
-    body .parrafos1 p {
+    body .parrafos1 h2 {
         font-size: 5vw;
         line-height: 6.5vw;
     }
