@@ -13,6 +13,7 @@ body .anuncio-diseno-desarrollo h2,
 body .anuncio-branding-diseno h2 {
   color: white;
   margin: 0;
+  font-weight: 300;
   font-size: 3vw;
   text-align: center;
   line-height: 3.5vw;
@@ -30,19 +31,24 @@ body .anuncio-branding-diseno span {
 body .anuncio-diseno-desarrollo .bota1,
 body .anuncio-branding-diseno .bota1 {
   margin: 0;
+  transition: transform 0.3s; 
+}
+
+body .anuncio-diseno-desarrollo .bota1:hover,
+body .anuncio-branding-diseno .bota1:hover {
+  transform: scale(1.05)
 }
 
 body .anuncio-diseno-desarrollo .bota1 a,
 body .anuncio-branding-diseno .bota1 a {
   text-decoration: none;
   width: fit-content;
-  padding: 15px 25px;
+  padding: 8px 34px;
   border: none;
   color: white;
-  background-color: #f83691;
+  background-color: rgb(237 8 125);
   margin-top: 1rem;
   font-size: 20px;
-  font-weight: 600;
   border-radius: 50px;
   box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 5px;
 }
@@ -51,6 +57,7 @@ body .anuncio-diseno-desarrollo .bota1 a:hover,
 body .anuncio-branding-diseno .bota1 a:hover {
   cursor: pointer;
 }
+
 
 /* Media Queries */
 @media screen and (max-width: 1024px) {

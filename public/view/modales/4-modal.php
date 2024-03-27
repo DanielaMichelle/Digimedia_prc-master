@@ -375,17 +375,15 @@
 <script>
 const btnCerrar = document.querySelector('.btn-cerrar');
 const modalContainer = document.querySelector('.modal-main-background')
-
+const btnAbrir = document.querySelector('.anuncio-branding-diseno .bota1');
 const objRegex = {
     telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
     gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
 };
 
 
-document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
-
-// Función para mostrar el modal después de 1 segundos
-function mostrarModalDespuesDe5Segundos() {
+// Abre el modal al pulsar un botón 
+btnAbrir.addEventListener('click', () => {
     if (localStorage.getItem("whatsappData")) {
         modalContainer.style.display = 'none';
     } else {
@@ -394,7 +392,8 @@ function mostrarModalDespuesDe5Segundos() {
             validarDatos();
         }, 1000); // 1000 milisegundos = 1 segundos
     }
-}
+});
+
 
 // Agregar evento al botón de cerrar
 btnCerrar.addEventListener('click', () => {

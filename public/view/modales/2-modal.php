@@ -10,13 +10,9 @@
     margin: auto;
     z-index: 4000;
     background: rgba(0, 155, 255, 0.9);
-    
     flex-wrap: wrap;
     justify-content: space-between;
     border-radius: 40px;
-
-
-
 }
 
 .btn-cerrar {
@@ -430,12 +426,15 @@ const btnCerrar = document.querySelector('.btn-cerrar');
 //const mobile = document.querySelector('.btn-mobile')
 const ocultar = document.querySelector(".ocultar");
 const overflow = document.querySelector(".overflow");
+const btnAbrir = document.querySelector('.manipulacion .bota1');
 
 const objRegex = {
     telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
     gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
 };
 
+// Al principio modal novisible
+contenedorForm.style.display = 'none';
 
 btnCerrar.addEventListener('click', toggleCerarForm);
 overflow.addEventListener('click', touch_display);
@@ -452,30 +451,18 @@ function toggleCerarForm() {
     document.body.style.overflowY = "auto";
     ocultar.style.display = "none";
 }
-/*window.addEventListener('resize', function() {
-  if (window.innerWidth <= 913) { 
-    document.body.classList.add('scroll-inerte');
-  } else {
-    document.body.classList.remove('scroll-inerte'); 
-  }
-});*/
-document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
 
-
-function mostrarModalDespuesDe5Segundos() {
+// Abre el modal al pulsar un botón 
+btnAbrir.addEventListener('click', () => {
     if (localStorage.getItem("whatsappData")) {
         contenedorForm.style.display = 'none';
         overflow.style.display = 'none';
     } else {
-        setTimeout(() => {
-            contenedorForm.style.display = 'flex';
-            overflow.style.display = 'block';
-            validarDatos();
-        }, 1000);
+        contenedorForm.style.display = 'flex';
+        overflow.style.display = 'block';
+        validarDatos();
     }
-}
-
-
+});
 
 //De aqui para abajo validas todos los campos del formulario con expresiones regulares
 function validarDatos() {

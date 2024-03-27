@@ -18,8 +18,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  display: flex;
   align-items: center;
 }
 
@@ -91,7 +90,7 @@
 .hero .hero-media .social-icon-hero .fa-brands{
   font-size: 2rem;
   transition: transform 0.3s;
-} 
+} .hero-servicios .container-hero
 
 
 .hero .hero-media .social-icon-hero .fa-brands:hover {
@@ -113,7 +112,9 @@
   div {
     display: flex;
     justify-content: center;
+    width: 100%;
     h1 {
+      color: white;
       font-size: 6vw;
       width: 60vw;
       text-align: center;
@@ -269,11 +270,6 @@
   display: flex;
   flex-direction: column;
 }
-/* 
-.botones-contacto .horario .horario--text .horario--container {
-
-} */
-
 
 @media screen and (max-width: 1135px) {
   /* CONTACTO */
