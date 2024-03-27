@@ -18,6 +18,11 @@ class ControllerlibroReclamacion {
         }
     }
 
+    public static function delete(){
+        $id = isset($_GET['id']) ? $_GET['id'] : null;
+        return ModelolibroReclamacion::delete( $id ); 
+    }
+
 
     public static function get(){
 

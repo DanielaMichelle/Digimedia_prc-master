@@ -10,13 +10,28 @@ $action = isset($_GET['action']) ? $_GET['action'] : null;
 
 if ($action == 'GET') {
     echo json_encode(ControllerlibroReclamacion::get());
-   
+
 
 } else if ($action == 'ADD') {
 
-    if (isset($_POST['nombre'], $_POST['apellido'], $_POST['documento'], $_POST['numeroDocumento'], $_POST['email'], $_POST['celular'],
-        $_POST['direccion'], $_POST['distrito'], $_POST['ciudad'], $_POST['tipoReclamo'], $_POST['servicioContratado'], $_POST['reclamoPerson'],
-        $_POST['checkReclamoForm'], $_POST['aceptaPoliticaPrivacidad'])) {
+    if (
+        isset(
+        $_POST['nombre'],
+        $_POST['apellido'],
+        $_POST['documento'],
+        $_POST['numeroDocumento'],
+        $_POST['email'],
+        $_POST['celular'],
+        $_POST['direccion'],
+        $_POST['distrito'],
+        $_POST['ciudad'],
+        $_POST['tipoReclamo'],
+        $_POST['servicioContratado'],
+        $_POST['reclamoPerson'],
+        $_POST['checkReclamoForm'],
+        $_POST['aceptaPoliticaPrivacidad']
+    )
+    ) {
 
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
@@ -39,9 +54,31 @@ if ($action == 'GET') {
 
 
         $controller = new ControllerlibroReclamacion();
-        echo json_encode($controller->add($nombre, $apellido, $documento, $numeroDocumento, $email, $celular, $direccion, 
-        $distrito, $ciudad, $tipoReclamo, $servicioContratado, $reclamoPerson, $checkReclamoForm, $aceptaPoliticaPrivacidad));
+        echo json_encode($controller->add(
+            $nombre,
+            $apellido,
+            $documento,
+            $numeroDocumento,
+            $email,
+            $celular,
+            $direccion,
+            $distrito,
+            $ciudad,
+            $tipoReclamo,
+            $servicioContratado,
+            $reclamoPerson,
+            $checkReclamoForm,
+            $aceptaPoliticaPrivacidad
+        )
+        );
 
+    } else if ($action == 'DELETE') {
+        $id = isset($_GET['id']) ? $_GET['id'] : null;
+        if ($id) {
+            echo json_encode(ControllerlibroReclamacion::delete($id));
+        } else {
+            echo json_encode(["error" => "No se proporcionó el ID del elemento a eliminar"]);
+        }
     } else {
         echo json_encode('Faltan parámetros en la solicitud.');
     }

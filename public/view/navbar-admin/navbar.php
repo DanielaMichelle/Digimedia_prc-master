@@ -42,6 +42,11 @@
                         para el futuro</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="/Digimedia_prc-master/public/view/secciones-admin/libro_reclamaciones.php">Terminos y reclamaciones</a>
+                </li>
+
             </ul>
         </div>
     </div>
