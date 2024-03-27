@@ -8,19 +8,14 @@
 # php -- END cPanel-generated handler, do not edit
 
 
+RewriteEngine On
+
+RewriteRule ^(servicios)/[a-z-]+(-[a-z-]+)/([1-4])$ servicios.php?id=$3 
 
 
-; Options +FollowSymLinks
-; RewriteEngine on
-
-; RewriteRule ^servicios/([0-9]+)$ servicios.php?id=$1
-
-; <!-- Options +FollowSymLinks
-; RewriteEngine On
-
-; RewriteRule ^diseno-desarrollo$ servicios.php?id=2 [L] -->
 
 
-; <!-- RewriteRule ^servicios/([0-9]+)$ servicios.php?id=$1 -->
-; <!-- /[a-zA-ZáéíóúüñÑ_\-]+([a-zA-ZáéíóúüñÑ_\-]+)*$ -->
+
+
+
 

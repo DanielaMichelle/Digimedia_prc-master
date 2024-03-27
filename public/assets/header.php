@@ -14,14 +14,14 @@
             <li class="submenu"><a href="#" title="Servicios">Servicios<i class="fa-solid fa-chevron-down"
                         style="color: #FFFFFF;"></i></a>
                 <ul>
-                    <li><a href="servicios.php?id=1" title="Diseño y Desarrollo Web">Diseño y
+                    <li><a href="servicios/diseno-desarrollo-web/1" title="Diseño y Desarrollo Web">Diseño y
                             Desarrollo
                             Web</a></li>
-                    <li><a href="servicios.php?id=2" title="Gestión de Redes Sociales">Gestión de Redes
+                    <li><a href="servicios/gestion-redes-sociales/2" title="Gestión de Redes Sociales">Gestión de Redes
                             Sociales</a></li>
-                    <li><a href="servicios.php?id=3" title="Marketing y Gestión Digital">Marketing y
+                    <li><a href="servicios/marketing-gestion-digital/3" title="Marketing y Gestión Digital">Marketing y
                             Gestión Digital</a></li>
-                    <li><a href="servicios.php?id=4" title="Branding y Diseño">Branding
+                    <li><a href="servicios/brading-desing/4" title="Branding y Diseño">Branding
                             y Diseño</a></li>
                 </ul>
             </li>
