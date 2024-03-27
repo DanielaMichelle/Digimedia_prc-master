@@ -91,7 +91,7 @@
             <div class="seccion diseno-desarrollo-web">
                 <h3>Diseño y Desarrollo Web</h3>
                 <p>*La creación de una experiencia web óptima mediante la presentación organizada de contenido.*</p>
-                <a href="servicios.php?id=1">
+                <a href="servicios/diseno-desarrollo-web/1">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
@@ -99,7 +99,7 @@
             <div class="seccion gestion-redes-sociales">
                 <h3>Gestión de Redes Sociales</h3>
                 <p>*La optimización estratégica para impacto, alcance y presencia de una marca.*</p>
-                <a href="servicios.php?id=2">
+                <a href="servicios/gestion-redes-sociales/2">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
@@ -107,7 +107,7 @@
             <div class="seccion marketing-gestion-digital">
                 <h3>Marketing y Gestión Digital</h3>
                 <p>*La ampliación de alcance y fortalecimiento de relaciones con clientes en línea.*</p>
-                <a href="servicios.php?id=3">
+                <a href="servicios/marketing-gestion-digital/3">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
@@ -115,7 +115,7 @@
             <div class="seccion branding-diseno">
                 <h3>Branding y Diseño</h3>
                 <p>*La unión de estos genera experiencias memorables, conexión emocional y diferenciación de otros.*</p>
-                <a href="servicios.php?id=4">
+                <a href="servicios/brading-desing/4">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
