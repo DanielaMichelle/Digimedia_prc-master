@@ -286,7 +286,7 @@
                 <!--//Nombre//-->
                 <div class="form-group">
                     <label for="name">Nombre Completo</label>
-                    <input type="text" class="form-control" placeholder="Jimena Vásquez" name="name" id="name">
+                    <input type="text" class="form-control" placeholder="Nombre Apellido" name="name" id="name">
                     <p class="err-msg"></p>
                 </div>
 

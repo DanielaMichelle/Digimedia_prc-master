@@ -7,8 +7,8 @@
     <title>.:: DigiMedia ::.</title>
 
     <!-- Base URL -->
-    <base href="http://localhost:82/Digimedia_prc-master/">
-    <!-- <base href="https://www.digimediamkt.com/"> -->
+    <!-- <base href="http://localhost/Digimedia_prc-master/"> -->
+    <base href="https://www.digimediamkt.com/">
 
 
     <link rel="shortcut icon" href="./public/img/logo.png" type="image/x-icon">

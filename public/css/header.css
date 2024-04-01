@@ -178,7 +178,8 @@ header label {
   font-weight: bold;
 }
 .menu a:hover {
-  background: #ff0c7d;
+  color: white;
+  background-color: #ff0c7d;
 }
 .menu a i {
   margin-left: 10px;

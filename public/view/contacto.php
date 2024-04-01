@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="./public/css/section.css">
     <link rel="stylesheet" href="./public/css/contactos.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Stylos Css propios -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -36,7 +35,15 @@
                 <div class="map">
                     <?php include './public/include/section_maps.php' ?>
                 </div>
-                <span class="address">Jr. Paruro 1401, Lima 15001</span>
+                <div class="map-bottom">
+                    <span class="address">Jr. Paruro 1401, Lima 15001</span>
+                    <div>
+                        <figure>
+                            <img src="./public/img/flecha-como-llegar.webp" alt="cómo llegar">
+                        </figure>
+                        <span>Cómo llegar</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -47,8 +54,7 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <div class="label">Nombre Completo</div>
-                                <input type="text" class="form-control" name="nombre" id="nombre"
-                                    placeholder="Nombres y Apellidos">
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombres y Apellidos">
                                 <small></small>
                             </div>
                         </div>
@@ -56,8 +62,7 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <div class="label">Email</div>
-                                <input type="email" class="form-control" name="emailPerson" id="emailPerson"
-                                    placeholder="Email">
+                                <input type="email" class="form-control" name="emailPerson" id="emailPerson" placeholder="Email">
                                 <small></small>
                             </div>
                         </div>
@@ -84,8 +89,7 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <div class="label">Número</div>
-                                <input type="text" class="form-control" name="numero" id="numero"
-                                    placeholder="Teléfono (9 dígitos)">
+                                <input type="text" class="form-control" name="numero" id="numero" placeholder="Teléfono (9 dígitos)">
                                 <small></small>
                             </div>
                         </div>
@@ -93,8 +97,7 @@
 
                     <div class="mb-3">
                         <div class="label">Mensaje</div>
-                        <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="4"
-                            placeholder="Escríbenos aquí"></textarea>
+                        <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="4" placeholder="Escríbenos aquí"></textarea>
                         <small></small>
                     </div>
 
@@ -142,118 +145,134 @@
                 <p>9:00 am - 7:00 pm</p>
             </div>
         </div>
-
     </div>
 
     <?php include './public/include/section_maps.php' ?>
 
     <?php include_once './public/assets/footer.php' ?>
 
-    <!-- Botones -->
-    <!-- <div class="botones-contacto"> -->
-    <!-- <div class="horario"> -->
-    <!-- <figure> -->
-    <!-- <img src="./public/img/ubicacion.png" alt="ubicacion"> -->
-    <!-- </figure> -->
-    <!-- <div class="horario--text"> -->
-    <!-- <span>Horario</sp> -->
-    <!-- <div class="horario--container"> -->
-    <!-- <div>
+    <!-- Panel de horario y whatsapp -->
+    <div class="botones-contacto">
+        <div class="horario horario--cerrado">
+            <figure>
+                <i class="fa-solid fa-calendar"></i>
+            </figure>
+            <div class="horario--text">
+                <span>Horario</span>
+                    <div class="horario--container">
+                        <div>
                             <p>Lunes - Viernes</p>
                             <span>8:00 am - 8:00 pm</span>
                         </div>
                         <div>
                             <p>Lunes - Viernes</p>
                             <span>8:00 am - 8:00 pm</span>
-                        </div> -->
-    <!-- </div>
+                        </div>
+                    </div>
             </div>
         </div>
-    </div> -->
+
+        <div class="whatsapp">
+            <a href="https://wa.me/51999351599" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+
     </div>
 
     <script>
-    const form = document.querySelector("#formulario");
+        const form = document.querySelector("#formulario");
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        validarCampos();
-    });
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            validarCampos();
+        });
 
-    function validarNumero(numero) {
-        // Validar que el campo "numero" tenga solo números y exactamente 9 dígitos, empezando por 9
-        return /^9\d{8}$/.test(numero);
-    }
-
-    function validarCampos() {
-        // Obtener valores de los campos
-        const nombre = document.querySelector("#nombre").value.trim();
-        const numero = document.querySelector("#numero").value.trim();
-        const emailPerson = document.querySelector("#emailPerson").value.trim();
-        const servicio = document.querySelector("#servicio").value.trim();
-        const mensaje = document.querySelector("#mensaje").value.trim();
-
-        // Verificar campos obligatorios
-        if (!nombre || !numero || !emailPerson || !servicio || !mensaje) {
-            alert("Debe rellenar todos los campos obligatorios.");
-            return;
+        function validarNumero(numero) {
+            // Validar que el campo "numero" tenga solo números y exactamente 9 dígitos, empezando por 9
+            return /^9\d{8}$/.test(numero);
         }
 
-        // Validar el campo "numero"
-        if (!validarNumero(numero)) {
-            alert("El campo número debe tener exactamente 9 dígitos numéricos y comenzar con el número 9.");
-            return;
+        function validarCampos() {
+            // Obtener valores de los campos
+            const nombre = document.querySelector("#nombre").value.trim();
+            const numero = document.querySelector("#numero").value.trim();
+            const emailPerson = document.querySelector("#emailPerson").value.trim();
+            const servicio = document.querySelector("#servicio").value.trim();
+            const mensaje = document.querySelector("#mensaje").value.trim();
+
+            // Verificar campos obligatorios
+            if (!nombre || !numero || !emailPerson || !servicio || !mensaje) {
+                alert("Debe rellenar todos los campos obligatorios.");
+                return;
+            }
+
+            // Validar el campo "numero"
+            if (!validarNumero(numero)) {
+                alert("El campo número debe tener exactamente 9 dígitos numéricos y comenzar con el número 9.");
+                return;
+            }
+
+            const formData = new FormData();
+
+
+            // Agregar valores al FormData
+            formData.append('nombre', nombre);
+            formData.append('numero', numero);
+            formData.append('email', emailPerson);
+            formData.append('servicio', servicio);
+            formData.append('mensaje', mensaje);
+
+            // Agregar campos adicionales
+            formData.append('emailMarck', obtenerValorCheckbox("emailMarck"));
+            formData.append('new', obtenerValorCheckbox("new"));
+            formData.append('production', obtenerValorCheckbox("production"));
+
+            formData.append('estado', 0);
+
+            enviarFormData(formData);
         }
 
-        const formData = new FormData();
+        function vaciarDatos() {
+            const nombre = document.querySelector("#nombre").value = "";
+            const numero = document.querySelector("#numero").value = "";
+            const emailPerson = document.querySelector("#emailPerson").value = "";
+            const servicio = document.querySelector("#servicio").value = "";
+            const mensaje = document.querySelector("#mensaje").value = "";
+        }
 
+        function obtenerValorCheckbox(nombreCheckbox) {
+            const checkbox = document.querySelector(`input[name='${nombreCheckbox}']`);
+            return checkbox.checked ? 'si' : 'no';
+        }
 
-        // Agregar valores al FormData
-        formData.append('nombre', nombre);
-        formData.append('numero', numero);
-        formData.append('email', emailPerson);
-        formData.append('servicio', servicio);
-        formData.append('mensaje', mensaje);
+        //ESTO TE LLEVA LOS DATOS AL SERVER Y LE PONE COMO NOMBRE ADD
+        function enviarFormData(formData) {
+            fetch("./app/trigger/intranet.php?action=ADD", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(res => res.json())
+                .then(data => {
+                    alert("Datos enviados")
+                    vaciarDatos();
+                    console.log(data);
+                })
+                .catch(err => {
+                    console.error("Error al enviar FormData:", err);
+                });
+        }
 
-        // Agregar campos adicionales
-        formData.append('emailMarck', obtenerValorCheckbox("emailMarck"));
-        formData.append('new', obtenerValorCheckbox("new"));
-        formData.append('production', obtenerValorCheckbox("production"));
-
-        formData.append('estado', 0);
-
-        enviarFormData(formData);
-    }
-
-    function vaciarDatos() {
-        const nombre = document.querySelector("#nombre").value = "";
-        const numero = document.querySelector("#numero").value = "";
-        const emailPerson = document.querySelector("#emailPerson").value = "";
-        const servicio = document.querySelector("#servicio").value = "";
-        const mensaje = document.querySelector("#mensaje").value = "";
-    }
-
-    function obtenerValorCheckbox(nombreCheckbox) {
-        const checkbox = document.querySelector(`input[name='${nombreCheckbox}']`);
-        return checkbox.checked ? 'si' : 'no';
-    }
-
-    //ESTO TE LLEVA LOS DATOS AL SERVER Y LE PONE COMO NOMBRE ADD
-    function enviarFormData(formData) {
-        fetch("./app/trigger/intranet.php?action=ADD", {
-                method: "POST",
-                body: formData
-            })
-            .then(res => res.json())
-            .then(data => {
-                alert("Datos enviados")
-                vaciarDatos();
-                console.log(data);
-            })
-            .catch(err => {
-                console.error("Error al enviar FormData:", err);
-            });
-    }
+        // Interactividad de botones
+        const panelHorario = document.querySelector(".botones-contacto .horario");
+        const horarioBtn = document.querySelector(".botones-contacto .horario figure");
+    
+        horarioBtn.addEventListener("click", () => {
+            panelHorario.classList.toggle("horario--cerrado");
+            panelHorario.classList.toggle("horario--abierto");
+        })
+    
     </script>
 
 </body>

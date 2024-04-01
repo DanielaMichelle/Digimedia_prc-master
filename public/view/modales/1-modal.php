@@ -127,7 +127,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 0;
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 .modal-main .modal-main-image img {
@@ -331,7 +331,7 @@
             </form>
 
             <figure class="modal-main-image">
-                <img src="./public/img/img4.jpg" alt="modal diseno y desarrollo">
+                <img src="./public/img/img4-sinfondo3.png" alt="modal diseno y desarrollo">
                 <figcaption>¡TU PRIMERA ASESORíA ES <span>GRATIS!</span></figcaption>
             </figure>
         </div>

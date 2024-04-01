@@ -8,7 +8,7 @@
 
     .mapa {
         height: 500px;
-        margin-bottom: 50px;
+        /* margin-bottom: 50px; */
     }
 
     .map {

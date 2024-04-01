@@ -14,20 +14,16 @@
     <link rel="stylesheet" href="./public/css/footer.css">
     <link rel="stylesheet" href="./public/css/section.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Stylos Css propios -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- Fuente Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Fuente Open Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -43,31 +39,23 @@
             </div>
             <ul class="hero-media">
                 <li class="nav-item">
-                    <a class="social-icon-hero"
-                        href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name"
-                        title="Linkedin!" aria-label="Nuestro Linkedin.."><i id="hero-icon-linkeding"
-                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="social-icon-hero" href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name" title="Linkedin!" aria-label="Nuestro Linkedin.."><i id="hero-icon-linkeding" class="fa-brands fa-linkedin-in"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="social-icon-hero" href="https://www.instagram.com/digimediamkt/" title="Instagram!"
-                        aria-label="Nuestro Instagram.."><i id="hero-icon-instagram"
-                            class=" fa-brands fa-instagram"></i></a>
+                    <a class="social-icon-hero" href="https://www.instagram.com/digimediamkt/" title="Instagram!" aria-label="Nuestro Instagram.."><i id="hero-icon-instagram" class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="social-icon-hero" href="https://www.youtube.com/@digimediamarketing2636" title="Youtube!"
-                        aria-label="Nuestro Youtube.."><i id="hero-icon-youtube" class="fa-brands fa-youtube"></i></a>
+                    <a class="social-icon-hero" href="https://www.youtube.com/@digimediamarketing2636" title="Youtube!" aria-label="Nuestro Youtube.."><i id="hero-icon-youtube" class="fa-brands fa-youtube"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="social-icon-hero" href="https://www.facebook.com/DigiMedia.Marketing1" title="Facebook!"
-                        aria-label="Nuestro Facebook.."><i id="hero-icon-facebook"
-                            class="fa-brands fa-facebook"></i></a>
+                    <a class="social-icon-hero" href="https://www.facebook.com/DigiMedia.Marketing1" title="Facebook!" aria-label="Nuestro Facebook.."><i id="hero-icon-facebook" class="fa-brands fa-facebook"></i></a>
                 </li>
             </ul>
         </div>
     </section>
 
     <!-- modal principal -->
-    <?php include_once './public/include/modal_main.php'?>
+    <?php include_once './public/include/modal_main.php' ?>
 
     <!-- Nuestros Servicios -->
     <section class="nuestros-servicios">
@@ -142,9 +130,23 @@
         <div class="pt-3"></div>
     </div>
 
+    <!-- Panel de horario y whatsapp -->
+    <div class="botones-contacto botones-contacto--main-page">
+        <div onclick="window.scrollTo(0, 0)" class="flecha-arriba">
+            <i class="fa-solid fa-up-long"></i>
+        </div>
+        <div class="whatsapp">
+            <a href="https://wa.me/51999351599" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+
+
     <?php include_once './public/include/section_maps.php' ?>
     <script src="./public/js/interactividad.js"></script>
     <?php include_once './public/assets/footer.php' ?>
+
 </body>
 
 </html>
