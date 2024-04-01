@@ -126,28 +126,7 @@
                 </form>
             </div>
         </div>
-
-
     </section>
-
-    <div class="col">
-
-        <div class="cont">
-            <div class="grande">
-                <h2 style="font-weight: bold;">Horario de atención</h2>
-            </div>
-            <div>
-                <p>Lunes - Viernes</p>
-                <p>Sábado</p>
-            </div>
-            <div>
-                <p>8:00 am - 8:00 pm</p>
-                <p>9:00 am - 7:00 pm</p>
-            </div>
-        </div>
-    </div>
-
-    <?php include './public/include/section_maps.php' ?>
 
     <?php include_once './public/assets/footer.php' ?>
 
