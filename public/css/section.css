@@ -358,6 +358,12 @@
   margin: 12px 10px;
 }
 
+.botones-contacto .whatsapp--preguntas {
+  position: static;
+  background-color: transparent;
+  margin-right: 0;
+}
+
 .botones-contacto .whatsapp a {
   display: grid;
   justify-content: center;
@@ -385,6 +391,9 @@
   color: rgb(111 75 232);
 }
 
+.botones-contacto .flecha-arriba--preguntas {
+  align-self: end;
+}
 
 .botones-contacto .flecha-arriba i  {
   font-size: 2rem;

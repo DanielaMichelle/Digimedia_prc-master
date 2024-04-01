@@ -7,8 +7,8 @@
     <title>.:: DigiMedia ::.</title>
 
     <!-- Base URL -->
-    <!-- <base href="http://localhost/Digimedia_prc-master/"> -->
-    <base href="https://www.digimediamkt.com/">
+    <base href="http://localhost/Digimedia_prc-master/">
+    <!-- <base href="https://www.digimediamkt.com/"> -->
 
 
     <link rel="shortcut icon" href="./public/img/logo.png" type="image/x-icon">
@@ -217,6 +217,19 @@
     <?php include_once './public/include/section_maps.php' ?>
     <!-- ?php include_once './public/include/section_form_contact_us.php' ? -->
 
+    <!-- Panel de horario y whatsapp -->
+    <div class="botones-contacto botones-contacto--main-page">
+        <div onclick="window.scrollTo(0, 0)" class="flecha-arriba">
+            <i class="fa-solid fa-up-long"></i>
+        </div>
+        <div class="whatsapp">
+            <a href="https://wa.me/51999351599" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="./public/js/interactividad.js"></script>
     <?php include_once './public/assets/footer.php' ?>
 
 </body>

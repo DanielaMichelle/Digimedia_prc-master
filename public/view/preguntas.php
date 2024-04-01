@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    
     <?php include_once './public/assets/header.php' ?>
 
     <div class="banner-image2" id="banner2" style="height: 50vh;">
@@ -138,7 +139,23 @@
     </main>
 
     <script src="./public/js/preguntas.js"></script>
+
+    
+    <!-- Panel de horario y whatsapp -->
+    <div class="botones-contacto botones-contacto--main-page">
+        <div onclick="window.scrollTo(0, 0)" class="flecha-arriba flecha-arriba--preguntas">
+            <i class="fa-solid fa-up-long"></i>
+        </div>
+        <div class="whatsapp whatsapp--preguntas">
+            <a href="https://wa.me/51999351599" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+    <script src="./public/js/interactividad.js"></script>
+
     <?php include_once './public/assets/footer.php' ?>
+    
 
 </body>
 
