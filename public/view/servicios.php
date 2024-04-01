@@ -160,7 +160,7 @@
                                 src="./public/img/gestion_redes.webp" alt="2 (1).webp" fetchpriority="high">
                             <p style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;" class="">
-                                    <a href="rd-sociales.php" target="_self" class="">
+                                    <a href="servicios/gestion-redes-sociales/2" target="_self" class="">
                                         <span style="font-size:20px;">
                                             <center><span
                                                     style="font-family:avenir-lt-w01_85-heavy1475544,sans-serif; letter-spacing:0.05em; "><b
@@ -179,7 +179,7 @@
                                 src="./public/img/branding.webp" alt="2 (1).webp" fetchpriority="high">
                             <p class=" " style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;">
-                                    <a href="branding.php" target="_self" class="">
+                                    <a href="servicios/brading-desing/4" target="_self" class="">
                                         <span style="font-size:20px;">
                                             <center><span
                                                     style="font-family:avenir-lt-w01_85-heavy1475544,sans-serif; letter-spacing:0.05em;"><b
@@ -198,7 +198,7 @@
                                 src="./public/img/marketing_gestion.webp" alt="2 (1).webp" fetchpriority="high">
                             <p class=" " style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;" class="">
-                                    <a href="marketing-digital.php" target="_self" class="">
+                                    <a href="servicios/marketing-gestion-digital/3" target="_self" class="">
                                         <span style="font-size:20px;">
                                             <center><span
                                                     style="font-family:avenir-lt-w01_85-heavy1475544,sans-serif; letter-spacing:0.05em; "><b
