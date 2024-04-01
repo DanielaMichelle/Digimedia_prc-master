@@ -1,5 +1,7 @@
 # php -- BEGIN cPanel-generated handler, do not edit
+
 # Set the “ea-php80” package as the default “PHP” programming language.
+
 <IfModule mime_module>
   AddHandler application/x-httpd-ea-php80___lsphp .php .php8 .phtml
 </IfModule>
@@ -9,7 +11,6 @@
 RewriteEngine On
 
 RewriteRule ^(servicios)/[a-z-]+(-[a-z-]+)/([1-4])$ servicios.php?id=$3 
-
 
 
 
