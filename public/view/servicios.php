@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./public/css/footer.css">
     <link rel="stylesheet" href="./public/css/servicios.css">
     <link rel="stylesheet" href="./public/css/section.css">
+    <link rel="stylesheet" href="./public/css/mas-servicios.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -55,86 +56,6 @@
         if(is_file("./public/view/services_option/{$servicio}-section.php")) require_once "./public/view/services_option/{$servicio}-section.php";
         else require_once "./public/view/services_option/1-section.php"; 
     ?>
-
-
-    <!--<section class="contenedor_rd_sls_">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mx-auto text-center">
-                    <div class="contenedor_gs_web_cont">
-                        <br>
-                        <h1><b>Te garantizamos</b></h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mt-4 mb-4">
-                    <div class="img-portafolio">
-                        <img src="./public/img/t1.webp" loading="lazy" title="DISEÑO UX Y UI" alt="Img no encontrada.."
-                            width="100%" height="100%">
-                        <div class="porta-po">
-                            <div>
-                                <h4>DISEÑO UX Y UI</h4>
-                                <p>Se trata de la creación y diseño visual de sitios web y aplicaciones móviles,
-                                    asegurando una navegación y experiencia de usuario óptimas.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-4 mb-4">
-                    <div class="img-portafolio">
-                        <img src="./public/img/t2.webp" loading="lazy" title="Desarrollo web" alt="Img no encontrada.."
-                            width="100%" height="100%">
-                        <div class="porta-po">
-                            <div>
-                                <h4>Desarrollo web</h4>
-                                <p>
-                                    Uso de tecnologías como PHP, JavaScript, HTML5, CSS, Bootstrap, MySQL y más. Estas
-                                    herramientas nos permiten crear sitios web altamente personalizados y adaptados a
-                                    las necesidades y objetivos de nuestros clientes,
-                                    ofreciendo una experiencia de usuario única y atractiva.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-4 mb-4">
-                    <div class="img-portafolio">
-                        <img src="./public/img/t3.webp" loading="lazy" title="DOMINIO Y HOSTING"
-                            alt="Img no encontrada.." width="100%" height="100%">
-                        <div class="porta-po">
-                            <div>
-                                <h4>DOMINIO Y HOSTING</h4>
-                                <p>
-                                    Adquirimos tu nombre de dominio y alojamos tu sitio en un servidor seguro y
-                                    confiable para garantizar que esté siempre accesible. Ofrecemos diferentes planes de
-                                    hosting para que puedas elegir el que mejor se adapte a tus necesidades.
-                                    Tu sitio estará en buenas manos y siempre disponible para tus visitantes.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-4 mb-4">
-                    <div class="img-portafolio">
-                        <img src="./public/img/t4.webp" loading="lazy" title="SEO" alt="Img no encontrada.."
-                            width="100%" height="100%">
-                        <div class="porta-po">
-                            <div>
-                                <h4>SEO</h4>
-                                <p>Se refiere a la creación de contenidos de calidad que ayuden a posicionar el sitio
-                                    web o aplicación en los motores de búsqueda, con el objetivo de aumentar la
-                                    visibilidad y el tráfico hacia el sitio, para que se clasifique mejor
-                                    en los motores de búsqueda y atraiga a más clientes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <?php include_once './public/include/section_message.php' ?>
 
     <div class="con-anun5">
         <div class="no-search">
@@ -215,7 +136,6 @@
         </table>
     </div>
     <?php include_once './public/include/section_maps.php' ?>
-    <!-- ?php include_once './public/include/section_form_contact_us.php' ? -->
 
     <!-- Panel de horario y whatsapp -->
     <div class="botones-contacto botones-contacto--main-page">
