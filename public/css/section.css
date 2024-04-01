@@ -191,12 +191,19 @@
   }
 }
 
-.contacto--map__container .map-bottom div span {
+.contacto--map__container .map-bottom div a {
   padding-top: 9px;
+  color: black;
+  text-decoration: none;
+}
+
+.contacto--map__container .map-bottom div a:hover {	
+  color: #169ff4;
+  text-decoration: underline;
 }
 
 .contacto--map__container .map-bottom .address,
-.contacto--map__container .map-bottom div span {
+.contacto--map__container .map-bottom div a {
   letter-spacing: 1px;
   font-size: 14px;
 }
@@ -321,6 +328,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .botones-contacto .horario figure i  {
@@ -568,7 +576,7 @@
   }
 
   .contacto--map__container .map-bottom .address,
-  .contacto--map__container .map-bottom div span {
+  .contacto--map__container .map-bottom div a {
     font-size: 10px;
   }
 

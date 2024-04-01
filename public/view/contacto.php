@@ -41,7 +41,7 @@
                         <figure>
                             <img src="./public/img/flecha-como-llegar.webp" alt="cómo llegar">
                         </figure>
-                        <span>Cómo llegar</span>
+                        <a target="_blank" href="https://maps.google.com/maps/dir//DigiMedia+Marketing-+Agencia+de+Marketing+Digital+para+PYMES+y+emprendimientos+en+Per%C3%BA+Jr.+Paruro+1401+Lima+15001/@-12.0574029,-77.025502,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9105c981108188a1:0x2bce3907b5bcb3ec">Cómo llegar</a>
                     </div>
                 </div>
             </div>
@@ -251,6 +251,7 @@
             panelHorario.classList.toggle("horario--cerrado");
             panelHorario.classList.toggle("horario--abierto");
         })
+
     
     </script>
 

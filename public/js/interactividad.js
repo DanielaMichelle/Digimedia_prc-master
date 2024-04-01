@@ -42,13 +42,3 @@ if (anchoPagina >= 984) {
 } else {
     constinerServicioMain.style.display = "none";
 }
-
-
-// Interactividad de botones
-const panelHorario = document.querySelector(".botones-contacto .horario");
-const horarioBtn = document.querySelector(".botones-contacto .horario figure");
-
-horarioBtn.addEventListener("click", () => {
-    panelHorario.classList.toggle("horario--cerrado");
-    panelHorario.classList.toggle("horario--abierto");
-})
