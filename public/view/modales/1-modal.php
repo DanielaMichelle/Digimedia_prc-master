@@ -127,7 +127,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 0;
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 .modal-main .modal-main-image img {
@@ -331,7 +331,7 @@
             </form>
 
             <figure class="modal-main-image">
-                <img src="./public/img/img4.jpg" alt="modal diseno y desarrollo">
+                <img src="./public/img/img4-sinfondo3.png" alt="modal diseno y desarrollo">
                 <figcaption>¡TU PRIMERA ASESORíA ES <span>GRATIS!</span></figcaption>
             </figure>
         </div>
@@ -344,24 +344,22 @@
 <script>
 const btnCerrar = document.querySelector('.btn-cerrar');
 const modalContainer = document.querySelector('.modal-main-background')
+const btnAbrir = document.querySelector('.anuncio-diseno-desarrollo .bota1');
 const objRegex = {
     telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
     gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
 };
 
-document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
 
-// Función para mostrar el modal después de 1 segundos
-function mostrarModalDespuesDe5Segundos() {
+// Abre el modal al pulsar un botón 
+btnAbrir.addEventListener('click', () => {
     if (localStorage.getItem("whatsappData")) {
         modalContainer.style.display = 'none';
     } else {
-        setTimeout(() => {
-            modalContainer.style.display = 'flex';
-            validarDatos();
-        }, 1000); // 1000 milisegundos = 1 segundos
+        modalContainer.style.display = 'flex';
+        validarDatos();
     }
-}
+});
 
 // Agregar evento al botón de cerrar
 btnCerrar.addEventListener('click', () => {

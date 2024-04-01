@@ -4,7 +4,7 @@ $phrase2 = "Aumenta tus ventas con marketing digital.";
 
 $marketing = array($phrase1,$phrase2);
 
-$phrase3 = "Crea contenido de calidad y potencial";
+$phrase3 = "Crea contenido de calidad y potencia tus redes sociales";
 $phrase4 = "Deja que tus redes estén en otro nivel";
 
 $redes = array($phrase3,$phrase4);
@@ -33,12 +33,12 @@ if($id){
 ?>
 <div class="con-anun3 manipulacion">
     <div class="parrafos1">
-        <p><?php echo $value ?></p>
+        <h2><?php echo $value ?></h2>
     </div>
 
 
     <div class="bota1">
-        <a href="contacto.php" title="¡Contactanos!" class="boton__2">Contactar</a>
+        <a href="#" title="¡Contactanos!" class="boton__2" onclick="return false;">Contactar</a>
     </div>
 
 </div>
@@ -57,40 +57,46 @@ body .parrafos1 {
     padding: 0;
 }
 
-body .parrafos1 p {
+body .parrafos1 h2 {
     color: white;
     margin: 0;
-    font-size: 3vw;
     text-align: center;
     line-height: 3.5vw;
     width: 80vw;
+    font-weight: 300;
+    font-size: 3vw;
 }
 
 
 body .bota1 {
     margin: 0;
+    transition: transform 0.3s;
+}
+
+body .bota1:hover {
+    transform: scale(1.05)
 }
 
 body .bota1 a {
     text-decoration: none;
     width: fit-content;
-    padding: 15px 25px;
+    padding: 8px 34px;
     border: none;
     color: white;
-    background-color: #f83691;
+    background-color: rgb(237 8 125);
     margin-top: 1rem;
     font-size: 20px;
-    font-weight: 600;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 5px;
 }
 
 body .bota1 a:hover {
     cursor: pointer;
+    color: white;
 }
 
 @media screen and (max-width: 1024px) {
-    body .parrafos1 p {
+    body .parrafos1 h2 {
         font-size: 3vw;
     }
 }
@@ -102,7 +108,7 @@ body .bota1 a:hover {
 }
 
 @media screen and (max-width: 425px) {
-    body .parrafos1 p {
+    body .parrafos1 h2 {
         font-size: 5vw;
         line-height: 6.5vw;
     }

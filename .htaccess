@@ -7,8 +7,19 @@
 </IfModule>
 # php -- END cPanel-generated handler, do not edit
 
+<<<<<<< HEAD
 Options +FollowSymlinks
 
 RewriteEngine On
 
 RewriteRule ^namePagina/([0-5]+)$ servicios.php?id=$1
+=======
+
+RewriteEngine On
+
+RewriteRule ^(servicios)/[a-z-]+(-[a-z-]+)/([1-4])$ servicios.php?id=$3 
+
+
+
+
+>>>>>>> 7076c659dc4d27c1c5d369b794edb37b640679ea

@@ -24,28 +24,45 @@
 <body>
     <?php include_once './public/assets/header.php' ?>
 
-    <section class="form">
-        <div class="cont_form_img">
-            <img src="./public/img/creacion de contenido.webp" alt="">
+    <section class="contacto">
+
+        <div class="contacto--map__title">
+            <h2>¡Queremos conocerte!</h2>
+            <p>Cuéntanos cómo te podemos ayudar</p>
+
+            <div class="contacto--map__container">
+                <span class="message">Encuentranos en el mapa</span>
+                <div class="map">
+                    <?php include './public/include/section_maps.php' ?>
+                </div>
+                <div class="map-bottom">
+                    <span class="address">Jr. Paruro 1401, Lima 15001</span>
+                    <div>
+                        <figure>
+                            <img src="./public/img/flecha-como-llegar.webp" alt="cómo llegar">
+                        </figure>
+                        <span>Cómo llegar</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="container">
+
+        <div class="container-form">
             <div class="col-lg-11">
                 <form action="" method="post" id="formulario">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <div class="pt-3">Nombre</div>
-                                <input type="text" class="form-control" name="nombre" id="nombre"
-                                    placeholder="Nombres y Apellidos">
+                                <div class="label">Nombre Completo</div>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombres y Apellidos">
                                 <small></small>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <div class="pt-3">Email</div>
-                                <input type="email" class="form-control" name="emailPerson" id="emailPerson" placeholder="email"
-                                >
+                                <div class="label">Email</div>
+                                <input type="email" class="form-control" name="emailPerson" id="emailPerson" placeholder="Email">
                                 <small></small>
                             </div>
                         </div>
@@ -54,9 +71,10 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <div class="pt-3">Servicio</div>
+                                <div class="label">Servicio</div>
                                 <select class="form-control" name="servicio" id="servicio">
-                                    <option selected disabled value="">--Selecciona--</option>
+                                    <option selected disabled value="" class="form-control">Selecciona
+                                    </option>
                                     <option value="Marketing Digital">Marketing Digital</option>
                                     <option value="Imagen Corporativa">Imagen Corporativa</option>
                                     <option value="Gestión De Redes Sociales">Gestión De Redes Sociales</option>
@@ -70,42 +88,46 @@
 
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <div class="pt-3">Numero</div>
-                                <input type="text" class="form-control" name="numero" id="numero" placeholder="Telefono(9 dígitos)">
+                                <div class="label">Número</div>
+                                <input type="text" class="form-control" name="numero" id="numero" placeholder="Teléfono (9 dígitos)">
                                 <small></small>
                             </div>
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <div class="pt-3">Mensaje</div>
-                        <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="4"
-                            placeholder="Mensaje"></textarea>
+                        <div class="label">Mensaje</div>
+                        <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="4" placeholder="Escríbenos aquí"></textarea>
                         <small></small>
                     </div>
 
-                    <div class="mb-3 dist" id="con">
-                        <label for="email">Email Marketing:</label>
-                        <div class="pt-3"></div>
-                        <input type="hidden" name="emailMarck" value="no" id="email">
-                        <input type="checkbox" name="emailMarck" value="si" id="email">
+                    <div class="dist" id="con">
+                        <div>
+                            <input type="hidden" name="emailMarck" value="no" id="email">
+                            <input class="checkbox" type="checkbox" name="emailMarck" value="si" id="email">
+                            <label for="email">Email Marketing</label>
+                        </div>
 
-                        <label for="new">News & Updates Emails:</label>
-                        <div class="pt-3"></div>
-                        <input type="hidden" name="new" value="no" id="new">
-                        <input type="checkbox" name="new" value="si" id="new">
+                        <div>
+                            <input type="hidden" name="new" value="no" id="new">
+                            <input type="checkbox" name="new" value="si" id="new">
+                            <label for="new">News & Updates Emails</label>
+                        </div>
 
-                        <label for="production">Production Process Emails:</label>
-                        <div class="pt-3"></div>
-                        <input type="hidden" name="production" value="no" id="production">
-                        <input type="checkbox" name="production" value="si" id="production">
+                        <div>
+                            <input type="hidden" name="production" value="no" id="production">
+                            <input type="checkbox" name="production" value="si" id="production">
+                            <label for="production">Production Process Emails</label>
+                        </div>
                     </div>
 
-                    <div class="pt-3" id="ps"></div>
+                    <div class="" id="ps"></div>
                     <input type="submit" value="Enviar" class="enviar">
                 </form>
+            </div>
         </div>
-    </div>
+
+
     </section>
 
     <div class="col">
@@ -123,18 +145,45 @@
                 <p>9:00 am - 7:00 pm</p>
             </div>
         </div>
-
     </div>
 
-    <?php include_once './public/include/section_maps.php' ?>
+    <?php include './public/include/section_maps.php' ?>
 
     <?php include_once './public/assets/footer.php' ?>
 
+    <!-- Panel de horario y whatsapp -->
+    <div class="botones-contacto">
+        <div class="horario horario--cerrado">
+            <figure>
+                <i class="fa-solid fa-calendar"></i>
+            </figure>
+            <div class="horario--text">
+                <span>Horario</span>
+                    <div class="horario--container">
+                        <div>
+                            <p>Lunes - Viernes</p>
+                            <span>8:00 am - 8:00 pm</span>
+                        </div>
+                        <div>
+                            <p>Lunes - Viernes</p>
+                            <span>8:00 am - 8:00 pm</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="whatsapp">
+            <a href="https://wa.me/51999351599" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+
+    </div>
 
     <script>
-
         const form = document.querySelector("#formulario");
- 
+
         form.addEventListener("submit", (e) => {
             e.preventDefault();
             validarCampos();
@@ -180,19 +229,19 @@
             formData.append('new', obtenerValorCheckbox("new"));
             formData.append('production', obtenerValorCheckbox("production"));
 
-            formData.append('estado', 0); 
+            formData.append('estado', 0);
 
             enviarFormData(formData);
-        }   
+        }
 
-        function vaciarDatos(){
+        function vaciarDatos() {
             const nombre = document.querySelector("#nombre").value = "";
             const numero = document.querySelector("#numero").value = "";
             const emailPerson = document.querySelector("#emailPerson").value = "";
             const servicio = document.querySelector("#servicio").value = "";
             const mensaje = document.querySelector("#mensaje").value = "";
         }
-        
+
         function obtenerValorCheckbox(nombreCheckbox) {
             const checkbox = document.querySelector(`input[name='${nombreCheckbox}']`);
             return checkbox.checked ? 'si' : 'no';
@@ -201,20 +250,29 @@
         //ESTO TE LLEVA LOS DATOS AL SERVER Y LE PONE COMO NOMBRE ADD
         function enviarFormData(formData) {
             fetch("./app/trigger/intranet.php?action=ADD", {
-                method: "POST",
-                body: formData
-            })
-            .then(res => res.json())
-            .then(data => {
-                alert("Datos enviados")
-                vaciarDatos();
-                console.log(data);
-            })
-            .catch(err => {
-                console.error("Error al enviar FormData:", err);
-            });
+                    method: "POST",
+                    body: formData
+                })
+                .then(res => res.json())
+                .then(data => {
+                    alert("Datos enviados")
+                    vaciarDatos();
+                    console.log(data);
+                })
+                .catch(err => {
+                    console.error("Error al enviar FormData:", err);
+                });
         }
 
+        // Interactividad de botones
+        const panelHorario = document.querySelector(".botones-contacto .horario");
+        const horarioBtn = document.querySelector(".botones-contacto .horario figure");
+    
+        horarioBtn.addEventListener("click", () => {
+            panelHorario.classList.toggle("horario--cerrado");
+            panelHorario.classList.toggle("horario--abierto");
+        })
+    
     </script>
 
 </body>

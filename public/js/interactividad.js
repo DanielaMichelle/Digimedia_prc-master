@@ -1,3 +1,5 @@
+
+// PAGINA PRINCIPAL
 // Ciculos de "Nuestros servicios"
 const disenoDesarrolloWebCircle = document.querySelector(".nuestros-servicios .diseno-desarrollo-web");
 const gestionRedesSocialesCircle = document.querySelector(".nuestros-servicios .gestion-redes-sociales");
@@ -41,3 +43,12 @@ if (anchoPagina >= 984) {
     constinerServicioMain.style.display = "none";
 }
 
+
+// Interactividad de botones
+const panelHorario = document.querySelector(".botones-contacto .horario");
+const horarioBtn = document.querySelector(".botones-contacto .horario figure");
+
+horarioBtn.addEventListener("click", () => {
+    panelHorario.classList.toggle("horario--cerrado");
+    panelHorario.classList.toggle("horario--abierto");
+})

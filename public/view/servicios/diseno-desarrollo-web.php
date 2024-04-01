@@ -8,16 +8,16 @@
 </section>
 
 <section class="con-anun3 anuncio-diseno-desarrollo">
-    <h2>Consolida tu presencia web, diseña con nosotros tu página web</h2>
+    <p>Consolida tu presencia web, diseña con nosotros</p>
     <div class="bota1">
-        <a href="#" title="¡Contactanos!" class="boton__2" onclick="return false;">Incrementa tus ventas</a>
+        <a href="contacto.php" title="¡Contactanos!" class="boton__2">Incrementa tus ventas</a>
     </div>
 </section>
 
 <script>
 const mensajesDisenoDesarrollo = [{
-        mensaje: "Consolida tu presencia web, diseña con nosotros tu página web",
-        mensajeBtn: "Incrementa tus ventas",
+        mensaje: "Consolida tu presencia web, diseña con nosotros",
+        mensajeBtn: "incrementa tus ventas",
     },
     {
         mensaje: "Transforma tu sitio web en una experiencia única",
@@ -31,7 +31,7 @@ const mensajesDisenoDesarrollo = [{
 
 const cambiarMensajeDisenoDesarrollo = () => {
     // Obtener elementos donde se mostrarán los elementos
-    var mensajeP = document.querySelector(".anuncio-diseno-desarrollo h2");
+    var mensajeP = document.querySelector(".anuncio-diseno-desarrollo p");
     var mensajeBtn = document.querySelector(
         ".anuncio-diseno-desarrollo .bota1 a"
     );

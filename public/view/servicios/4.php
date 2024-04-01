@@ -8,11 +8,11 @@
 </section>
 
 <section class="con-anun3 anuncio-branding-diseno">
-    <p>Descubre como impulsar tu marca al siguiente nivel</p>
-    <p>Ofrecemos la primera asesoría</p>
+    <h2>Descubre como impulsar tu marca al siguiente nivel</h2>
+    <h2>Ofrecemos la primera asesoría</h2>
     <span>Gratis</span>
     <div class="bota1">
-        <a href="contacto.php" title="¡Contactanos!" class="boton__2">Incrementa tus ventas</a>
+        <a href="#" title="¡Contactanos!" class="boton__2" onclick="return false;">Incrementa tus ventas</a>
     </div>
 </section>
 
@@ -40,10 +40,10 @@ const mensajesBrandingDiseno = [{
 const cambiarMensajeBrandingDiseno = () => {
     // Obtener elementos donde se mostrarán los elementos
     var mensajeP1 = document.querySelector(
-        ".anuncio-branding-diseno p:first-child"
+        ".anuncio-branding-diseno h2:first-child"
     );
     var mensajeP2 = document.querySelector(
-        ".anuncio-branding-diseno p:nth-child(2)"
+        ".anuncio-branding-diseno h2:nth-child(2)"
     );
 
     var mensajeSpan = document.querySelector(".anuncio-branding-diseno span");
