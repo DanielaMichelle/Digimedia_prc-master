@@ -152,7 +152,6 @@
             </a>
         </div>
     </div>
-    <script src="./public/js/interactividad.js"></script>
 
     <?php include_once './public/assets/footer.php' ?>
     

@@ -57,7 +57,7 @@
         else require_once "./public/view/services_option/1-section.php"; 
     ?>
 
-    <div class="con-anun5">
+    <div class="con-anun5" id="anuncio-servicio">
         <div class="no-search">
             <h5 class="title-nosearch">¿No encontraste lo que<br> buscabas?</h5>
             <div class="pt-3"></div>
@@ -149,7 +149,6 @@
         </div>
     </div>
     
-    <script src="./public/js/interactividad.js"></script>
     <?php include_once './public/assets/footer.php' ?>
 
 </body>

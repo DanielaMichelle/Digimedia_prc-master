@@ -251,6 +251,7 @@
             panelHorario.classList.toggle("horario--cerrado");
             panelHorario.classList.toggle("horario--abierto");
         })
+
     
     </script>
 
