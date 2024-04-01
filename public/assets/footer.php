@@ -5,7 +5,7 @@
             <div class="row row_des">
 
                 <div class="col-md-5">
-                    <h4><a href="index.php" class="text-white"><img src="./public/img/logoblanco.png" class="logoimagen"
+                    <h4><a href="index.php" class="text-white"><img src="./public/img/logo_footer.webp" class="logoimagen"
                                 title="Digimedia!" alt="Logo">
                     </a></h4>
                     <h2>Agencia de Marketing Digital</h2>
@@ -74,7 +74,7 @@
                                 Gesti&oacute;n Digital</a></li>
                         <li><a href="View/branding.php" title="Branding y Diseño">Branding y Diseño</a></li>
                     </ul>-->
-                    <ul>
+                    <ul class="legales_medium">
                         <li></li>
                         <p class="p">Pol&iacute;tica de privacidad</p>
                         </li>
