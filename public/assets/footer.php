@@ -47,7 +47,7 @@
                 </div>
 
 
-                <div class="col-md-2 ms-auto">
+                <div class="col-md-2 ms-auto twoBorx">
                     <h4>Contacto</h4>
                     <!--<ul>
                         <li><a href="View/nosotros.php" title="Nosotros">Nosotros</a></li>
@@ -55,11 +55,11 @@
                         <li><a href="View/contacto.php" title="Trabaja con nosotros">Trabaja con nosotros</a></li>
                         <li><a href="View/contacto.php" title="Accesibilidad">Accesibilidad</a></li>
                     </ul>-->
-                    <ul>
-                        <li><i class="fa-solid fa-mobile-screen"></i>
+                    <ul class="fasinos">
+                        <li class="grid-item-des"><i class="fa-solid fa-mobile-screen"></i>
                         <a href="View/nosotros.php" title="Nosotros">958716002</a></li>
-                        <li><i class="fa-solid fa-envelope"></i><a href="View/preguntas.php" title="Digimediakt email">digimediamkt@gmail.com</a></li>
-                        <li><i class="fa-solid fa-map-location-dot"></i><a href="View/contacto.php" title="Trabaja con nosotros">Perú - Jr. Paruro 1401, Cercado de Lima, Lima</a></li>
+                        <li class="grid-item-des"><i class="fa-solid fa-envelope"></i><a href="View/preguntas.php" title="Digimediakt email">digimediamkt@gmail.com</a></li>
+                        <li class="grid-item-des"><i class="fa-solid fa-map-location-dot"></i><a href="View/contacto.php" title="Trabaja con nosotros">Perú - Jr. Paruro 1401, Cercado de Lima, Lima</a></li>
                         
                     </ul>
 

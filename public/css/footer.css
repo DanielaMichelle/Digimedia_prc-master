@@ -24,6 +24,7 @@ footer ul li {
 
 .footer-top {
   padding-bottom: 40px;
+  padding-top: 40px;
   border-bottom: 3px solid rgba(255, 255, 255, 0.943);
 }
 
@@ -73,6 +74,11 @@ h4::selection {
   text-align: center;
   color: aliceblue;
   border: 2px solid white;
+  width: 30% !important;
+}
+.twoBorx {
+  background: thistle;
+  width: 22% !important;
 }
 .col-md-2 {
   overflow: hidden;
@@ -81,7 +87,16 @@ h4::selection {
 .col-md-5 h4 {
   overflow: hidden;
   display: grid;
-  width: 80%;
+  width: 70%;
+  background: yellow;
+  grid-template-columns: repeat(1, 1fr);
+  margin: auto;
+}
+.col-md-5 h2 {
+  overflow: hidden;
+  display: grid;
+  width: 100%;
+  background: yellow;
   grid-template-columns: repeat(1, 1fr);
   margin: auto;
 }
@@ -99,7 +114,25 @@ h4::selection {
   width: 20%;
   border: 2px solid white;
 }
-
+.col-md-2 .fasinos {
+  background: pink;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  margin: 0;
+}
+.grid-item-des {
+  border: 1px solid white;
+  display: grid;
+  grid-template-columns: 16% 84%;
+}
+.grid-item-des i {
+  text-align: left;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 990px) {
   .col-md-2:last-child {
     width: 100% !important;
