@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/footer.css">
     <link rel="stylesheet" href="./public/css/nosotros.css">
+    <link rel="stylesheet" href="./public/css/section.css">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Stylos Css propios -->
@@ -65,9 +67,6 @@
         </div>
     </section>
 
-    <br>
-    <br>
-
     <section class="CONTENEDOR_VALORES">
         <div class="conten">
             <section id="titulo">
@@ -76,10 +75,7 @@
 
             <section id="valores">
                 <article class="valores1">
-                    <p>En nuestra DigiMedia, creemos que nuestros valores
-                        son la
-                        clave de nuestro éxito y nos guían en todas nuestras
-                        decisiones y acciones.</p>
+                    <p>En DigiMedia, creemos firmemente que nuestros valores son fundamentales para el éxito y nos orientan en todas nuestras decisiones y acciones.</p>
                 </article>
             </section>
 
@@ -93,8 +89,8 @@
                         </b>
                     </div>
                     <div class="con">
-                        <p class="a">Nos esforzamos por ser responsables con
-                            nuestros clientes, nuestro personal y nuestro
+                        <p class="a"> Nos esforzamos por ser responsables con
+                            nuestros clientes, personal y el
                             medio
                             ambiente.</p>
                     </div>
@@ -120,7 +116,7 @@
                     <img src="./public/img/nos_adaptavilidad.webp" width="100%" height="100%" loading="lazy" title="¡Adaptavilidad!" alt="Img no encontrada.." style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;" fetchpriority="high" />
                     <div class="tit">
                         <b>
-                            <p>Adaptavilidad</p>
+                            <p>Adaptabilidad</p>
                         </b>
                     </div>
                     <div class="con">
@@ -165,6 +161,19 @@
         </div>
 
     </section>
+
+    <!-- Panel de horario y whatsapp -->
+    <div class="botones-contacto botones-contacto--main-page">
+        <div onclick="window.scrollTo(0, 0)" class="flecha-arriba">
+            <i class="fa-solid fa-up-long"></i>
+        </div>
+        <div class="whatsapp">
+            <a href="https://wa.me/51999351599" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+    <script src="./public/js/interactividad.js"></script>
 
     <?php include_once './public/assets/footer.php' ?>
 
