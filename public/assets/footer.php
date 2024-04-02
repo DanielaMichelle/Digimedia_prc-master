@@ -76,13 +76,13 @@
                     </ul>-->
                     <ul class="legales_medium">
                         <li></li>
-                        <p class="p">Pol&iacute;tica de privacidad</p>
+                        <a href="politica_privacidad.php"><p class="p">Pol&iacute;tica de privacidad</p></a>
                         </li>
                         <li></li>
-                        <p class="p">T&eacute;rminos y Condiciones</p>
+                        <a href="terminos_condiciones.php"><p class="p">T&eacute;rminos y Condiciones</p></a>
                         </li>
                         <li></li>
-                        <p class="p">Libro de Reclamaciones</p>
+                        <a href="libro_reclamaciones.php"><p class="p">Libro de Reclamaciones</p></a>
                         </li>
                         <li></li>
                         <p class="p">Trabaja con nosotros</p>
