@@ -49,6 +49,9 @@
 
     .modal2--image-container .icon {
         position: absolute;
+        width: 4rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
     }
 
     .modal2--form-container {
@@ -180,6 +183,10 @@
             padding-bottom: 5vw;
         }
 
+        .modal2--image-container .icon {
+            width: 3rem;
+        }
+
         .modal2--form-container__title span:nth-child(1) {
             font-size: 4vw;
             line-height: 4vw;
@@ -222,7 +229,7 @@
 
 <div class="modal2" id="modal2_desarrollo">
     <div class="modal2--image-container">
-        <img class="icon" src="" alt="Digimedia Icon">
+        <img class="icon" src="public/img/logo_footer.webp" alt="Digimedia Icon">
         <span>¡Destaca tu negocio!</span>
         <figure>
             <img src="./public/img/modal2/modal2-desarrollo.webp" alt="Modal 2 Desarrollo y Diseño Web">
@@ -266,7 +273,7 @@
 <script>
     const modal = document.getElementById('modal2_desarrollo');
     const anuncioServicio = document.querySelector("#anuncio-servicio");
-    
+
     // OPEN MODAL
     // let options = {
     //     threshold: 0.5,

@@ -49,6 +49,9 @@
 
     .modal2--image-container .icon {
         position: absolute;
+        width: 4rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
     }
 
     .modal2--form-container {
@@ -72,6 +75,7 @@
         font-size: 24px;
         line-height: 30px;
         font-weight: 700;
+
         span {
             font-size: 40px;
         }
@@ -143,8 +147,9 @@
         .modal2--form-container__title span:nth-child(1) {
             font-size: 3vw;
             line-height: 3vw;
+
             span {
-                font-size: 5vw; 
+                font-size: 5vw;
             }
         }
 
@@ -188,6 +193,10 @@
             padding-bottom: 5vw;
         }
 
+        .modal2--image-container .icon {
+            width: 3rem;
+        }
+
         .modal2--form-container form .form-inputs input {
             height: 5vw;
         }
@@ -215,7 +224,7 @@
 
 <div class="modal2" id="modal2_branding">
     <div class="modal2--image-container">
-        <img class="icon" src="" alt="Digimedia Icon">
+    <img class="icon" src="public/img/logo_footer.webp" alt="Digimedia Icon">
         <span>¡Diseña tu camino al éxito!</span>
         <figure>
             <img src="./public/img/modal2/modal2-branding.webp" alt="Modal 2 Desarrollo y Diseño Web">
@@ -279,7 +288,7 @@
 
     // observer.observe(anuncioServicio);
 
-    
+
     // CLOSE MODAL
     // document.addEventListener('click', function(event) {
     //     if (!modal.contains(event.target)) {
