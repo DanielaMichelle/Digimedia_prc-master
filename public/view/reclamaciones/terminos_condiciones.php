@@ -3,14 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="terminos_condiciones.css">
+        <title>.:: DigiMedia ::.</title>
+        <link rel="shortcut icon" href="./public/img/logo.png" type="image/x-icon">
+        <meta name="description" content="Terminos y Condiciones!">
+        <link rel="stylesheet" href="./public/css/terminos_condiciones.css">
         <title>Terminos y condiciones</title>
     </head>
     <body>
 
         <div class="contDigi">
             <div class="contDigiImg">
-                <img src="../../img/logo_footer.webp" alt="Img digimedia">
+                <img src="./public/img/logo_footer.webp" alt="Img digimedia">
             </div>
             <div class="contText">
                 <h1>Terminos y condiciones</h1>
