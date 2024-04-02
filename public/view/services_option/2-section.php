@@ -263,7 +263,7 @@
   width: calc(70% + 5px); 
   height: calc(70% + 20px);   
    
-  background-image: url('./public/img/servis_wepb/services2/Diseño-sin-título-2-removebg-preview.png'); 
+  background-image: url('./public/img/servis_wepb/services2/icon2_1.png'); 
   background-size: contain; 
   background-position: center;
   background-repeat: no-repeat;
@@ -276,7 +276,7 @@
   width: calc(70% + 5px); 
   height: calc(70% + 20px);   
    
-  background-image: url('./public/img/servis_wepb/services2/Diseño-sin-título-2_2-removebg-preview.png'); 
+  background-image: url('./public/img/servis_wepb/services2/icon2_2.png'); 
   background-size: contain; 
   background-position: center;
   background-repeat: no-repeat;
@@ -289,7 +289,7 @@
   width: calc(70% + 5px); 
   height: calc(70% + 20px);   
    
-  background-image: url('./public/img/servis_wepb/services2/Diseño_sin_título-2_3-removebg-preview.png'); 
+  background-image: url('./public/img/servis_wepb/services2/icon2_3.png'); 
   background-size: contain; 
   background-position: center;
   background-repeat: no-repeat;
@@ -302,7 +302,7 @@
   width: calc(70% + 5px); 
   height: calc(70% + 20px);   
    
-  background-image: url('./public/img/servis_wepb/services2/Diseño_sin_título-2_4-removebg-preview.png'); 
+  background-image: url('./public/img/servis_wepb/services2/icon2_4.png'); 
   background-size: contain; 
   background-position: center;
   background-repeat: no-repeat;
