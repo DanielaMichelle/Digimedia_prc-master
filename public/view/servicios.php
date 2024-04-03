@@ -7,7 +7,7 @@
     <title>.:: DigiMedia ::.</title>
 
     <!-- Base URL -->
-    <base href="http://localhost/Digimedia_prc-master/">
+    <base href="http://localhost/Web_desing_DigimediaPKT/Digimedia_prc-master/">
     <!-- <base href="https://www.digimediamkt.com/"> -->
 
 
@@ -50,6 +50,12 @@
         $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
         if(is_file("./public/view/modales/{$servicio}-modal.php")) require_once "./public/view/modales/{$servicio}-modal.php";
         else require_once "./public/view/modales/1-modal.php"; 
+    ?>
+    <!-- segundos modales servicios  -->
+    <?php 
+        $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
+        if(is_file("./public/view/modales/{$servicio}-modal-2.php")) require_once "./public/view/modales/{$servicio}-modal-2.php";
+        else require_once "./public/view/modales/1-modal-2.php"; 
     ?>
     <?php 
         $servicio = isset($_GET['id']) ? $_GET['id'] : 1;

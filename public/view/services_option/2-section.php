@@ -1021,7 +1021,7 @@
 
 
 </style>
-<section class="firts_section">
+<section class="firts_section" id="metros_locs2">
     <div class="content_section">
         <h3 id="titulo">Gestión de Redes Sociales</h3>
         <p id="Relleno">

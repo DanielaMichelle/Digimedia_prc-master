@@ -1025,7 +1025,7 @@
 
 
 </style>
-<section class="firts_section">
+<section class="firts_section" id="metros_locs">
     <div class="content_section">
         <h3 id="titulo">Marketing y Gestión Digital</h3>
         <p id="Relleno">
