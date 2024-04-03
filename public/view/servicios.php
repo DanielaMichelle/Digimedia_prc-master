@@ -53,9 +53,12 @@
     ?>
     <!-- segundos modales servicios  -->
     <?php 
-        $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
-        if(is_file("./public/view/modales/{$servicio}-modal-2.php")) require_once "./public/view/modales/{$servicio}-modal-2.php";
-        else require_once "./public/view/modales/1-modal-2.php"; 
+         $servicio = isset($_GET['id']) && ($_GET['id'] == '2' || $_GET['id'] == '3') ? $_GET['id'] : null;
+
+         $ruta_modal = $servicio ? "./public/view/modales/{$servicio}-modal-2.php" : null; 
+         if ($ruta_modal && is_file($ruta_modal)) {
+             require_once $ruta_modal;
+         }
     ?>
     <?php 
         $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
@@ -141,6 +144,7 @@
             </tbody>
         </table>
     </div>
+
     <?php include_once './public/include/section_maps.php' ?>
 
     <!-- Panel de horario y whatsapp -->
@@ -156,6 +160,13 @@
     </div>
     
     <?php include_once './public/assets/footer.php' ?>
+
+    <!-- Modal 2 -->
+     <?php 
+        $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
+        if(is_file("./public/view/modales2/{$servicio}-modal.php")) require_once "./public/view/modales2/{$servicio}-modal.php";
+        else require_once "./public/view/modales2/1-modal.php"; 
+    ?>
 
 </body>
 

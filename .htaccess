@@ -1,3 +1,4 @@
+Options -Indexes 
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php80” package as the default “PHP” programming language.
 <IfModule mime_module>
@@ -9,3 +10,9 @@
 RewriteEngine On
 
 RewriteRule ^(servicios)/[a-z-]+(-[a-z-]+)/([1-4])$ servicios.php?id=$3 
+
+
+#Si colocan un articulo que no existe
+ErrorDocument 404 /Digimedia_prc-master/data/error/404.html
+ErrorDocument 403 /Digimedia_prc-master/data/error/403.html
+
