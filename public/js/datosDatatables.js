@@ -1,5 +1,5 @@
-$(document).ready(function () {
-  $("#exampleTable").DataTable({
+$(document).ready(function() {
+  $("#example").DataTable({
     language: {
       lengthMenu: "Mostrar _MENU_ registros",
       zeroRecords: "No se encontraron resultados",
@@ -15,29 +15,39 @@ $(document).ready(function () {
       },
       sProcessing: "Procesando...",
     },
-    //para usar los botones
     responsive: "true",
     dom: "Bfrtilp",
     buttons: [
       {
+        extend: "copy",
+        text: '<i class="far fa-copy"></i> Copiar',
+        titleAttr: "Copiar al portapapeles",
+        className: "btn btn-primary",
+      },
+      {
+        extend: "csv",
+        text: '<i class="fas fa-file-csv"></i> Exportar a CSV',
+        titleAttr: "Exportar a CSV",
+        className: "btn btn-warning",
+      },
+      {
         extend: "excelHtml5",
-        text: '<i class="fas fa-file-excel"></i> ',
+        text: '<i class="fas fa-file-excel"></i> Exportar a Excel',
         titleAttr: "Exportar a Excel",
         className: "btn btn-success",
       },
       {
         extend: "pdfHtml5",
-        text: '<i class="fas fa-file-pdf"></i> ',
+        text: '<i class="fas fa-file-pdf"></i> Exportar a PDF',
         titleAttr: "Exportar a PDF",
         className: "btn btn-danger",
       },
       {
         extend: "print",
-        text: '<i class="fa fa-print"></i> ',
+        text: '<i class="fa fa-print"></i> Imprimir',
         titleAttr: "Imprimir",
         className: "btn btn-info",
       },
     ],
   });
 });
-//sksksksss

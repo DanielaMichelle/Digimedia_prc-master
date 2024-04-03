@@ -7,4 +7,4 @@
 
     require_once '../db/db.php';
 
-    ControllerAuth::login(); 
+    ControllerAuth::dataPerson();

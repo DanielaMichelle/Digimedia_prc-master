@@ -64,6 +64,7 @@
                 'estado' => true,
                 'mensaje' => 'exito al cerrar sesion'
             ]);
-
         }
+
+
     }
