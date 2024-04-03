@@ -54,7 +54,7 @@
     <!-- segundos modales servicios  -->
     <?php 
          $servicio = isset($_GET['id']) && ($_GET['id'] == '2' || $_GET['id'] == '3') ? $_GET['id'] : null;
-
+            #lalala
          $ruta_modal = $servicio ? "./public/view/modales/{$servicio}-modal-2.php" : null; 
          if ($ruta_modal && is_file($ruta_modal)) {
              require_once $ruta_modal;
