@@ -1139,11 +1139,6 @@
         }
     }
 
-    @media (min-width:478px) AND (max-width:1024px) {
-        /* .descripcion_div {
-            height: 70%;
-        } */
-    }
 </style>
 <section class="firts_section">
     <div class="content_section">

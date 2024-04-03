@@ -279,8 +279,8 @@
         border-radius: 50%;
         background: #FF66C4;
         overflow: hidden;
-        top: 0;
-        left: 27%;
+        top: -5%;
+        left: 31%;
         right: 27%;
         transition: transform 1s ease-in-out, background 2s ease-in-out;
         z-index: 50;
@@ -348,7 +348,7 @@
 
     .descripcion_div {
         width: 85%;
-        height: 77%;
+        height: 88%;
         border: 1px solid black;
         margin: auto;
         transition: transform 1s;
@@ -371,13 +371,11 @@
         height: 71%;
         background: transparent;
         text-align: center;
-        padding: 2%;
+        padding: 2% 13px;
         font-size: 1vw;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-
-
+        /* justify-content: space-between; */
     }
 
     .textos h4 {
@@ -388,11 +386,10 @@
     .textos p {
         background: transparent;
         position: relative;
-        font-size: 1.1vw;
+        font-size: 0.95vw;
         top: -40px;
         font-family: "Open Sans", sans-serif;
-
-
+        margin-top: 3rem;
     }
 
     .hovered {
@@ -413,8 +410,7 @@
 
         .textos {
             background: transparent;
-            padding: 2%;
-
+            justify-content: space-around;
             margin: 0;
         }
 
@@ -425,8 +421,12 @@
 
         .textos p {
             position: relative;
-            font-size: 2vw;
+            font-size: 1.5vw;
             top: -37px;
+        }
+
+        .descripcion_div {
+            height: 74%;
         }
 
         .grid_item {
@@ -591,9 +591,9 @@
 
         .textos {
             background: transparent;
-            padding: 2%;
+            /* padding: 2%;
 
-            margin: 0;
+            margin: 0; */
         }
 
         .textos h4 {
@@ -602,7 +602,7 @@
         }
 
         .textos p {
-            font-size: 1.5vw;
+            font-size: 1.2vw;
         }
 
         #slider {
@@ -1127,6 +1127,12 @@
             position: relative;
 
 
+        }
+    }
+
+    @media (min-width:0px) AND (max-width:478px) {
+        .descripcion_div {
+            height: 70%;
         }
     }
 </style>
