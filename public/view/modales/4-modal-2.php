@@ -8,11 +8,11 @@
         left: 50%;
         transform: translate(-50%, -45%);
         z-index: 50;
-        display: grid;
+        /* display: grid; */
         grid-template-columns: 3fr 4fr;
         background-image: linear-gradient(to bottom, #ff6622, #ff513b, #ff3951, #ff2068, #ff037f);
         border-radius: 12px;
-        /* display: none; */
+        display: none;
     }
 
     .modal2--image-container {
@@ -61,6 +61,15 @@
         justify-content: center;
         gap: 1rem;
         padding: 2rem;
+    }
+
+    .modal2--form-container .modal-close-button {
+        color: #eceef2;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 20px;
+        cursor: pointer;
     }
 
     .modal2--form-container__title {
@@ -126,6 +135,7 @@
         font-weight: 800;
         border: none;
         letter-spacing: 1px;
+        cursor: pointer;
     }
 
     @media (max-width: 687px) {
@@ -224,7 +234,7 @@
 
 <div class="modal2" id="modal2_branding">
     <div class="modal2--image-container">
-    <img class="icon" src="public/img/logo_footer.webp" alt="Digimedia Icon">
+    <img class="icon" src="public/img/logo_digimedia_color.webp" alt="Digimedia Icon">
         <span>¡Diseña tu camino al éxito!</span>
         <figure>
             <img src="./public/img/modal2/modal2-branding.webp" alt="Modal 2 Desarrollo y Diseño Web">
@@ -232,6 +242,7 @@
     </div>
 
     <div class="modal2--form-container">
+        <i class="fa-solid fa-x modal-close-button" id="close-button"></i>
         <div class="modal2--form-container__title">
             <span><span>Hoy</span> es tu día</span>
             <span>Tu primera consulta</span>
@@ -268,32 +279,113 @@
 <script>
     const modal = document.getElementById("modal2_branding");
     const anuncioServicio = document.querySelector("#anuncio-servicio");
+    const closeBtn = document.querySelector("#close-button");
+    const objReg = {
+        gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ 
+    };
 
-    // OPEN MODAL
-    // let options = {
-    //     threshold: 0.5,
-    // };
-    // let ejecutado = false;
-
-    // // Abrir modal en sección de anuncio 
-    // let observer = new IntersectionObserver(function(entries) {
-    //     for (const entry of entries) {
-    //         if (entry.isIntersecting && !ejecutado) {
-    //             console.log("entro");
-    //             modal.style.display = "grid";
-    //             ejecutado = true; // Marcar como ejecutado
-    //         }
-    //     }
-    // }, options);
-
-    // observer.observe(anuncioServicio);
+    // Abrir modal
+    let options = {
+        threshold: 0.5,
+    };
+    let ejecutado = false;
+    let observer = new IntersectionObserver(function(entries) {
+        for (const entry of entries) {
+            if (entry.isIntersecting && !ejecutado) {
+                modal.style.display = "grid";
+                ejecutado = true; // Marcar como ejecutado
+            }
+        }
+    }, options);
+    observer.observe(anuncioServicio);
 
 
-    // CLOSE MODAL
-    // document.addEventListener('click', function(event) {
-    //     if (!modal.contains(event.target)) {
-    //         modal.style.display = "none";
-    //         console.log("Click fuera del modal");
-    //     }
-    // });
+    // Cerrar modal click afuera
+    document.addEventListener('click', function(event) {
+        if (!modal.contains(event.target)) {
+            modal.style.display = "none";
+            console.log("Click fuera del modal");
+        }
+    });
+
+    // Cerrar modal click X
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = "none";
+    })
+
+    validateData(); 
+    function validateData() {
+        const formMain = document.querySelector(".modal2--form-container #formMain");
+        formMain.addEventListener("submit", (e) => {
+            e.preventDefault();
+            datos();
+        })
+    }
+
+    function datos() {
+        const nameInput = document.querySelector(".modal2--form-container #name");
+        const lastNameInput = document.querySelector(".modal2--form-container #lastName");
+        const emailInput = document.querySelector(".modal2--form-container #email");
+        const email = emailInput.value.trim();
+        const emailValido = objReg.gmail.test(email);
+
+        if (nameInput.value === '') alert('El nombre no debe estar vacío');
+        if (lastNameInput.value === '') alert('El apellido no debe estar vacío');
+        if (emailInput.value === '') alert('El correo no debe estar vacío');
+        if (!emailValido) alert("Debe de ingresar un correo válido.");
+        if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
+            modal.style.display = "none";
+            agarrandoDatos(nameInput, lastNameInput, emailInput);
+            enviarEmailAjax();
+            limpiarDatos(nameInput, lastNameInput, emailInput);
+        }
+    }
+
+    function agarrandoDatos(name, lastName, email) {
+        const form = new FormData();
+        form.append('name', name.value)
+        form.append('lastName', lastName.value)
+        form.append('email', email.value)
+    }
+
+    //Enviando datos al servidor:
+    // function enviandoDatosServer(form) {
+    // }
+
+    function limpiarDatos(name, lastName, email) {
+        name.value = "";
+        lastName.value = "";
+        email.value = "";
+    }
+
+    function enviarEmailAjax() {
+        console.log("Enviando correo ...");
+        // var queryString = window.location.search;
+        // var parametros = new URLSearchParams(queryString);
+        // const id_ser = parametros.get('id');
+
+        // const email = document.getElementById('email').value;
+
+        // var datos = new FormData();
+        // datos.append("id_ser", id_ser);
+        // datos.append("email", email);
+
+        // $.ajax({
+        //     url: "./public/message/Controller/process.php",
+        //     method: "POST",
+        //     data: datos,
+        //     cache: false,
+        //     contentType: false,
+        //     processData: false,
+        //     success: function(respuesta) {
+        //         console.log("Respuesta", respuesta);
+        //         if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
+        //             alert("Email Enviado");
+
+        //         } else {
+        //             alert("ocurrio un error " + respuesta);
+        //         }
+        //     }
+        // })
+    }
 </script>

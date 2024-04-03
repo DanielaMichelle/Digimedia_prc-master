@@ -7,7 +7,8 @@
     <title>.:: DigiMedia ::.</title>
 
     <!-- Base URL -->
-    <base href="http://localhost/Web_desing_DigimediaPKT/Digimedia_prc-master/">
+    <base href="http://localhost/Digimedia_prc-master/">
+    <!-- <base href="http://localhost/Web_desing_DigimediaPKT/Digimedia_prc-master/"> -->
     <!-- <base href="https://www.digimediamkt.com/"> -->
 
 
@@ -51,15 +52,7 @@
         if(is_file("./public/view/modales/{$servicio}-modal.php")) require_once "./public/view/modales/{$servicio}-modal.php";
         else require_once "./public/view/modales/1-modal.php"; 
     ?>
-    <!-- segundos modales servicios  -->
-    <?php 
-         $servicio = isset($_GET['id']) && ($_GET['id'] == '2' || $_GET['id'] == '3') ? $_GET['id'] : null;
-            #lalala
-         $ruta_modal = $servicio ? "./public/view/modales/{$servicio}-modal-2.php" : null; 
-         if ($ruta_modal && is_file($ruta_modal)) {
-             require_once $ruta_modal;
-         }
-    ?>
+    
     <?php 
         $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
         if(is_file("./public/view/services_option/{$servicio}-section.php")) require_once "./public/view/services_option/{$servicio}-section.php";
@@ -159,14 +152,15 @@
         </div>
     </div>
     
-    <?php include_once './public/assets/footer.php' ?>
-
-    <!-- Modal 2 -->
-     <?php 
-        $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
-        if(is_file("./public/view/modales2/{$servicio}-modal.php")) require_once "./public/view/modales2/{$servicio}-modal.php";
-        else require_once "./public/view/modales2/1-modal.php"; 
+    <!-- segundos modales servicios  -->
+    <?php 
+         $servicio = isset($_GET['id']) && ($_GET['id'] == '1'||  $_GET['id'] == '2' || $_GET['id'] == '3' || $_GET['id'] == '4') ? $_GET['id'] : null;
+         $ruta_modal = $servicio ? "./public/view/modales/{$servicio}-modal-2.php" : null; 
+         if ($ruta_modal && is_file($ruta_modal)) {
+             require_once $ruta_modal;
+         }
     ?>
+    <?php include_once './public/assets/footer.php' ?>
 
 </body>
 
