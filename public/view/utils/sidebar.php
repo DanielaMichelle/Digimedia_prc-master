@@ -83,8 +83,9 @@
             <img src="/Digimedia_prc-master/public/img/user-admin.png" alt="" height="50px">
             <div class="info-usuario">
                 <div class="nombre-email">
+                <!-- Nombre admin: -->
                     <span class="nombre">Bienvenido</span>
-                    <span class="email">Administrador</span>
+                    <span class="email">Administrador</span> 
                 </div>
                 <ion-icon name="ellipsis-vertical-outline"></ion-icon>
             </div>
