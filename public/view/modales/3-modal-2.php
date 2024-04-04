@@ -4,7 +4,7 @@
     top: 52%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 470px;
+    height: 83vh;
     width: 60%;
     overflow: hidden;
     z-index: 10000;
@@ -26,7 +26,7 @@
     background: linear-gradient(to bottom ,#7B22B3,#0095FF);  
     display: flex;
     flex-direction: column;
-    padding: 35px 0;
+    padding: 10% 0;
     
 }
 .h3_postion{
@@ -392,7 +392,7 @@
         container_des.classList.add('oculto_des')   
     }
     function scrollmedn(){
-      var ventasSection = document.getElementById('metros_locs');
+      var ventasSection = document.getElementById('anuncio-servicio');
       
       
       var scrollPosition = window.scrollY;

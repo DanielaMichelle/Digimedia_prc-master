@@ -427,7 +427,7 @@
         container_des.classList.add('oculto_des')   
     }
     function scrollmedn(){
-      var ventasSection = document.getElementById('metros_locs2');
+      var ventasSection = document.getElementById('anuncio-servicio');
       
       
       var scrollPosition = window.scrollY;
