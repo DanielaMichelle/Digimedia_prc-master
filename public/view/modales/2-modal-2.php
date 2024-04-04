@@ -4,7 +4,7 @@
     top: 52%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 470px;
+    height: 83vh;
     width: 60%;
     overflow: hidden;
     z-index: 10000;
@@ -26,7 +26,7 @@
     background: linear-gradient(to bottom ,#FF037F,#7B22B3);  
     display: flex;
     flex-direction: column;
-    padding: 35px 0;
+    padding: 10% 0;
     
 }
 .h3_postion{
@@ -168,7 +168,7 @@
 @media (min-width:650px) AND (max-width:860px){
     .main-container{
         width: 80%; 
-        height: 400px;
+        height: 420px;
     }
     .h3_postion .h3{
         font-size: 3.5vw;
