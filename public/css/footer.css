@@ -135,6 +135,42 @@ h4::selection {
 .grid-item-des a {
   font-size: 1.4vw;
 }
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.legales_medium p:hover{
+  color: white;
+}
+
+
+.footer-social-media {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-self: flex-end;
+  gap: 16px;
+}
+
+.footer-social-media .social-icon-hero {
+  color: #ffffff;  
+}
+
+.footer-social-media .social-icon-hero .fa-brands{
+  font-size: 1.5rem;
+  cursor: pointer;
+} 
+
+.footer-social-media .social-icon-hero .fa-brands:hover {
+  color: white;
+}
+
 @media (min-width: 600px) AND (max-width: 990px) {
   .col-md-5 {
     width: 34% !important;
