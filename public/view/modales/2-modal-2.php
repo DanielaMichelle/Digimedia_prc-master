@@ -146,7 +146,7 @@
     
 }
 #form_en button{
-    background: #0095FF;
+    background: #FF037F;
     color: white;
     font-size: 3.3vw;
     padding: 2px 40px;

@@ -11,6 +11,8 @@
     display: grid;
     grid-template-columns: repeat(2,40% 60%);
     grid-template-rows: repeat(1,1fr);
+    border-radius: 20px;
+    border: .4px solid black;
     
 }
 .grid-item-modal:first-child{
