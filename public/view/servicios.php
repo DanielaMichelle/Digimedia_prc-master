@@ -7,7 +7,7 @@
     <title>.:: DigiMedia ::.</title>
 
     <!-- Base URL -->
-    <base href="http://localhost/Digimedia_prc-master/">
+    <base href="http://localhost/Web_desing_DigimediaPKT/Digimedia_prc-master/">
     <!-- <base href="http://localhost/Web_desing_DigimediaPKT/Digimedia_prc-master/"> -->
     <!-- <base href="https://www.digimediamkt.com/"> -->
 

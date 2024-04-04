@@ -11,6 +11,8 @@
     display: grid;
     grid-template-columns: repeat(2,40% 60%);
     grid-template-rows: repeat(1,1fr);
+    border-radius: 20px;
+    border: .4px solid black;
     
 }
 .grid-item-modal:first-child{
@@ -21,7 +23,7 @@
 }   
 .grid-item-modal:last-child{  
     
-    background: linear-gradient(to bottom ,#0095FF,#FF037F);  
+    background: linear-gradient(to bottom ,#FF037F,#7B22B3);  
     display: flex;
     flex-direction: column;
     padding: 35px 0;
@@ -51,7 +53,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 24% 76%;
+    object-position: 40% 60%;
     box-shadow: inset 0 10px 10px black;
     
 }
@@ -60,25 +62,44 @@
     height: 100%;
     background: transparent;
 }
-
+.manta{
+    
+    display: flex;
+    justify-content: center;
+}
+.top{
+    margin-right: 6px;
+    
+}
 .top h4{
+    text-align: center;
+    font-size: 2.5vw;
+    color: white;
+    margin: 0;
+    font-weight: 700;
+    margin-top: 7%;
+    
+}
+.top h3{
+    
     text-align: center;
     font-size: 2vw;
     color: white;
-    margin: 0;
 }
 
 .medium h2{
     text-align: center;
-    font-size: 4.5vw;
+    font-size: 5.5vw;
     color: white;
     margin: 0;
+    font-weight: 900;
 }
 
 .bottom-2 h3{
     text-align: center;
     font-size: 2.5vw;
     color: white;
+    font-weight: 900;
 }
 .bottom{
     
@@ -153,6 +174,9 @@
         font-size: 3.5vw;
 
     }
+    .medium h2{
+        font-size: 6vw;
+    }
    
 }
 @media (min-width:500px) AND (max-width:650px){
@@ -176,8 +200,11 @@
     .top h4{
         font-size: 3.5vw;
     }
+    .top h3{
+        font-size: 3.1vw;
+    }
     .medium h2{
-        font-size: 5vw;
+        font-size: 8vw;
     }
 
     .bottom-2 h3{
@@ -217,8 +244,11 @@
     .top h4{
         font-size: 3.5vw;
     }
+    .top h3{
+        font-size: 3.1vw;
+    }
     .medium h2{
-        font-size: 5vw;
+        font-size: 8.3vw;
     }
 
     .bottom-2 h3{
@@ -260,8 +290,11 @@
     .top h4{
         font-size: 4.3vw;
     }
+    .top h3{
+        font-size: 3.8vw;
+    }
     .medium h2{
-        font-size: 6vw;
+        font-size: 7.3vw;
     }
 
     .bottom-2 h3{
@@ -305,7 +338,7 @@
         font-size: 4.3vw;
     }
     .medium h2{
-        font-size: 6vw;
+        font-size:7.3vw;
     }
 
     .bottom-2 h3{
@@ -342,14 +375,17 @@
 <section class="overflow_lo oculto_des"></section>
 <section class="main-container oculto_des">
     <div class="main-container-div1 grid-item-modal">
-        <img src="./public/img/lexico_serves.jpg"/>
-        <div class="h3_postion"><h3 class="h3">¡DESTACA TU NEGOCIO!</h3></div>
+        <img src="./public/img/modal2/dgservis.jpg"/>
+        <div class="h3_postion"><h3 class="h3">¡HAZ CRECER TUS REDES! </h3></div>
     </div>
     <div class="main-container-div1 grid-item-modal">
         <div class="mantainer">
-            <div class="top"><h4>OBTÉN AHORA</h4></div>
+            <div class="manta">
+                <div class="top"><h4>SOLO POR</h4><h3>ACCEDE A UNA</h3></div>
+                <div class="medium"><h2>HOY</h2></div>
+            </div>
+            
             <div class="bottom-2"><h3>! ASESORIA GRATIS ¡</h3></div>
-            <div class="medium"><h2>!GRATIS¡</h2></div>
             
             <div class="bottom">
                 <form>
