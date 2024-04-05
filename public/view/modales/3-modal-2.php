@@ -353,14 +353,14 @@
             <div class="medium"><h2>SUEÑOS</h2></div>
             <div class="bottom-2"><h3>! ASESORIA GRATIS ¡</h3></div>
             <div class="bottom">
-                <form>
+                <form id="formMain_lost">
                     <div class="form_in">
                         <label>Nombre</label>
-                        <input type="text"/>
+                        <input type="text" id="name_lost"/>
                         <label>Apellido</label>
-                        <input type="text"/>
+                        <input type="text" id="lastName"/>
                         <label>Correo</label>
-                        <input type="text"/>
+                        <input type="text" id="email_lost"/>
                     </div>
                     <div id="form_en">
                         <button type="submit">HAZLO YA</button>
@@ -376,6 +376,9 @@
     const overflow_los = document.querySelector('.overflow_lo');
     const container_des = document.querySelector('.main-container')
     let  modalMostrado = false;
+    const objRegex_lost = {
+        gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
+    };
 
     document.addEventListener('DOMContentLoaded', function() {
         //overflow.addEventListener('click',touch_display);
@@ -384,9 +387,53 @@
         overflow_los.addEventListener('click',touchOverflowdes);
 
         window.addEventListener('scroll',scrollmedn);
+
+        validarDatos_lost();
     
         
     });
+    function validarDatos_lost() {
+        const formMain = document.querySelector("#formMain_lost");
+        formMain.addEventListener("submit", (e) => {
+            console.log("estamos active")
+            e.preventDefault();
+            datos_lost();
+        })
+    }
+    function datos_lost() {
+
+        const nombreInput = document.getElementById('name_lost');
+        //const telefonoInput = document.getElementById('phone');
+        const lastNInput = document.getElementById('lastName');
+        const emailInput = document.getElementById('email_lost');
+
+        // Hacer que los 9 números esten juntos
+        // const telefono = telefonoInput.value.replace(/\s/g, '');
+        const email = emailInput.value.trim(); //delete white space
+
+        //const telefonoValido = objRegex.telefono.test(telefono);
+        const emailValido = objRegex_lost.gmail.test(email);
+
+
+        if (nombreInput.value === '') alert('El nombre no debe estar vacio')
+
+        if (lastNInput.value === '') alert('El apellido no debe estar vacio')
+
+        // if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos")
+
+        if (!emailValido) alert("Debe de ingresar un correo valido.")
+
+
+        if (nombreInput.value != '' && lastNInput.value != '' && emailValido) {
+            alert("Todos los campos son correctos.")
+            overflow_los.classList.add('oculto_des')
+            container_des.classList.add('oculto_des')  
+            //agarrandoDatos(nombreInput, telefonoInput, emailInput);
+            //envioDatosWhatsApp(telefono);
+            //enviarEmailAjax();
+            //limpiarDatos(nombreInput, telefonoInput, emailInput);
+        }
+    }
     function touchOverflowdes(){
         overflow_los.classList.add('oculto_des')
         container_des.classList.add('oculto_des')   

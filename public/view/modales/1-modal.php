@@ -384,7 +384,7 @@ function datos() {
 
     // Hacer que los 9 números esten juntos
     const telefono = telefonoInput.value.replace(/\s/g, '');
-    const email = emailInput.value.trim();
+    const email = emailInput.value.trim(); 
 
     const telefonoValido = objRegex.telefono.test(telefono);
     const emailValido = objRegex.gmail.test(email);
