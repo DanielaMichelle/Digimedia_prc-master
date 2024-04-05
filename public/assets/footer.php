@@ -1,161 +1,69 @@
 <script src="https://kit.fontawesome.com/0ee4e706bf.js" crossorigin="anonymous"></script>
 <footer>
-    <div class="footer-top">
-        <div class="container">
-            <div class="row row_des">
-
-                <div class="col-md-5">
-                    <h4><a href="index.php" class="text-white"><img src="./public/img/logo_footer.webp" class="logoimagen" title="Digimedia!" alt="Logo">
-                        </a></h4>
-                    <h2>Agencia de Marketing Digital</h2>
-
-
-                    <!--<ul>
-                        <li></li>
-                        <p class="p">T&eacute;rminos del servicio</p>
-                        </li>
-                        <li></li>
-                        <p class="p">Condiciones del servicio</p>
-                        </li>
-                        <li></li>
-                        <p class="p">Declaraci&oacute;n de accesibilidad</p>
-                        </li>
-                        <li></li>
-                        <p class="p">Pol&iacute;tica de privacidad</p>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav flex-row">
-                        <li class="nav-item">
-                            <a class="social-icon" href="https://www.facebook.com/DigiMedia.Marketing1"
-                                title="Facebook!" aria-label="Nuestro Facebook.."><i class="bi bi-facebook"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="social-icon" href="https://www.instagram.com/digimediamkt/" title="Instagram!"
-                                aria-label="Nuestro Instagram.."><i class="bi bi-instagram"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="social-icon" href="https://www.tiktok.com/@digimediamkt?lang=es"
-                                title="Instagram!" aria-label="Nuestro Instagram.."><i class="bi bi-tiktok"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="social-icon"
-                                href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name"
-                                title="Linkedin!" aria-label="Nuestro Linkedin.."><i class="bi bi-linkedin"></i></a>
-                        </li>
-                    </ul>-->
-                </div>
-
-
-                <div class="col-md-2 ms-auto twoBorx">
-                    <h4>Contacto</h4>
-                    <!--<ul>
-                        <li><a href="View/nosotros.php" title="Nosotros">Nosotros</a></li>
-                        <li><a href="View/preguntas.php" title="Preguntas frecuentes">Preguntas frecuentes</a></li>
-                        <li><a href="View/contacto.php" title="Trabaja con nosotros">Trabaja con nosotros</a></li>
-                        <li><a href="View/contacto.php" title="Accesibilidad">Accesibilidad</a></li>
-                    </ul>-->
-                    <ul class="fasinos">
-                        <li class="grid-item-des"><i class="fa-solid fa-mobile-screen"></i>
-                            <a href="View/nosotros.php" title="Nosotros">958716002</a>
-                        </li>
-                        <li class="grid-item-des"><i class="fa-solid fa-envelope"></i><a href="View/preguntas.php" title="Digimediakt email">digimediamkt@gmail.com</a></li>
-                        <li class="grid-item-des"><i class="fa-solid fa-map-location-dot"></i><a href="View/contacto.php" title="Trabaja con nosotros">Perú - Jr. Paruro 1401, Cercado de Lima, Lima</a></li>
-
-                    </ul>
-
-                </div>
-                <div class="col-md-2 ms-auto">
-                    <h4>Legales</h4>
-                    <!--<ul>
-                        <li><a href="View/ds-web.php" title="Diseño y Desarrollo Web">Diseño y Desarrollo Web</a></li>
-                        <li><a href="View/rd-sociales.php" title="Gestion de redes sociales">Gesti&oacute;n de redes
-                                sociales</a></li>
-                        <li><a href="View/marketing-digital.php" title="Marketing y Gestion Digital">Marketing y
-                                Gesti&oacute;n Digital</a></li>
-                        <li><a href="View/branding.php" title="Branding y Diseño">Branding y Diseño</a></li>
-                    </ul>-->
-                    <ul class="legales_medium">
-                        <li></li>
-                        <a href="politica_privacidad.php">
-                            <p class="p">Pol&iacute;tica de privacidad</p>
-                        </a>
-                        </li>
-                        <li></li>
-                        <a href="terminos_condiciones.php">
-                            <p class="p">T&eacute;rminos y Condiciones</p>
-                        </a>
-                        </li>
-                        <li></li>
-                        <a href="libro_reclamaciones.php">
-                            <p class="p">Libro de Reclamaciones</p>
-                        </a>
-                        </li>
-                        <li></li>
-                        <p class="p">Trabaja con nosotros</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-2 ms-auto">
-                    <h4>Redes Sociales</h4>
-                    <!--<ul>
-                        <li></li>
-                        <p>Solicitar asesor&iacute;a gratuita</p>
-                        </li>
-                        <li></li>
-                        <p>Contacto para PYMES</p>
-                        </li>
-                        <li></li>
-                        <p>Contacto para XXXX</p>
-                        </li>
-                    </ul>-->
-
-                    <ul class="navbar-nav flex-row footer-social-media">
-                        <li class="nav-item">
-                            <a class="social-icon-hero" href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name" title="Linkedin!" aria-label="Nuestro Linkedin.."><i id="hero-icon-linkeding" class="fa-brands fa-linkedin-in"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="social-icon-hero" href="https://www.instagram.com/digimediamkt/" title="Instagram!" aria-label="Nuestro Instagram.."><i id="hero-icon-instagram" class="fa-brands fa-instagram"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="social-icon-hero" href="https://www.youtube.com/@digimediamarketing2636" title="Youtube!" aria-label="Nuestro Youtube.."><i id="hero-icon-youtube" class="fa-brands fa-youtube"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="social-icon-hero" href="https://www.facebook.com/DigiMedia.Marketing1" title="Facebook!" aria-label="Nuestro Facebook.."><i id="hero-icon-facebook" class="fa-brands fa-facebook"></i></a>
-                        </li>
-                    </ul>
-                    <!-- <ul class="navbar-nav flex-row">
-                        <li class="nav-item">
-                            <a class="social-icon" href="https://www.facebook.com/DigiMedia.Marketing1"
-                                title="Facebook!" aria-label="Nuestro Facebook.."><i class="bi bi-facebook"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="social-icon" href="https://www.instagram.com/digimediamkt/" title="Instagram!"
-                                aria-label="Nuestro Instagram.."><i class="bi bi-instagram"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="social-icon" href="https://www.tiktok.com/@digimediamkt?lang=es"
-                                title="Instagram!" aria-label="Nuestro Instagram.."><i class="bi bi-tiktok"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="social-icon"
-                                href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name"
-                                title="Linkedin!" aria-label="Nuestro Linkedin.."><i class="bi bi-linkedin"></i></a>
-                        </li>
-                    </ul> -->
-                </div>
-            </div>
+    <div class="footer_top">
+        <div class="footer_top--imagen">
+            <img src="./public/img/logo_footer.webp" alt="logo" class="logo Digimedia">
+            <span>Agencia de Marketing Digital</span>
         </div>
+
+        <div class="footer_top--contact">
+            <h6>Contacto</h6>
+            <ul class="footer_top--contact_list">
+                <li>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <span>958716002</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>digimediamkt@gmail.com</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>                
+                    <span>Jr. Paruro 1401, Cercado de Lima - Lima</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="footer_top--legal">
+            <h6>Legales</h6>
+            <ul class="footer_top--legal_list">
+                <li>
+                    <a href="politica_privacidad.php">Pol&iacute;tica de privacidad</a>
+                </li>
+                <li>
+                    <a href="terminos_condiciones.php">T&eacute;rminos y Condiciones</a>
+                </li>
+                <li>
+                    <a href="libro_reclamaciones.php">Libro de reclamaciones</a>
+                </li>
+                <li>
+                    <a>Trabaja con nosotros</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="footer_top--social-media">
+            <h6>Redes Sociales</h6>
+            <ul class="footer_top--social-media_list">
+                <li>
+                    <a href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name" title="Linkedin!" aria-label="Nuestro Linkedin.."><i class="fa-brands fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/digimediamkt/" title="Instagram!" aria-label="Nuestro Instagram.."><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@digimediamarketing2636" title="Youtube!" aria-label="Nuestro Youtube.."><i class="fa-brands fa-youtube"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/DigiMedia.Marketing1" title="Facebook!" aria-label="Nuestro Facebook.."><i class="fa-brands fa-facebook"></i></a>
+                </li>
+            </ul>
+        </div>
+    
     </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-auto">
-                    <p class="mb-0">RUC: 20605116559</p>
-                </div>
-                <div class="col-auto">
-                    <p class="mb-0">@Digimedia Marketing® 2019. Derechos reservados</p>
-                </div>
-            </div>
-        </div>
+
+    <div class="footer_bottom">
+        <span>RUC: 20605116559</span>
+        <span>@DigiMedia Marketing 2019. Derechos reservados</span>
     </div>
 </footer>

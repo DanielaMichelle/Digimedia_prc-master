@@ -4,15 +4,15 @@
     top: 52%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 83vh;
-    width: 60%;
+    height: 400px;
+    width: 570px;
     overflow: hidden;
     z-index: 10000;
     display: grid;
-    grid-template-columns: repeat(2,40% 60%);
+    grid-template-columns: repeat(2,43% 57%);
     grid-template-rows: repeat(1,1fr);
     border-radius: 20px;
-    border: .4px solid black;
+    font-size: 16px;
     
 }
 .grid-item-modal:first-child{
@@ -33,18 +33,18 @@
     
     position: absolute;
     bottom: 6%;
-    width: 40%;
+    width: 43%;
     
 }
 .h3_postion .h3{
-    font-size: 2.5vw;
+    font-size: 1.3em;
     text-align: center;
     color: white;
     font-weight: 800;
 }
 .grid-item-modal:first-child::before{
     content: '';
-    width: 40%;
+    width: 43%;
     height: 107.5%;
     position: absolute;
     background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,0.8));
@@ -65,21 +65,22 @@
 
 .top h4{
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.3em;
     color: white;
     margin: 0;
 }
 
 .medium h2{
     text-align: center;
-    font-size: 4.5vw;
+    font-size: 2.6em;
+    font-weight: 900;
     color: white;
     margin: 0;
 }
 
 .bottom-2 h3{
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 1.7em;
     color: white;
 }
 .bottom{
@@ -105,13 +106,14 @@
 .form_in input{
     border-radius: 10px ;
     padding: 2px;
+    font-size: .7em;
     
     
 }
 .form_in label{
     margin-left: 8px;
     color: white;
-    font-size: 1.2vw;
+    font-size: .7em;
     display: flex;
     align-items: end;
     
@@ -129,196 +131,44 @@
 #form_en button{
     background: purple;
     color: white;
-    font-size: 3.3vw;
-    padding: 2px 40px;
+    font-size: 1.7em;
+    padding: 6px 30px;
     font-weight: 900;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 1px 0px 0px 0px white;
 }
-@media (min-width:860px) AND (max-width:980px){
-    .main-container{
-        width: 70%; 
-        height: 430px;
-    }
-    .h3_postion .h3{
-        font-size: 3vw;
-
-    }
+.btn_close{
+    position: absolute;
+    top: -5px;
+    right: 4px;
+    color: white;
     
-}
-@media (min-width:650px) AND (max-width:860px){
-    .main-container{
-        width: 80%; 
-        height: 400px;
-    }
-    .h3_postion .h3{
-        font-size: 3.5vw;
-
-    }
+    
    
-}
-@media (min-width:500px) AND (max-width:650px){
-    .main-container{
-        width: 95%; 
-        height: 370px;
-    }
-    .form_in input{
-        border-radius: 10px ;
-        padding: 2px;
-        font-size: 2vw;
     
-    }
-   
-    .form_in label{
-        font-size: 2.5vw;
-    }
-    #form_en button{
-        font-size: 4vw;
-    }
-    .top h4{
-        font-size: 3.5vw;
-    }
-    .medium h2{
-        font-size: 5vw;
-    }
-
-    .bottom-2 h3{
-        font-size: 3.5vw;
-    }
-    .h3_postion .h3{
-        font-size: 4vw;
-
-    }
     
 }
-@media (min-width:380px) AND (max-width:500px){
+.btn_close .close-modal{
+    width: 100%;
+    font-size: 1.9em;
+    background: transparent;
+    border: none;
+    text-align: left;
+    position: relative;
+    top: 0;
+}
+@media (min-width:300px) AND (max-width:600px){
     .main-container{
-        width: 95%; 
-        height: 330px;
-    }
-    .bottom{
-    
-        width: 100%;
-        height: 69%;
-        
-        
-    }
-    .form_in input{
-        border-radius: 10px ;
-        padding: 2px;
-        font-size: 2.2vw;
-    
-    }
-   
-    .form_in label{
-        font-size: 2.5vw;
-    }
-    #form_en button{
-        font-size: 4vw;
-    }
-    .top h4{
-        font-size: 3.5vw;
-    }
-    .medium h2{
-        font-size: 5vw;
-    }
-
-    .bottom-2 h3{
-        font-size: 3.5vw;
-    }
-    .h3_postion .h3{
-        font-size: 4vw;
-
-    }
-    .h3_postion{
-        bottom: 5%;  
+        height: 280px;
+        width: 95%;
+        font-size: 10px;
     }
 }
-@media (min-width:280px) AND (max-width:380px){
+@media (min-width:0px) AND (max-width:300px){
     .main-container{
-        width: 95%; 
-        height: 300px;
-    }
-    .bottom{
-    
-        width: 100%;
-        height: 69%;
-       
-        
-    }
-    .form_in input{
-        border-radius: 10px ;
-        padding: 2px;
-        font-size: 2.5vw;
-    
-    }
-    
-    .form_in label{
-        font-size: 2.5vw;
-    }
-    #form_en button{
-        font-size: 4.5vw;
-    }
-    .top h4{
-        font-size: 4.3vw;
-    }
-    .medium h2{
-        font-size: 6vw;
-    }
-
-    .bottom-2 h3{
-        font-size: 4.3vw;
-    }
-    .h3_postion .h3{
-        font-size: 4vw;
-
-    }
-    .h3_postion{
-        bottom: 5%;  
-    }
-    
-}
-@media (min-width:0px) AND (max-width:280px){
-    .main-container{
-        width: 95%; 
-        height: 250px;
-    }
-    .bottom{
-    
-        width: 100%;
-        height: 69%;
-       
-        
-    }
-    .form_in input{
-        border-radius: 10px ;
-        padding: 2px;
-        font-size: 2.5vw;
-    
-    }
-    
-    .form_in label{
-        font-size: 2.5vw;
-    }
-    #form_en button{
-        font-size: 3.5vw;
-    }
-    .top h4{
-        font-size: 4.3vw;
-    }
-    .medium h2{
-        font-size: 6vw;
-    }
-
-    .bottom-2 h3{
-        font-size: 4.3vw;
-    }
-    .h3_postion .h3{
-        font-size: 4vw;
-
-    }
-    .h3_postion{
-        bottom: 5%;  
+        height: 245px;
+        width: 96%;
+        font-size: 8px;
     }
 }
 .overflow_lo{
@@ -343,18 +193,19 @@
 
 <section class="overflow_lo oculto_des"></section>
 <section class="main-container oculto_des">
-    <div class="main-container-div1 grid-item-modal">
+    <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
         <img src="https://img.freepik.com/foto-gratis/peron-haciendo-presentacion-sus-colegas_23-2149229031.jpg?w=740&t=st=1712071654~exp=1712072254~hmac=c4267799e79d6b20e124ba780aef541de7ff000e79063af0c0ecc90f2b9e6177"/>
-        <div class="h3_postion"><h3 class="h3">!INCREMENTA TUS VENTAS¡</h3></div>
+        <div class="h3_postion" style="font-size: 100%;"><h3 class="h3">!INCREMENTA TUS VENTAS¡</h3></div>
     </div>
-    <div class="main-container-div1 grid-item-modal">
-        <div class="mantainer">
-            <div class="top"><h4>Hazlo y Cumple Tus</h4></div>
-            <div class="medium"><h2>SUEÑOS</h2></div>
-            <div class="bottom-2"><h3>! ASESORIA GRATIS ¡</h3></div>
-            <div class="bottom">
-                <form id="formMain_lost">
-                    <div class="form_in">
+    <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
+        <div class="btn_close" style="font-size: 100%;"><button class="close-modal">&times;</button></div>
+        <div class="mantainer" style="font-size: 100%;">
+            <div class="top" style="font-size: 100%;"><h4>Hazlo y Cumple Tus</h4></div>
+            <div class="medium" style="font-size: 100%;"><h2>SUEÑOS</h2></div>
+            <div class="bottom-2" style="font-size: 100%;"><h3>! ASESORIA GRATIS ¡</h3></div>
+            <div class="bottom" style="font-size: 100%;">
+                <form id="formMain_lost" style="font-size: 100%;">
+                    <div class="form_in" style="font-size: 100%;">
                         <label>Nombre</label>
                         <input type="text" id="name_lost"/>
                         <label>Apellido</label>
@@ -362,7 +213,7 @@
                         <label>Correo</label>
                         <input type="text" id="email_lost"/>
                     </div>
-                    <div id="form_en">
+                    <div id="form_en" style="font-size: 100%;">
                         <button type="submit">HAZLO YA</button>
                     </div>
                     
@@ -371,7 +222,7 @@
         </div>
     </div>
 </section>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     const overflow_los = document.querySelector('.overflow_lo');
     const container_des = document.querySelector('.main-container')
@@ -430,7 +281,7 @@
             container_des.classList.add('oculto_des')  
             //agarrandoDatos(nombreInput, telefonoInput, emailInput);
             //envioDatosWhatsApp(telefono);
-            //enviarEmailAjax();
+            enviarEmailAjax();
             //limpiarDatos(nombreInput, telefonoInput, emailInput);
         }
     }
@@ -458,6 +309,37 @@
       }
     
     }
-   
+    function enviarEmailAjax() {
+        var queryString = window.location.search;
+        var parametros = new URLSearchParams(queryString);
+        const id_ser = parametros.get('id');
+
+        const email = document.getElementById('email_lost').value;
+
+
+        var datos = new FormData();
+        datos.append("id_ser", id_ser);
+        datos.append("email", email);
+
+
+
+        $.ajax({
+            url: "./public/message/Controller/process.php",
+            method: "POST",
+            data: datos,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(respuesta) {
+                console.log("Respuesta", respuesta);
+                if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
+                    alert("Email Enviado");
+
+                } else {
+                    alert("ocurrio un error " + respuesta);
+                }
+            }
+        })
+    }
     
 </script>
