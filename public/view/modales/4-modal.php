@@ -580,9 +580,10 @@ window.onload = function() {
 
 
 function enviarEmailAjax() {
-    var queryString = window.location.search;
-    var parametros = new URLSearchParams(queryString);
-    const id_ser = parametros.get('id');
+    var url = window.location.href;
+
+// Extraer el valor después de "servicios/"
+    const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
 
     const email = document.getElementById('email').value;
 
