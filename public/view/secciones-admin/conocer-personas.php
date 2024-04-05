@@ -39,6 +39,7 @@
 
     <script>
         const tableBody = document.getElementById('tableBody');
+        const person =document.getElementById("person")
 
         const dataRender = () => {
             fetch('../../../app/trigger/person1.php?action=GET')
@@ -59,7 +60,12 @@
 
                 })
         };
+
         dataRender();
+
+
+
+
     </script>
 
 
