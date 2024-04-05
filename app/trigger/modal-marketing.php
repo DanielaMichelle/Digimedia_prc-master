@@ -14,10 +14,10 @@ if ($action == 'GET') {
 
 } else if ($action == 'ADD') {
 
-    if (isset($_POST['nombre'], $_POST['apellido'], $_POST['correo'])) {
-        $nombre = $_POST['nombre'];
-        $apellido = $_POST['apellido'];
-        $correo = $_POST['correo'];
+    if (isset($_POST['name'], $_POST['lastName'], $_POST['email'])) {
+        $nombre = $_POST['name'];
+        $apellido = $_POST['lastName'];
+        $correo = $_POST['email'];
 
         $controller = new ControllerModalMarketing();
         echo json_encode($controller->add($nombre, $apellido, $correo));

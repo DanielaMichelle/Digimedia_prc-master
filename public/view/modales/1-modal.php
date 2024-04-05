@@ -556,7 +556,7 @@ function enviarEmailAjax() {
     var url = window.location.href;
 
         // Extraer el valor después de "servicios/"
-    const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
+    const id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
 
     const email = document.getElementById('email').value;
 

@@ -636,39 +636,44 @@ window.onload = function() {
 };
 
 
-
-
 function enviarEmailAjax() {
-    var url = window.location.href;
+        //var queryString = window.location.search;
+        //var parametros = new URLSearchParams(queryString);
+        
+        //console.log(parametros)
+        var url = window.location.href;
 
         // Extraer el valor después de "servicios/"
-    const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
+        const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
+        
+        console.log(id_ser)
 
-    const email = document.getElementById('email').value;
-
-
-    var datos = new FormData();
-    datos.append("id_ser", id_ser);
-    datos.append("email", email);
+        const email = document.getElementById('email_lost').value;
 
 
+        var datos = new FormData();
+        datos.append("id_ser", id_ser);
+        datos.append("email", email);
 
-    $.ajax({
-        url: "./public/message/Controller/process.php",
-        method: "POST",
-        data: datos,
-        cache: false,
-        contentType: false,
-        processData: false,
-        success: function(respuesta) {
-            console.log("Respuesta", respuesta);
-            if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
-                alert("Email Enviado");
 
-            } else {
-                alert("ocurrio un error " + respuesta);
+
+        $.ajax({
+            url: "./public/message/Controller/process.php",
+            method: "POST",
+            data: datos,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(respuesta) {
+                console.log("Respuesta", respuesta);
+                if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
+                    alert("Email Enviado");
+
+                } else {
+                    alert("ocurrio un error " + respuesta);
+                }
             }
-        }
-    })
+        })
 }
+
 </script>

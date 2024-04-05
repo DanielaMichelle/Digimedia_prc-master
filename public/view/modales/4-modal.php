@@ -579,11 +579,12 @@ window.onload = function() {
 
 
 
+
 function enviarEmailAjax() {
     var url = window.location.href;
 
-// Extraer el valor después de "servicios/"
-    const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
+        // Extraer el valor después de "servicios/"
+    const id_ser  = url.split('servicios/brading-desing/')[1];
 
     const email = document.getElementById('email').value;
 

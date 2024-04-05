@@ -367,34 +367,39 @@
         email.value = "";
     }
 
-    function enviarEmailAjax() {
-        console.log("Enviando correo ...");
-        // var queryString = window.location.search;
-        // var parametros = new URLSearchParams(queryString);
-        // const id_ser = parametros.get('id');
 
-        // const email = document.getElementById('email').value;
+function enviarEmailAjax() {
+    var url = window.location.href;
 
-        // var datos = new FormData();
-        // datos.append("id_ser", id_ser);
-        // datos.append("email", email);
+        // Extraer el valor después de "servicios/"
+    const id_ser  = url.split('servicios/brading-desing/')[1];
 
-        // $.ajax({
-        //     url: "./public/message/Controller/process.php",
-        //     method: "POST",
-        //     data: datos,
-        //     cache: false,
-        //     contentType: false,
-        //     processData: false,
-        //     success: function(respuesta) {
-        //         console.log("Respuesta", respuesta);
-        //         if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
-        //             alert("Email Enviado");
+    const email = document.getElementById('email').value;
 
-        //         } else {
-        //             alert("ocurrio un error " + respuesta);
-        //         }
-        //     }
-        // })
-    }
+
+    var datos = new FormData();
+    datos.append("id_ser", id_ser);
+    datos.append("email", email);
+
+
+
+    $.ajax({
+        url: "./public/message/Controller/process.php",
+        method: "POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(respuesta) {
+            console.log("Respuesta", respuesta);
+            if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
+                alert("Email Enviado");
+
+            } else {
+                alert("ocurrio un error " + respuesta);
+            }
+        }
+    })
+}
+
 </script>
