@@ -374,6 +374,7 @@
 
     function enviarEmailAjax() {
         console.log("Enviando correo ...");
+
         // var queryString = window.location.search;
         // var parametros = new URLSearchParams(queryString);
         // const id_ser = parametros.get('id');
