@@ -411,6 +411,9 @@
             grid-template-columns: repeat(auto-fill, 20%);
             width: 100%;
         }
+        .img_div{
+            top: 1%;
+        }
 
         .textos {
             background: transparent;
@@ -592,6 +595,10 @@
             grid-template-columns: repeat(auto-fill, 10%);
             width: 100%;
         }
+        .img_div {
+            
+            top: -.1%;
+        }
 
         .textos {
             background: transparent;
@@ -735,6 +742,7 @@
         .img_div {
             left: 25%;
             right: 27%;
+            top: -.1%;
         }
     }
 
@@ -761,6 +769,9 @@
             justify-content: center;
 
 
+        }
+        .img_div{
+            top: 1%;
         }
 
         .textos {
@@ -932,10 +943,15 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, 25%);
             width: 100%;
-            padding: 40px 0;
+            padding: 30px 0;
             justify-content: center;
 
 
+        }
+        .img_div{
+            top: 3%;
+            height: 110px;
+            height: 110px;
         }
 
         .textos {
@@ -958,7 +974,7 @@
         }
 
         .grid_item {
-            height: 450px;
+            height: 400px;
             display: flex;
             flex-direction: column;
             justify-content: center;
