@@ -336,7 +336,7 @@
         if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
             modal.style.display = "none";
             agarrandoDatos(nameInput, lastNameInput, emailInput);
-            enviarEmailAjax();
+            // enviarEmailAjax();
             limpiarDatos(nameInput, lastNameInput, emailInput);
         }
     }
@@ -346,11 +346,20 @@
         form.append('name', name.value)
         form.append('lastName', lastName.value)
         form.append('email', email.value)
+
+        enviandoDatosServer(form)
     }
 
-    //Enviando datos al servidor:
-    // function enviandoDatosServer(form) {
-    // }
+    // Enviando datos al servidor:
+    function enviandoDatosServer(form) {
+        fetch("./app/trigger/modal-branding.php?action=ADD", {
+            method: 'POST',
+            body: form
+        })
+        .then(res => res.json())
+        .then(console.log)
+        .catch(err => console.log(err))
+    }
 
     function limpiarDatos(name, lastName, email) {
         name.value = "";

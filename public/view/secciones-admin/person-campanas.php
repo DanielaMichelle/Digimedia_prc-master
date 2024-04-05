@@ -13,7 +13,7 @@
     <?php require_once ("../utils/sidebar.php"); ?>
 
     <main>
-        <h1>Seccion: Exploit content</h1>
+        <h1>Seccion: MARKETING AND DIGITAL MANAGEMENT</h1>
 
         <div class="content-table">
 

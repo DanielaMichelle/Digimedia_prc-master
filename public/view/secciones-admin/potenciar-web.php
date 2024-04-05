@@ -13,7 +13,7 @@
     <?php require_once ("../utils/sidebar.php"); ?>
 
     <main>
-        <h1>Seccion de mejorar tu web</h1>
+        <h1>Seccion: Web design and development</h1>
 
         <div class="content-table">
 

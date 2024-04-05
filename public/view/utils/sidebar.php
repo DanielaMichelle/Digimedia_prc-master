@@ -56,7 +56,31 @@
             <li>
                 <a href="/Digimedia_prc-master/public/view/secciones-admin/libro_reclamaciones.php">
                     <ion-icon name="duplicate-outline"></ion-icon>
-                    <span>Terms and claims</span>
+                    <span>Terms and reclaims</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Digimedia_prc-master/public/view/secciones-admin/modal-branding.php">
+                    <ion-icon name="duplicate-outline"></ion-icon>
+                    <span>Modal branding</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Digimedia_prc-master/public/view/secciones-admin/modal-desing.php">
+                    <ion-icon name="duplicate-outline"></ion-icon>
+                    <span>Modal desing</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Digimedia_prc-master/public/view/secciones-admin/modal-gestion.php">
+                    <ion-icon name="duplicate-outline"></ion-icon>
+                    <span>Modal gestion</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Digimedia_prc-master/public/view/secciones-admin/modal-marketing.php">
+                    <ion-icon name="duplicate-outline"></ion-icon>
+                    <span>Modal marketing</span>
                 </a>
             </li>
         </ul>

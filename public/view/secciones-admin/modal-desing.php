@@ -13,7 +13,7 @@
     <?php require_once ("../utils/sidebar.php"); ?>
 
     <main>
-        <h1>Seccion: SOCIAL NETWORK MANAGEMENT</h1>
+        <h1>Seccion: Modal branding</h1>
 
         <div class="content-table">
 
@@ -22,7 +22,7 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">NOMBRE</th>
-                        <th scope="col">TELEFONO</th>
+                        <th scope="col">APELLIDO</th>
                         <th scope="col">EMAIL</th>
                     </tr>
                 </thead>
@@ -39,26 +39,25 @@
         const tableBody = document.getElementById('tableBody');
 
         const dataRender = () => {
-            fetch('../../../app/trigger/person4.php?action=GET')
+            fetch('../../../app/trigger/modal-desing.php?action=GET')
                 .then(res => res.json())
                 .then((Data = []) => {
 
                     tableBody.innerHTML = Data.map(data => {
                         return `
-        <tr data-id="${data.id}">
-            <td>${data.id}</td>
-            <td>${data.nombre}</td>
-            <td>${data.telefono}</td>
-            <td>${data.email}</td>
-        </tr>
-    `
+                <tr data-id="${data.id}">
+                    <td>${data.id}</td>
+                    <td>${data.nombre}</td>
+                    <td>${data.apellido}</td>
+                    <td>${data.correo}</td>
+                </tr>
+            `
                     }).join('')
 
                 })
         };
 
         dataRender();
-
 
 
     </script>

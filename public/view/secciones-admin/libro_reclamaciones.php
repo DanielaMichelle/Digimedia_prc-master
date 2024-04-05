@@ -13,7 +13,7 @@
     <?php require_once ("../utils/sidebar.php"); ?>
 
     <main>
-        <h1>Seccion: Design your path</h1>
+        <h1>Seccion: Terms and reclaims</h1>
 
         <div class="content-table">
 

@@ -13,7 +13,7 @@
     <?php require_once ("../utils/sidebar.php"); ?>
 
     <main>
-        <h1>Seccion de conociendo personas</h1>
+        <h1>Seccion: Home</h1>
 
         <div class="content-table">
             <table id="example" class="table table-striped" style="width:100%">
