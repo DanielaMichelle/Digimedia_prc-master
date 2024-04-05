@@ -5,12 +5,11 @@
             <div class="row row_des">
 
                 <div class="col-md-5">
-                    <h4><a href="index.php" class="text-white"><img src="./public/img/logo_footer.webp" class="logoimagen"
-                                title="Digimedia!" alt="Logo">
-                    </a></h4>
+                    <h4><a href="index.php" class="text-white"><img src="./public/img/logo_footer.webp" class="logoimagen" title="Digimedia!" alt="Logo">
+                        </a></h4>
                     <h2>Agencia de Marketing Digital</h2>
-                    
-                    
+
+
                     <!--<ul>
                         <li></li>
                         <p class="p">T&eacute;rminos del servicio</p>
@@ -57,10 +56,11 @@
                     </ul>-->
                     <ul class="fasinos">
                         <li class="grid-item-des"><i class="fa-solid fa-mobile-screen"></i>
-                        <a href="View/nosotros.php" title="Nosotros">958716002</a></li>
+                            <a href="View/nosotros.php" title="Nosotros">958716002</a>
+                        </li>
                         <li class="grid-item-des"><i class="fa-solid fa-envelope"></i><a href="View/preguntas.php" title="Digimediakt email">digimediamkt@gmail.com</a></li>
                         <li class="grid-item-des"><i class="fa-solid fa-map-location-dot"></i><a href="View/contacto.php" title="Trabaja con nosotros">Perú - Jr. Paruro 1401, Cercado de Lima, Lima</a></li>
-                        
+
                     </ul>
 
                 </div>
@@ -76,13 +76,19 @@
                     </ul>-->
                     <ul class="legales_medium">
                         <li></li>
-                        <a href="politica_privacidad.php"><p class="p">Pol&iacute;tica de privacidad</p></a>
+                        <a href="politica_privacidad.php">
+                            <p class="p">Pol&iacute;tica de privacidad</p>
+                        </a>
                         </li>
                         <li></li>
-                        <a href="terminos_condiciones.php"><p class="p">T&eacute;rminos y Condiciones</p></a>
+                        <a href="terminos_condiciones.php">
+                            <p class="p">T&eacute;rminos y Condiciones</p>
+                        </a>
                         </li>
                         <li></li>
-                        <a href="libro_reclamaciones.php"><p class="p">Libro de Reclamaciones</p></a>
+                        <a href="libro_reclamaciones.php">
+                            <p class="p">Libro de Reclamaciones</p>
+                        </a>
                         </li>
                         <li></li>
                         <p class="p">Trabaja con nosotros</p>
@@ -102,7 +108,22 @@
                         <p>Contacto para XXXX</p>
                         </li>
                     </ul>-->
-                    <ul class="navbar-nav flex-row">
+
+                    <ul class="navbar-nav flex-row footer-social-media">
+                        <li class="nav-item">
+                            <a class="social-icon-hero" href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name" title="Linkedin!" aria-label="Nuestro Linkedin.."><i id="hero-icon-linkeding" class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="social-icon-hero" href="https://www.instagram.com/digimediamkt/" title="Instagram!" aria-label="Nuestro Instagram.."><i id="hero-icon-instagram" class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="social-icon-hero" href="https://www.youtube.com/@digimediamarketing2636" title="Youtube!" aria-label="Nuestro Youtube.."><i id="hero-icon-youtube" class="fa-brands fa-youtube"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="social-icon-hero" href="https://www.facebook.com/DigiMedia.Marketing1" title="Facebook!" aria-label="Nuestro Facebook.."><i id="hero-icon-facebook" class="fa-brands fa-facebook"></i></a>
+                        </li>
+                    </ul>
+                    <!-- <ul class="navbar-nav flex-row">
                         <li class="nav-item">
                             <a class="social-icon" href="https://www.facebook.com/DigiMedia.Marketing1"
                                 title="Facebook!" aria-label="Nuestro Facebook.."><i class="bi bi-facebook"></i></a>
@@ -120,7 +141,7 @@
                                 href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name"
                                 title="Linkedin!" aria-label="Nuestro Linkedin.."><i class="bi bi-linkedin"></i></a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>

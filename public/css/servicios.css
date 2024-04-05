@@ -6,7 +6,7 @@ body .anuncio-branding-diseno {
   align-items: center;
   justify-content: center;
   background-color: rgb(128 0 128);
-  padding: 2rem;
+  padding: 2.5rem 2rem;
 }
 
 body .anuncio-diseno-desarrollo h2,
@@ -76,6 +76,12 @@ body .anuncio-branding-diseno .bota1 a:hover {
 }
 
 @media screen and (max-width: 425px) {
+  
+  body .anuncio-diseno-desarrollo,
+  body .anuncio-branding-diseno {
+    padding: 2rem;
+  }
+
   body .anuncio-diseno-desarrollo h2,
   body .anuncio-branding-diseno h2,
   body .anuncio-branding-diseno span {

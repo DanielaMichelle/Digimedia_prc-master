@@ -50,7 +50,7 @@ body .manipulacion {
     align-items: center;
     justify-content: center;
     background-color: rgb(128 0 128);
-    padding: 2rem;
+    padding: 2.5rem 2rem;
 }
 
 body .parrafos1 {
@@ -108,6 +108,10 @@ body .bota1 a:hover {
 }
 
 @media screen and (max-width: 425px) {
+    body .manipulacion {
+        padding: 2rem;
+    }
+
     body .parrafos1 h2 {
         font-size: 5vw;
         line-height: 6.5vw;

@@ -4,13 +4,15 @@
     top: 52%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 470px;
+    height: 83vh;
     width: 60%;
     overflow: hidden;
     z-index: 10000;
     display: grid;
     grid-template-columns: repeat(2,40% 60%);
     grid-template-rows: repeat(1,1fr);
+    border-radius: 20px;
+    border: .4px solid black;
     
 }
 .grid-item-modal:first-child{
@@ -21,10 +23,10 @@
 }   
 .grid-item-modal:last-child{  
     
-    background: linear-gradient(to bottom ,#0095FF,#FF037F);  
+    background: linear-gradient(to bottom ,#FF037F,#7B22B3);  
     display: flex;
     flex-direction: column;
-    padding: 35px 0;
+    padding: 10% 0;
     
 }
 .h3_postion{
@@ -51,7 +53,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 24% 76%;
+    object-position: 40% 60%;
     box-shadow: inset 0 10px 10px black;
     
 }
@@ -60,25 +62,44 @@
     height: 100%;
     background: transparent;
 }
-
+.manta{
+    
+    display: flex;
+    justify-content: center;
+}
+.top{
+    margin-right: 6px;
+    
+}
 .top h4{
+    text-align: center;
+    font-size: 2.5vw;
+    color: white;
+    margin: 0;
+    font-weight: 700;
+    margin-top: 7%;
+    
+}
+.top h3{
+    
     text-align: center;
     font-size: 2vw;
     color: white;
-    margin: 0;
 }
 
 .medium h2{
     text-align: center;
-    font-size: 4.5vw;
+    font-size: 5.5vw;
     color: white;
     margin: 0;
+    font-weight: 900;
 }
 
 .bottom-2 h3{
     text-align: center;
     font-size: 2.5vw;
     color: white;
+    font-weight: 900;
 }
 .bottom{
     
@@ -125,7 +146,7 @@
     
 }
 #form_en button{
-    background: #0095FF;
+    background: #FF037F;
     color: white;
     font-size: 3.3vw;
     padding: 2px 40px;
@@ -147,11 +168,14 @@
 @media (min-width:650px) AND (max-width:860px){
     .main-container{
         width: 80%; 
-        height: 400px;
+        height: 420px;
     }
     .h3_postion .h3{
         font-size: 3.5vw;
 
+    }
+    .medium h2{
+        font-size: 6vw;
     }
    
 }
@@ -176,8 +200,11 @@
     .top h4{
         font-size: 3.5vw;
     }
+    .top h3{
+        font-size: 3.1vw;
+    }
     .medium h2{
-        font-size: 5vw;
+        font-size: 8vw;
     }
 
     .bottom-2 h3{
@@ -217,8 +244,11 @@
     .top h4{
         font-size: 3.5vw;
     }
+    .top h3{
+        font-size: 3.1vw;
+    }
     .medium h2{
-        font-size: 5vw;
+        font-size: 8.3vw;
     }
 
     .bottom-2 h3{
@@ -260,8 +290,11 @@
     .top h4{
         font-size: 4.3vw;
     }
+    .top h3{
+        font-size: 3.8vw;
+    }
     .medium h2{
-        font-size: 6vw;
+        font-size: 7.3vw;
     }
 
     .bottom-2 h3{
@@ -305,7 +338,7 @@
         font-size: 4.3vw;
     }
     .medium h2{
-        font-size: 6vw;
+        font-size:7.3vw;
     }
 
     .bottom-2 h3{
@@ -342,24 +375,27 @@
 <section class="overflow_lo oculto_des"></section>
 <section class="main-container oculto_des">
     <div class="main-container-div1 grid-item-modal">
-        <img src="./public/img/lexico_serves.jpg"/>
-        <div class="h3_postion"><h3 class="h3">¡DESTACA TU NEGOCIO!</h3></div>
+        <img src="./public/img/modal2/dgservis.jpg"/>
+        <div class="h3_postion"><h3 class="h3">¡HAZ CRECER TUS REDES! </h3></div>
     </div>
     <div class="main-container-div1 grid-item-modal">
         <div class="mantainer">
-            <div class="top"><h4>OBTÉN AHORA</h4></div>
+            <div class="manta">
+                <div class="top"><h4>SOLO POR</h4><h3>ACCEDE A UNA</h3></div>
+                <div class="medium"><h2>HOY</h2></div>
+            </div>
+            
             <div class="bottom-2"><h3>! ASESORIA GRATIS ¡</h3></div>
-            <div class="medium"><h2>!GRATIS¡</h2></div>
             
             <div class="bottom">
-                <form>
+                <form id="formMain_lost">
                     <div class="form_in">
                         <label>Nombre</label>
-                        <input type="text"/>
+                        <input type="text" id="name_lost"/>
                         <label>Apellido</label>
-                        <input type="text"/>
+                        <input type="text" id="lastName"/>
                         <label>Correo</label>
-                        <input type="text"/>
+                        <input type="text" id="email_lost"/>
                     </div>
                     <div id="form_en">
                         <button type="submit">HAZLO YA</button>
@@ -375,6 +411,10 @@
     const overflow_los = document.querySelector('.overflow_lo');
     const container_des = document.querySelector('.main-container')
     let  modalMostrado = false;
+    const objRegex_lost = {
+        gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
+    };
+
 
     document.addEventListener('DOMContentLoaded', function() {
         //overflow.addEventListener('click',touch_display);
@@ -383,15 +423,58 @@
         overflow_los.addEventListener('click',touchOverflowdes);
 
         window.addEventListener('scroll',scrollmedn);
+        validarDatos_lost()
     
         
     });
+    function validarDatos_lost() {
+        const formMain = document.querySelector("#formMain_lost");
+        formMain.addEventListener("submit", (e) => {
+            e.preventDefault();
+            datos_lost();
+        })
+    }
+    function datos_lost() {
+
+        const nombreInput = document.getElementById('name_lost');
+        //const telefonoInput = document.getElementById('phone');
+        const lastNInput = document.getElementById('lastName');
+        const emailInput = document.getElementById('email_lost');
+
+        // Hacer que los 9 números esten juntos
+       // const telefono = telefonoInput.value.replace(/\s/g, '');
+        const email = emailInput.value.trim(); //delete white space
+
+        //const telefonoValido = objRegex.telefono.test(telefono);
+        const emailValido = objRegex_lost.gmail.test(email);
+
+
+        if (nombreInput.value === '') alert('El nombre no debe estar vacio')
+
+        if (lastNInput.value === '') alert('El apellido no debe estar vacio')
+
+       // if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos")
+
+        if (!emailValido) alert("Debe de ingresar un correo valido.")
+
+
+        if (nombreInput.value != '' && lastNInput.value != '' && emailValido) {
+             alert("Todos los campos son correctos.")
+            overflow_los.classList.add('oculto_des')
+            container_des.classList.add('oculto_des')  
+            //modalContainer.style.display = 'none';
+            //agarrandoDatos(nombreInput, telefonoInput, emailInput);
+            //envioDatosWhatsApp(telefono);
+            //enviarEmailAjax();
+            //limpiarDatos(nombreInput, telefonoInput, emailInput);
+        }
+    }
     function touchOverflowdes(){
         overflow_los.classList.add('oculto_des')
         container_des.classList.add('oculto_des')   
     }
     function scrollmedn(){
-      var ventasSection = document.getElementById('metros_locs2');
+      var ventasSection = document.getElementById('anuncio-servicio');
       
       
       var scrollPosition = window.scrollY;

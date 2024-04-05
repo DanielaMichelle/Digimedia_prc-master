@@ -407,6 +407,10 @@
             grid-template-columns: repeat(auto-fill, 20%);
             width: 100%;
         }
+        .img_div{
+            top: 1%;
+        }
+        
 
         .textos {
             background: transparent;
@@ -588,6 +592,10 @@
             grid-template-columns: repeat(auto-fill, 10%);
             width: 100%;
         }
+        .img_div {
+            
+            top: -.1%;
+        }
 
         .textos {
             background: transparent;
@@ -732,6 +740,7 @@
         .img_div {
             left: 25%;
             right: 27%;
+            top: -.1%;
         }
     }
 
@@ -758,6 +767,9 @@
             justify-content: center;
 
 
+        }
+        .img_div{
+            top: 1%;
         }
 
         .textos {
@@ -933,6 +945,9 @@
             justify-content: center;
 
 
+        }
+        .img_div{
+            top: 1%;
         }
 
         .textos {
