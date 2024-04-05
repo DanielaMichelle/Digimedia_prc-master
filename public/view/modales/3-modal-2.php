@@ -249,7 +249,7 @@
 <script>
     const overflow_los = document.querySelector('.overflow_lo');
     const container_des = document.querySelector('.main-container')
-    let modalMostrado = false;
+    let  modalMostrado = false;
     const objRegex_lost = {
         gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
     };
@@ -263,8 +263,8 @@
         window.addEventListener('scroll', scrollmedn);
 
         validarDatos_lost();
-
-
+    
+        
     });
     function validarDatos_lost() {
         const formMain = document.querySelector("#formMain_lost");
@@ -321,7 +321,7 @@
         form.append('name', nombre.value)
         form.append('lastName', apellido.value)
         form.append('email', correo.value)
-
+        
         enviandoDatosServer(form)
     }
 

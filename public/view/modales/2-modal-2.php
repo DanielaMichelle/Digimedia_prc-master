@@ -253,7 +253,7 @@
     const overflow_los = document.querySelector('.overflow_lo');
     const container_des = document.querySelector('.main-container')
     let  modalMostrado = false;
-    const close_modal = document.querySelector('close-modal');
+    const btnCerrarLa = document.querySelector('.close-modal');
     const objRegex_lost = {
         gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
     };
@@ -265,7 +265,10 @@
         
         overflow_los.addEventListener('click',touchOverflowdes);
         
-        //close_modal.addEventListener('click',touchOverflowdes);
+        btnCerrarLa.addEventListener('click', () => {
+            overflow_los.classList.add('oculto_des')
+            container_des.classList.add('oculto_des')
+        });
 
         window.addEventListener('scroll',scrollmedn);
         validarDatos_lost()

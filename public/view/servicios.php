@@ -146,7 +146,7 @@
             <i class="fa-solid fa-up-long"></i>
         </div>
         <div class="whatsapp">
-            <a href="https://wa.me/51999351599" target="_blank">
+            <a href="https://wa.me/51936910425" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
         </div>
