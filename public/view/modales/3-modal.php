@@ -516,6 +516,7 @@ function datos() {
     if (nombreInput.value != '' && telefonoValido && emailValido) {
         alert("Todos los campos son correctos.")
         toggleCerarForm();
+        envioDatosWhatsApp(telefono);
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
         enviarEmailAjaxModal3_3(emailInput);
         limpiarDatos(nombreInput, telefonoInput, emailInput);
