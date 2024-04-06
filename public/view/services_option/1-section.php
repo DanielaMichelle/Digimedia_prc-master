@@ -1378,7 +1378,7 @@
 </style>
 <section class="firts_section">
     <div class="content_section">
-        <h3 id="titulo">Diseño y Desarollo Web</h3>
+        <h3 id="titulo">Diseño y Desarrollo Web</h3>
         <p id="Relleno">
             Consiste en la habilidad de presentar contenido de manera organizada
             en una página web con el objetivo de brindar una experiencia óptima al usuario.

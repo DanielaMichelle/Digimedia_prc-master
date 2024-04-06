@@ -21,7 +21,7 @@
             <img src="./public/img/logo_footer.webp" alt="Img digimedia">
         </div>
         <div class="contText">
-            <h1>Terminos y condiciones</h1>
+            <h1 style="font-weight: 600;">Libro de Reclamaciones</h1>
         </div>
     </div>
 
