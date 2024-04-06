@@ -1,11 +1,11 @@
 <style>
 .main-container{
     position: fixed;
-    top: 52%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 400px;
-    width: 570px;
+    height: 483px;
+    width: 630px;
     overflow: hidden;
     z-index: 10000;
     display: grid;
@@ -62,6 +62,14 @@
     width: 100%;
     height: 100%;
     background: transparent;
+    display: flex;
+   
+    flex-direction: column;
+    
+}
+.textoss{
+    
+    height: 40%;
 }
 .manta{
     
@@ -105,7 +113,7 @@
 .bottom{
     
     width: 100%;
-    height: 69%;
+    height: 80%;
     position: relative;
     bottom: 0;
 }
@@ -179,14 +187,14 @@
 
 @media (min-width:300px) AND (max-width:600px){
     .main-container{
-        height: 280px;
-        width: 95%;
-        font-size: 10px;
+        height: 295px;
+        width: 89%;
+        font-size: 9.2px;
     }
 }
 @media (min-width:0px) AND (max-width:300px){
     .main-container{
-        height: 245px;
+        height: 250px;
         width: 96%;
         font-size: 8px;
     }
@@ -204,7 +212,13 @@
 .oculto_des{
     display: none;
 }
-
+.icon{
+    position: absolute;
+    top: 3%;
+    left: 4%;
+    width: 4.8em;
+    height: 3.3em;
+}
 
 
 
@@ -214,20 +228,22 @@
 
 <section class="overflow_lo oculto_des"></section>
 <section class="main-container oculto_des">
+    <img class="icon" src="public/img/logo_digimedia_color.webp" alt="Digimedia Icon">
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
         
         <img src="./public/img/modal2/dgservis.jpg"/>
         <div class="h3_postion" style="font-size: 100%;"><h3 class="h3">¡HAZ CRECER TUS REDES! </h3></div>
     </div>
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
-        <div class="btn_close" style="font-size: 100%;"><button class="close-modal">&times;</button></div>
+        <div class="btn_close" style="font-size: 100%;"><button class="close-modal" style="color: white;">&times;</button></div>
         <div class="mantainer" style="font-size: 100%;">
-            <div class="manta" style="font-size: 100%;">
-                <div class="top" style="font-size: 100%;"><h4>SOLO POR</h4><h3>ACCEDE A UNA</h3></div>
-                <div class="medium" style="font-size: 100%;"><h2>HOY</h2></div>
+            <div class="textoss" style="font-size: 100%;">
+                <div class="manta" style="font-size: 100%;">
+                    <div class="top" style="font-size: 100%;"><h4>SOLO POR</h4><h3>ACCEDE A UNA</h3></div>
+                    <div class="medium" style="font-size: 100%;"><h2>HOY</h2></div>
+                </div>
+                <div class="bottom-2" style="font-size: 100%;"><h3>! ASESORIA GRATIS ¡</h3></div>
             </div>
-            
-            <div class="bottom-2" style="font-size: 100%;"><h3>! ASESORIA GRATIS ¡</h3></div>
             
             <div class="bottom" style="font-size: 100%;">
                 <form id="formMain_lost" style="font-size: 100%;">

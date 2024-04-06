@@ -1,11 +1,11 @@
 <style>
 .main-container{
     position: fixed;
-    top: 52%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 400px;
-    width: 570px;
+    height: 483px;
+    width: 630px;
     overflow: hidden;
     z-index: 10000;
     display: grid;
@@ -60,7 +60,10 @@
 .mantainer{
     width: 100%;
     height: 100%;
-    background: transparent;
+    display: flex;
+   
+    flex-direction: column;
+    
 }
 
 .top h4{
@@ -68,6 +71,10 @@
     font-size: 1.3em;
     color: white;
     margin: 0;
+}
+.textoss{
+    
+    height: 40%;
 }
 
 .medium h2{
@@ -84,11 +91,8 @@
     color: white;
 }
 .bottom{
-    
     width: 100%;
-    height: 69%;
-    position: relative;
-    bottom: 0;
+    height: 80%;
 }
 .bottom form{
     
@@ -96,7 +100,7 @@
     height: 100%;
 }
 .bottom form .form_in{
-    
+   
     width: 50%;
     margin: auto;
     display: grid;
@@ -126,6 +130,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    position: relative;
+    bottom: -1em;
     
 }
 #form_en button{
@@ -159,14 +166,14 @@
 }
 @media (min-width:300px) AND (max-width:600px){
     .main-container{
-        height: 280px;
-        width: 95%;
-        font-size: 10px;
+        height: 295px;
+        width: 89%;
+        font-size: 9.2px;
     }
 }
 @media (min-width:0px) AND (max-width:300px){
     .main-container{
-        height: 245px;
+        height: 270px;
         width: 96%;
         font-size: 8px;
     }
@@ -183,6 +190,13 @@
 .oculto_des{
     display: none;
 }
+.icon{
+    position: absolute;
+    top: 3%;
+    left: 4%;
+    width: 4.8em;
+    height: 3.3em;
+}
 
 
 
@@ -193,16 +207,20 @@
 
 <section class="overflow_lo oculto_des"></section>
 <section class="main-container oculto_des">
+    <img class="icon" src="public/img/logo_digimedia_color.webp" alt="Digimedia Icon">
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
         <img src="https://img.freepik.com/foto-gratis/peron-haciendo-presentacion-sus-colegas_23-2149229031.jpg?w=740&t=st=1712071654~exp=1712072254~hmac=c4267799e79d6b20e124ba780aef541de7ff000e79063af0c0ecc90f2b9e6177"/>
         <div class="h3_postion" style="font-size: 100%;"><h3 class="h3">!INCREMENTA TUS VENTAS¡</h3></div>
     </div>
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
-        <div class="btn_close" style="font-size: 100%;"><button class="close-modal">&times;</button></div>
+        <div class="btn_close" style="font-size: 100%;"><button class="close-modal"  style="color: white;">&times;</button></div>
         <div class="mantainer" style="font-size: 100%;">
-            <div class="top" style="font-size: 100%;"><h4>Hazlo y Cumple Tus</h4></div>
-            <div class="medium" style="font-size: 100%;"><h2>SUEÑOS</h2></div>
-            <div class="bottom-2" style="font-size: 100%;"><h3>! ASESORIA GRATIS ¡</h3></div>
+            <div class="textoss" style="font-size: 100%;">
+                <div class="top" style="font-size: 100%;"><h4>Hazlo y Cumple Tus</h4></div>
+                <div class="medium" style="font-size: 100%;"><h2>SUEÑOS</h2></div>
+                <div class="bottom-2" style="font-size: 100%;"><h3>! ASESORIA GRATIS ¡</h3></div>
+            </div>
+            
             <div class="bottom" style="font-size: 100%;">
                 <form id="formMain_lost" style="font-size: 100%;">
                     <div class="form_in" style="font-size: 100%;">

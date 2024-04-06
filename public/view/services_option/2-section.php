@@ -250,7 +250,9 @@
         }
 
     }
-
+    #slider{
+        font-size: 16px;
+    }
     .container_grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, 23%);
@@ -269,24 +271,33 @@
 
 
     }
-
-    .img_div {
+    .bossly{
         position: absolute;
+        background: transparent;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        top: -1em;
+    }
+    
+    .img_div {
+        z-index: 3;
         width: 130px;
         /* ajusta el tamaño según sea necesario */
         height: 130px;
+        
         /* ajusta el tamaño según sea necesario */
         border-radius: 50%;
         background: #FF66C4;
         overflow: hidden;
-        top: -5%;
-        left: 31%;
-        right: 27%;
+        
         transition: transform 1s ease-in-out, background 2s ease-in-out;
-        z-index: 50;
+        z-index: 100;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0;
 
     }
 
@@ -358,9 +369,11 @@
 
     }
 
-    .img_div:hover~.descripcion_div {
-        background: linear-gradient(to bottom, #FF037F, #7B22B3);
+    .bossly:hover~.descripcion_div {
+        color: black;
     }
+    
+    
 
     .descripcion_div:hover {
         background: linear-gradient(to bottom, #FF037F, #7B22B3);
@@ -386,7 +399,7 @@
     .textos p {
         background: transparent;
         position: relative;
-        font-size: 0.95vw;
+        font-size: .8em;
         top: -40px;
         font-family: "Open Sans", sans-serif;
         margin-top: 3rem;
@@ -407,8 +420,11 @@
             grid-template-columns: repeat(auto-fill, 20%);
             width: 100%;
         }
-        .img_div{
-            top: 1%;
+        
+        .grid_item {
+            
+            position: relative;
+            top: 3%;
         }
         
 
@@ -592,9 +608,21 @@
             grid-template-columns: repeat(auto-fill, 10%);
             width: 100%;
         }
+        .grid_item {
+            height: 460px;
+            position: relative;
+            top: 3%;
+        }
         .img_div {
             
             top: -.1%;
+            
+       
+            width: 120px;
+            /* ajusta el tamaño según sea necesario */
+            height: 120px;
+        
+        
         }
 
         .textos {
@@ -770,6 +798,11 @@
         }
         .img_div{
             top: 1%;
+        }
+        .grid_item {
+            
+            position: relative;
+            top: 3%;
         }
 
         .textos {
@@ -948,6 +981,13 @@
         }
         .img_div{
             top: 1%;
+            width: 120px;
+            height: 120px;
+        }
+        .grid_item {
+            
+            position: relative;
+            top: -2%;
         }
 
         .textos {
@@ -1174,13 +1214,13 @@
     <input type='radio' name="slider" id="slide2" hidden />
     <input type='radio' name="slider" id="slide3" hidden />
     <input type='radio' name="slider" id="slide4" hidden />
-    <div id="slides">
-        <div id="overflow">
-            <section class="container_grid">
-                <div class="grid_item">
-                    <div class="img_div elemento basel"></div>
-                    <div class="descripcion_div elemento">
-                        <div class="textos">
+    <div id="slides" style="font-size: 100%;">
+        <div id="overflow" style="font-size: 100%;">
+            <section class="container_grid" style="font-size: 100%;">
+                <div class="grid_item" style="font-size: 100%;">
+                    <div class="bossly"><div class="img_div elemento basel"></div></div>
+                    <div class="descripcion_div elemento" style="font-size: 100%;">
+                        <div class="textos" style="font-size: 100%;">
                             <h4>PLANIFICACIÓN Y CRONOGRAMA</h4>
 
                             <p>
@@ -1197,10 +1237,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid_item">
-                    <div class="img_div elemento2 basel2"></div>
-                    <div class="descripcion_div elemento2">
-                        <div class="textos">
+                <div class="grid_item" style="font-size: 100%;">
+                    <div class="bossly"><div class="img_div elemento2 basel2"></div></div>
+                    <div class="descripcion_div elemento2" style="font-size: 100%;">
+                        <div class="textos" style="font-size: 100%;">
                             <h4>PRODUCCIÓN DE
                                 PAUTAS</h4>
 
@@ -1215,10 +1255,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid_item">
-                    <div class="img_div elemento3 basel3"></div>
-                    <div class="descripcion_div elemento3">
-                        <div class="textos">
+                <div class="grid_item" style="font-size: 100%;">
+                    <div class="bossly"><div class="img_div elemento3 basel3"></div></div>
+                    <div class="descripcion_div elemento3" style="font-size: 100%;">
+                        <div class="textos" style="font-size: 100%;">
                             <h4>DISEÑO DE
                                 PAUTAS</h4>
                             <p>El diseño de pautas implica la creación de
@@ -1232,10 +1272,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid_item">
-                    <div class="img_div elemento4 basel4"></div>
-                    <div class="descripcion_div elemento4">
-                        <div class="textos">
+                <div class="grid_item" style="font-size: 100%;">
+                    <div class="bossly"><div class="img_div elemento4 basel4" ></div></div>
+                    <div class="descripcion_div elemento4" style="font-size: 100%;">
+                        <div class="textos" style="font-size: 100%;">
                             <h4>DISEÑO UX Y UI</h4>
                             <p>El diseño UX y UI colaboran para crear productos
                                 digitales que no solo sean visualmente atractivos, sino también
@@ -1247,13 +1287,13 @@
             </section>
         </div>
     </div>
-    <div id="controls">
+    <div id="controls" style="font-size: 100%;">
         <label for="slide1"></label>
         <label for="slide2"></label>
         <label for="slide3"></label>
         <label for="slide4"></label>
     </div>
-    <div id="bulets">
+    <div id="bulets" style="font-size: 100%;">
         <label for="slide1"></label>
         <label for="slide2"></label>
         <label for="slide3"></label>

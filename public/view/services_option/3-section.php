@@ -269,9 +269,18 @@
 
 
     }
+    .bossly{
+        position: absolute;
+        background: transparent;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        top: -1em;
+    }
 
     .img_div {
-        position: absolute;
+        
         width: 130px;
         /* ajusta el tamaño según sea necesario */
         height: 130px;
@@ -279,9 +288,7 @@
         border-radius: 50%;
         background: #8D6EF6;
         overflow: hidden;
-        top: -5%;
-        left: 31%;
-        right: 27%;
+        
         transition: transform 1s ease-in-out, background 2s ease-in-out;
         z-index: 50;
         display: flex;
@@ -1177,7 +1184,7 @@
         <div id="overflow">
             <section class="container_grid">
                 <div class="grid_item">
-                    <div class="img_div elemento basel"></div>
+                    <div class="bossly"><div class="img_div elemento basel"></div></div>
                     <div class="descripcion_div elemento">
                         <div class="textos">
                             <h4>ANALISIS Y
@@ -1199,7 +1206,7 @@
                     </div>
                 </div>
                 <div class="grid_item">
-                    <div class="img_div elemento2 basel2"></div>
+                    <div class="bossly"><div class="img_div elemento2 basel2"></div></div>
                     <div class="descripcion_div elemento2">
                         <div class="textos">
                             <h4>PLANIFICACION Y
@@ -1217,7 +1224,7 @@
                     </div>
                 </div>
                 <div class="grid_item">
-                    <div class="img_div elemento3 basel3"></div>
+                    <div class="bossly"><div class="img_div elemento3 basel3"></div></div>
                     <div class="descripcion_div elemento3">
                         <div class="textos">
                             <h4>PUBLICIDAD
@@ -1234,7 +1241,7 @@
                     </div>
                 </div>
                 <div class="grid_item">
-                    <div class="img_div elemento4 basel4"></div>
+                    <div class="bossly"><div class="img_div elemento4 basel4"></div></div>
                     <div class="descripcion_div elemento4">
                         <div class="textos">
                             <h4>MONITOREO Y
