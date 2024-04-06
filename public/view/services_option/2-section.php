@@ -146,7 +146,7 @@
     @media (min-width:380px) AND (max-width: 600px) {
 
         .content_section {
-            width: 95%;
+            width: 100%;
         }
 
         .content_section>h3 {
@@ -347,8 +347,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(70% + 5px);
-        height: calc(70% + 20px);
+        width: calc(67% + 5px);
+        height: calc(67% + 20px);
 
         background-image: url('./public/img/servis_wepb/services2/icon2_4.png');
         background-size: contain;
@@ -419,12 +419,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, 20%);
             width: 100%;
+            padding-bottom: 20px;
         }
         
         .grid_item {
-            
+            height: 480px;
             position: relative;
             top: 3%;
+            
         }
         
 
@@ -449,15 +451,7 @@
             height: 74%;
         }
 
-        .grid_item {
-            height: 505px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-
-
-        }
+        
 
         #slider {
             margin: 0;
@@ -602,16 +596,18 @@
         }
     }
 
-    @media (min-width:820px) AND (max-width:1020px) {
+    @media (min-width:820px) AND (max-width:1150px) {
         .container_grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, 10%);
             width: 100%;
+           
         }
         .grid_item {
-            height: 460px;
+            height: 430px;
             position: relative;
             top: 3%;
+            
         }
         .img_div {
             
@@ -650,6 +646,7 @@
             flex-direction: column;
             justify-content: center;
             position: relative;
+            
         }
 
         #slider input[type=radio] {
@@ -663,7 +660,7 @@
 
         #slides {
             width: 90%;
-
+            
             margin: auto;
             background: transparent;
             position: relative;
@@ -674,6 +671,7 @@
             width: 100%;
             overflow: hidden;
             background: transparent;
+            
         }
 
         #slide1:checked~#slides .container_grid {
@@ -969,7 +967,7 @@
         }
     }
 
-    @media (min-width:0px) AND (max-width:380px) {
+    @media (min-width:285px) AND (max-width:380px) {
         .container_grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, 25%);
@@ -985,7 +983,194 @@
             height: 120px;
         }
         .grid_item {
-            
+            padding-bottom: 30px;
+            position: relative;
+            top: -2%;
+        }
+
+        .textos {
+            background: transparent;
+            padding: 2%;
+
+            margin: 0;
+        }
+
+        .textos h4 {
+            background: transparent;
+            font-size: 4vw;
+        }
+
+        .textos p {
+            font-size: 2.7vw;
+            position: relative;
+            align-self: flex-end;
+            top: -45px;
+        }
+
+        .grid_item {
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+
+
+        }
+
+        #slider {
+            margin: 0;
+
+            max-width: 100%;
+            text-align: center;
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        #slider input[type=radio] {
+            display: none;
+        }
+
+        #slider label {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #slides {
+            width: 80%;
+            padding: 30px;
+
+            /* border: 4px solid black;*/
+            margin: auto;
+            background: transparent;
+            position: relative;
+            z-index: 1;
+        }
+
+        #overflow {
+            width: 100%;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        #slide1:checked~#slides .container_grid {
+            margin-left: 0;
+        }
+
+        #slide2:checked~#slides .container_grid {
+            margin-left: -100%;
+        }
+
+        #slide3:checked~#slides .container_grid {
+            margin-left: -200%;
+        }
+
+        #slide4:checked~#slides .container_grid {
+            margin-left: -300%;
+        }
+
+        #slides .container_grid {
+            transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+            width: 400%;
+
+        }
+
+        #slides .grid_item {
+            float: left;
+            background: transparent;
+        }
+
+        #controls {
+            width: 100%;
+            margin: 0 0 0 0;
+            height: 50px;
+            position: relative;
+            z-index: 3;
+        }
+
+        #controls label {
+            height: 50px;
+            width: 50px;
+            transition: opacity 0.2s ease-out;
+            opacity: .7;
+
+        }
+
+        #controls label:hover {
+            opacity: 1;
+        }
+
+        #slide1:checked~#controls label:nth-child(2),
+        #slide2:checked~#controls label:nth-child(3),
+        #slide3:checked~#controls label:nth-child(4),
+        #slide4:checked~#controls label:nth-child(1) {
+            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+
+            background-size: 50px;
+
+            display: flex;
+            z-index: 100;
+            position: absolute;
+            right: 0;
+            top: -150px;
+        }
+
+        #slide1:checked~#controls label:nth-last-child(1),
+        #slide2:checked~#controls label:nth-last-child(4),
+        #slide3:checked~#controls label:nth-last-child(3),
+        #slide4:checked~#controls label:nth-last-child(2) {
+            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background-size: 50px;
+            display: flex;
+            z-index: 100;
+            position: absolute;
+            left: 0;
+            top: -150px;
+        }
+
+        #bulets {
+            margin: 100px 0 0;
+            text-align: center;
+        }
+
+        #bulets label {
+            display: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            margin: 0 10px;
+            background: black;
+        }
+
+        #slide1:checked~#bulets label:nth-child(1),
+        #slide2:checked~#bulets label:nth-child(2),
+        #slide3:checked~#bulets label:nth-child(3),
+        #slide4:checked~#bulets label:nth-child(4) {
+            background: #2100E8;
+        }
+    }
+    @media (min-width:0px) AND (max-width:285px) {
+        .container_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 25%);
+            width: 100%;
+            padding: 40px 0;
+            justify-content: center;
+
+
+        }
+        .bossly{
+            top: 2%;
+        }
+        .img_div{
+            top: 1%;
+            width: 90px;
+            height: 90px;
+        }
+        .grid_item {
+            padding-bottom: 30px;
             position: relative;
             top: -2%;
         }
