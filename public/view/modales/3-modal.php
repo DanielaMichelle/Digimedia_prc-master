@@ -395,7 +395,7 @@
 
     </section>
 
-    <div class="registration-form">
+    <div class="registration-form data-FormMarketing-modal">
         <p class="text-success text-center"></p>
         <form id="formMain" method="post">
 
@@ -495,9 +495,9 @@ function validarDatos() {
 
 function datos() {
 
-    const nombreInput = document.getElementById('name');
-    const telefonoInput = document.getElementById('phone');
-    const emailInput = document.getElementById('email');
+    const nombreInput = document.querySelector('.data-FormMarketing-modal #name');
+    const telefonoInput = document.querySelector('.data-FormMarketing-modal #phone');
+    const emailInput = document.querySelector('.data-FormMarketing-modal #email');
 
     // Hacer que los 9 números esten juntos
     const telefono = telefonoInput.value.replace(/\s/g, '');
@@ -514,11 +514,10 @@ function datos() {
     if (!emailValido) alert("Debe de ingresar un correo valido.")
 
     if (nombreInput.value != '' && telefonoValido && emailValido) {
-        // alert("Todos los campos son correctos.")
+        alert("Todos los campos son correctos.")
         toggleCerarForm();
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
-        envioDatosWhatsApp(telefono);
-        enviarEmailAjax();
+        enviarEmailAjaxModal3_3(emailInput);
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
 }
@@ -661,18 +660,16 @@ window.onload = function() {
 
 
 
-function enviarEmailAjax() {
+function enviarEmailAjaxModal3_3(email) {
     var url = window.location.href;
-
-        // Extraer el valor después de "servicios/"
+    const emailModal = email.value;
+    // Extraer el valor después de "servicios/"
     const id_ser  = url.split('servicios/marketing-gestion-digital/')[1];
-
-    const email = document.getElementById('email').value;
 
 
     var datos = new FormData();
     datos.append("id_ser", id_ser);
-    datos.append("email", email);
+    datos.append("email", emailModal);
 
 
 

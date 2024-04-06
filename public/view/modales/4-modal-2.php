@@ -334,9 +334,9 @@
         if (!emailValido) alert("Debe de ingresar un correo válido.");
         if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
             modal.style.display = "none";
-            // catchData(nameInput, lastNameInput, emailInput);
+            catchData(nameInput, lastNameInput, emailInput);
             enviarEmailAjax(emailInput);
-            // cleanData(nameInput, lastNameInput, emailInput);
+            cleanData(nameInput, lastNameInput, emailInput);
             
             // console.log(emailInput.value);
         }
