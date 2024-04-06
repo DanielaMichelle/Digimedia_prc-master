@@ -299,17 +299,12 @@
         })
     }
     function datos_lost() {
-
         const nombreInput = document.getElementById('name_lost');
-        //const telefonoInput = document.getElementById('phone');
         const lastNInput = document.getElementById('lastName');
         const emailInput = document.getElementById('email_lost');
 
-        // Hacer que los 9 números esten juntos
-       // const telefono = telefonoInput.value.replace(/\s/g, '');
-        const email = emailInput.value.trim(); //delete white space
 
-        //const telefonoValido = objRegex.telefono.test(telefono);
+        const email = emailInput.value.trim(); 
         const emailValido = objRegex_lost.gmail.test(email);
 
 
@@ -317,7 +312,6 @@
 
         if (lastNInput.value === '') alert('El apellido no debe estar vacio')
 
-       // if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos")
 
         if (!emailValido) alert("Debe de ingresar un correo valido.")
 
@@ -327,16 +321,45 @@
             overflow_los.classList.add('oculto_des')
             container_des.classList.add('oculto_des')  
             //modalContainer.style.display = 'none';
-            //agarrandoDatos(nombreInput, telefonoInput, emailInput);
+            agarrandoDatos(nombreInput, lastNInput, emailInput);
             //envioDatosWhatsApp(telefono);
             enviarEmailAjax();
-            //limpiarDatos(nombreInput, telefonoInput, emailInput);
+            limpiarDatos(nombreInput, lastNInput, emailInput);
         }
     }
+
+    function limpiarDatos(nombre, apellido, correo) {
+        nombre.value = "";
+        apellido.value = "";
+        correo.value = "";
+    }
+
+    function agarrandoDatos(nombre, apellido, correo) {
+        const form = new FormData();
+        form.append('name', nombre.value)
+        form.append('lastName', apellido.value)
+        form.append('email', correo.value)
+
+        enviandoDatosServer(form)
+    }
+
+    //Enviando datos al servidor:
+    function enviandoDatosServer(form) {
+        fetch("./app/trigger/modal-gestion.php?action=ADD", {
+            method: 'POST',
+            body: form
+        })
+            .then(res => res.json())
+            .then(console.log)
+            .catch(err => console.log(err))
+    }
+    
+    
     function touchOverflowdes(){
         overflow_los.classList.add('oculto_des')
         container_des.classList.add('oculto_des')   
     }
+    
     function scrollmedn(){
       var ventasSection = document.getElementById('anuncio-servicio');
       
