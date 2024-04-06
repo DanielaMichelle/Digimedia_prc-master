@@ -497,7 +497,7 @@ function datos() {
         toggleCerarForm();
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
         envioDatosWhatsApp(telefono);
-        enviarEmailAjax();
+        enviarEmailAjax_los();
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
 }
@@ -636,7 +636,7 @@ window.onload = function() {
 };
 
 
-function enviarEmailAjax() {
+function enviarEmailAjax_los() {
         //var queryString = window.location.search;
         //var parametros = new URLSearchParams(queryString);
         
@@ -648,7 +648,7 @@ function enviarEmailAjax() {
         
         console.log(id_ser)
 
-        const email = document.getElementById('email_lost').value;
+        const email = document.getElementById('email').value;
 
 
         var datos = new FormData();
