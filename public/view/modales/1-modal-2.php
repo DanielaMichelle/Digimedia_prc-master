@@ -7,7 +7,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -45%);
-        z-index: 50;
+        z-index: 100;
         /* display: grid; */
         grid-template-columns: 3fr 4fr;
         background-image: linear-gradient(to bottom, #0095ff, #3a89f6, #537cec, #656ee0, #7460d2, #8957cb, #9b4cc1, #ab3fb6, #c533ac, #dc24a0, #ef1390, #ff037f);
@@ -259,23 +259,22 @@
                 <!--Nombre-->
                 <div class="form-group">
                     <label for="name">Nombre</label>
-                    <input type="text" class="form-control" name="name" id="name">
+                    <input type="text" class="form-control" name="name" id="name2">
                 </div>
 
                 <!--Apellido-->
                 <div class="form-group">
                     <label for="lastName">Apellido</label>
-                    <input type="text" class="form-control" name="lastName" id="lastName">
+                    <input type="text" class="form-control" name="lastName" id="lastName2">
                 </div>
 
                 <!--Correo-->
                 <div class="form-group">
                     <label for="email">Correo</label>
-                    <input type="text" class="form-control" name="email" id="email">
+                    <input type="text" class="form-control" name="email" id="email2">
                 </div>
 
             </div>
-            <input type="text" value="<?php echo $_GET["id"];?>" name="id_ser" hidden />
             <button type="submit" class="go-button" name="submit">Hazlo ya</button>
         </form>
 
@@ -328,9 +327,9 @@
     }
 
     function data() {
-        const nameInput = document.querySelector("#modal2_desarrollo .modal2--form-container #name");
-        const lastNameInput = document.querySelector("#modal2_desarrollo .modal2--form-container #lastName");
-        const emailInput = document.querySelector("#modal2_desarrollo .modal2--form-container #email");
+        const nameInput = document.querySelector("#modal2_desarrollo .modal2--form-container #name2");
+        const lastNameInput = document.querySelector("#modal2_desarrollo .modal2--form-container #lastName2");
+        const emailInput = document.querySelector("#modal2_desarrollo .modal2--form-container #email2");
         const email = emailInput.value.trim();
         const emailValido = objReg.gmail.test(email);
 
@@ -340,7 +339,7 @@
         if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
             modal.style.display = "none";
             catchData(nameInput, lastNameInput, emailInput);
-            // sendEmailAjax();
+            sendEmailAjax();
             cleanData(nameInput, lastNameInput, emailInput);
         }
     }
@@ -372,42 +371,39 @@
     }
 
     function sendEmailAjax() {
-        //var queryString = window.location.search;
-        //var parametros = new URLSearchParams(queryString);
-        
-        //console.log(parametros)
-        var url = window.location.href;
+    /*var queryString = window.location.search;
+    var parametros = new URLSearchParams(queryString);
+    const id_ser = parametros.get('id');*/
+    var url = window.location.href;
 
-        // Extraer el valor después de "servicios/"
-        const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
-        
-        console.log(id_ser)
+    // Extraer el valor después de "servicios/"
+    let id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
 
-        const email = document.getElementById('email_lost').value;
+    let email = document.getElementById('email2').value;
 
 
-        var datos = new FormData();
-        datos.append("id_ser", id_ser);
-        datos.append("email", email);
+    var datos = new FormData();
+    datos.append("id_ser", id_ser);
+    datos.append("email", email);
 
 
 
-        $.ajax({
-            url: "./public/message/Controller/process.php",
-            method: "POST",
-            data: datos,
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function(respuesta) {
-                console.log("Respuesta", respuesta);
-                if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
-                    alert("Email Enviado");
+    $.ajax({
+        url: "./public/message/Controller/process.php",
+        method: "POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(respuesta) {
+            console.log("Respuesta", respuesta);
+            if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
+                alert("Email Enviado");
 
-                } else {
-                    alert("ocurrio un error " + respuesta);
-                }
+            } else {
+                alert("ocurrio un error " + respuesta);
             }
-        })
-    }
+        }
+    })
+}
 </script>
