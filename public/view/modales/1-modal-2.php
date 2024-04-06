@@ -350,11 +350,11 @@
         form.append('lastName', lastName.value)
         form.append('email', email.value)
 
-        sendDataToServer(form)
+        enviandoDatosServer(form)
     }
 
     // Enviando datos al servidor:
-    function sendDataToServer(form) {
+    function enviandoDatosServer(form) {
         fetch("./app/trigger/modal-desing.php?action=ADD", {
             method: 'POST',
             body: form
@@ -371,10 +371,11 @@
     }
 
     function sendEmailAjax() {
-    /*var queryString = window.location.search;
-    var parametros = new URLSearchParams(queryString);
-    const id_ser = parametros.get('id');*/
-    var url = window.location.href;
+        //var queryString = window.location.search;
+        //var parametros = new URLSearchParams(queryString);
+        
+        //console.log(parametros)
+        var url = window.location.href;
 
     // Extraer el valor después de "servicios/"
     let id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];

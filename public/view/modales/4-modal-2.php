@@ -249,7 +249,7 @@
             <span>¡Es Gratis!</span>
         </div>
 
-        <form id="formMain" method="post">
+        <form id="formMain" class="form-modal-2Branding-desing" method="post">
             <div class="form-inputs">
                 <!--Nombre-->
                 <div class="form-group">
@@ -322,9 +322,10 @@
     }
 
     function data() {
-        const nameInput = document.querySelector("#modal2_branding .modal2--form-container #name");
-        const lastNameInput = document.querySelector("#modal2_branding .modal2--form-container #lastName");
-        const emailInput = document.querySelector("#modal2_branding .modal2--form-container #email");
+        const nameInput = document.querySelector(".form-modal-2Branding-desing #name");
+        const lastNameInput = document.querySelector(".form-modal-2Branding-desing #lastName");
+        const emailInput = document.querySelector(".form-modal-2Branding-desing #email");
+
         const email = emailInput.value.trim();
         const emailValido = objReg.gmail.test(email);
 
@@ -333,9 +334,11 @@
         if (!emailValido) alert("Debe de ingresar un correo válido.");
         if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
             modal.style.display = "none";
-            catchData(nameInput, lastNameInput, emailInput);
-            // sendEmailAjax();
-            cleanData(nameInput, lastNameInput, emailInput);
+            // catchData(nameInput, lastNameInput, emailInput);
+            enviarEmailAjax(emailInput);
+            // cleanData(nameInput, lastNameInput, emailInput);
+            
+            // console.log(emailInput.value);
         }
     }
 
@@ -366,20 +369,18 @@
     }
 
 
-function sendEmailAjax() {
+function enviarEmailAjax(email) {
     var url = window.location.href;
 
-        // Extraer el valor después de "servicios/"
     const id_ser  = url.split('servicios/brading-desing/')[1];
-
-    const email = document.getElementById('email').value;
-
+    const emailCorreo = email.value;
 
     var datos = new FormData();
     datos.append("id_ser", id_ser);
-    datos.append("email", email);
+    datos.append("email", emailCorreo);
 
 
+    // console.log(email.value);
 
     $.ajax({
         url: "./public/message/Controller/process.php",
