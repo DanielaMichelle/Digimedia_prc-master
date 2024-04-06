@@ -39,16 +39,16 @@
             </div>
             <ul class="hero-media">
                 <li class="nav-item">
-                    <a class="social-icon-hero" href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name" title="Linkedin!" aria-label="Nuestro Linkedin.."><i id="hero-icon-linkeding" class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="social-icon-hero" target="_blank" href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name" title="Linkedin!" aria-label="Nuestro Linkedin.."><i id="hero-icon-linkeding" class="fa-brands fa-linkedin-in"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="social-icon-hero" href="https://www.instagram.com/digimediamkt/" title="Instagram!" aria-label="Nuestro Instagram.."><i id="hero-icon-instagram" class="fa-brands fa-instagram"></i></a>
+                    <a class="social-icon-hero" target="_blank" href="https://www.instagram.com/digimediamkt/" title="Instagram!" aria-label="Nuestro Instagram.."><i id="hero-icon-instagram" class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="social-icon-hero" href="https://www.youtube.com/@digimediamarketing2636" title="Youtube!" aria-label="Nuestro Youtube.."><i id="hero-icon-youtube" class="fa-brands fa-youtube"></i></a>
+                    <a class="social-icon-hero" target="_blank" href="https://www.youtube.com/@digimediamarketing2636" title="Youtube!" aria-label="Nuestro Youtube.."><i id="hero-icon-youtube" class="fa-brands fa-youtube"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="social-icon-hero" href="https://www.facebook.com/DigiMedia.Marketing1" title="Facebook!" aria-label="Nuestro Facebook.."><i id="hero-icon-facebook" class="fa-brands fa-facebook"></i></a>
+                    <a class="social-icon-hero" target="_blank" href="https://www.facebook.com/DigiMedia.Marketing1" title="Facebook!" aria-label="Nuestro Facebook.."><i id="hero-icon-facebook" class="fa-brands fa-facebook"></i></a>
                 </li>
             </ul>
         </div>

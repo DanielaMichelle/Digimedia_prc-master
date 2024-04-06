@@ -46,16 +46,16 @@
             <h6>Redes Sociales</h6>
             <ul class="footer_top--social-media_list">
                 <li>
-                    <a href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name" title="Linkedin!" aria-label="Nuestro Linkedin.."><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name" title="Linkedin!" aria-label="Nuestro Linkedin.."><i class="fa-brands fa-linkedin-in"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/digimediamkt/" title="Instagram!" aria-label="Nuestro Instagram.."><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/digimediamkt/" title="Instagram!" aria-label="Nuestro Instagram.."><i class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/@digimediamarketing2636" title="Youtube!" aria-label="Nuestro Youtube.."><i class="fa-brands fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@digimediamarketing2636" title="Youtube!" aria-label="Nuestro Youtube.."><i class="fa-brands fa-youtube"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/DigiMedia.Marketing1" title="Facebook!" aria-label="Nuestro Facebook.."><i class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/DigiMedia.Marketing1" title="Facebook!" aria-label="Nuestro Facebook.."><i class="fa-brands fa-facebook"></i></a>
                 </li>
             </ul>
         </div>

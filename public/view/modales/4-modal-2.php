@@ -304,7 +304,6 @@
     document.addEventListener('click', function(event) {
         if (!modal.contains(event.target)) {
             modal.style.display = "none";
-            console.log("Click fuera del modal");
         }
     });
 
@@ -315,43 +314,42 @@
 
     validateData(); 
     function validateData() {
-        const formMain = document.querySelector(".modal2--form-container #formMain");
+        const formMain = document.querySelector("#modal2_branding .modal2--form-container #formMain");
         formMain.addEventListener("submit", (e) => {
             e.preventDefault();
-            datos();
+            data();
         })
     }
 
-    function datos() {
-        const nameInput = document.querySelector(".modal2--form-container #name");
-        const lastNameInput = document.querySelector(".modal2--form-container #lastName");
-        const emailInput = document.querySelector(".modal2--form-container #email");
+    function data() {
+        const nameInput = document.querySelector("#modal2_branding .modal2--form-container #name");
+        const lastNameInput = document.querySelector("#modal2_branding .modal2--form-container #lastName");
+        const emailInput = document.querySelector("#modal2_branding .modal2--form-container #email");
         const email = emailInput.value.trim();
         const emailValido = objReg.gmail.test(email);
 
         if (nameInput.value === '') alert('El nombre no debe estar vacío');
         if (lastNameInput.value === '') alert('El apellido no debe estar vacío');
-        if (emailInput.value === '') alert('El correo no debe estar vacío');
         if (!emailValido) alert("Debe de ingresar un correo válido.");
         if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
             modal.style.display = "none";
-            agarrandoDatos(nameInput, lastNameInput, emailInput);
-            // enviarEmailAjax();
-            limpiarDatos(nameInput, lastNameInput, emailInput);
+            catchData(nameInput, lastNameInput, emailInput);
+            // sendEmailAjax();
+            cleanData(nameInput, lastNameInput, emailInput);
         }
     }
 
-    function agarrandoDatos(name, lastName, email) {
+    function catchData(name, lastName, email) {
         const form = new FormData();
         form.append('name', name.value)
         form.append('lastName', lastName.value)
         form.append('email', email.value)
 
-        enviandoDatosServer(form)
+        sendDataToServer(form)
     }
 
     // Enviando datos al servidor:
-    function enviandoDatosServer(form) {
+    function sendDataToServer(form) {
         fetch("./app/trigger/modal-branding.php?action=ADD", {
             method: 'POST',
             body: form
@@ -361,14 +359,14 @@
         .catch(err => console.log(err))
     }
 
-    function limpiarDatos(name, lastName, email) {
+    function cleanData(name, lastName, email) {
         name.value = "";
         lastName.value = "";
         email.value = "";
     }
 
 
-function enviarEmailAjax() {
+function sendEmailAjax() {
     var url = window.location.href;
 
         // Extraer el valor después de "servicios/"

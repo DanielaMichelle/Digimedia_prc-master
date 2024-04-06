@@ -321,7 +321,7 @@
 }
 </style>
 
-<div class="modal-main-background">
+<div class="modal-main-background modal1_branding">
     <div class="modal-main">
         <figure class="btn-cerrar">
             <i class="fa solid fa-xmark fa-lg"></i>
@@ -409,7 +409,7 @@ btnCerrar.addEventListener('click', () => {
 });
 
 function validarDatos() {
-    const formMain = document.querySelector("#formMain");
+    const formMain = document.querySelector(".modal1_branding #formMain");
     formMain.addEventListener("submit", (e) => {
         e.preventDefault();
         datos();
@@ -418,9 +418,9 @@ function validarDatos() {
 
 function datos() {
 
-    const nombreInput = document.getElementById('name');
-    const telefonoInput = document.getElementById('phone');
-    const emailInput = document.getElementById('email');
+    const nombreInput = document.querySelector('.modal1_branding #name');
+    const telefonoInput = document.querySelector('.modal1_branding #phone');
+    const emailInput = document.querySelector('.modal1_branding #email');
 
     // Hacer que los 9 números esten juntos
     const telefono = telefonoInput.value.replace(/\s/g, '');
