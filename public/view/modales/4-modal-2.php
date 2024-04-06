@@ -254,19 +254,19 @@
                 <!--Nombre-->
                 <div class="form-group">
                     <label for="name">Nombre</label>
-                    <input type="text" class="form-control" name="name" id="name">
+                    <input type="text" class="form-control" name="name" id="name2">
                 </div>
 
                 <!--Apellido-->
                 <div class="form-group">
                     <label for="lastName">Apellido</label>
-                    <input type="text" class="form-control" name="lastName" id="lastName">
+                    <input type="text" class="form-control" name="lastName" id="lastName2">
                 </div>
 
                 <!--Correo-->
                 <div class="form-group">
                     <label for="email">Correo</label>
-                    <input type="text" class="form-control" name="email" id="email">
+                    <input type="text" class="form-control" name="email" id="email2">
                 </div>
 
             </div>
@@ -322,9 +322,9 @@
     }
 
     function data() {
-        const nameInput = document.querySelector(".form-modal-2Branding-desing #name");
-        const lastNameInput = document.querySelector(".form-modal-2Branding-desing #lastName");
-        const emailInput = document.querySelector(".form-modal-2Branding-desing #email");
+        const nameInput = document.querySelector(".form-modal-2Branding-desing #name2");
+        const lastNameInput = document.querySelector(".form-modal-2Branding-desing #lastName2");
+        const emailInput = document.querySelector(".form-modal-2Branding-desing #email2");
 
         const email = emailInput.value.trim();
         const emailValido = objReg.gmail.test(email);
@@ -335,7 +335,7 @@
         if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
             modal.style.display = "none";
             catchData(nameInput, lastNameInput, emailInput);
-            enviarEmailAjax(emailInput);
+            sendEmailAjax(emailInput);
             cleanData(nameInput, lastNameInput, emailInput);
             
             // console.log(emailInput.value);
@@ -369,11 +369,14 @@
     }
 
 
-function enviarEmailAjax(email) {
+function sendEmailAjax(email) {
     var url = window.location.href;
 
     const id_ser  = url.split('servicios/brading-desing/')[1];
-    const emailCorreo = email.value;
+
+    let emailCorreo = document.getElementById('email2').value;
+
+    // const emailCorreo = email.value;
 
     var datos = new FormData();
     datos.append("id_ser", id_ser);
