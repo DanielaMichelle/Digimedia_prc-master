@@ -77,13 +77,13 @@
     height: 40%;
 }
 
-    .medium h2 {
-        text-align: center;
-        font-size: 2.6em;
-        font-weight: 900;
-        color: white;
-        margin: 0;
-    }
+.medium h2{
+    text-align: center;
+    font-size: 2.6em;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+}
 
 .bottom-2 h3{
     text-align: center;
@@ -209,11 +209,8 @@
 <section class="main-container oculto_des">
     <img class="icon" src="public/img/logo_digimedia_color.webp" alt="Digimedia Icon">
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
-        <img
-            src="https://img.freepik.com/foto-gratis/peron-haciendo-presentacion-sus-colegas_23-2149229031.jpg?w=740&t=st=1712071654~exp=1712072254~hmac=c4267799e79d6b20e124ba780aef541de7ff000e79063af0c0ecc90f2b9e6177" />
-        <div class="h3_postion" style="font-size: 100%;">
-            <h3 class="h3">!INCREMENTA TUS VENTAS¡</h3>
-        </div>
+        <img src="https://img.freepik.com/foto-gratis/peron-haciendo-presentacion-sus-colegas_23-2149229031.jpg?w=740&t=st=1712071654~exp=1712072254~hmac=c4267799e79d6b20e124ba780aef541de7ff000e79063af0c0ecc90f2b9e6177"/>
+        <div class="h3_postion" style="font-size: 100%;"><h3 class="h3">!INCREMENTA TUS VENTAS¡</h3></div>
     </div>
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
         <div class="btn_close" style="font-size: 100%;"><button class="close-modal"  style="color: white;">&times;</button></div>
@@ -228,26 +225,28 @@
                 <form id="formMain_lost" style="font-size: 100%;">
                     <div class="form_in" style="font-size: 100%;">
                         <label>Nombre</label>
-                        <input type="text" id="name_lost" />
+                        <input type="text" id="name_lost"/>
                         <label>Apellido</label>
-                        <input type="text" id="lastName" />
+                        <input type="text" id="lastName"/>
                         <label>Correo</label>
-                        <input type="text" id="email_lost" />
+                        <input type="text" id="email_lost"/>
                     </div>
                     <div id="form_en" style="font-size: 100%;">
                         <button type="submit">HAZLO YA</button>
                     </div>
-
+                    
                 </form>
             </div>
         </div>
     </div>
 </section>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     const overflow_los = document.querySelector('.overflow_lo');
     const container_des = document.querySelector('.main-container')
     let  modalMostrado = false;
+    const btnCerrarLa = document.querySelector('.close-modal');
     const objRegex_lost = {
         gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
     };
@@ -261,6 +260,11 @@
         window.addEventListener('scroll', scrollmedn);
 
         validarDatos_lost();
+
+        btnCerrarLa.addEventListener('click', () => {
+            overflow_los.classList.add('oculto_des')
+            container_des.classList.add('oculto_des')
+        });
     
         
     });
