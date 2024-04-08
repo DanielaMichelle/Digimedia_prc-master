@@ -11,7 +11,7 @@
             <ul class="footer_top--contact_list">
                 <li>
                     <i class="fa-solid fa-mobile-screen"></i>
-                    <span>958716002</span>
+                    <span>936 910 425</span>
                 </li>
                 <li>
                     <i class="fa-solid fa-envelope"></i>
