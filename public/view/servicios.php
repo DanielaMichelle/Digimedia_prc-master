@@ -34,29 +34,48 @@
     <!-- Stylos Css propios -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143365030-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143365030-1');
+    </script>
+
 </head>
 
 <body>
     <?php include_once './public/assets/header.php' ?>
 
-    <?php 
+    <?php
 
-        $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
-        if(is_file("./public/view/servicios/{$servicio}.php")) require_once "./public/view/servicios/{$servicio}.php";
-        else require_once "./public/view/servicios/1.php"; 
+    $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
+    if (is_file("./public/view/servicios/{$servicio}.php"))
+        require_once "./public/view/servicios/{$servicio}.php";
+    else
+        require_once "./public/view/servicios/1.php";
     ?>
 
     <!-- modales servicios -->
-    <?php 
-        $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
-        if(is_file("./public/view/modales/{$servicio}-modal.php")) require_once "./public/view/modales/{$servicio}-modal.php";
-        else require_once "./public/view/modales/1-modal.php"; 
+    <?php
+    $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
+    if (is_file("./public/view/modales/{$servicio}-modal.php"))
+        require_once "./public/view/modales/{$servicio}-modal.php";
+    else
+        require_once "./public/view/modales/1-modal.php";
     ?>
-    
-    <?php 
-        $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
-        if(is_file("./public/view/services_option/{$servicio}-section.php")) require_once "./public/view/services_option/{$servicio}-section.php";
-        else require_once "./public/view/services_option/1-section.php"; 
+
+    <?php
+    $servicio = isset($_GET['id']) ? $_GET['id'] : 1;
+    if (is_file("./public/view/services_option/{$servicio}-section.php"))
+        require_once "./public/view/services_option/{$servicio}-section.php";
+    else
+        require_once "./public/view/services_option/1-section.php";
     ?>
 
     <div class="con-anun5" id="anuncio-servicio">
@@ -151,14 +170,14 @@
             </a>
         </div>
     </div>
-    
+
     <!-- segundos modales servicios  -->
-    <?php 
-         $servicio = isset($_GET['id']) && ($_GET['id'] == '1'||  $_GET['id'] == '2' || $_GET['id'] == '3' || $_GET['id'] == '4') ? $_GET['id'] : null;
-         $ruta_modal = $servicio ? "./public/view/modales/{$servicio}-modal-2.php" : null; 
-         if ($ruta_modal && is_file($ruta_modal)) {
-             require_once $ruta_modal;
-         }
+    <?php
+    $servicio = isset($_GET['id']) && ($_GET['id'] == '1' || $_GET['id'] == '2' || $_GET['id'] == '3' || $_GET['id'] == '4') ? $_GET['id'] : null;
+    $ruta_modal = $servicio ? "./public/view/modales/{$servicio}-modal-2.php" : null;
+    if ($ruta_modal && is_file($ruta_modal)) {
+        require_once $ruta_modal;
+    }
     ?>
     <?php include_once './public/assets/footer.php' ?>
 

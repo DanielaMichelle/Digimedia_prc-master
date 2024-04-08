@@ -16,10 +16,23 @@
     <link rel="stylesheet" href="./public/css/section.css">
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Stylos Css propios -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143365030-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143365030-1');
+    </script>
+
+
 </head>
 
 <body>
@@ -75,14 +88,18 @@
 
             <section id="valores">
                 <article class="valores1">
-                    <p>En DigiMedia, creemos firmemente que nuestros valores son fundamentales para el éxito y nos orientan en todas nuestras decisiones y acciones.</p>
+                    <p>En DigiMedia, creemos firmemente que nuestros valores son fundamentales para el éxito y nos
+                        orientan en todas nuestras decisiones y acciones.</p>
                 </article>
             </section>
 
             <div class="container container_LETRAS_VALORES">
 
                 <div class="img">
-                    <img src="./public/img/nos_responsabilidad.webp" width="100%" height="100%" loading="lazy" title="Nuestra responsabilidad." alt="Img no encontrada.." style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;" fetchpriority="high" />
+                    <img src="./public/img/nos_responsabilidad.webp" width="100%" height="100%" loading="lazy"
+                        title="Nuestra responsabilidad." alt="Img no encontrada.."
+                        style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;"
+                        fetchpriority="high" />
                     <div class="tit">
                         <b>
                             <p>Responsabilidad</p>
@@ -97,7 +114,10 @@
                 </div>
 
                 <div class="img">
-                    <img src="./public/img/nos_innovacion.webp" width="100%" height="100%" loading="lazy" title="Nuestra Innovación." alt="Img no encontrada.." style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;" fetchpriority="high" />
+                    <img src="./public/img/nos_innovacion.webp" width="100%" height="100%" loading="lazy"
+                        title="Nuestra Innovación." alt="Img no encontrada.."
+                        style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;"
+                        fetchpriority="high" />
                     <div class="tit">
                         <b>
                             <p>Innovación</p>
@@ -113,7 +133,10 @@
                 </div>
 
                 <div class="img">
-                    <img src="./public/img/nos_adaptavilidad.webp" width="100%" height="100%" loading="lazy" title="¡Adaptavilidad!" alt="Img no encontrada.." style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;" fetchpriority="high" />
+                    <img src="./public/img/nos_adaptavilidad.webp" width="100%" height="100%" loading="lazy"
+                        title="¡Adaptavilidad!" alt="Img no encontrada.."
+                        style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;"
+                        fetchpriority="high" />
                     <div class="tit">
                         <b>
                             <p>Adaptabilidad</p>
@@ -128,7 +151,10 @@
                 </div>
 
                 <div class="img">
-                    <img src="./public/img/nos_trabajo.webp" width="100%" height="100%" loading="lazy" title="¡Adaptavilidad!" alt="Img no encontrada.." style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;" fetchpriority="high" />
+                    <img src="./public/img/nos_trabajo.webp" width="100%" height="100%" loading="lazy"
+                        title="¡Adaptavilidad!" alt="Img no encontrada.."
+                        style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;"
+                        fetchpriority="high" />
                     <div class="tit">
                         <b>
                             <p>Trabajo en equipo</p>
@@ -144,7 +170,10 @@
                 </div>
 
                 <div class="img">
-                    <img src="./public/img/nos_compromiso.webp" width="100%" height="100%" loading="lazy" title="¡Nuestro Compromiso!" alt="Img no encontrada.." style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;" fetchpriority="high" />
+                    <img src="./public/img/nos_compromiso.webp" width="100%" height="100%" loading="lazy"
+                        title="¡Nuestro Compromiso!" alt="Img no encontrada.."
+                        style="width: 85px; height: 85px; object-fit: cover; object-position: 50% 50%;"
+                        fetchpriority="high" />
                     <div class="tit">
                         <b>
                             <p>Compromiso</p>

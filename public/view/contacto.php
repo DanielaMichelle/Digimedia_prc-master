@@ -15,10 +15,22 @@
     <link rel="stylesheet" href="./public/css/section.css">
     <link rel="stylesheet" href="./public/css/contactos.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Stylos Css propios -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143365030-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143365030-1');
+    </script>
+
 </head>
 
 <body>
@@ -41,7 +53,9 @@
                         <figure>
                             <img src="./public/img/flecha-como-llegar.webp" alt="cómo llegar">
                         </figure>
-                        <a target="_blank" href="https://maps.google.com/maps/dir//DigiMedia+Marketing-+Agencia+de+Marketing+Digital+para+PYMES+y+emprendimientos+en+Per%C3%BA+Jr.+Paruro+1401+Lima+15001/@-12.0574029,-77.025502,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9105c981108188a1:0x2bce3907b5bcb3ec">Cómo llegar</a>
+                        <a target="_blank"
+                            href="https://maps.google.com/maps/dir//DigiMedia+Marketing-+Agencia+de+Marketing+Digital+para+PYMES+y+emprendimientos+en+Per%C3%BA+Jr.+Paruro+1401+Lima+15001/@-12.0574029,-77.025502,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9105c981108188a1:0x2bce3907b5bcb3ec">Cómo
+                            llegar</a>
                     </div>
                 </div>
             </div>
@@ -54,7 +68,8 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <div class="label">Nombre Completo</div>
-                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombres y Apellidos">
+                                <input type="text" class="form-control" name="nombre" id="nombre"
+                                    placeholder="Nombres y Apellidos">
                                 <small></small>
                             </div>
                         </div>
@@ -62,7 +77,8 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <div class="label">Email</div>
-                                <input type="email" class="form-control" name="emailPerson" id="emailPerson" placeholder="Email">
+                                <input type="email" class="form-control" name="emailPerson" id="emailPerson"
+                                    placeholder="Email">
                                 <small></small>
                             </div>
                         </div>
@@ -89,7 +105,8 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <div class="label">Número</div>
-                                <input type="text" class="form-control" name="numero" id="numero" placeholder="Teléfono (9 dígitos)">
+                                <input type="text" class="form-control" name="numero" id="numero"
+                                    placeholder="Teléfono (9 dígitos)">
                                 <small></small>
                             </div>
                         </div>
@@ -97,7 +114,8 @@
 
                     <div class="mb-3">
                         <div class="label">Mensaje</div>
-                        <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="4" placeholder="Escríbenos aquí"></textarea>
+                        <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="4"
+                            placeholder="Escríbenos aquí"></textarea>
                         <small></small>
                     </div>
 
@@ -138,16 +156,16 @@
             </figure>
             <div class="horario--text">
                 <span>Horario</span>
-                    <div class="horario--container">
-                        <div>
-                            <p>Lunes - Viernes</p>
-                            <span>8:00 am - 8:00 pm</span>
-                        </div>
-                        <div>
-                            <p>Lunes - Viernes</p>
-                            <span>8:00 am - 8:00 pm</span>
-                        </div>
+                <div class="horario--container">
+                    <div>
+                        <p>Lunes - Viernes</p>
+                        <span>8:00 am - 8:00 pm</span>
                     </div>
+                    <div>
+                        <p>Lunes - Viernes</p>
+                        <span>8:00 am - 8:00 pm</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -229,9 +247,9 @@
         //ESTO TE LLEVA LOS DATOS AL SERVER Y LE PONE COMO NOMBRE ADD
         function enviarFormData(formData) {
             fetch("./app/trigger/intranet.php?action=ADD", {
-                    method: "POST",
-                    body: formData
-                })
+                method: "POST",
+                body: formData
+            })
                 .then(res => res.json())
                 .then(data => {
                     alert("Datos enviados")
@@ -246,13 +264,13 @@
         // Interactividad de botones
         const panelHorario = document.querySelector(".botones-contacto .horario");
         const horarioBtn = document.querySelector(".botones-contacto .horario figure");
-    
+
         horarioBtn.addEventListener("click", () => {
             panelHorario.classList.toggle("horario--cerrado");
             panelHorario.classList.toggle("horario--abierto");
         })
 
-    
+
     </script>
 
 </body>
