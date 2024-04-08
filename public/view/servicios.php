@@ -36,7 +36,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     
-
+    <!-- Servicio desing 1 -->
+	
+	<meta name="google-site-verification" content="zvd_7b2pmgLXGJTIpThKfQoqwj3g7Qp4JB42EWArIK4" />
+    
+	<!--gestion-->
+    <meta name="google-site-verification" content="zvd_7b2pmgLXGJTIpThKfQoqwj3g7Qp4JB42EWArIK4" />
+	
+	<!--marketing-->
+    <meta name="google-site-verification" content="zvd_7b2pmgLXGJTIpThKfQoqwj3g7Qp4JB42EWArIK4" />
+	
+	<!--Branding-->
+    <meta name="google-site-verification" content="zvd_7b2pmgLXGJTIpThKfQoqwj3g7Qp4JB42EWArIK4" />
+	
+	
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143365030-1"></script>
     <script>
