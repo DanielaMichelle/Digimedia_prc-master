@@ -376,7 +376,8 @@
     
 
     .descripcion_div:hover {
-        background: linear-gradient(to bottom, #FF037F, #7B22B3);
+        /*background: linear-gradient(to bottom, #FF037F, #7B22B3);*/
+        background: linear-gradient(135deg, #d0d0d0, #505050);
     }
 
     .textos {
