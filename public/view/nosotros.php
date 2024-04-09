@@ -40,11 +40,8 @@
 
     <section class="principal">
         <main>
-            <h1>¿Quienes somos?</h1>
-            <p>Digimedia es una empresa de marketing digital, que se enfoca en potenciar tu
-                emprendimiento a nivel online. Además, le brinda a tu emprendimiento estrategias que
-                ayuden a cumplir los objetivos de manera eficaz. Somos un grupo de personas comprometidas
-                con el desarrollo de cada marca que nos contacta.</p>
+            <h1>¿Quiénes somos?</h1>
+            <p>Digimedia es una empresa de marketing digital, que se enfoca en potenciar tu emprendimiento a nivel online. Además, le brinda a tu emprendimiento estrategias que ayuden a cumplir los objetivos de manera eficaz. Somos un grupo de personas comprometidas con el desarrollo de cada marca que nos contacta.</p>
         </main>
     </section>
 
@@ -54,14 +51,12 @@
 
         <div class="cont1">
             <div class="cont1_img">
-                <img src="./public/img/ds_web.webp" alt="">
+                <img src="./public/img/nosotros/nosotros-img1.webp" alt="misión">
             </div>
             <div class="cont1_data">
                 <div>
                     <h1>Misión</h1>
-                    <p>Ser aliado de los emprendimientos en su posicionamiento digital;
-                        mediante la generación de contenido estratégico que garantice el
-                        cumplimiento de los objetivos planteados.</p>
+                    <p>Ser aliado de los emprendimientos en su posicionamiento digital; mediante la generación de contenido estratégico que garantice el cumplimiento de los objetivos planteados.</p>
                 </div>
             </div>
         </div>
@@ -70,12 +65,11 @@
             <div class="cont2_data">
                 <div>
                     <h1>Visión</h1>
-                    <p>Liderar la transformación digital de las PYME en el Perú; estableciendo
-                        vínculos sólidos entre nuestros clientes y sus respectivas audiencias.</p>
+                    <p>Liderar la transformación digital de las PYME en el Perú; estableciendo vínculos sólidos entre nuestros clientes y sus respectivas audiencias.</p>
                 </div>
             </div>
             <div class="cont2_img">
-                <img src="./public/img/ds_web.webp" alt="">
+                <img src="./public/img/nosotros/nosotros-img2.webp" alt="visión">
             </div>
         </div>
     </section>

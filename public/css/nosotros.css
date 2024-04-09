@@ -17,6 +17,8 @@
 .principal p {
   margin-top: 20px;
   font-size: 18px;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .mision_vision {
@@ -142,12 +144,13 @@
 
 .container_LETRAS_VALORES {
   color: #ffffff;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
   position: relative;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 2rem;
 }
 
 .container .img {
@@ -172,6 +175,7 @@
   align-items: center;
   margin-left: 15px;
   flex-basis: 17%;
+  margin-right: 3rem;
 }
 
 .container .con {
@@ -226,7 +230,17 @@
   font-family: Arial, sans-serif;
 }
 
+
 /* ------- MEDIA QUERIE ----------- */
+
+@media (max-width: 1024px) {
+  .container{
+    margin: 0 auto;
+  } 
+}
+
+
+
 @media (max-width: 720px) {
   .principal main h1 {
     font-size: 24px;
@@ -243,7 +257,7 @@
 
   .mision_vision .cont1 .cont1_img {
     width: 100vw;
-    min-height: 400px;
+    min-height: fit-content;
   }
 
   .cont1 .cont1_data {
@@ -259,7 +273,7 @@
 
   .mision_vision .cont2 .cont2_img {
     width: 100vw;
-    min-height: 400px;
+    min-height: fit-content;
   }
 
   .cont2 .cont2_data {
@@ -284,6 +298,7 @@
 
   .container .tit {
     margin-left: 0;
+    margin-right: 0;
   }
 
   .a,
@@ -297,4 +312,66 @@
   .container .img img {
     margin-top: 0;
   }
+
+  .conten {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .container .img {
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
 }
+
+@media (max-width: 426px) {
+  .principal {
+    min-height: fit-content;
+    padding: 8rem 1rem 2rem;
+  }
+
+  .principal main p {
+    font-size: 3vw;
+  }
+
+  .cont1 .cont1_data,
+  .cont2 .cont2_data{
+    min-height: auto;
+  }
+
+  .cont1 .cont1_data p, .cont2 .cont2_data p {
+    font-size: 3vw;
+  }
+
+  .cont1 .cont1_data h1, .cont2 .cont2_data h1 {
+    font-size: 24px;
+  }
+
+  .conten {
+    font-size: 3vw;
+  }
+
+  #titulo h1 {
+    font-size: 24px;
+  }
+
+  .valores1 p {
+    font-size: 3.5vw;
+    font-weight: 600;
+  }
+
+  .container .img {
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
+
+  .a,
+  .b,
+  .c,
+  .e,
+  .f {
+    margin-left: 0;
+  }
+}
+
+
