@@ -7,6 +7,7 @@
     <title>.:: DigiMedia ::.</title>
     <link rel="shortcut icon" href="./public/img/logo.png" type="image/x-icon">
     <meta name="description" content="Digimedia un mundo innovador">
+    <!-- Reemplazar todos los stylesheet por solo los nombres en un arreglo -->
     <link rel="stylesheet" href="./public/css/index.css">
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="./public/css/inicio.css">
