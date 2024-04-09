@@ -75,7 +75,7 @@ footer .footer_top div .footer_top--legal_list li i {
 
 footer .footer_top--social-media_list li i {
   width: auto;
-  font-size: 20px;
+  font-size: 26px;
   transition: font-size 0.2s ease;
 }
 
@@ -118,6 +118,10 @@ footer .footer_bottom {
     grid-template-columns: 1fr;
   }
 
+  footer .footer_top .footer_top--imagen span {
+    font-size: 14px;
+  }
+
   footer .footer_top .footer_top--contact,
   footer .footer_top .footer_top--legal,
   footer .footer_top .footer_top--social-media {
@@ -153,5 +157,22 @@ footer .footer_bottom {
     flex-direction: column;
     text-align: center;
     border-top: none;
+  }
+}
+
+@media (max-width: 426px) {
+  footer .footer_top div ul li {
+    justify-content: start;
+  }
+
+  footer .footer_top .footer_top--contact,
+  .footer_top .footer_top--legal {
+    width: 100%;
+  }
+
+  footer .footer_top div .footer_top--contact_list,
+  footer .footer_top div .footer_top--legal_list {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
