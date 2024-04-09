@@ -8,10 +8,17 @@
     </div>
     <input type="checkbox" id="btn-menu">
     <label for="btn-menu" class="icon-menu"><i class="fa-solid fa-bars" style="color: #FFFFFF;"></i></label>
-    <nav class="menu">
-        <ul>
+    <nav class="menu" style="font-size: 100%;">
+        <ul class="vacios" style="font-size: 100%;">
+            <div class="btn_close" style="font-size: 100%;"><button class="close-modal" style="color: white;">&times;</button></div>
+            <div class="doresilaba">
+                <a class="navbar-brand" href="index.php">
+                    <img src="./public/img/logoblanco.png" loading="lazy" class="logoimagen" title="¡Digimedia!" width="100%"
+                        height="100%" alt="Img no encontrada">
+                </a>
+            </div>
             <li><a href="index.php" title="Home">Home</a></li>
-            <li class="submenu"><a href="#" title="Servicios">Servicios<i class="fa-solid fa-chevron-down"
+            <li class="submenu"><a  title="Servicios">Servicios<i class="fa-solid fa-chevron-down"
                         style="color: #FFFFFF;"></i></a>
                 <ul>
                     <li><a href="servicios/diseno-desarrollo-web/1" title="Diseño y Desarrollo Web">Diseño y
@@ -26,7 +33,7 @@
                 </ul>
             </li>
             <li><a href="nosotros.php" title="Nosotros">Nosotros</a></li>
-            <li class="submenu"><a href="#" title="Saber mas..">More<i class="fa-solid fa-chevron-down" title="Mas.."
+            <li class="submenu"><a  title="Saber mas..">More<i class="fa-solid fa-chevron-down" title="Mas.."
                         style="color: #FFFFFF;"></i></a>
                 <ul>
                     <li><a href="contacto.php" title="Contactanos">Contáctanos</a></li>
@@ -37,3 +44,19 @@
         </ul>
     </nav>
 </header>
+
+<script>
+
+   /* const cer_12 = document.querySelector(".close-modal");
+    const menu_123 = document.querySelector('.menu');
+
+    document.addEventListener('DOMContentLoaded',function(){
+        menu_123.classList.remove('lost_con');
+        cer_12.addEventListener('click',close_1234)
+    })
+
+    function close_1234(){
+        menu_123.classList.add('lost_con')
+    }*/
+
+</script>
