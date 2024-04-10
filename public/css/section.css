@@ -169,6 +169,7 @@
   width: 100%;
   margin-top: 4px;
   margin-bottom: 16px;
+  padding: 0;
 }
 
 .contacto--map__container .map-bottom {
@@ -642,6 +643,11 @@
   .botones-contacto .flecha-arriba {
     width: 55px;
     height: 55px;
+  }
+
+  .contacto--map__container .map-bottom div figure {
+    width: 15px;
+    height: 15px;
   }
 }
 

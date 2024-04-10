@@ -17,7 +17,7 @@ include_once './public/include/html_head.php';
 
             <div class="contacto--map__container">
                 <span class="message">Encuentranos en el mapa</span>
-                <div class="map">
+                <div class="map map--contact">
                     <?php include './public/include/section_maps.php' ?>
                 </div>
                 <div class="map-bottom">

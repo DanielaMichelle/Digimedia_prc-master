@@ -286,7 +286,7 @@
 
     // Abrir modal
     let options = {
-        threshold: 0.5,
+        threshold: 0.01,
     };
     let ejecutado = false;
     let observer = new IntersectionObserver(function(entries) {
