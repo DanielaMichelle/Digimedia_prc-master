@@ -54,6 +54,7 @@ if (anchoPagina >= 984) {
         gestionRedesSocialesCircle.style.borderColor = "rgb(0 155 255)";
         marketingGestionDigitalCircle.style.borderColor = "rgb(0 155 255)";
         brandingDisenoCircle.style.borderColor = "rgb(0 155 255)";
+        disenoDesarrolloWebCircle.style.borderColor = "rgb(0 155 255)";
     })
 
     gestionRedesSocialesCircle.addEventListener("mouseover", () => {
@@ -63,6 +64,7 @@ if (anchoPagina >= 984) {
         disenoDesarrolloWebCircle.style.borderColor = "rgb(235 33 151)";
         marketingGestionDigitalCircle.style.borderColor = "rgb(235 33 151)";
         brandingDisenoCircle.style.borderColor = "rgb(235 33 151)";
+        gestionRedesSocialesCircle.style.borderColor = "rgb(235 33 151)";
     })
 
     marketingGestionDigitalCircle.addEventListener("mouseover", () => {
@@ -72,6 +74,7 @@ if (anchoPagina >= 984) {
         gestionRedesSocialesCircle.style.borderColor = "rgb(123 34 179)";
         brandingDisenoCircle.style.borderColor = "rgb(123 34 179)";
         disenoDesarrolloWebCircle.style.borderColor = "rgb(123 34 179)";
+        marketingGestionDigitalCircle.style.borderColor = "rgb(123 34 179)";
     })
 
     brandingDisenoCircle.addEventListener("mouseover", () => {
@@ -81,6 +84,7 @@ if (anchoPagina >= 984) {
         disenoDesarrolloWebCircle.style.borderColor = "rgb(255 94 3)";
         marketingGestionDigitalCircle.style.borderColor = "rgb(255 94 3)";
         gestionRedesSocialesCircle.style.borderColor = "rgb(255 94 3)";
+        brandingDisenoCircle.style.borderColor = "rgb(255 94 3)";
     })
 }
 
