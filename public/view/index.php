@@ -92,7 +92,7 @@
                     manera eficaz. Somos un grupo de personas comprometidas con el desarrollo de cada marca que nos
                     contacta.</p>
             </div>
-            <div class="nuestros-servicios-text-bottom">
+            <div class="nuestros-servicios-text-bottom interactivo-top">
                 <span class="nuestros-servicios-text-interactivo"></span>
                 <figure class="nuestros-servicios-img-interactivo">
                     <img src="" alt="desarrollo y diseño web">
@@ -132,6 +132,13 @@
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
+        </div>
+
+        <div class="nuestros-servicios-text-bottom interactivo-bottom">
+                <p class="nuestros-servicios-text-interactivo">bottom</p>
+                <figure class="nuestros-servicios-img-interactivo">
+                    <img src="" alt="desarrollo y diseño web">
+                </figure>
         </div>
 
     </section>
