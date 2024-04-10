@@ -41,7 +41,17 @@
 }
 @media (max-width: 820px) {
   .mapa {
-    height: 380px;
+    width: 100%;
+    background: linear-gradient(to left, #0199fe, #672bb7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 330px;
+  }
+  .map {
+    width: 98%;
+    height: 100%;
+    padding: 14px 15px;
   }
 }
 
