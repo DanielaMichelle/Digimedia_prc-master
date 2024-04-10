@@ -250,9 +250,11 @@
         }
 
     }
-    #slider{
+
+    #slider {
         font-size: 16px;
     }
+
     .container_grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, 23%);
@@ -271,7 +273,8 @@
 
 
     }
-    .bossly{
+
+    .bossly {
         position: absolute;
         background: transparent;
         width: 100%;
@@ -280,18 +283,18 @@
         justify-content: center;
         top: -1em;
     }
-    
+
     .img_div {
         z-index: 3;
         width: 130px;
         /* ajusta el tamaño según sea necesario */
         height: 130px;
-        
+
         /* ajusta el tamaño según sea necesario */
         border-radius: 50%;
         background: #FF8616;
         overflow: hidden;
-        
+
         transition: transform 1s ease-in-out, background 2s ease-in-out;
         z-index: 100;
         display: flex;
@@ -372,8 +375,8 @@
     .bossly:hover~.descripcion_div {
         color: black;
     }
-    
-    
+
+
 
     .descripcion_div:hover {
         background: linear-gradient(to bottom, #FF8616, #FF037F);
@@ -421,14 +424,14 @@
             width: 100%;
             padding-bottom: 20px;
         }
-        
+
         .grid_item {
             height: 480px;
             position: relative;
             top: 3%;
-            
+
         }
-        
+
 
         .textos {
             background: transparent;
@@ -451,7 +454,7 @@
             height: 74%;
         }
 
-        
+
 
         #slider {
             margin: 0;
@@ -601,24 +604,26 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, 10%);
             width: 100%;
-           
+
         }
+
         .grid_item {
             height: 430px;
             position: relative;
             top: 3%;
-            
+
         }
+
         .img_div {
-            
+
             top: -.1%;
-            
-       
+
+
             width: 120px;
             /* ajusta el tamaño según sea necesario */
             height: 120px;
-        
-        
+
+
         }
 
         .textos {
@@ -646,7 +651,7 @@
             flex-direction: column;
             justify-content: center;
             position: relative;
-            
+
         }
 
         #slider input[type=radio] {
@@ -660,7 +665,7 @@
 
         #slides {
             width: 90%;
-            
+
             margin: auto;
             background: transparent;
             position: relative;
@@ -671,7 +676,7 @@
             width: 100%;
             overflow: hidden;
             background: transparent;
-            
+
         }
 
         #slide1:checked~#slides .container_grid {
@@ -794,11 +799,13 @@
 
 
         }
-        .img_div{
+
+        .img_div {
             top: 1%;
         }
+
         .grid_item {
-            
+
             position: relative;
             top: 3%;
         }
@@ -977,11 +984,13 @@
 
 
         }
-        .img_div{
+
+        .img_div {
             top: 1%;
             width: 120px;
             height: 120px;
         }
+
         .grid_item {
             padding-bottom: 30px;
             position: relative;
@@ -1151,6 +1160,7 @@
             background: #2100E8;
         }
     }
+
     @media (min-width:0px) AND (max-width:285px) {
         .container_grid {
             display: grid;
@@ -1161,14 +1171,17 @@
 
 
         }
-        .bossly{
+
+        .bossly {
             top: 2%;
         }
-        .img_div{
+
+        .img_div {
             top: 1%;
             width: 90px;
             height: 90px;
         }
+
         .grid_item {
             padding-bottom: 30px;
             position: relative;
@@ -1375,6 +1388,16 @@
             height: 70%;
         }
     }
+
+    @media screen and (max-width: 1150px) {
+        .control1 {
+            right: 2px;
+        }
+
+        .control4 {
+            left: 7px;
+        }
+    }
 </style>
 <section class="firts_section">
     <div class="content_section">
@@ -1403,7 +1426,9 @@
         <div id="overflow" style="font-size: 100%;">
             <section class="container_grid" style="font-size: 100%;">
                 <div class="grid_item" style="font-size: 100%;">
-                    <div class="bossly" style="font-size: 100%;"><div class="img_div elemento basel"></div></div>
+                    <div class="bossly" style="font-size: 100%;">
+                        <div class="img_div elemento basel"></div>
+                    </div>
                     <div class="descripcion_div elemento" style="font-size: 100%;">
                         <div class="textos" style="font-size: 100%;">
                             <h4>DESARROLLO DE
@@ -1423,7 +1448,9 @@
                     </div>
                 </div>
                 <div class="grid_item" style="font-size: 100%;">
-                    <div class="bossly" style="font-size: 100%;"><div class="img_div elemento2 basel2"></div></div>
+                    <div class="bossly" style="font-size: 100%;">
+                        <div class="img_div elemento2 basel2"></div>
+                    </div>
                     <div class="descripcion_div elemento2" style="font-size: 100%;">
                         <div class="textos" style="font-size: 100%;">
                             <h4>IDENTIDAD VISUAL
@@ -1444,7 +1471,9 @@
                     </div>
                 </div>
                 <div class="grid_item" style="font-size: 100%;">
-                    <div class="bossly" style="font-size: 100%;"><div class="img_div elemento3 basel3"></div></div>
+                    <div class="bossly" style="font-size: 100%;">
+                        <div class="img_div elemento3 basel3"></div>
+                    </div>
                     <div class="descripcion_div elemento3" style="font-size: 100%;">
                         <div class="textos" style="font-size: 100%;">
                             <h4>NAMING, LOGO Y
@@ -1460,7 +1489,9 @@
                     </div>
                 </div>
                 <div class="grid_item" style="font-size: 100%;">
-                    <div class="bossly" style="font-size: 100%;"><div class="img_div elemento4 basel4"></div></div>
+                    <div class="bossly" style="font-size: 100%;">
+                        <div class="img_div elemento4 basel4"></div>
+                    </div>
                     <div class="descripcion_div elemento4" style="font-size: 100%;">
                         <div class="textos" style="font-size: 100%;">
                             <h4>MANUAL DE
@@ -1480,10 +1511,10 @@
         </div>
     </div>
     <div id="controls">
-        <label for="slide1"></label>
+        <label class="control1" for="slide1"></label>
         <label for="slide2"></label>
         <label for="slide3"></label>
-        <label for="slide4"></label>
+        <label class="control4" for="slide4"></label>
     </div>
     <div id="bulets">
         <label for="slide1"></label>

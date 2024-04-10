@@ -24,37 +24,37 @@
     <link rel="stylesheet" href="./public/css/mas-servicios.css">
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,500;1,500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
     <!-- Stylos Css propios -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    
+
     <!-- Servicio desing 1 -->
-	
-	<meta name="google-site-verification" content="zvd_7b2pmgLXGJTIpThKfQoqwj3g7Qp4JB42EWArIK4" />
-    
-	<!--gestion-->
+
     <meta name="google-site-verification" content="zvd_7b2pmgLXGJTIpThKfQoqwj3g7Qp4JB42EWArIK4" />
-	
-	<!--marketing-->
+
+    <!--gestion-->
     <meta name="google-site-verification" content="zvd_7b2pmgLXGJTIpThKfQoqwj3g7Qp4JB42EWArIK4" />
-	
-	<!--Branding-->
+
+    <!--marketing-->
     <meta name="google-site-verification" content="zvd_7b2pmgLXGJTIpThKfQoqwj3g7Qp4JB42EWArIK4" />
-	
-	
+
+    <!--Branding-->
+    <meta name="google-site-verification" content="zvd_7b2pmgLXGJTIpThKfQoqwj3g7Qp4JB42EWArIK4" />
+
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143365030-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-143365030-1');
@@ -95,7 +95,7 @@
         <div class="no-search">
             <h5 class="title-nosearch">¿No encontraste lo que<br> buscabas?</h5>
             <div class="pt-3"></div>
-            <p style="font-size: 24px; line-height:normal;"><b>Tenemos más servicios para ti</b></p>
+            <p class="anuncio-servicio__text" style="font-size: 24px; line-height:normal;"><b>Tenemos más servicios para ti</b></p>
         </div>
         <table class="table-nosearch">
             <thead>
@@ -107,19 +107,29 @@
                 <th class="col-3"></th>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td>
+                <tr class="services-continer">
+                    <td class="desarrollo"> 
+                        <div style="border-radius: 50px;" class="cards-nosearch" title="MARKETING Y GESTIÓN DIGITAL">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="marketing-digital.php" src="./public/img/mas-servicios-desarrollo.webp" alt="2 (1).webp" fetchpriority="high">
+                            <p class=" " style="font-size:20px; line-height:normal;">
+                                <span style="color:#059EFF;" class="">
+                                    <a href="servicios/diseno-desarrollo-web/1" target="_self" class="">
+                                        <span style="font-size:20px;">
+                                            <center><span style="font-family:avenir-lt-w01_85-heavy1475544,sans-serif; letter-spacing:0.05em; "><b class="seconds-titlenosearch">DISEÑO Y DESARROLLO WEB</b></span></center>
+                                        </span>
+                                    </a>
+                                </span>
+                            </p>
+                        </div>
+                    </td>
+                    <td class="gestion">
                         <div style="border-radius: 50px;" class="cards-nosearch" title="GESTIÓN DE REDES SOCIALES">
-                            <img style="border-radius: 50px;" class="card-imagenosearch" href="rd-sociales.php"
-                                src="./public/img/gestion_redes.webp" alt="2 (1).webp" fetchpriority="high">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="rd-sociales.php" src="./public/img/gestion_redes.webp" alt="2 (1).webp" fetchpriority="high">
                             <p style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;" class="">
                                     <a href="servicios/gestion-redes-sociales/2" target="_self" class="">
                                         <span style="font-size:20px;">
-                                            <center><span
-                                                    style="font-family:avenir-lt-w01_85-heavy1475544,sans-serif; letter-spacing:0.05em; "><b
-                                                        class="seconds-titlenosearch">GESTIÓN DE REDES
+                                            <center><span style="font-family:avenir-lt-w01_85-heavy1475544,sans-serif; letter-spacing:0.05em; "><b class="seconds-titlenosearch">GESTIÓN DE REDES
                                                         SOCIALES</b></span></center>
                                         </span>
                                     </a>
@@ -127,18 +137,14 @@
                             </p>
                         </div>
                     </td>
-                    <td></td>
-                    <td>
+                    <td class="branding">
                         <div style="border-radius: 50px;" class="cards-nosearch" title="BRANDING Y DISEÑO">
-                            <img style="border-radius: 50px;" class="card-imagenosearch" href="branding.php"
-                                src="./public/img/branding.webp" alt="2 (1).webp" fetchpriority="high">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="branding.php" src="./public/img/branding.webp" alt="2 (1).webp" fetchpriority="high">
                             <p class=" " style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;">
                                     <a href="servicios/brading-desing/4" target="_self" class="">
                                         <span style="font-size:20px;">
-                                            <center><span
-                                                    style="font-family:avenir-lt-w01_85-heavy1475544,sans-serif; letter-spacing:0.05em;"><b
-                                                        class="seconds-titlenosearch">BRANDING Y DISEÑO</b></span>
+                                            <center><span style="font-family:avenir-lt-w01_85-heavy1475544,sans-serif; letter-spacing:0.05em;"><b class="seconds-titlenosearch">BRANDING Y DISEÑO</b></span>
                                             </center>
                                         </span>
                                     </a>
@@ -146,18 +152,14 @@
                             </p>
                         </div>
                     </td>
-                    <td></td>
-                    <td>
+                    <td class="marketing">
                         <div style="border-radius: 50px;" class="cards-nosearch" title="MARKETING Y GESTIÓN DIGITAL">
-                            <img style="border-radius: 50px;" class="card-imagenosearch" href="marketing-digital.php"
-                                src="./public/img/marketing_gestion.webp" alt="2 (1).webp" fetchpriority="high">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="marketing-digital.php" src="./public/img/marketing_gestion.webp" alt="2 (1).webp" fetchpriority="high">
                             <p class=" " style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;" class="">
                                     <a href="servicios/marketing-gestion-digital/3" target="_self" class="">
                                         <span style="font-size:20px;">
-                                            <center><span
-                                                    style="font-family:avenir-lt-w01_85-heavy1475544,sans-serif; letter-spacing:0.05em; "><b
-                                                        class="seconds-titlenosearch">MARKETING Y GESTIÓN
+                                            <center><span style="font-family:avenir-lt-w01_85-heavy1475544,sans-serif; letter-spacing:0.05em; "><b class="seconds-titlenosearch">MARKETING Y GESTIÓN
                                                         DIGITAL</b></span></center>
                                         </span>
                                     </a>

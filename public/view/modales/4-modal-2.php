@@ -7,7 +7,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -45%);
-        z-index: 50;
+        z-index: 100;
         /* display: grid; */
         grid-template-columns: 3fr 4fr;
         background-image: linear-gradient(to bottom, #ff6622, #ff513b, #ff3951, #ff2068, #ff037f);
