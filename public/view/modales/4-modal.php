@@ -337,7 +337,7 @@
                 <figcaption>¡Primera asesoría <span>GRATIS!</span></figcaption>
             </figure>
 
-            <form class="form-modal-4-2Brandn-desing1" id="formMain" method="post">
+            <form class="modal-main-form" id="formMain" method="post">
                 <div class="form-inputs">
                     <!--//Nombre//-->
                     <div class="form-group">

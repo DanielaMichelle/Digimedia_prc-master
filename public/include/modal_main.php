@@ -349,14 +349,13 @@ btnHero.addEventListener('click', () => {
 
 // Agregar evento al botón de cerrar
 btnCerrar.addEventListener('click', () => {
-    console.log("clickeaste");
     modalContainer.style.display = 'none';
 });
 
 
 //De aqui para abajo validas todos los campos del formulario con expresiones regulares
 function validarDatos() {
-    const formMain = document.querySelector("#formMain");
+    const formMain = document.querySelector(".modal-main #formMain");
     formMain.addEventListener("submit", (e) => {
         e.preventDefault();
         datos();
@@ -369,14 +368,14 @@ function datos() {
         gmail: /^[\w.-]+@gmail\.com$/ //validar la estructura de un correo electrónico
     };
 
-    const nombreInput = document.getElementById('name');
-    const telefonoInput = document.getElementById('phone');
-    const emailInput = document.getElementById('email');
+    const nombreInput = document.querySelector('.modal-main #name');
+    const telefonoInput = document.querySelector('.modal-main #phone');
+    const emailInput = document.querySelector('.modal-main #email');
 
     // Hacer que los 9 números esten juntos
     const telefono = telefonoInput.value.replace(/\s/g, '');
     const email = emailInput.value.trim();
-    const indexService = document.getElementById("service").value;
+    const indexService = document.querySelector(".modal-main #service").value;
 
     const telefonoValido = objRegex.telefono.test(telefono);
     const emailValido = objRegex.gmail.test(email);
@@ -389,7 +388,7 @@ function datos() {
     if (!emailValido) alert("Debe de ingresar un correo valido.")
 
     //validacion del servicio
-    const service = document.querySelector("#service")
+    const service = document.querySelector(".modal-main #service")
     if (service.value === '') alert('Seleccione un servicio por favor.')
 
     if (nombreInput.value != '' && telefonoValido && emailValido && service.value != '') {
@@ -512,7 +511,7 @@ function envioDatosWhatsApp(num, indexService) {
 
 
 // Evento para controlar el envío del formulario
-document.getElementById('formMain').addEventListener('submit', function(event) {
+document.querySelector('.modal-main #formMain').addEventListener('submit', function(event) {
     event.preventDefault(); // Evitar el envío del formulario por defecto
 
     // Verificar si hay mensajes pendientes en el localStorage
@@ -555,8 +554,8 @@ window.onload = function() {
 
 function enviarEmailAjax() {
 
-    const email = document.getElementById('email').value;
-    const service = document.getElementById('service').value;
+    const email = document.querySelector('.modal-main #email').value;
+    const service = document.querySelector('.modal-main #service').value;
 
     var datos = new FormData();
     datos.append("service", service);

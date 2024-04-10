@@ -8,6 +8,13 @@
     width: 100%;
 }
 
+.contacto .contacto--map__container .map--contact .mapa{
+    background: none;
+    display: block;
+    height: 330px;
+
+}
+
 /* Media query de 768px pra abajo */
 @media (max-width: 768px) {
     .enviar{
