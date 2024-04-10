@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>.:: DigiMedia ::.</title>
-        <link rel="shortcut icon" href="./public/img/logo.png" type="image/x-icon">
-        <meta name="description" content="Politica y Privacidad!">
-        <link rel="stylesheet" href="./public/css/politica_privacidad.css">
-        <title>Politica de privacidad</title>
-    </head>
+<?php
+$title = '.:: DigiMedia ::.';
+
+$fileCSS    = ['politica_privacidad'];
+
+include_once './public/include/html_head.php';
+?>
     <body>
 
         <div class="contDigi">

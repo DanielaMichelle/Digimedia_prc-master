@@ -1,37 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>.:: DigiMedia ::.</title>
-    <link rel="shortcut icon" href="./public/img/logo.png" type="image/x-icon">
-    <meta name="description" content="Contactate con nosotros!">
-    <link rel="stylesheet" href="./public/css/index.css">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" href="./public/css/inicio.css">
-    <link rel="stylesheet" href="./public/css/header.css">
-    <link rel="stylesheet" href="./public/css/footer.css">
-    <link rel="stylesheet" href="./public/css/section.css">
-    <link rel="stylesheet" href="./public/css/contactos.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!-- Stylos Css propios -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143365030-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-143365030-1');
-    </script>
-
-</head>
+$fileCSS    = ['index', 'style', 'inicio', 'header', 'footer', 'section', 'contactos'];
+include_once './public/include/html_head.php';
+?>
 
 <body>
     <?php include_once './public/assets/header.php' ?>

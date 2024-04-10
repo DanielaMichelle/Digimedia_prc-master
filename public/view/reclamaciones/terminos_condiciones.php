@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>.:: DigiMedia ::.</title>
-        <link rel="shortcut icon" href="./public/img/logo.png" type="image/x-icon">
-        <meta name="description" content="Terminos y Condiciones!">
-        <link rel="stylesheet" href="./public/css/terminos_condiciones.css">
-        <title>Terminos y condiciones</title>
-    </head>
+
+<?php
+$title = '.:: DigiMedia ::.';
+
+$fileCSS    = ['terminos_condiciones'];
+
+include_once './public/include/html_head.php';
+?>
+
     <body>
 
         <div class="contDigi">

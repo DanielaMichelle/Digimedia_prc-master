@@ -1,5 +1,5 @@
 <?php
-    $title  = isset($title) ? $title : 'Document';
+    // $title  = isset($title) ? $title : 'Document';
     /*Si hay archivos css y js damelos, sino hay entonces coloca un arreglo vacio*/
     $fileCSS = isset($fileCSS) ? $fileCSS : []; 
     $fileJS = isset($fileJS) ? $fileJS : []; 
@@ -9,12 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="public/img/logo_favi.png" type="image/x-icon">
     <meta name="description" content="Líderes innovadores en marketing digital. Conectamos tu marca con las audiencias del futuro, impulsando tu presencia online hacia el éxito." />
-    <title><?php $title?></title>
+    <link rel="shortcut icon" href="./public/img/logo.png" type="image/x-icon">
+    <title>.:: DigiMedia ::.</title>
 
+    <!-- RUTA BASE  -->
+    <base href="http://localhost/Digimedia_prc-master/">
 
-        <!-- Css de la nube, osea cdn: -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+     <!-- Css de la nube, osea cdn: -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
