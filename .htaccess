@@ -8,7 +8,7 @@ Options -Indexes
 
 
 RewriteEngine On
-
+#data
 RewriteRule ^(servicios)/[a-z-]+(-[a-z-]+)/([1-4])$ servicios.php?id=$3 
 
 
