@@ -286,7 +286,7 @@
     const anuncioServicio = document.querySelector("#anuncio-servicio");
     const closeBtn = document.querySelector("#close-button");
     const objReg = {
-        gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ 
+        gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/
     };
 
     // Abrir modal
@@ -294,7 +294,7 @@
         threshold: 0.01,
     };
     let ejecutado = false;
-    let observer = new IntersectionObserver(function(entries) {
+    let observer = new IntersectionObserver(function (entries) {
         for (const entry of entries) {
             if (entry.isIntersecting && !ejecutado) {
                 modal.style.display = "grid";
@@ -306,18 +306,18 @@
 
 
     // Cerrar modal click afuera
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (!modal.contains(event.target)) {
             modal.style.display = "none";
         }
     });
 
     // Cerrar modal click X
-    closeBtn.addEventListener('click', function() {
+    closeBtn.addEventListener('click', function () {
         modal.style.display = "none";
     })
 
-    validateData(); 
+    validateData();
     function validateData() {
         const formMain = document.querySelector("#modal2_desarrollo .modal2--form-container #formMain");
         formMain.addEventListener("submit", (e) => {
@@ -359,9 +359,9 @@
             method: 'POST',
             body: form
         })
-        .then(res => res.json())
-        .then(console.log)
-        .catch(err => console.log(err))
+            .then(res => res.json())
+            .then(console.log)
+            .catch(err => console.log(err))
     }
 
     function cleanData(name, lastName, email) {
@@ -373,38 +373,38 @@
     function sendEmailAjax() {
         //var queryString = window.location.search;
         //var parametros = new URLSearchParams(queryString);
-        
+
         //console.log(parametros)
         var url = window.location.href;
 
-    // Extraer el valor después de "servicios/"
-    let id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
+        // Extraer el valor después de "servicios/"
+        let id_ser = url.split('servicios/diseno-desarrollo-web/')[1];
 
-    let email = document.getElementById('email2').value;
-
-
-    var datos = new FormData();
-    datos.append("id_ser", id_ser);
-    datos.append("email", email);
+        let email = document.getElementById('email2').value;
 
 
+        var datos = new FormData();
+        datos.append("id_ser", id_ser);
+        datos.append("email", email);
 
-    $.ajax({
-        url: "./public/message/Controller/process.php",
-        method: "POST",
-        data: datos,
-        cache: false,
-        contentType: false,
-        processData: false,
-        success: function(respuesta) {
-            console.log("Respuesta", respuesta);
-            if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
-                alert("Email Enviado");
 
-            } else {
-                alert("ocurrio un error " + respuesta);
+
+        $.ajax({
+            url: "./public/message/Controller/process.php",
+            method: "POST",
+            data: datos,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (respuesta) {
+                console.log("Respuesta", respuesta);
+                if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
+                    alert("Email Enviado");
+
+                } else {
+                    alert("ocurrio un error " + respuesta);
+                }
             }
-        }
-    })
-}
+        })
+    }
 </script>

@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 
-$fileCSS    = ['index', 'style', 'inicio', 'header', 'footer', 'section', 'contactos'];
+$fileCSS = ['index', 'style', 'inicio', 'header', 'footer', 'section', 'contactos'];
 include_once './public/include/html_head.php';
 ?>
 
@@ -201,7 +201,9 @@ include_once './public/include/html_head.php';
 
             formData.append('estado', 0);
 
-            enviarFormData(formData);
+            // enviarFormData(formData);
+            envioDatosWhatsApp(numero);
+            // console.log(mensajesWtsp);
         }
 
         function vaciarDatos() {
@@ -210,6 +212,10 @@ include_once './public/include/html_head.php';
             const emailPerson = document.querySelector("#emailPerson").value = "";
             const servicio = document.querySelector("#servicio").value = "";
             const mensaje = document.querySelector("#mensaje").value = "";
+            // Desmarcar los checkboxes
+            document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+                checkbox.checked = false;
+            });
         }
 
         function obtenerValorCheckbox(nombreCheckbox) {
@@ -234,6 +240,123 @@ include_once './public/include/html_head.php';
                 });
         }
 
+
+
+
+
+        // Función para guardar los datos en el localStorage
+        function guardarDatosEnLocalStorage(data) {
+            localStorage.setItem("whatsappData", JSON.stringify(data));
+        }
+
+        // Función para obtener el número de teléfono del localStorage
+        function obtenerNumeroTelefonoDelLocalStorage() {
+            const data = localStorage.getItem("whatsappData");
+            return data ? JSON.parse(data).phoneNumber : null;
+        }
+
+        // Función para obtener los datos del localStorage
+        function obtenerDatosDelLocalStorage() {
+            const data = localStorage.getItem("whatsappData");
+            return data ? JSON.parse(data) : null;
+        }
+
+        // Función para enviar los mensajes de WhatsApp
+        function envioDatosWhatsApp(num) {
+            const phone = "51" + num;
+            console.log("Iniciando envío de mensajes de WhatsApp para el número:", phone);
+
+            // Definir los intervalos de tiempo entre cada mensaje en milisegundos
+            const intervalos = [0, 5000, 10000]; // Intervalos entre el primer, segundo y tercer mensaje
+
+            // Función para enviar un mensaje y actualizar el localStorage
+            function enviarMensaje(index) {
+                sendWsApi(mensajesWtsp[0][index], imagenesWtsp[0][index], phone);
+                console.log("Mensaje", index + 1, "enviado.");
+                sentMessages.push({
+                    index,
+                    time: new Date().getTime()
+                });
+                guardarDatosEnLocalStorage({
+                    phoneNumber: num,
+                    sentMessages: sentMessages
+                });
+
+
+                // Si se ha enviado el tercer mensaje, eliminar los datos del localStorage
+                if (index === 2) {
+                    console.log("Eliminando localStorage después de enviar todos los mensajes.");
+                    localStorage.removeItem("whatsappData");
+                }
+            }
+
+            // Función para verificar y enviar el siguiente mensaje
+            function enviarSiguienteMensaje() {
+                if (messageIndex < mensajesWtsp[0].length) {
+                    enviarMensaje(messageIndex);
+                    messageIndex++;
+                    setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
+                }
+            }
+
+            // Verificar si hay mensajes pendientes en el localStorage y continuar enviándolos
+            const storedData = obtenerDatosDelLocalStorage();
+            const sentMessages = storedData ? storedData.sentMessages || [] : [];
+            let messageIndex = sentMessages.length; // Indica el índice del siguiente mensaje a enviar
+
+            // Si no hay mensajes pendientes, enviar el primer mensaje
+            if (messageIndex === 0) {
+                enviarSiguienteMensaje();
+            } else {
+                // Si hay mensajes pendientes, reanudar el envío desde el próximo mensaje
+                setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
+            }
+        }
+
+
+        // Evento para controlar el envío del formulario
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evitar el envío del formulario por defecto
+
+            // Verificar si hay mensajes pendientes en el localStorage
+            const storedData = obtenerDatosDelLocalStorage();
+            const sentMessages = storedData ? storedData.sentMessages || [] : [];
+
+            if (sentMessages.length >= 1 && sentMessages.length < 3) {
+                alert("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
+                return;
+            }
+
+            // Si no hay mensajes pendientes, permitir el envío del formulario
+            submit();
+        });
+
+
+
+
+        // Llamar a la función para enviar los mensajes de WhatsApp cuando se cargue la página
+        window.onload = function () {
+
+            console.log(localStorage.getItem("modal1"));
+
+            // Obtener el número de teléfono del formulario desde el LocalStorage
+            const storedPhoneNumber = obtenerNumeroTelefonoDelLocalStorage();
+
+            // Verificar si se recuperó un número de teléfono válido desde el LocalStorage
+            const storedData = obtenerDatosDelLocalStorage();
+            const sentMessages = storedData ? storedData.sentMessages || [] : [];
+            if (storedPhoneNumber && storedPhoneNumber.trim() !== "" && sentMessages.length < 3) {
+                // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
+                envioDatosWhatsApp(storedPhoneNumber);
+            } else {
+                console.error("Número de teléfono no válido o ya se han enviado los mensajes.");
+            }
+        };
+
+
+
+
+
         // Interactividad de botones
         const panelHorario = document.querySelector(".botones-contacto .horario");
         const horarioBtn = document.querySelector(".botones-contacto .horario figure");
@@ -245,6 +368,8 @@ include_once './public/include/html_head.php';
 
 
     </script>
+
+    <script src="./public/js/mensajesWhatsapp.js"></script>
 
 </body>
 
