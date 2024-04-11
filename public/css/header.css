@@ -155,16 +155,7 @@ header .navb-logo img {
 #btn-menu {
   display: none;
 }
-.lost_con {
-  position: absolute;
 
-  top: 75px;
-  left: 0;
-  width: 100%;
-  transform: translateY(-120%);
-  transition: all 0.3s;
-  font-size: 16px;
-}
 header label {
   font-size: 30px;
   cursor: pointer;

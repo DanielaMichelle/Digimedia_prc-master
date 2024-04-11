@@ -15,7 +15,7 @@
             </div>-->
             
             <div class="doresilaba">
-                <div class="navbar-brand" >
+                <div class="navbar-brand-2" >
                     <img src="./public/img/logoblanco.png" loading="lazy" class="logoimagen" title="¡Digimedia!" width="100%"
                         height="100%" alt="Img no encontrada">
                 </div>
