@@ -16,7 +16,7 @@
             
             <div class="doresilaba">
                 <div class="navbar-brand-2" >
-                    <img src="./public/img/logoblanco.png" loading="lazy" class="logoimagen" title="¡Digimedia!" width="100%"
+                    <img src="./public/img/logoblanco2.webp" loading="lazy" class="logoimagen" title="¡Digimedia!" width="100%"
                         height="100%" alt="Img no encontrada">
                 </div>
                 <input type="checkbox" id="btn-menu_lose" >
