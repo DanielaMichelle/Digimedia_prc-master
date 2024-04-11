@@ -366,9 +366,6 @@ header label {
 }
 
 @media (max-width: 550px) {
-  .navbar-brand-2 {
-    background: rebeccapurple;
-  }
   .logoimagen {
     width: 82%;
     height: 82%;
@@ -376,9 +373,6 @@ header label {
 }
 
 @media (max-width: 300px) {
-  .navbar-brand-2 {
-    background: rebeccapurple;
-  }
   .logoimagen {
     width: 80%;
     height: 85%;
