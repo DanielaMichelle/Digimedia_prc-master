@@ -26,6 +26,24 @@ if(isset($_POST["service"])){
         case "3":
             $id = 4;
             break;
+        case "Marketing Digital":
+            $id = 3;
+            break;
+        case "Imagen Corporativa":
+            $id = 2;
+            break;
+        case "Gestión De Redes Sociales":
+            $id = 2;
+            break;
+        case "Crea Tu Marca":
+            $id = 4;
+            break;
+        case "Diseño web":
+            $id = 1;
+            break;
+        case "Diseño Grafico":
+            $id = 4;
+            break;
     }
 }
 $mesa1 = SendMessage($menssage[0][$id-1],$imagenes_main[0][$id-1],$title[0][$id-1]);
