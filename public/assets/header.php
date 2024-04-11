@@ -13,15 +13,16 @@
             <!--<div class="btn_close" style="font-size: 100%;">
                 <button class="close-modal" style="color: white;">&times;</button>
             </div>-->
-            <input type="checkbox" id="btn-menu_lose" >
-            <label for="btn-menu_lose" class="icon-menu_close close-modal">
-                <i class="fa-solid fa-xmark" style="color: #fcfcfc;"></i>
-            </label>
+            
             <div class="doresilaba">
                 <div class="navbar-brand" >
                     <img src="./public/img/logoblanco.png" loading="lazy" class="logoimagen" title="¡Digimedia!" width="100%"
                         height="100%" alt="Img no encontrada">
                 </div>
+                <input type="checkbox" id="btn-menu_lose" >
+                <label for="btn-menu_lose" class="icon-menu_close close-modal">
+                    <i class="fa-solid fa-xmark" style="color: #fcfcfc;"></i>
+                </label>
             </div>
             <li><a href="index.php" title="Home">Home</a></li>
             <li class="submenu"><a  title="Servicios">Servicios<i class="fa-solid fa-chevron-down"

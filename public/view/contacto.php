@@ -150,6 +150,7 @@ include_once './public/include/html_head.php';
     </div>
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
         const form = document.querySelector("#formulario");
@@ -202,7 +203,9 @@ include_once './public/include/html_head.php';
             formData.append('estado', 0);
 
             // enviarFormData(formData);
+            enviarEmailAjax_contacto();
             envioDatosWhatsApp(numero);
+            
             // console.log(mensajesWtsp);
         }
 
@@ -366,7 +369,47 @@ include_once './public/include/html_head.php';
             panelHorario.classList.toggle("horario--abierto");
         })
 
+        function enviarEmailAjax_contacto() {
+            //var queryString = window.location.search;
+            //var parametros = new URLSearchParams(queryString);
+            
+            //console.log(parametros)
+            //var url = window.location.href;
+            const servicio = document.getElementById('servicio').value;
+            // Extraer el valor después de "servicios/"
+            //const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
+            
+            //console.log(id_ser)
 
+            const emailPerson_mail = document.querySelector("#emailPerson").value;
+            
+   
+
+            var datos = new FormData();
+            datos.append("id_ser", 0);
+            datos.append("email", emailPerson_mail);
+            datos.append("service", servicio);
+
+
+
+            $.ajax({
+                url: "./public/message/Controller/process.php",
+                method: "POST",
+                data: datos,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(respuesta) {
+                    console.log("Respuesta", respuesta);
+                    if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
+                        alert("Email Enviado");
+
+                    } else {
+                        alert("ocurrio un error " + respuesta);
+                    }
+                }
+            })
+        }
     </script>
 
     <script src="./public/js/mensajesWhatsapp.js"></script>
