@@ -141,7 +141,7 @@ include_once './public/include/html_head.php';
 
 
     <?php include_once './public/include/section_maps.php' ?>
-    <script src="./public/js/interactividad.js"></script>
+    <script defer src="./public/js/interactividad.js"></script>
     <?php include_once './public/assets/footer.php' ?>
 
 </body>

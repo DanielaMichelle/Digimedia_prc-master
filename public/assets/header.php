@@ -2,7 +2,7 @@
     <!-- NUEVOOO -->
     <div>
         <a class="navbar-brand" href="index.php">
-            <img src="./public/img/logoblanco.png" loading="lazy" class="logoimagen" title="¡Digimedia!" width="100%"
+            <img src="./public/img/logoblanco2.webp" loading="lazy" class="logoimagen" title="¡Digimedia!" width="100%"
                 height="100%" alt="Img no encontrada">
         </a>
     </div>
