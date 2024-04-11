@@ -383,8 +383,7 @@ include_once './public/include/html_head.php';
 
             const emailPerson_mail = document.querySelector("#emailPerson").value;
             
-   
-
+            //hola mundo
             var datos = new FormData();
             datos.append("id_ser", 0);
             datos.append("email", emailPerson_mail);
