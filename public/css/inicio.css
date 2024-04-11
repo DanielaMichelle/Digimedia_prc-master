@@ -1282,7 +1282,7 @@ small {
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 427px) {
   .nuestros-servicios-secciones {
     height: 16rem;
   }
@@ -1299,11 +1299,11 @@ small {
   }
 
   .nuestros-servicios-secciones .seccion h3 {
-    font-size: 12px;
+    font-size: 9px;
   }
 
   .nuestros-servicios-secciones .seccion:hover {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
   }
 
   .nuestros-servicios-secciones .seccion i {

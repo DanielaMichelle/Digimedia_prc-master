@@ -54,7 +54,7 @@ include_once './public/include/html_services.php';
                 <tr class="services-continer">
                     <td class="desarrollo"> 
                         <div style="border-radius: 50px;" class="cards-nosearch" title="MARKETING Y GESTIÓN DIGITAL">
-                            <img style="border-radius: 50px;" class="card-imagenosearch" href="marketing-digital.php" src="./public/img/mas-servicios-desarrollo.webp" alt="2 (1).webp" fetchpriority="high">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="marketing-digital.php" src="./public/img/mas-servicios-desarrollo2.webp" alt="2 (1).webp" fetchpriority="high">
                             <p class=" " style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;" class="">
                                     <a href="servicios/diseno-desarrollo-web/1" target="_self" class="">
@@ -68,7 +68,7 @@ include_once './public/include/html_services.php';
                     </td>
                     <td class="gestion">
                         <div style="border-radius: 50px;" class="cards-nosearch" title="GESTIÓN DE REDES SOCIALES">
-                            <img style="border-radius: 50px;" class="card-imagenosearch" href="rd-sociales.php" src="./public/img/gestion_redes.webp" alt="2 (1).webp" fetchpriority="high">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="rd-sociales.php" src="./public/img/gestion_redes2.webp" alt="2 (1).webp" fetchpriority="high">
                             <p style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;" class="">
                                     <a href="servicios/gestion-redes-sociales/2" target="_self" class="">
@@ -83,7 +83,7 @@ include_once './public/include/html_services.php';
                     </td>
                     <td class="branding">
                         <div style="border-radius: 50px;" class="cards-nosearch" title="BRANDING Y DISEÑO">
-                            <img style="border-radius: 50px;" class="card-imagenosearch" href="branding.php" src="./public/img/branding.webp" alt="2 (1).webp" fetchpriority="high">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="branding.php" src="./public/img/branding2.webp" alt="2 (1).webp" fetchpriority="high">
                             <p class=" " style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;">
                                     <a href="servicios/brading-desing/4" target="_self" class="">
@@ -98,7 +98,7 @@ include_once './public/include/html_services.php';
                     </td>
                     <td class="marketing">
                         <div style="border-radius: 50px;" class="cards-nosearch" title="MARKETING Y GESTIÓN DIGITAL">
-                            <img style="border-radius: 50px;" class="card-imagenosearch" href="marketing-digital.php" src="./public/img/marketing_gestion.webp" alt="2 (1).webp" fetchpriority="high">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="marketing-digital.php" src="./public/img/marketing_gestion2.webp" alt="2 (1).webp" fetchpriority="high">
                             <p class=" " style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;" class="">
                                     <a href="servicios/marketing-gestion-digital/3" target="_self" class="">

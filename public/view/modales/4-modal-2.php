@@ -237,7 +237,7 @@
     <img class="icon" src="public/img/logo_digimedia_color.webp" alt="Digimedia Icon">
         <span>¡Diseña tu camino al éxito!</span>
         <figure>
-            <img src="./public/img/modal2/modal2-branding.webp" alt="Modal 2 Desarrollo y Diseño Web">
+            <img src="./public/img/modal2/modal2-branding2.webp" alt="Modal 2 Desarrollo y Diseño Web">
         </figure>
     </div>
 

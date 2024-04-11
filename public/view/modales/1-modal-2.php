@@ -242,7 +242,7 @@
         <img class="icon" src="public/img/logo_digimedia_color.webp" alt="Digimedia Icon">
         <span>¡Destaca tu negocio!</span>
         <figure>
-            <img src="./public/img/modal2/modal2-desarrollo.webp" alt="Modal 2 Desarrollo y Diseño Web">
+            <img src="./public/img/modal2/modal2-desarrollo2.webp" alt="Modal 2 Desarrollo y Diseño Web">
         </figure>
     </div>
 
