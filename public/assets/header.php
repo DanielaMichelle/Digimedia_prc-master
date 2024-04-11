@@ -39,8 +39,7 @@
                 </ul>
             </li>
             <li><a href="nosotros.php" title="Nosotros">Nosotros</a></li>
-            <li class="submenu"><a  title="Saber mas..">More<i class="fa-solid fa-chevron-down" title="Mas.."
-                        style="color: #FFFFFF;"></i></a>
+            <li class="submenu"><a  title="Saber mas..">More<i class="fa-solid fa-chevron-down" title="Mas.."style="color: #FFFFFF;"></i></a>
                 <ul>
                     <li><a href="contacto.php" title="Contactanos">Contáctanos</a></li>
                     <li><a href="preguntas.php" title="FAQ">FAQ</a></li>
@@ -50,7 +49,6 @@
         </ul>
     </nav>
 </header>
-<script src="https://kit.fontawesome.com/0ee4e706bf.js" crossorigin="anonymous"></script>
 <script>
 
     const cer_12 = document.querySelector(".close-modal");
