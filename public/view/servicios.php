@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 
-$fileCSS    = ['index', 'style', 'inicio', 'header', 'footer', 'servicios', 'section','mas-servicios'];
+$fileCSS    = ['index', 'style', 'inicio', 'header', 'footer', 'servicios', 'section', 'mas-servicios'];
 include_once './public/include/html_services.php';
 ?>
 
@@ -52,9 +52,9 @@ include_once './public/include/html_services.php';
             </thead>
             <tbody>
                 <tr class="services-continer">
-                    <td class="desarrollo"> 
+                    <td class="desarrollo">
                         <div style="border-radius: 50px;" class="cards-nosearch" title="MARKETING Y GESTIÓN DIGITAL">
-                            <img style="border-radius: 50px;" class="card-imagenosearch" href="marketing-digital.php" src="./public/img/mas-servicios-desarrollo2.webp" alt="2 (1).webp" fetchpriority="high">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="marketing-digital.php" src="./public/img/mas-servicios-desarrollo3.webp" alt="2 (1).webp" fetchpriority="high">
                             <p class=" " style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;" class="">
                                     <a href="servicios/diseno-desarrollo-web/1" target="_self" class="">
@@ -83,7 +83,7 @@ include_once './public/include/html_services.php';
                     </td>
                     <td class="branding">
                         <div style="border-radius: 50px;" class="cards-nosearch" title="BRANDING Y DISEÑO">
-                            <img style="border-radius: 50px;" class="card-imagenosearch" href="branding.php" src="./public/img/branding2.webp" alt="2 (1).webp" fetchpriority="high">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="branding.php" src="./public/img/branding3.webp" alt="2 (1).webp" fetchpriority="high">
                             <p class=" " style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;">
                                     <a href="servicios/brading-desing/4" target="_self" class="">
@@ -98,7 +98,7 @@ include_once './public/include/html_services.php';
                     </td>
                     <td class="marketing">
                         <div style="border-radius: 50px;" class="cards-nosearch" title="MARKETING Y GESTIÓN DIGITAL">
-                            <img style="border-radius: 50px;" class="card-imagenosearch" href="marketing-digital.php" src="./public/img/marketing_gestion2.webp" alt="2 (1).webp" fetchpriority="high">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="marketing-digital.php" src="./public/img/marketing_gestion3.webp" alt="2 (1).webp" fetchpriority="high">
                             <p class=" " style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;" class="">
                                     <a href="servicios/marketing-gestion-digital/3" target="_self" class="">

@@ -242,7 +242,9 @@
         <img class="icon" src="public/img/logo_digimedia_color.webp" alt="Digimedia Icon">
         <span>¡Destaca tu negocio!</span>
         <figure>
-            <img src="./public/img/modal2/modal2-desarrollo2.webp" alt="Modal 2 Desarrollo y Diseño Web">
+            <source srcset="./public/img/modal2/modal2-desarrollo3.webp" media="(min-width: 426px)">
+            <source srcset="./public/img/modal2/modal2-desarrollo3-mobile.webp" media="(max-width: 425px)">
+            <img src="./public/img/modal2/modal2-desarrollo3.webp" alt="Descripción de la imagen">
         </figure>
     </div>
 
@@ -294,7 +296,7 @@
         threshold: 0.01,
     };
     let ejecutado = false;
-    let observer = new IntersectionObserver(function (entries) {
+    let observer = new IntersectionObserver(function(entries) {
         for (const entry of entries) {
             if (entry.isIntersecting && !ejecutado) {
                 modal.style.display = "grid";
@@ -306,18 +308,19 @@
 
 
     // Cerrar modal click afuera
-    document.addEventListener('click', function (event) {
+    document.addEventListener('click', function(event) {
         if (!modal.contains(event.target)) {
             modal.style.display = "none";
         }
     });
 
     // Cerrar modal click X
-    closeBtn.addEventListener('click', function () {
+    closeBtn.addEventListener('click', function() {
         modal.style.display = "none";
     })
 
     validateData();
+
     function validateData() {
         const formMain = document.querySelector("#modal2_desarrollo .modal2--form-container #formMain");
         formMain.addEventListener("submit", (e) => {
@@ -356,9 +359,9 @@
     // Enviando datos al servidor:
     function enviandoDatosServer(form) {
         fetch("./app/trigger/modal-desing.php?action=ADD", {
-            method: 'POST',
-            body: form
-        })
+                method: 'POST',
+                body: form
+            })
             .then(res => res.json())
             .then(console.log)
             .catch(err => console.log(err))
@@ -396,7 +399,7 @@
             cache: false,
             contentType: false,
             processData: false,
-            success: function (respuesta) {
+            success: function(respuesta) {
                 console.log("Respuesta", respuesta);
                 if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
                     alert("Email Enviado");
