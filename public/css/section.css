@@ -4,8 +4,8 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background: -webkit-linear-gradient(to right, rgb(167 41 189 / 62%), rgba(170, 43, 193, 0.62), rgba(249, 54, 204,0.5)), url(../img/hero-image2.webp);
-  background: linear-gradient(to right, rgb(167 41 189 / 62%), rgba(170, 43, 193, 0.62), rgba(249, 54, 204,0.5)), url(../img/hero-image2.webp);
+  background: -webkit-linear-gradient(to right, rgb(167 41 189 / 62%), rgba(170, 43, 193, 0.62), rgba(249, 54, 204,0.5)), url(../img/hero-image3.webp);
+  background: linear-gradient(to right, rgb(167 41 189 / 62%), rgba(170, 43, 193, 0.62), rgba(249, 54, 204,0.5)), url(../img/hero-image3.webp);
   background-repeat: no-repeat;
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -453,6 +453,15 @@
   }
 
   /* Hero */
+
+  .hero {
+    background: -webkit-linear-gradient(to right, rgb(167 41 189 / 62%), rgba(170, 43, 193, 0.62), rgba(249, 54, 204,0.5)), url(../img/hero-image3-tablet.webp);
+    background: linear-gradient(to right, rgb(167 41 189 / 62%), rgba(170, 43, 193, 0.62), rgba(249, 54, 204,0.5)), url(../img/hero-image3-tablet.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 4rem;
+  }
+
   .container-hero .hero-text {
     padding: 0px 20vw 0px 16%;
   }
@@ -503,6 +512,11 @@
   /* Hero */
   .hero {
     height: 85vh;
+    background: -webkit-linear-gradient(to right, rgb(167 41 189 / 62%), rgba(170, 43, 193, 0.62), rgba(249, 54, 204,0.5)), url(../img/hero-image3-mobile.webp);
+    background: linear-gradient(to right, rgb(167 41 189 / 62%), rgba(170, 43, 193, 0.62), rgba(249, 54, 204,0.5)), url(../img/hero-image3-mobile.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-position-y: 4rem;
   }
 

@@ -209,7 +209,7 @@
 <section class="main-container oculto_des">
     <img class="icon" src="public/img/logo_digimedia_color.webp" alt="Digimedia Icon">
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
-        <img src="https://img.freepik.com/foto-gratis/peron-haciendo-presentacion-sus-colegas_23-2149229031.jpg?w=740&t=st=1712071654~exp=1712072254~hmac=c4267799e79d6b20e124ba780aef541de7ff000e79063af0c0ecc90f2b9e6177"/>
+        <img src="./public/img/modal2/modal2-servicio3-img.webp"/>
         <div class="h3_postion" style="font-size: 100%;"><h3 class="h3">!INCREMENTA TUS VENTAS¡</h3></div>
     </div>
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">

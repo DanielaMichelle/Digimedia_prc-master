@@ -1,5 +1,5 @@
 <section class="hero_dising hero-servicios">
-    <div class="lara"><img src="./public/img/ds_web2.webp" alt="Diseno y desarrollo"></div>
+    <div class="lara"><img class="hero-desarrollo-img" src="./public/img/ds_web2.webp" alt="Diseno y desarrollo"></div>
     <div class="container-hero">
         <div>
             <h1>Diseño y desarrollo web</h1>
@@ -51,4 +51,17 @@ const cambiarMensajeDisenoDesarrollo = () => {
 document.addEventListener("DOMContentLoaded", () => {
     cambiarMensajeDisenoDesarrollo();
 });
+
+// cambio de imagen de hero en base al ancho de pantalla
+let widthScreenToService1 = window.innerWidth;
+const imgDesarrolloHero = document.querySelector(".hero-desarrollo-img");
+if (widthScreenToService1 <= 426) {
+    imgDesarrolloHero.setAttribute('src', './public/img/ds_web2-mobile.webp');
+}  else if  (widthScreenToService1 > 426 && widthScreenToService1 <= 768) {
+    imgDesarrolloHero.setAttribute('src', './public/img/ds_web2-tablet.webp');
+} else {
+    imgDesarrolloHero.setAttribute('src', './public/img/ds_web2.webp');
+}
+
+
 </script>

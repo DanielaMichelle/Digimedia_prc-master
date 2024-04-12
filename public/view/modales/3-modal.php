@@ -386,7 +386,7 @@
             <h2>¡EXPLOTA EL CONTENIDO DE TUS REDES!</h2>
         </div>
         <figure class="resgistration-style__div">
-            <img src="./public/img/fu_2.jpg" />
+            <img src="./public/img/fu_2.webp" />
         </figure>
         <div class="resgistration-style__frase">
             <h2>¡Primera asesoría <blond>gratis!</blond>

@@ -368,7 +368,7 @@
     </div>
     <section class="resgistration-style">
         <figure class="resgistration-style__div">
-            <img src="./public/img/a_services-removebg-preview.png" />
+            <img src="./public/img/a_services-removebg-preview.webp" />
         </figure>
         <div class="resgistration-style__frase">
             <h2>¡TU PRIMERA ASESORÍA ES</h2>
