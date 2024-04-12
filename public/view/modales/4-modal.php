@@ -441,7 +441,7 @@ function datos() {
         modalContainer.style.display = 'none';
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
         envioDatosWhatsApp(telefono);
-        enviarEmailAjax();
+        enviarEmailAjax(emailInput);
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
 }
@@ -580,14 +580,14 @@ window.onload = function() {
 
 
 
-function enviarEmailAjax() {
+function enviarEmailAjax(email) {
 
     const body = new FormData();
-    const email = document.getElementById('email').value;
+    const emailDataModal_4 = email.value;
     var url = window.location.href;
     const id_ser  = url.split('servicios/brading-desing/')[1];
     body.append("id_ser", id_ser);
-    body.append("email", email);
+    body.append("email", emailDataModal_4);
     // Enviar la solicitud POST al servidor
     fetch("./public/message/Controller/process.php", {
         method: "POST",

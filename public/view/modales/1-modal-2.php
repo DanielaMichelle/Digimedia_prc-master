@@ -342,7 +342,7 @@
         if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
             modal.style.display = "none";
             catchData(nameInput, lastNameInput, emailInput);
-            sendEmailAjax();
+            sendEmailAjax(emailInput);
             cleanData(nameInput, lastNameInput, emailInput);
         }
     }
@@ -373,13 +373,13 @@
         email.value = "";
     }
 
-    function sendEmailAjax() {
+    function sendEmailAjax(email) {
         const body = new FormData();
-        const email = document.getElementById('email2').value;
+        const emailDataModal1_2 = email.value;
         var url = window.location.href;
         const id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
         body.append("id_ser", id_ser);
-        body.append("email", email);
+        body.append("email", emailDataModal1_2);
         // Enviar la solicitud POST al servidor
         fetch("./public/message/Controller/process.php", {
             method: "POST",

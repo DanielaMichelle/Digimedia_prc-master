@@ -496,7 +496,7 @@ function datos() {
         toggleCerarForm();
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
         envioDatosWhatsApp(telefono);
-        enviarEmailAjax_los();
+        enviarEmailAjax_los(emailInput);
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
 }
@@ -635,14 +635,14 @@ window.onload = function() {
 };
 
 
-function enviarEmailAjax_los() {
+function enviarEmailAjax_los(email) {
 
     const body = new FormData();
-    const email = document.getElementById('email').value;
+    const emailDataModal_2 = email.value;
     var url = window.location.href;
     const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
     body.append("id_ser", id_ser);
-    body.append("email", email);
+    body.append("email", emailDataModal_2);
     // Enviar la solicitud POST al servidor
     fetch("./public/message/Controller/process.php", {
         method: "POST",
@@ -659,43 +659,6 @@ function enviarEmailAjax_los() {
         console.error("Error al enviar formulario a Gmail:", error);
         alert("Email no Enviado: ", error);
         });
-        //var queryString = window.location.search;
-        //var parametros = new URLSearchParams(queryString);
-        
-        //console.log(parametros)
-        /*var url = window.location.href;
-
-        // Extraer el valor después de "servicios/"
-        const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
-        
-        console.log(id_ser)
-
-        const email = document.getElementById('email').value;
-
-
-        var datos = new FormData();
-        datos.append("id_ser", id_ser);
-        datos.append("email", email);
-
-
-
-        $.ajax({
-            url: "./public/message/Controller/process.php",
-            method: "POST",
-            data: datos,
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function(respuesta) {
-                console.log("Respuesta", respuesta);
-                if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
-                    alert("Email Enviado");
-
-                } else {
-                    alert("ocurrio un error " + respuesta);
-                }
-            }
-        })*/
 }
 
 </script>

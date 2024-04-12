@@ -402,7 +402,7 @@ function datos() {
         modalContainer.style.display = 'none';
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
         envioDatosWhatsApp(telefono);
-        enviarEmailAjax();
+        enviarEmailAjax(emailInput);
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
 }
@@ -549,18 +549,14 @@ window.onload = function() {
 
 
 
-function enviarEmailAjax() {
-    /*var queryString = window.location.search;
-    var parametros = new URLSearchParams(queryString);
-    const id_ser = parametros.get('id');*/
-   
-    //const formulario_gmail = document.getElementById("formMain");
+function enviarEmailAjax(email) {
+
     const body = new FormData();
-    const email = document.getElementById('email').value;
+    const emailDataModal1= email.value;
     var url = window.location.href;
     const id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
     body.append("id_ser", id_ser);
-    body.append("email", email);
+    body.append("email", emailDataModal1);
     // Enviar la solicitud POST al servidor
     fetch("./public/message/Controller/process.php", {
         method: "POST",

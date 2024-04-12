@@ -306,7 +306,7 @@
             container_des.classList.add('oculto_des')
             agarrandoDatos(nombreInput, lastNInput, emailValido);
             //envioDatosWhatsApp(telefono);
-            enviarEmailAjax();
+            enviarEmailAjax(emailInput);
             limpiarDatos(nombreInput, lastNInput, emailValido);
         }
     }
@@ -366,15 +366,13 @@
 
 
 
-    function enviarEmailAjax() {
-
-
+    function enviarEmailAjax(email) {
         const body = new FormData();
-        const email = document.getElementById('email_lost').value;
+        const emailDataModal_3_2 = email.value;
         var url = window.location.href;
         const id_ser  = url.split('marketing-gestion-digital/')[1];
         body.append("id_ser", id_ser);
-        body.append("email", email);
+        body.append("email", emailDataModal_3_2);
         // Enviar la solicitud POST al servidor
         fetch("./public/message/Controller/process.php", {
             method: "POST",

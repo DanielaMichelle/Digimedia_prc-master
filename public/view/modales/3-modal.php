@@ -663,11 +663,11 @@ window.onload = function() {
 
 function enviarEmailAjaxModal3_3(email) {
     const body = new FormData();
-    const email = document.getElementById('email').value;
+    const emailDataModal_3 = email.value;
     var url = window.location.href;
     const id_ser  = url.split('servicios/marketing-gestion-digital/')[1];
     body.append("id_ser", id_ser);
-    body.append("email", email);
+    body.append("email", emailDataModal_3);
     // Enviar la solicitud POST al servidor
     fetch("./public/message/Controller/process.php", {
         method: "POST",
