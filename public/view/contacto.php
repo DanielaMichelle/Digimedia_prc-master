@@ -64,12 +64,10 @@ include_once './public/include/html_head.php';
                                 <select class="form-control" name="servicio" id="servicio">
                                     <option selected disabled value="" class="form-control">Selecciona
                                     </option>
+                                    <option value="Desing y desarrollo web">Diseño y desarollo web</option>
+                                    <option value="Gestion de redes sociales">Gestion de redes sociales</option>
                                     <option value="Marketing Digital">Marketing Digital</option>
-                                    <option value="Imagen Corporativa">Imagen Corporativa</option>
-                                    <option value="Gestión De Redes Sociales">Gestión De Redes Sociales</option>
-                                    <option value="Crea Tu Marca">Crea Tu Marca</option>
-                                    <option value="Diseño web">Diseño web</option>
-                                    <option value="Diseño Grafico">Diseño Grafico</option>
+                                    <option value="MBranding y desing">Branding y diseño</option>
                                 </select>
                                 <small></small>
                             </div>
@@ -352,7 +350,7 @@ include_once './public/include/html_head.php';
                 // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
                 envioDatosWhatsApp(storedPhoneNumber);
             } else {
-                console.error("Número de teléfono no válido o ya se han enviado los mensajes.");
+                console.log("Número de teléfono no válido o ya se han enviado los mensajes.");
             }
         };
 

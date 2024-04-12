@@ -546,7 +546,7 @@ window.onload = function() {
         // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
         envioDatosWhatsApp(storedPhoneNumber, storedIndexService);
     } else {
-        console.error("Número de teléfono no válido o ya se han enviado los mensajes.");
+        console.log("Número de teléfono no válido o ya se han enviado los mensajes.");
     }
 };
 
