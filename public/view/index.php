@@ -3,7 +3,7 @@
 
 <?php
 
-$fileCSS    = ['index', 'style', 'inicio', 'header', 'footer', 'section'];
+$fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified'];
 include_once './public/include/html_head.php';
 ?>
 
