@@ -417,7 +417,6 @@
 
 
 <script src="./public/js/mensajesWhatsapp.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
 //const desktopContact = document.querySelector('.desktop-contact');
@@ -637,11 +636,34 @@ window.onload = function() {
 
 
 function enviarEmailAjax_los() {
+
+    const body = new FormData();
+    const email = document.getElementById('email').value;
+    var url = window.location.href;
+    const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
+    body.append("id_ser", id_ser);
+    body.append("email", email);
+    // Enviar la solicitud POST al servidor
+    fetch("./public/message/Controller/process.php", {
+        method: "POST",
+        body: body,
+    })
+        .then((response) => response.text()) // Convertir la respuesta a texto
+        .then((data) => {
+        // Manejar la respuesta del servidor
+        console.log("Respuesta del servidor Gmail Es:", data);
+        alert("Enviado con éxito a Gmail");
+        })
+        .catch((error) => {
+        // Manejar cualquier error que ocurra durante la solicitud
+        console.error("Error al enviar formulario a Gmail:", error);
+        alert("Email no Enviado: ", error);
+        });
         //var queryString = window.location.search;
         //var parametros = new URLSearchParams(queryString);
         
         //console.log(parametros)
-        var url = window.location.href;
+        /*var url = window.location.href;
 
         // Extraer el valor después de "servicios/"
         const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
@@ -673,7 +695,7 @@ function enviarEmailAjax_los() {
                     alert("ocurrio un error " + respuesta);
                 }
             }
-        })
+        })*/
 }
 
 </script>
