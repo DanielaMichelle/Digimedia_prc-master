@@ -333,7 +333,7 @@
             <figure class="modal-main-image">
                 <h3>¡DISEÑA TU CAMINO HACIA EL ÉXITO!</h3>
 
-                <img src="./public/img/modal-img-4.jpeg" alt="modal diseno y desarrollo">
+                <img src="./public/img/fu_2.webp" alt="modal diseno y desarrollo">
                 <figcaption>¡Primera asesoría <span>GRATIS!</span></figcaption>
             </figure>
 

@@ -231,7 +231,7 @@
     <img class="icon" src="public/img/logo_digimedia_color.webp" alt="Digimedia Icon">
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
         
-        <img src="./public/img/modal2/dgservis.jpg"/>
+        <img src="./public/img/modal2/dgservis.webp"/>
         <div class="h3_postion" style="font-size: 100%;"><h3 class="h3">¡HAZ CRECER TUS REDES! </h3></div>
     </div>
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">

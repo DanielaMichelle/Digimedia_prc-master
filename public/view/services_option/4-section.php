@@ -311,7 +311,7 @@
         width: calc(70% + 5px);
         height: calc(70% + 20px);
 
-        background-image: url('./public/img/servis_wepb/services4/icon4_1.png');
+        background-image: url('./public/img/servis_wepb/services4/icon4_1.webp');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -325,7 +325,7 @@
         width: calc(70% + 5px);
         height: calc(70% + 20px);
 
-        background-image: url('./public/img/servis_wepb/services4/icon4_2.png');
+        background-image: url('./public/img/servis_wepb/services4/icon4_2.webp');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -339,7 +339,7 @@
         width: calc(70% + 5px);
         height: calc(70% + 20px);
 
-        background-image: url('./public/img/servis_wepb/services4/icon4_3.png');
+        background-image: url('./public/img/servis_wepb/services4/icon4_3.webp');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -353,7 +353,7 @@
         width: calc(62% + 5px);
         height: calc(60% + 20px);
 
-        background-image: url('./public/img/servis_wepb/services4/icon4_4.png');
+        background-image: url('./public/img/servis_wepb/services4/icon4_4.webp');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
