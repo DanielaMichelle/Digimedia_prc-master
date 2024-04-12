@@ -37,7 +37,7 @@
                     <a href="libro_reclamaciones.php">Libro de reclamaciones</a>
                 </li>
                 <li>
-                    <a>Trabaja con nosotros</a>
+                    <p>Trabaja con nosotros</p>
                 </li>
             </ul>
         </div>
