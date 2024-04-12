@@ -64,12 +64,10 @@ include_once './public/include/html_head.php';
                                 <select class="form-control" name="servicio" id="servicio">
                                     <option selected disabled value="" class="form-control">Selecciona
                                     </option>
+                                    <option value="Desing y desarrollo web">Diseño y desarollo web</option>
+                                    <option value="Gestion de redes sociales">Gestion de redes sociales</option>
                                     <option value="Marketing Digital">Marketing Digital</option>
-                                    <option value="Imagen Corporativa">Imagen Corporativa</option>
-                                    <option value="Gestión De Redes Sociales">Gestión De Redes Sociales</option>
-                                    <option value="Crea Tu Marca">Crea Tu Marca</option>
-                                    <option value="Diseño web">Diseño web</option>
-                                    <option value="Diseño Grafico">Diseño Grafico</option>
+                                    <option value="Branding y desing">Branding y diseño</option>
                                 </select>
                                 <small></small>
                             </div>
@@ -150,7 +148,7 @@ include_once './public/include/html_head.php';
     </div>
 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
 
     <script>
         const form = document.querySelector("#formulario");
@@ -352,7 +350,7 @@ include_once './public/include/html_head.php';
                 // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
                 envioDatosWhatsApp(storedPhoneNumber);
             } else {
-                console.error("Número de teléfono no válido o ya se han enviado los mensajes.");
+                console.log("Número de teléfono no válido o ya se han enviado los mensajes.");
             }
         };
 
@@ -370,44 +368,28 @@ include_once './public/include/html_head.php';
         })
 
         function enviarEmailAjax_contacto() {
-            //var queryString = window.location.search;
-            //var parametros = new URLSearchParams(queryString);
-            
-            //console.log(parametros)
-            //var url = window.location.href;
             const servicio = document.getElementById('servicio').value;
-            // Extraer el valor después de "servicios/"
-            //const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
-            
-            //console.log(id_ser)
-
+            const body = new FormData();
             const emailPerson_mail = document.querySelector("#emailPerson").value;
-            
-            //hola mundo
-            var datos = new FormData();
-            datos.append("id_ser", 0);
-            datos.append("email", emailPerson_mail);
-            datos.append("service", servicio);
-
-
-
-            $.ajax({
-                url: "./public/message/Controller/process.php",
+            body.append("id_ser", 0);
+            body.append("email", emailPerson_mail);
+            body.append("service", servicio);
+            // Enviar la solicitud POST al servidor
+            fetch("./public/message/Controller/process.php", {
                 method: "POST",
-                data: datos,
-                cache: false,
-                contentType: false,
-                processData: false,
-                success: function(respuesta) {
-                    console.log("Respuesta", respuesta);
-                    if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
-                        alert("Email Enviado");
-
-                    } else {
-                        alert("ocurrio un error " + respuesta);
-                    }
-                }
+                body: body,
             })
+                .then((response) => response.text()) // Convertir la respuesta a texto
+                .then((data) => {
+                // Manejar la respuesta del servidor
+                console.log("Respuesta del servidor Gmail Es:", data);
+                alert("Enviado con éxito a Gmail");
+                })
+                .catch((error) => {
+                // Manejar cualquier error que ocurra durante la solicitud
+                console.error("Error al enviar formulario a Gmail:", error);
+                alert("Email no Enviado: ", error);
+                });
         }
     </script>
 

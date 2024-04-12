@@ -26,22 +26,16 @@ if(isset($_POST["service"])){
         case "3":
             $id = 4;
             break;
+        case "Desing y desarrollo web":
+            $id = 1;
+            break;
+        case "Gestion de redes sociales":
+            $id = 2;
+            break;
         case "Marketing Digital":
             $id = 3;
             break;
-        case "Imagen Corporativa":
-            $id = 2;
-            break;
-        case "Gestión De Redes Sociales":
-            $id = 2;
-            break;
-        case "Crea Tu Marca":
-            $id = 4;
-            break;
-        case "Diseño web":
-            $id = 1;
-            break;
-        case "Diseño Grafico":
+        case "Branding y desing":
             $id = 4;
             break;
     }

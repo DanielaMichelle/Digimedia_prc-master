@@ -350,7 +350,7 @@
         if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
             modal.style.display = "none";
             catchData(nameInput, lastNameInput, emailInput);
-            sendEmailAjax();
+            sendEmailAjax(emailInput);
             cleanData(nameInput, lastNameInput, emailInput);
         }
     }
@@ -381,42 +381,29 @@
         email.value = "";
     }
 
-    function sendEmailAjax() {
-        //var queryString = window.location.search;
-        //var parametros = new URLSearchParams(queryString);
-
-        //console.log(parametros)
+    function sendEmailAjax(email) {
+        const body = new FormData();
+        const emailDataModal1_2 = email.value;
         var url = window.location.href;
-
-        // Extraer el valor después de "servicios/"
-        let id_ser = url.split('servicios/diseno-desarrollo-web/')[1];
-
-        let email = document.getElementById('email2').value;
-
-
-        var datos = new FormData();
-        datos.append("id_ser", id_ser);
-        datos.append("email", email);
-
-
-
-        $.ajax({
-            url: "./public/message/Controller/process.php",
+        const id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
+        body.append("id_ser", id_ser);
+        body.append("email", emailDataModal1_2);
+        // Enviar la solicitud POST al servidor
+        fetch("./public/message/Controller/process.php", {
             method: "POST",
-            data: datos,
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function(respuesta) {
-                console.log("Respuesta", respuesta);
-                if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
-                    alert("Email Enviado");
-
-                } else {
-                    alert("ocurrio un error " + respuesta);
-                }
-            }
+            body: body,
         })
+            .then((response) => response.text()) // Convertir la respuesta a texto
+            .then((data) => {
+            // Manejar la respuesta del servidor
+            console.log("Respuesta del servidor Gmail Es:", data);
+            alert("Enviado con éxito a Gmail");
+            })
+            .catch((error) => {
+            // Manejar cualquier error que ocurra durante la solicitud
+            console.error("Error al enviar formulario a Gmail:", error);
+            alert("Email no Enviado: ", error);
+            });
     }
 
 </script>

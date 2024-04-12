@@ -1489,28 +1489,32 @@
 </section>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $(".elemento").hover(function() {
-            $(".elemento").addClass("hovered");
-        }, function() {
-            $(".elemento").removeClass("hovered");
-        });
-        $(".elemento2").hover(function() {
-            $(".elemento2").addClass("hovered");
-        }, function() {
-            $(".elemento2").removeClass("hovered");
-        });
-        $(".elemento3").hover(function() {
-            $(".elemento3").addClass("hovered");
-        }, function() {
-            $(".elemento3").removeClass("hovered");
-        });
-        $(".elemento4").hover(function() {
-            $(".elemento4").addClass("hovered");
-        }, function() {
-            $(".elemento4").removeClass("hovered");
+    document.addEventListener("DOMContentLoaded", function() {
+        // Función para agregar la clase 'hovered' al elemento
+        function addHoverClass(event) {
+            var imgDiv = event.currentTarget.querySelector('.img_div');
+            var descripcionDiv = event.currentTarget.querySelector('.descripcion_div');
+            imgDiv.classList.add("hovered");
+            descripcionDiv.classList.add("hovered");
+        }
+
+        // Función para eliminar la clase 'hovered' del elemento
+        function removeHoverClass(event) {
+            var imgDiv = event.currentTarget.querySelector('.img_div');
+            var descripcionDiv = event.currentTarget.querySelector('.descripcion_div');
+            imgDiv.classList.remove("hovered");
+            descripcionDiv.classList.remove("hovered");
+        }
+
+        // Obtener todos los elementos con la clase 'grid_item'
+        var gridItems = document.querySelectorAll(".grid_item");
+
+        // Iterar sobre cada elemento y agregar eventos de mouseover y mouseout
+        gridItems.forEach(function(gridItem) {
+            gridItem.addEventListener("mouseover", addHoverClass);
+            gridItem.addEventListener("mouseout", removeHoverClass);
         });
     });
+
 </script>

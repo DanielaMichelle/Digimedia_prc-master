@@ -1,4 +1,4 @@
-<script src="https://kit.fontawesome.com/0ee4e706bf.js" crossorigin="anonymous"></script>
+
 <footer>
     <div class="footer_top">
         <div class="footer_top--imagen">

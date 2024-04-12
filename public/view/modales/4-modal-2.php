@@ -370,38 +370,29 @@
 
 
 function sendEmailAjax(email) {
+
+    const body = new FormData();
+    const emailDataModal_4_2 = email.value;
     var url = window.location.href;
-
     const id_ser  = url.split('servicios/brading-desing/')[1];
-
-    let emailCorreo = document.getElementById('email2').value;
-
-    // const emailCorreo = email.value;
-
-    var datos = new FormData();
-    datos.append("id_ser", id_ser);
-    datos.append("email", emailCorreo);
-
-
-    // console.log(email.value);
-
-    $.ajax({
-        url: "./public/message/Controller/process.php",
+    body.append("id_ser", id_ser);
+    body.append("email", emailDataModal_4_2);
+    // Enviar la solicitud POST al servidor
+    fetch("./public/message/Controller/process.php", {
         method: "POST",
-        data: datos,
-        cache: false,
-        contentType: false,
-        processData: false,
-        success: function(respuesta) {
-            console.log("Respuesta", respuesta);
-            if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
-                alert("Email Enviado");
-
-            } else {
-                alert("ocurrio un error " + respuesta);
-            }
-        }
+        body: body,
     })
+        .then((response) => response.text()) // Convertir la respuesta a texto
+        .then((data) => {
+        // Manejar la respuesta del servidor
+        console.log("Respuesta del servidor Gmail Es:", data);
+        alert("Enviado con éxito a Gmail");
+        })
+        .catch((error) => {
+        // Manejar cualquier error que ocurra durante la solicitud
+        console.error("Error al enviar formulario a Gmail:", error);
+        alert("Email no Enviado: ", error);
+        });
 }
 
 </script>
