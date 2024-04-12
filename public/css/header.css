@@ -193,12 +193,10 @@ header label {
   color: white;
   background-color: #ff0c7d;
 }
-/*.menu p i {
-  margin-left: 50px;
-}*/
-.menu ul li {
-  display: flex;
+.menu p i {
+  margin-left: 24px;
 }
+
 .menu ul li:hover ul {
   display: block;
   position: absolute;
@@ -212,9 +210,13 @@ header label {
 #btn-menu_lose {
   display: none;
 }
-/* -------- BREACK POINTS --------- */
+/* -------- BREACK POINTS --------- cc*/
 @media (max-width: 920px) {
   /* Hamburguesa nuevo  */
+  .menu ul li p {
+    display: flex;
+    justify-content: space-between;
+  }
   .icon-menu_close {
     display: flex;
     align-items: center;
