@@ -68,7 +68,7 @@ include_once './public/include/html_services.php';
                     </td>
                     <td class="gestion">
                         <div style="border-radius: 50px;" class="cards-nosearch" title="GESTIÓN DE REDES SOCIALES">
-                            <img style="border-radius: 50px;" class="card-imagenosearch" href="rd-sociales.php" src="./public/img/gestion_redes2.webp" alt="2 (1).webp" fetchpriority="high">
+                            <img style="border-radius: 50px;" class="card-imagenosearch" href="rd-sociales.php" src="./public/img/gestion-redes3.webp" alt="2 (1).webp" fetchpriority="high">
                             <p style="font-size:20px; line-height:normal;">
                                 <span style="color:#059EFF;" class="">
                                     <a href="servicios/gestion-redes-sociales/2" target="_self" class="">

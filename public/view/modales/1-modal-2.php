@@ -242,9 +242,7 @@
         <img class="icon" src="public/img/logo_digimedia_color.webp" alt="Digimedia Icon">
         <span>¡Destaca tu negocio!</span>
         <figure>
-            <source srcset="./public/img/modal2/modal2-desarrollo3.webp" media="(min-width: 426px)">
-            <source srcset="./public/img/modal2/modal2-desarrollo3-mobile.webp" media="(max-width: 425px)">
-            <img src="./public/img/modal2/modal2-desarrollo3.webp" alt="Descripción de la imagen">
+            <img id="service1-modal2--image" src="./public/img/modal2/modal2-desarrollo3.webp" alt="Descripción de la imagen">
         </figure>
     </div>
 
@@ -290,6 +288,16 @@
     const objReg = {
         gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/
     };
+
+    // cambio de imagen de hero en base al ancho de pantalla
+    let widthScreenModal2Servicio1 = window.innerWidth;
+    const imgModal2Servivio1 = document.querySelector("#service1-modal2--image");
+    console.log(widthScreenModal2Servicio1);
+    if (widthScreenModal2Servicio1 <= 430) {
+        imgModal2Servivio1.setAttribute('src', './public/img/modal2/modal2-desarrollo3-mobile.webp');
+    } else {
+        imgModal2Servivio1.setAttribute('src', './public/img/modal2/modal2-desarrollo3.webp');
+    }
 
     // Abrir modal
     let options = {
@@ -410,4 +418,5 @@
             }
         })
     }
+
 </script>
