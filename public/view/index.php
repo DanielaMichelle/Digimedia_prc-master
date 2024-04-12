@@ -69,7 +69,7 @@ include_once './public/include/html_head.php';
             <div class="seccion diseno-desarrollo-web">
                 <h3>Diseño y Desarrollo Web</h3>
                 <p>*La creación de una experiencia web óptima mediante la presentación organizada de contenido.*</p>
-                <a href="servicios/diseno-desarrollo-web/1">
+                <a href="servicios/diseno-desarrollo-web/1" aria-label="Visita el area de diseño y desarrollo web!">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
@@ -77,7 +77,7 @@ include_once './public/include/html_head.php';
             <div class="seccion gestion-redes-sociales">
                 <h3>Gestión de Redes Sociales</h3>
                 <p>*La optimización estratégica para impacto, alcance y presencia de una marca.*</p>
-                <a href="servicios/gestion-redes-sociales/2">
+                <a href="servicios/gestion-redes-sociales/2" aria-label="Visita la seccion de Gestion de redes sociales!">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
@@ -85,7 +85,7 @@ include_once './public/include/html_head.php';
             <div class="seccion marketing-gestion-digital">
                 <h3>Marketing y Gestión Digital</h3>
                 <p>*La ampliación de alcance y fortalecimiento de relaciones con clientes en línea.*</p>
-                <a href="servicios/marketing-gestion-digital/3">
+                <a href="servicios/marketing-gestion-digital/3" aria-label="Visita nuestra area de Marketing y gestion digital">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
@@ -93,7 +93,7 @@ include_once './public/include/html_head.php';
             <div class="seccion branding-diseno">
                 <h3>Branding y Diseño</h3>
                 <p>*La unión de estos genera experiencias memorables, conexión emocional y diferenciación de otros.*</p>
-                <a href="servicios/brading-desing/4">
+                <a href="servicios/brading-desing/4" aria-label="Visita la seccion de brading y diseño">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
@@ -133,7 +133,7 @@ include_once './public/include/html_head.php';
             <i class="fa-solid fa-up-long"></i>
         </div>
         <div class="whatsapp">
-            <a href="https://wa.me/51936910425" target="_blank">
+            <a href="https://wa.me/51936910425" aria-label="Comunicate con nosotros!" title="Comunicate con nosotros!" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
         </div>

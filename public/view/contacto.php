@@ -141,7 +141,7 @@ include_once './public/include/html_head.php';
         </div>
 
         <div class="whatsapp">
-            <a href="https://wa.me/51936910425" target="_blank">
+            <a href="https://wa.me/51936910425" aria-label="Comunicate con nosotros!" title="Comunicate con nosotros!" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
         </div>

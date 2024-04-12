@@ -477,8 +477,8 @@ main {
 }
 
 .navbar-brand img {
-  height: 4rem;
-  width: auto;
+  /* height: 4rem; */
+  max-width: 250px;
 }
 
 .nav-link {
