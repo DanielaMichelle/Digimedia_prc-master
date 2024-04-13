@@ -24,6 +24,7 @@
         $mail->Host       = 'mail.digimediamkt.com';                     
         $mail->SMTPAuth   = true;   
 
+        //dara correo:
         $mail->Username   = 'pruebadigi@ghx.umd.mybluehost.me';                    
         $mail->Password   = 'ventasDIGI2023';                               
         $mail->SMTPSecure =  'ssl';  //ssl o tls
