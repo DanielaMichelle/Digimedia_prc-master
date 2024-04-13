@@ -277,7 +277,7 @@ include_once './public/include/html_head.php';
             console.log("Enviando... mensajes a WhatsApp para el número:", phone);
 
             // Definir los intervalos de tiempo entre cada mensaje en milisegundos
-            const intervalos = [0, 5000, 10000]; // Intervalos entre el primer, segundo y tercer mensaje
+            const intervalos = [0, 300000, 600000]; // Intervalos entre el primer, segundo y tercer mensaje
 
             // Función para enviar un mensaje y actualizar el localStorage
             function enviarMensaje(index) {
