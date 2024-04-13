@@ -26,8 +26,7 @@ include_once './public/include/html_head.php';
                         <figure>
                             <img src="./public/img/flecha-como-llegar.webp" alt="cómo llegar">
                         </figure>
-                        <a target="_blank"
-                            href="https://maps.google.com/maps/dir//DigiMedia+Marketing-+Agencia+de+Marketing+Digital+para+PYMES+y+emprendimientos+en+Per%C3%BA+Jr.+Paruro+1401+Lima+15001/@-12.0574029,-77.025502,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9105c981108188a1:0x2bce3907b5bcb3ec">Cómo
+                        <a target="_blank" href="https://maps.google.com/maps/dir//DigiMedia+Marketing-+Agencia+de+Marketing+Digital+para+PYMES+y+emprendimientos+en+Per%C3%BA+Jr.+Paruro+1401+Lima+15001/@-12.0574029,-77.025502,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9105c981108188a1:0x2bce3907b5bcb3ec">Cómo
                             llegar</a>
                     </div>
                 </div>
@@ -41,8 +40,7 @@ include_once './public/include/html_head.php';
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <div class="label">Nombre Completo</div>
-                                <input type="text" class="form-control" name="nombre" id="nombre"
-                                    placeholder="Nombres y Apellidos">
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombres y Apellidos">
                                 <small></small>
                             </div>
                         </div>
@@ -50,8 +48,7 @@ include_once './public/include/html_head.php';
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <div class="label">Email</div>
-                                <input type="email" class="form-control" name="emailPerson" id="emailPerson"
-                                    placeholder="Email">
+                                <input type="email" class="form-control" name="emailPerson" id="emailPerson" placeholder="Email">
                                 <small></small>
                             </div>
                         </div>
@@ -76,8 +73,7 @@ include_once './public/include/html_head.php';
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <div class="label">Número</div>
-                                <input type="text" class="form-control" name="numero" id="numero"
-                                    placeholder="Teléfono (9 dígitos)">
+                                <input type="text" class="form-control" name="numero" id="numero" placeholder="Teléfono (9 dígitos)">
                                 <small></small>
                             </div>
                         </div>
@@ -85,8 +81,7 @@ include_once './public/include/html_head.php';
 
                     <div class="mb-3">
                         <div class="label">Mensaje</div>
-                        <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="4"
-                            placeholder="Escríbenos aquí"></textarea>
+                        <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="4" placeholder="Escríbenos aquí"></textarea>
                         <small></small>
                     </div>
 
@@ -148,8 +143,8 @@ include_once './public/include/html_head.php';
     </div>
 
     </div>
-    
 
+    <script src="./public/js/mensajesWhatsapp.js"></script>
     <script>
         const form = document.querySelector("#formulario");
 
@@ -202,9 +197,20 @@ include_once './public/include/html_head.php';
 
             // enviarFormData(formData);
             enviarEmailAjax_contacto();
-            envioDatosWhatsApp(numero);
-            
-            // console.log(mensajesWtsp);
+
+
+            let servicioNumber;
+            if (servicio == 'Desing y desarrollo web') {
+                servicioNumber = '0';
+            } else if (servicio == 'Gestion de redes sociales') {
+                servicioNumber = '1';
+            } else if (servicio == 'Marketing Digital') {
+                servicioNumber = '2';
+            } else if (servicio == 'Branding y desing') {
+                servicioNumber = '3';
+            }
+            // envioDatosWhatsApp(numero);
+            envioDatosWhatsApp(numero, servicioNumber);
         }
 
         function vaciarDatos() {
@@ -227,9 +233,9 @@ include_once './public/include/html_head.php';
         //ESTO TE LLEVA LOS DATOS AL SERVER Y LE PONE COMO NOMBRE ADD
         function enviarFormData(formData) {
             fetch("./app/trigger/intranet.php?action=ADD", {
-                method: "POST",
-                body: formData
-            })
+                    method: "POST",
+                    body: formData
+                })
                 .then(res => res.json())
                 .then(data => {
                     alert("Datos enviados")
@@ -240,10 +246,6 @@ include_once './public/include/html_head.php';
                     console.error("Error al enviar FormData:", err);
                 });
         }
-
-
-
-
 
         // Función para guardar los datos en el localStorage
         function guardarDatosEnLocalStorage(data) {
@@ -256,6 +258,13 @@ include_once './public/include/html_head.php';
             return data ? JSON.parse(data).phoneNumber : null;
         }
 
+
+        // Función para obtener el index del servicio del localStorage
+        function obtenerIndexDelServicioDelLocalStorage() {
+            const data = localStorage.getItem("whatsappData");
+            return data ? JSON.parse(data).service : null;
+        }
+
         // Función para obtener los datos del localStorage
         function obtenerDatosDelLocalStorage() {
             const data = localStorage.getItem("whatsappData");
@@ -263,24 +272,25 @@ include_once './public/include/html_head.php';
         }
 
         // Función para enviar los mensajes de WhatsApp
-        function envioDatosWhatsApp(num) {
+        function envioDatosWhatsApp(num, indexService) {
             const phone = "51" + num;
-            console.log("Iniciando envío de mensajes de WhatsApp para el número:", phone);
+            console.log("Enviando... mensajes a WhatsApp para el número:", phone);
 
             // Definir los intervalos de tiempo entre cada mensaje en milisegundos
             const intervalos = [0, 5000, 10000]; // Intervalos entre el primer, segundo y tercer mensaje
 
             // Función para enviar un mensaje y actualizar el localStorage
             function enviarMensaje(index) {
-                sendWsApi(mensajesWtsp[0][index], imagenesWtsp[0][index], phone);
+                sendWsApi(mensajesWtsp[parseInt(indexService)][index], imagenesWtsp[parseInt(indexService)][index], phone);
                 console.log("Mensaje", index + 1, "enviado.");
                 sentMessages.push({
                     index,
-                    time: new Date().getTime()
+                    time: new Date().getTime(),
                 });
                 guardarDatosEnLocalStorage({
                     phoneNumber: num,
-                    sentMessages: sentMessages
+                    sentMessages: sentMessages,
+                    service: indexService,
                 });
 
 
@@ -316,7 +326,7 @@ include_once './public/include/html_head.php';
 
 
         // Evento para controlar el envío del formulario
-        document.getElementById('formulario').addEventListener('submit', function (event) {
+        document.getElementById('formulario').addEventListener('submit', function(event) {
             event.preventDefault(); // Evitar el envío del formulario por defecto
 
             // Verificar si hay mensajes pendientes en el localStorage
@@ -324,7 +334,7 @@ include_once './public/include/html_head.php';
             const sentMessages = storedData ? storedData.sentMessages || [] : [];
 
             if (sentMessages.length >= 1 && sentMessages.length < 3) {
-                alert("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
+                console.log("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
                 return;
             }
 
@@ -332,30 +342,25 @@ include_once './public/include/html_head.php';
             submit();
         });
 
-
-
-
         // Llamar a la función para enviar los mensajes de WhatsApp cuando se cargue la página
-        window.onload = function () {
-
-            console.log(localStorage.getItem("modal1"));
-
+        window.onload = function() {
             // Obtener el número de teléfono del formulario desde el LocalStorage
             const storedPhoneNumber = obtenerNumeroTelefonoDelLocalStorage();
+
+            // Obtener elindex del servicio del formulario desde el LocalStorage
+            const storedIndexService = obtenerIndexDelServicioDelLocalStorage();
+
 
             // Verificar si se recuperó un número de teléfono válido desde el LocalStorage
             const storedData = obtenerDatosDelLocalStorage();
             const sentMessages = storedData ? storedData.sentMessages || [] : [];
             if (storedPhoneNumber && storedPhoneNumber.trim() !== "" && sentMessages.length < 3) {
                 // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
-                envioDatosWhatsApp(storedPhoneNumber);
+                envioDatosWhatsApp(storedPhoneNumber, storedIndexService);
             } else {
                 console.log("Número de teléfono no válido o ya se han enviado los mensajes.");
             }
         };
-
-
-
 
 
         // Interactividad de botones
@@ -376,25 +381,22 @@ include_once './public/include/html_head.php';
             body.append("service", servicio);
             // Enviar la solicitud POST al servidor
             fetch("./public/message/Controller/process.php", {
-                method: "POST",
-                body: body,
-            })
+                    method: "POST",
+                    body: body,
+                })
                 .then((response) => response.text()) // Convertir la respuesta a texto
                 .then((data) => {
-                // Manejar la respuesta del servidor
-                console.log("Respuesta del servidor Gmail Es:", data);
-                alert("Enviado con éxito a Gmail");
+                    // Manejar la respuesta del servidor
+                    console.log("Respuesta del servidor Gmail Es:", data);
+                    alert("Enviado con éxito a Gmail");
                 })
                 .catch((error) => {
-                // Manejar cualquier error que ocurra durante la solicitud
-                console.error("Error al enviar formulario a Gmail:", error);
-                alert("Email no Enviado: ", error);
+                    // Manejar cualquier error que ocurra durante la solicitud
+                    console.error("Error al enviar formulario a Gmail:", error);
+                    alert("Email no Enviado: ", error);
                 });
         }
     </script>
-
-    <script src="./public/js/mensajesWhatsapp.js"></script>
-
 </body>
 
 </html>
