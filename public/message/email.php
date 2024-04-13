@@ -25,12 +25,12 @@
         $mail->SMTPAuth   = true;   
 
         //dara correo:
-        $mail->Username   = 'pruebadigi@ghx.umd.mybluehost.me';                    
-        $mail->Password   = 'ventasDIGI2023';                               
+        $mail->Username   = 'digi.mediamkt@gmail.com';                    
+        $mail->Password   = 'Digimedia2024@.#';                               
         $mail->SMTPSecure =  'ssl';  //ssl o tls
         $mail->Port       = 465;                                   
 
-        $mail->setFrom('pruebadigi@ghx.umd.mybluehost.me', $title);
+        $mail->setFrom('digi.mediamkt@gmail.com', $title);
         $mail->addAddress($email);     
 
         $mail->isHTML(true);  
