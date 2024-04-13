@@ -164,7 +164,7 @@
     border-radius: 10px;
     box-shadow: 1px 0px 0px 0px white;
 }
-.btn_close{
+.btn_close_2{
     position: absolute;
     top: -5px;
     right: 4px;
@@ -175,7 +175,7 @@
     
     
 }
-.btn_close .close-modal{
+.btn_close_2 .close-modal_2{
     width: 100%;
     font-size: 1.9em;
     background: transparent;
@@ -191,12 +191,18 @@
         width: 89%;
         font-size: 9.2px;
     }
+    .btn_close_2 .close-modal_2{
+        font-size: 2.5em;
+    }
 }
 @media (min-width:0px) AND (max-width:300px){
     .main-container{
         height: 250px;
         width: 96%;
         font-size: 8px;
+    }
+    .btn_close_2 .close-modal_2{
+        font-size: 3em;
     }
 }
 
@@ -235,7 +241,7 @@
         <div class="h3_postion" style="font-size: 100%;"><h3 class="h3">¡HAZ CRECER TUS REDES! </h3></div>
     </div>
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
-        <div class="btn_close" style="font-size: 100%;"><button class="close-modal" style="color: white;">&times;</button></div>
+        <div class="btn_close_2" style="font-size: 100%;"><button class="close-modal_2" style="color: white;">&times;</button></div>
         <div class="mantainer" style="font-size: 100%;">
             <div class="textoss" style="font-size: 100%;">
                 <div class="manta" style="font-size: 100%;">
@@ -269,7 +275,7 @@
     const overflow_los = document.querySelector('.overflow_lo');
     const container_des = document.querySelector('.main-container')
     let  modalMostrado = false;
-    const btnCerrarLa = document.querySelector('.close-modal');
+    const btnCerrarLa = document.querySelector('.close-modal_2');
     const objRegex_lost = {
         gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
     };

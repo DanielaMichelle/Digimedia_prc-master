@@ -144,7 +144,7 @@
     border-radius: 10px;
     box-shadow: 1px 0px 0px 0px white;
 }
-.btn_close{
+.btn_close_3{
     position: absolute;
     top: -5px;
     right: 4px;
@@ -155,7 +155,7 @@
     
     
 }
-.btn_close .close-modal{
+.btn_close_3 .close-modal_3{
     width: 100%;
     font-size: 1.9em;
     background: transparent;
@@ -213,7 +213,7 @@
         <div class="h3_postion" style="font-size: 100%;"><h3 class="h3">!INCREMENTA TUS VENTAS¡</h3></div>
     </div>
     <div class="main-container-div1 grid-item-modal" style="font-size: 100%;">
-        <div class="btn_close" style="font-size: 100%;"><button class="close-modal"  style="color: white;">&times;</button></div>
+        <div class="btn_close_3" style="font-size: 100%;"><button class="close-modal_3"  style="color: white;">&times;</button></div>
         <div class="mantainer" style="font-size: 100%;">
             <div class="textoss" style="font-size: 100%;">
                 <div class="top" style="font-size: 100%;"><h4>Hazlo y Cumple Tus</h4></div>
@@ -246,7 +246,7 @@
     const overflow_los = document.querySelector('.overflow_lo');
     const container_des = document.querySelector('.main-container')
     let  modalMostrado = false;
-    const btnCerrarLa = document.querySelector('.close-modal');
+    const btnCerrarLa_3 = document.querySelector('.close-modal_3');
     const objRegex_lost = {
         gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
     };
@@ -261,7 +261,7 @@
 
         validarDatos_lost();
 
-        btnCerrarLa.addEventListener('click', () => {
+        btnCerrarLa_3.addEventListener('click', () => {
             overflow_los.classList.add('oculto_des')
             container_des.classList.add('oculto_des')
         });
