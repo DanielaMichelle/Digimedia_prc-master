@@ -11,7 +11,7 @@ include_once './public/include/html_head.php';
     <?php include_once './public/assets/header.php' ?>
 
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" loading="lazy">
         <div class="container-hero">
             <div class="hero-text">
                 <h1>¿No sabes por dónde empezar?</h1>
