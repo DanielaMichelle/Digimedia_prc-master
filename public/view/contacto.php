@@ -195,7 +195,7 @@ include_once './public/include/html_head.php';
 
             formData.append('estado', 0);
 
-            // enviarFormData(formData);
+            enviarFormData(formData);
             enviarEmailAjax_contacto();
 
 
