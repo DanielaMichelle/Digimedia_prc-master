@@ -407,10 +407,7 @@
         <h5>Contactanos</h5>
         <i class="fa-solid fa-minus" style="color: #ffffff;"></i>
     </div>
-    <div class="btn-mobile">
-        <button><img src="./public/img/mensaje.png" style="color:white;" alt=""></button>
-        <!-- <button><img src="../img/mensaje.png" style="color:white;" alt=""></button> -->
-    </div>
+    
 
 
 </div>
