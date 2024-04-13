@@ -42,15 +42,15 @@ class mainController{
             //Server settings
             $mail->SMTPDebug = 0;                      //Enable verbose debug output
             $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp.gmail.com'; //tipo de servicio o cuenta de hosting                    //Set the SMTP server to send through
+            $mail->Host       = 'mail.digimediamkt.com'; //tipo de servicio o cuenta de hosting                    //Set the SMTP server to send through
             $mail->CharSet = 'utf-8';
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = '3456antony@gmail.com';                     //SMTP username
-            $mail->Password   = 'ntvmcaglbugddkau';                               //SMTP password
-            $mail->SMTPSecure = 'tsl';            //Enable implicit TLS encryption
-            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->Username   = 'pruebadigi@ghx.umd.mybluehost.me';                     //SMTP username
+            $mail->Password   = 'ventasDIGI2023';                               //SMTP password
+            $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
             //Recipients
-            $mail->setFrom('3456antony@gmail.com', 'Antony');
+            $mail->setFrom('pruebadigi@ghx.umd.mybluehost.me', 'Digimedia');
             $mail->addAddress($email);     //Add a recipient       
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
