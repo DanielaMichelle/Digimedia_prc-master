@@ -46,7 +46,7 @@ class mainController{
             $mail->CharSet = 'utf-8';
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'digi.mediamkt@gmail.com';                     //SMTP username
-            $mail->Password   = 'Digimedia2024@.#';                               //SMTP password
+            $mail->Password   = 'bjgcnkfhrulmvsjt';                               //SMTP password
             $mail->SMTPSecure = 'tsl';            //Enable implicit TLS encryption
             $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
             //Recipients
