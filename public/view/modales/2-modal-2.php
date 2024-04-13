@@ -329,7 +329,7 @@
             //modalContainer.style.display = 'none';
             agarrandoDatos(nombreInput, lastNInput, emailInput);
             //envioDatosWhatsApp(telefono);
-            enviarEmailAjax(email);
+            enviarEmailAjax(emailInput);
             limpiarDatos(nombreInput, lastNInput, emailInput);
         }
     }
