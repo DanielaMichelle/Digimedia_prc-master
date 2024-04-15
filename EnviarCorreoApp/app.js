@@ -23,12 +23,12 @@ function enviarEmail(correo) {
 
     setTimeout(() => {
         enviarMensajeCorreo(correo, 1, sentMessages);
-    }, 10000);
+    }, 20000);
 
     setTimeout(() => {
         enviarMensajeCorreo(correo, 2, sentMessages);
         localStorage.removeItem("correoData");
-    }, 15000);
+    }, 40000);
 }
 
 // Función para enviar un mensaje de correo y actualizar el localStorage
@@ -46,6 +46,10 @@ function enviarMensajeCorreo(correo, index, sentMessages) {
     enviarEmailAjax(correo);
 }
 
+
+// Variable para verificar si se ha recibido la respuesta del servidor Gmail
+let gmailResponseReceived = false;
+
 // Función para enviar el correo electrónico al servidor
 function enviarEmailAjax(correo) {
     const body = new FormData();
@@ -60,14 +64,20 @@ function enviarEmailAjax(correo) {
     })
         .then((response) => response.text()) // Convertir la respuesta a texto
         .then((data) => {
-            // Manejar la respuesta del servidor
-            console.log("Respuesta del servidor Gmail:", data);
+            // Verificar si la respuesta del servidor Gmail ya ha sido recibida
+            if (!gmailResponseReceived) {
+                // Mostrar la respuesta del servidor Gmail solo si no ha sido recibida antes
+                console.log("Respuesta del servidor Gmail:", data);
+                // Marcar que se ha recibido la respuesta del servidor Gmail
+                gmailResponseReceived = true;
+            }
         })
         .catch((error) => {
             // Manejar cualquier error que ocurra durante la solicitud
             console.error("Error al enviar el formulario a Gmail:", error);
         });
 }
+
 
 // Llamar a la función para enviar los correos electrónicos cuando se cargue la página
 window.onload = function() {
