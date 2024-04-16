@@ -490,6 +490,7 @@ function validarDatos() {
     formMain.addEventListener("submit", (e) => {
         e.preventDefault();
         datos();
+        
     })
 }
 
@@ -518,7 +519,7 @@ function datos() {
         toggleCerarForm();
         envioDatosWhatsApp(telefono);
         agarrandoDatos(nombreInput, telefonoInput, emailInput);
-        enviarEmailAjaxModal3_3(emailInput);
+        enviarEmail_3(emailInput.value);
         limpiarDatos(nombreInput, telefonoInput, emailInput);
     }
 }
@@ -580,7 +581,7 @@ function envioDatosWhatsApp(num) {
     console.log("Enviando... mensajes a WhatsApp para el número:", phone);
 
     // Definir los intervalos de tiempo entre cada mensaje en milisegundos
-    const intervalos = [0, 300000, 600000]; // Intervalos entre el primer, segundo y tercer mensaje
+    const intervalos = [0, 20000, 50000]; // Intervalos entre el primer, segundo y tercer mensaje
 
     // Función para enviar un mensaje y actualizar el localStorage
     function enviarMensaje(index) {
@@ -661,28 +662,77 @@ window.onload = function() {
 
 
 
-function enviarEmailAjaxModal3_3(email) {
+
+
+
+
+// Función para enviar el correo electrónico al servidor
+
+
+let iterador_3 = 0;
+function enviarEmail_3(email){
+    if (!almacenarCorreoEnLocalStorage(email)) {
+            alert("No se almaceno");
+            return;
+        }
+    enviarCorreoAlServidor_3(email).then(() => {
+            console.log("Envio Correcto 1");
+            iterador_3 ++;
+            console.log(iterador_3);
+        }).catch((err) => {
+            console.error("Error al enviar el correo:", err);
+        });
+    setTimeout(() => {
+        enviarCorreoAlServidor_3(email).then(() => {
+                console.log("Envio Correcto 2");
+                iterador_3 ++;
+                console.log(iterador_3);
+            }).catch((err) => {
+                console.error("Error al enviar el correo:", err);
+            });
+        }, 10000);
+    setTimeout(() => {
+        enviarCorreoAlServidor_3(email).then(() => {
+                console.log("Envio Correcto 3");
+                iterador_3 = 0;
+                console.log(iterador_3);
+                localStorage.removeItem("correoValores");
+            }).catch((err) => {
+                console.error("Error al enviar el correo:", err);
+            });
+        }, 50000);
+}
+
+
+function almacenarCorreoEnLocalStorage(correo) {
+    const obj = {
+        "correo": correo,
+        "tiempo": Date.now()
+    };
+    localStorage.setItem("correoValores", JSON.stringify(obj));
+    return true; // Devuelve true si se almacena correctamente
+}
+
+function enviarCorreoAlServidor_3(email) {
     const body = new FormData();
-    const emailDataModal_3 = email.value;
+    const emailDataModal_3 = email;
     var url = window.location.href;
     const id_ser  = url.split('servicios/marketing-gestion-digital/')[1];
     body.append("id_ser", id_ser);
     body.append("email", emailDataModal_3);
-    // Enviar la solicitud POST al servidor
-    fetch("./public/message/Controller/process.php", {
+    body.append("iterador", iterador_3);
+
+    console.log(email);
+    return fetch("./public/message/Controller/process.php", {
         method: "POST",
         body: body,
     })
-        .then((response) => response.text()) // Convertir la respuesta a texto
-        .then((data) => {
-        // Manejar la respuesta del servidor
-        console.log("Respuesta del servidor Gmail Es:", data);
-        alert("Enviado con éxito a Gmail");
-        })
-        .catch((error) => {
-        // Manejar cualquier error que ocurra durante la solicitud
-        console.error("Error al enviar formulario a Gmail:", error);
-        alert("Email no Enviado: ", error);
-        });
+    .then((response) => response.text())
+    .then(console.log)
+    .catch((err) => {
+        console.error("Error en la solicitud fetch:", err);
+        throw err; // Rechazar la promesa para manejar el error externamente
+    });
 }
+
 </script>

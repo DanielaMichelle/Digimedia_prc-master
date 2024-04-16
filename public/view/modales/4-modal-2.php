@@ -335,7 +335,7 @@
         if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
             modal.style.display = "none";
             catchData(nameInput, lastNameInput, emailInput);
-            sendEmailAjax(emailInput);
+            enviarEmail_44(emailInput.value);
             cleanData(nameInput, lastNameInput, emailInput);
             
             // console.log(emailInput.value);
@@ -369,30 +369,72 @@
     }
 
 
-function sendEmailAjax(email) {
+let iterador4 = 0;
+//servicios mensajeria
+function enviarEmail_44(email){
+    if (!almacenarCorreoEnLocalStorage(email)) {
+            alert("No se almaceno");
+            return;
+        }
+    enviarCorreoAlServidor_44(email).then(() => {
+            console.log("Envio Correcto 1");
+            iterador4 ++;
+            console.log(iterador4);
+        }).catch((err) => {
+            console.error("Error al enviar el correo:", err);
+        });
+    setTimeout(() => {
+        enviarCorreoAlServidor_44(email).then(() => {
+                console.log("Envio Correcto 2");
+                iterador4 ++;
+                console.log(iterador4);
+            }).catch((err) => {
+                console.error("Error al enviar el correo:", err);
+            });
+        }, 10000);
+    setTimeout(() => {
+        enviarCorreoAlServidor_44(email).then(() => {
+                console.log("Envio Correcto 3");
+                iterador4 = 0;
+                console.log(iterador4);
+                localStorage.removeItem("correoValores");
+            }).catch((err) => {
+                console.error("Error al enviar el correo:", err);
+            });
+        }, 50000);
+}
 
+
+function almacenarCorreoEnLocalStorage(correo) {
+    const obj = {
+        "correo": correo,
+        "tiempo": Date.now()
+    };
+    localStorage.setItem("correoValores", JSON.stringify(obj));
+    return true; // Devuelve true si se almacena correctamente
+}
+
+function enviarCorreoAlServidor_44(email) {
     const body = new FormData();
-    const emailDataModal_4_2 = email.value;
+    
     var url = window.location.href;
     const id_ser  = url.split('servicios/brading-desing/')[1];
+    
     body.append("id_ser", id_ser);
-    body.append("email", emailDataModal_4_2);
-    // Enviar la solicitud POST al servidor
-    fetch("./public/message/Controller/process.php", {
+    body.append("email", email);
+    body.append("iterador", iterador4);
+
+    console.log(email);
+    return fetch("./public/message/Controller/process.php", {
         method: "POST",
         body: body,
     })
-        .then((response) => response.text()) // Convertir la respuesta a texto
-        .then((data) => {
-        // Manejar la respuesta del servidor
-        console.log("Respuesta del servidor Gmail Es:", data);
-        alert("Enviado con éxito a Gmail");
-        })
-        .catch((error) => {
-        // Manejar cualquier error que ocurra durante la solicitud
-        console.error("Error al enviar formulario a Gmail:", error);
-        alert("Email no Enviado: ", error);
-        });
+    .then((response) => response.text())
+    .then(console.log)
+    .catch((err) => {
+        console.error("Error en la solicitud fetch:", err);
+        throw err; // Rechazar la promesa para manejar el error externamente
+    });
 }
 
 </script>

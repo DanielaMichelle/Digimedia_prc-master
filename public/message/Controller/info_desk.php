@@ -157,12 +157,12 @@ function SendMessage($menssage,$imagenes_main,$title){
             <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
                 <tr>
                     <td align=\"center\">
-                        <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"background: rgb(228, 236, 237); width: 70%; box-shadow: 1px 2px 3px 2px black;\">
+                        <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"background: white; width: 100%; box-shadow: 1px 2px 3px 2px black;\">
                             <tr>
                                 <td align=\"center\">
-                                    <h1 style=\"color: rgb(20, 20, 18); font-size: 3vw; margin-top: 0;padding: 5%;\">".$title."</h1>
-                                    <p style=\"font-size: 2vw; padding: 5%; text-align: left;\">".$mensaje2."</p>
-                                    <img src=".$imagenes_main." style=\"width: 90%; height: auto;\">
+                                    <h1 style=\"color: rgb(20, 20, 18); font-size: 2vw;padding: 1%;\">".$title."</h1>
+                                    <p style=\"font-size: 1.3vw; padding: 2%; text-align: left;\">".$mensaje2."</p>
+                                    <img src=".$imagenes_main." style=\"width: 65%; height: 100vh;\">
                                 </td>
                             </tr>
                         </table>

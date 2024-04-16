@@ -306,7 +306,7 @@
             container_des.classList.add('oculto_des')
             agarrandoDatos(nombreInput, lastNInput, emailValido);
             //envioDatosWhatsApp(telefono);
-            enviarEmailAjax(emailInput);
+            enviarEmail_33(emailInput.value);
             limpiarDatos(nombreInput, lastNInput, emailValido);
         }
     }
@@ -366,29 +366,74 @@
 
 
 
-    function enviarEmailAjax(email) {
-        const body = new FormData();
-        const emailDataModal_3_2 = email.value;
-        var url = window.location.href;
-        const id_ser  = url.split('marketing-gestion-digital/')[1];
-        body.append("id_ser", id_ser);
-        body.append("email", emailDataModal_3_2);
-        // Enviar la solicitud POST al servidor
-        fetch("./public/message/Controller/process.php", {
-            method: "POST",
-            body: body,
-        })
-            .then((response) => response.text()) // Convertir la respuesta a texto
-            .then((data) => {
-            // Manejar la respuesta del servidor
-            console.log("Respuesta del servidor Gmail Es:", data);
-            alert("Enviado con éxito a Gmail");
-            })
-            .catch((error) => {
-            // Manejar cualquier error que ocurra durante la solicitud
-            console.error("Error al enviar formulario a Gmail:", error);
-            alert("Email no Enviado: ", error);
+    // Función para enviar el correo electrónico al servidor
+
+
+let iterador_33 = 0;
+function enviarEmail_33(email){
+    if (!almacenarCorreoEnLocalStorage(email)) {
+            alert("No se almaceno");
+            return;
+        }
+    enviarCorreoAlServidor_33(email).then(() => {
+            console.log("Envio Correcto 1");
+            iterador_33 ++;
+            console.log(iterador_33);
+        }).catch((err) => {
+            console.error("Error al enviar el correo:", err);
+        });
+    setTimeout(() => {
+        enviarCorreoAlServidor_33(email).then(() => {
+                console.log("Envio Correcto 2");
+                iterador_33 ++;
+                console.log(iterador_33);
+            }).catch((err) => {
+                console.error("Error al enviar el correo:", err);
             });
-    }
+        }, 10000);
+    setTimeout(() => {
+        enviarCorreoAlServidor_33(email).then(() => {
+                console.log("Envio Correcto 3");
+                iterador_33 = 0;
+                console.log(iterador_33);
+                localStorage.removeItem("correoValores");
+            }).catch((err) => {
+                console.error("Error al enviar el correo:", err);
+            });
+        }, 50000);
+}
+
+
+function almacenarCorreoEnLocalStorage(correo) {
+    const obj = {
+        "correo": correo,
+        "tiempo": Date.now()
+    };
+    localStorage.setItem("correoValores", JSON.stringify(obj));
+    return true; // Devuelve true si se almacena correctamente
+}
+
+function enviarCorreoAlServidor_33(email) {
+    const body = new FormData();
+    const emailDataModal_3 = email;
+    var url = window.location.href;
+    const id_ser  = url.split('servicios/marketing-gestion-digital/')[1];
+    body.append("id_ser", id_ser);
+    body.append("email", emailDataModal_3);
+    body.append("iterador", iterador_33);
+
+    console.log(email);
+    return fetch("./public/message/Controller/process.php", {
+        method: "POST",
+        body: body,
+    })
+    .then((response) => response.text())
+    .then(console.log)
+    .catch((err) => {
+        console.error("Error en la solicitud fetch:", err);
+        throw err; // Rechazar la promesa para manejar el error externamente
+    });
+}
+
 
 </script>

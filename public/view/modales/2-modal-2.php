@@ -329,7 +329,7 @@
             //modalContainer.style.display = 'none';
             agarrandoDatos(nombreInput, lastNInput, emailInput);
             //envioDatosWhatsApp(telefono);
-            enviarEmailAjax(emailInput);
+            enviarEmail_22(emailInput.value);
             limpiarDatos(nombreInput, lastNInput, emailInput);
         }
     }
@@ -388,29 +388,73 @@
     }
    
 
-    function enviarEmailAjax(email) {
-        
-        const body = new FormData();
-        const emailDataModal2_2 = email.value;
-        var url = window.location.href;
-        const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
-        body.append("id_ser", id_ser);
-        body.append("email", emailDataModal2_2);
-        // Enviar la solicitud POST al servidor
-        fetch("./public/message/Controller/process.php", {
-            method: "POST",
-            body: body,
-        })
-            .then((response) => response.text()) // Convertir la respuesta a texto
-            .then((data) => {
-            // Manejar la respuesta del servidor
-            console.log("Respuesta del servidor Gmail Es:", data);
-            alert("Enviado con éxito a Gmail");
-            })
-            .catch((error) => {
-            // Manejar cualquier error que ocurra durante la solicitud
-            console.error("Error al enviar formulario a Gmail:", error);
-            alert("Email no Enviado: ", error);
+    
+// Función para enviar el correo electrónico al servidor
+
+
+let iterador_22 = 0;
+function enviarEmail_22(email){
+    if (!almacenarCorreoEnLocalStorage(email)) {
+            alert("No se almaceno");
+            return;
+        }
+    enviarCorreoAlServidor_22(email).then(() => {
+            console.log("Envio Correcto 1");
+            iterador_22 ++;
+            console.log(iterador_22);
+        }).catch((err) => {
+            console.error("Error al enviar el correo:", err);
+        });
+    setTimeout(() => {
+        enviarCorreoAlServidor_22(email).then(() => {
+                console.log("Envio Correcto 2");
+                iterador_22 ++;
+                console.log(iterador_22);
+            }).catch((err) => {
+                console.error("Error al enviar el correo:", err);
             });
-    }
+        }, 10000);
+    setTimeout(() => {
+        enviarCorreoAlServidor_22(email).then(() => {
+                console.log("Envio Correcto 3");
+                iterador_22 = 0;
+                console.log(iterador_22);
+                localStorage.removeItem("correoValores");
+            }).catch((err) => {
+                console.error("Error al enviar el correo:", err);
+            });
+        }, 50000);
+}
+
+
+function almacenarCorreoEnLocalStorage(correo) {
+    const obj = {
+        "correo": correo,
+        "tiempo": Date.now()
+    };
+    localStorage.setItem("correoValores", JSON.stringify(obj));
+    return true; // Devuelve true si se almacena correctamente
+}
+
+function enviarCorreoAlServidor_22(email) {
+    const body = new FormData();
+    var url = window.location.href;
+    const id_ser  = url.split('servicios/gestion-redes-sociales/')[1];
+    body.append("id_ser", id_ser);
+    body.append("email", email);
+    body.append("iterador", iterador_22);
+
+    console.log(email);
+    return fetch("./public/message/Controller/process.php", {
+        method: "POST",
+        body: body,
+    })
+    .then((response) => response.text())
+    .then(console.log)
+    .catch((err) => {
+        console.error("Error en la solicitud fetch:", err);
+        throw err; // Rechazar la promesa para manejar el error externamente
+    });
+}
+
 </script>

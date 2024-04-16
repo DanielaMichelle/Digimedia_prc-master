@@ -10,6 +10,7 @@ require '../PHPMailer/SMTP.php';
 include '../Controller/info_desk.php';
 
 $id= $_POST["id_ser"];
+$iterador= $_POST["iterador"];
 
 if(isset($_POST["service"])){
     $trol = $_POST["service"];
@@ -40,9 +41,9 @@ if(isset($_POST["service"])){
             break;
     }
 }
-$mesa1 = SendMessage($menssage[0][$id-1],$imagenes_main[0][$id-1],$title[0][$id-1]);
-$mesa2 = SendMessage($menssage[1][$id-1],$imagenes_main[1][$id-1],$title[1][$id-1]);
-$mesa3 = SendMessage($menssage[2][$id-1],$imagenes_main[2][$id-1],$title[2][$id-1]);
+$mesa1 = SendMessage($menssage[$iterador][$id-1],$imagenes_main[$iterador][$id-1],$title[$iterador][$id-1]);
+//$mesa2 = SendMessage($menssage[1][$id-1],$imagenes_main[1][$id-1],$title[1][$id-1]);
+//$mesa3 = SendMessage($menssage[2][$id-1],$imagenes_main[2][$id-1],$title[2][$id-1]);
 
 
     
@@ -51,9 +52,9 @@ $email = $_POST["email"];
         //$phone = $_POST["message"];
        // $id = $_POST["id_ser"];
         
-$respuesta = mainController::funcionName($title[0][$id-1],$email,$mesa1);
-$respuesta2 = mainController::funcionName($title[1][$id-1],$email,$mesa2);
-$respuesta3 = mainController::funcionName($title[2][$id-1],$email,$mesa3);
+$respuesta = mainController::funcionName($title[$iterador][$id-1],$email,$mesa1);
+//$respuesta2 = mainController::funcionName($title[1][$id-1],$email,$mesa2);
+//$respuesta3 = mainController::funcionName($title[2][$id-1],$email,$mesa3);
 echo $respuesta;
     
         

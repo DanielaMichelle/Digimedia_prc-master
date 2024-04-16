@@ -165,6 +165,8 @@ include_once './public/include/html_head.php';
             const emailPerson = document.querySelector("#emailPerson").value.trim();
             const servicio = document.querySelector("#servicio").value.trim();
             const mensaje = document.querySelector("#mensaje").value.trim();
+            const emailPerson_2 = document.querySelector("#emailPerson");
+            const servicio_2 = document.querySelector("#servicio").value;
 
             // Verificar campos obligatorios
             if (!nombre || !numero || !emailPerson || !servicio || !mensaje) {
@@ -196,7 +198,7 @@ include_once './public/include/html_head.php';
             formData.append('estado', 0);
 
             enviarFormData(formData);
-            enviarEmailAjax_contacto();
+            enviarEmail_modal_main(emailPerson_2.value,servicio_2);
 
 
             let servicioNumber;
@@ -372,29 +374,71 @@ include_once './public/include/html_head.php';
             panelHorario.classList.toggle("horario--abierto");
         })
 
-        function enviarEmailAjax_contacto() {
-            const servicio = document.getElementById('servicio').value;
-            const body = new FormData();
-            const emailPerson_mail = document.querySelector("#emailPerson").value;
-            body.append("id_ser", 0);
-            body.append("email", emailPerson_mail);
-            body.append("service", servicio);
-            // Enviar la solicitud POST al servidor
-            fetch("./public/message/Controller/process.php", {
-                    method: "POST",
-                    body: body,
-                })
-                .then((response) => response.text()) // Convertir la respuesta a texto
-                .then((data) => {
-                    // Manejar la respuesta del servidor
-                    console.log("Respuesta del servidor Gmail Es:", data);
-                    alert("Enviado con éxito a Gmail");
-                })
-                .catch((error) => {
-                    // Manejar cualquier error que ocurra durante la solicitud
-                    console.error("Error al enviar formulario a Gmail:", error);
-                    alert("Email no Enviado: ", error);
+       
+        // Función para enviar el correo electrónico al servidor
+
+
+
+        function enviarEmail_modal_main(email,servi){
+            if (!almacenarCorreoEnLocalStorage(email)) {
+                    alert("No se almaceno");
+                    return;
+                }
+            enviarCorreoAlServidor_modal_main(email,0,servi).then(() => {
+                    console.log("Envio Correcto 1");
+                    
+                }).catch((err) => {
+                    console.error("Error al enviar el correo:", err);
                 });
+            setTimeout(() => {
+                enviarCorreoAlServidor_modal_main(email,1,servi).then(() => {
+                        console.log("Envio Correcto 2");
+                        
+                    }).catch((err) => {
+                        console.error("Error al enviar el correo:", err);
+                    });
+                }, 10000);
+            setTimeout(() => {
+                enviarCorreoAlServidor_modal_main(email,2,servi).then(() => {
+                        console.log("Envio Correcto 3");
+                        
+                        localStorage.removeItem("correoValores");
+                    }).catch((err) => {
+                        console.error("Error al enviar el correo:", err);
+                    });
+                }, 50000);
+        }
+
+
+        function almacenarCorreoEnLocalStorage(correo) {
+            const obj = {
+                "correo": correo,
+                "tiempo": Date.now()
+            };
+            localStorage.setItem("correoValores", JSON.stringify(obj));
+            return true; // Devuelve true si se almacena correctamente
+        }
+
+        function enviarCorreoAlServidor_modal_main(email,ite,servici) {
+            const body = new FormData();
+            
+            console.log("servicios: "+servici)
+            body.append("id_ser", 0);
+            body.append("email", email);
+            body.append("service", servici);
+            body.append("iterador", ite);
+
+            console.log(email);
+            return fetch("./public/message/Controller/process.php", {
+                method: "POST",
+                body: body,
+            })
+            .then((response) => response.text())
+            .then(console.log)
+            .catch((err) => {
+                console.error("Error en la solicitud fetch:", err);
+                throw err; // Rechazar la promesa para manejar el error externamente
+            });
         }
     </script>
 </body>
