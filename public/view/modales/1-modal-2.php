@@ -381,7 +381,7 @@
         email.value = "";
     }
 
-    let iterador_12 = 0;
+   /* let iterador_12 = 0;
 let timeoutIds = []; // Almacenar los IDs de los setTimeouts activos
 let funcionesPendientes = 0; // Contador de funciones pendientes
 
@@ -483,5 +483,66 @@ function enviarCorreoAlServidor_12(email, iteracion) {
             throw err; // Rechazar la promesa para manejar el error externamente
         });
 }
+*/
 
+function enviarEmail_12(email){
+    if (!almacenarCorreoEnLocalStorage_12(email)) {
+            alert("No se almaceno");
+            return;
+        }
+    enviarCorreoAlServidor_12(email,0).then(() => {
+            console.log("Envio Correcto 1");
+          
+        }).catch((err) => {
+            console.error("Error al enviar el correo:", err);
+        });
+    setTimeout(() => {
+        enviarCorreoAlServidor_12(email,1).then(() => {
+                console.log("Envio Correcto 2");
+                
+            }).catch((err) => {
+                console.error("Error al enviar el correo:", err);
+            });
+        }, 10000);
+    setTimeout(() => {
+        enviarCorreoAlServidor_12(email,2).then(() => {
+                console.log("Envio Correcto 3");
+               
+                localStorage.removeItem("correoValores");
+            }).catch((err) => {
+                console.error("Error al enviar el correo:", err);
+            });
+        }, 50000);
+}
+
+
+function almacenarCorreoEnLocalStorage_12(correo) {
+    const obj = {
+        "correo": correo,
+        "tiempo": Date.now()
+    };
+    localStorage.setItem("correoValores", JSON.stringify(obj));
+    return true; // Devuelve true si se almacena correctamente
+}
+
+function enviarCorreoAlServidor_12(email,ite) {
+    const body = new FormData();
+    var url = window.location.href;
+    const id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
+    body.append("id_ser", id_ser);
+    body.append("email", email);
+    body.append("iterador", ite);
+
+    console.log(email);
+    return fetch("./public/message/Controller/process.php", {
+        method: "POST",
+        body: body,
+    })
+    .then((response) => response.text())
+    .then(console.log)
+    .catch((err) => {
+        console.error("Error en la solicitud fetch:", err);
+        throw err; // Rechazar la promesa para manejar el error externamente
+    });
+}
 </script>
