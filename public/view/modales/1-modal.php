@@ -397,11 +397,11 @@
 
 
         if (nombreInput.value != '' && telefonoValido && emailValido) {
-            // alert("Todos los campos son correctos.")
+            alert("Todos los campos son correctos.")
             modalContainer.style.display = 'none';
             agarrandoDatos(nombreInput, telefonoInput, emailInput);
             envioDatosWhatsApp(telefono);
-            enviarDatosCorreo(emailInput);
+            enviarDatosCorreo(emailInput.value);
             limpiarDatos(nombreInput, telefonoInput, emailInput);
         }
     }
@@ -522,9 +522,7 @@
     }
 
     function enviarDatosCorreo(email) {
-
-        const emailUser = email.value;
-
+        const emailUser = email;
 
         // Definir los intervalos de tiempo entre cada mensaje en milisegundos
         // const intervalos = [0, 300000, 600000]; // Intervalos entre el primer, segundo y tercer mensaje
@@ -636,12 +634,8 @@
     });
 
 
-
-
     // Llamar a la función para enviar los mensajes de WhatsApp cuando se cargue la página
     window.onload = function() {
-        console.log(localStorage.getItem("modal1"));
-
         // Obtener el número de teléfono del formulario desde el LocalStorage
         const storedPhoneNumber = obtenerNumeroTelefonoDelLocalStorage();
 
@@ -659,7 +653,7 @@
         }
 
         // Verificar si se recuperó un correo válido desde el LocalStorage
-        const storedDataEmail = obtenerDatosDelLocalStorage();
+        const storedDataEmail = obtenerDatosDelLocalStorageCorreo();
         const sentMessagesEmail = storedDataEmail ? storedDataEmail.sentMessages || [] : [];
         if (storedEmail && storedEmail.trim() !== "" && sentMessagesEmail.length < 3) {
             // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado

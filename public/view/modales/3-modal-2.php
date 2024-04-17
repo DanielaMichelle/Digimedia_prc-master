@@ -305,8 +305,7 @@
             overflow_los.classList.add('oculto_des')
             container_des.classList.add('oculto_des')
             agarrandoDatos(nombreInput, lastNInput, emailValido);
-            //envioDatosWhatsApp(telefono);
-            enviarEmail_33(emailInput.value);
+            enviarDatosCorreo(emailInput.value);
             limpiarDatos(nombreInput, lastNInput, emailValido);
         }
     }
@@ -365,75 +364,142 @@
     }
 
 
+    
+    // Función para guardar los datos en el localStorage (Correo)
+    function guardarDatosEnLocalStorageCorreo(data) {
+        localStorage.setItem("correoData", JSON.stringify(data));
+    }
 
-    // Función para enviar el correo electrónico al servidor
+    // Función para obtener la dirección de correo del localStorage (Correo)
+    function obtenerCorreoDelLocalStorage() {
+        const data = localStorage.getItem("correoData");
+        return data ? JSON.parse(data).correo : null;
+    }
+
+    // Función para obtener los datos del localStorage (Correo)
+    function obtenerDatosDelLocalStorageCorreo() {
+        const data = localStorage.getItem("correoData");
+        return data ? JSON.parse(data) : null;
+    }
+
+    function enviarDatosCorreo(email) {
+        const emailUser = email;
+
+        // Definir los intervalos de tiempo entre cada mensaje en milisegundos
+        // const intervalos = [0, 300000, 600000]; // Intervalos entre el primer, segundo y tercer mensaje
+        const intervalos = [0, 30000, 30000];
+
+        function enviarMensaje(index) {
+            enviarEmailAjax(emailUser, index);
+            sentMessages.push({
+                index,
+                time: new Date().getTime()
+            });
+
+            guardarDatosEnLocalStorageCorreo({
+                correo: emailUser,
+                sentMessages: sentMessages
+            });
+
+            // Si se ha enviado el tercer mensaje, eliminar los datos del localStorage
+            if (index === 2) {
+                console.log("Eliminando localStorage después de enviar todos los mensajes de correo.");
+                localStorage.removeItem("correoData");
+            }
+
+        }
+
+        const storedData = obtenerDatosDelLocalStorageCorreo();
+        const sentMessages = storedData ? storedData.sentMessages || [] : [];
+        let messageIndex = sentMessages.length; // Indica el índice del siguiente mensaje a enviar
+
+        // Si no hay mensajes pendientes, enviar el primer mensaje
+        if (messageIndex === 0) {
+            enviarSiguienteMensaje();
+        } else {
+            // Si hay mensajes pendientes, reanudar el envío desde el próximo mensaje
+            setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
+        }
+
+        // Función para verificar y enviar el siguiente mensaje
+        function enviarSiguienteMensaje() {
+
+            if (messageIndex < 3) {
+                enviarMensaje(messageIndex);
+                messageIndex++;
+                setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
+            }
+        }
+    }
+
+    function enviarEmailAjax(email, index) {
+        const body = new FormData();
+        const emailDataModal1 = email;
+
+        body.append("id_servicio", 2);
+        body.append("index", index);
 
 
-let iterador_33 = 0;
-function enviarEmail_33(email){
-    if (!almacenarCorreoEnLocalStorage(email)) {
-            alert("No se almaceno");
+        if (obtenerDatosDelLocalStorageCorreo() === null) {
+            body.append("email", emailDataModal1);
+            console.log("Email:", emailDataModal1);
+        } else {
+            body.append("email", obtenerDatosDelLocalStorageCorreo().correo);
+            console.log("Email:", obtenerDatosDelLocalStorageCorreo().correo);
+        }
+
+        // Enviar la solicitud POST al servidor
+        fetch("./public/message/Controller/process.php", {
+                method: "POST",
+                body: body,
+            })
+            .then((response) => response.text()) // Convertir la respuesta a texto
+            .then((data) => {
+                // Manejar la respuesta del servidor
+                console.log("Respuesta del servidor Gmail Es:", data);
+            })
+            .catch((error) => {
+                // Manejar cualquier error que ocurra durante la solicitud
+                console.error("Error al enviar formulario a Gmail:", error);
+                alert("Email no Enviado: ", error);
+            });
+
+    }
+
+    // Evento para controlar el envío del formulario
+    document.getElementById('formMain').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
+
+        // Verificar si hay mensajes pendientes en el localStorage (correo)
+        const storedDataEmail = obtenerDatosDelLocalStorageCorreo();
+        const sentMessagesEmail = storedDataEmail ? storedDataEmail.sentMessages || [] : [];
+
+        if (sentMessagesEmail.length >= 1 && sentMessagesEmail.length < 3) {
+            alert("Debes esperar a que se completen los mensajes de correo antes de enviar otro formulario.");
             return;
         }
-    enviarCorreoAlServidor_33(email).then(() => {
-            console.log("Envio Correcto 1");
-            iterador_33 ++;
-            console.log(iterador_33);
-        }).catch((err) => {
-            console.error("Error al enviar el correo:", err);
-        });
-    setTimeout(() => {
-        enviarCorreoAlServidor_33(email).then(() => {
-                console.log("Envio Correcto 2");
-                iterador_33 ++;
-                console.log(iterador_33);
-            }).catch((err) => {
-                console.error("Error al enviar el correo:", err);
-            });
-        }, 10000);
-    setTimeout(() => {
-        enviarCorreoAlServidor_33(email).then(() => {
-                console.log("Envio Correcto 3");
-                iterador_33 = 0;
-                console.log(iterador_33);
-                localStorage.removeItem("correoValores");
-            }).catch((err) => {
-                console.error("Error al enviar el correo:", err);
-            });
-        }, 50000);
-}
 
-
-function almacenarCorreoEnLocalStorage(correo) {
-    const obj = {
-        "correo": correo,
-        "tiempo": Date.now()
-    };
-    localStorage.setItem("correoValores", JSON.stringify(obj));
-    return true; // Devuelve true si se almacena correctamente
-}
-
-function enviarCorreoAlServidor_33(email) {
-    const body = new FormData();
-    const emailDataModal_3 = email;
-    var url = window.location.href;
-    const id_ser  = url.split('servicios/marketing-gestion-digital/')[1];
-    body.append("id_ser", id_ser);
-    body.append("email", emailDataModal_3);
-    body.append("iterador", iterador_33);
-
-    console.log(email);
-    return fetch("./public/message/Controller/process.php", {
-        method: "POST",
-        body: body,
-    })
-    .then((response) => response.text())
-    .then(console.log)
-    .catch((err) => {
-        console.error("Error en la solicitud fetch:", err);
-        throw err; // Rechazar la promesa para manejar el error externamente
+        // Si no hay mensajes pendientes, permitir el envío del formulario
+        submit();
     });
-}
+
+    // Llamar a la función para enviar los mensajes de WhatsApp cuando se cargue la página
+    window.onload = function() {
+        // Obtener el correo del formulario desde el LocalStorage
+        const storedEmail = obtenerCorreoDelLocalStorage();
+        console.log(storedEmail);
+
+        // Verificar si se recuperó un correo válido desde el LocalStorage
+        const storedDataEmail = obtenerDatosDelLocalStorageCorreo();
+        const sentMessagesEmail = storedDataEmail ? storedDataEmail.sentMessages || [] : [];
+        if (storedEmail && storedEmail.trim() !== "" && sentMessagesEmail.length < 3) {
+            // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
+            enviarDatosCorreo(storedEmail);
+        } else {
+            console.log("correo no válido o ya se han enviado los mensajes.");
+        }
+    };
+
 
 
 </script>
