@@ -12,12 +12,9 @@ include '../Controller/info_desk.php';
 $idServicio= $_POST["id_servicio"];
 $index = $_POST["index"];
 $email = $_POST["email"];
-        //$phone = $_POST["message"];
-       // $id = $_POST["id_ser"];
-        
-$respuesta = mainController::funcionName($title[0][$id-1],$email,$mesa1);
-$respuesta2 = mainController::funcionName($title[1][$id-1],$email,$mesa2);
-$respuesta3 = mainController::funcionName($title[2][$id-1],$email,$mesa3);
+
+$mensaje = SendMessage($menssage[$idServicio][$index],$imagenes_main[$idServicio][$index],$title[$idServicio][$index]);
+$respuesta = mainController::funcionName($title[$idServicio][$index],$email,$mensaje);
 echo $respuesta;
 
 // if(isset($_POST["service"])){

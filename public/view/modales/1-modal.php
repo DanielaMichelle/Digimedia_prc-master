@@ -648,47 +648,24 @@
         // Obtener el correo del formulario desde el LocalStorage
         const storedEmail = obtenerCorreoDelLocalStorage();
 
-    // Verificar si se recuperó un número de teléfono válido desde el LocalStorage
-    const storedData = obtenerDatosDelLocalStorage();
-    const sentMessages = storedData ? storedData.sentMessages || [] : [];
-    if (storedPhoneNumber && storedPhoneNumber.trim() !== "" && sentMessages.length < 3) {
-        // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
-        envioDatosWhatsApp(storedPhoneNumber);
-    } else {
-        console.log("Número de teléfono no válido o ya se han enviado los mensajes.");
-    }
-};
+        // Verificar si se recuperó un número de teléfono válido desde el LocalStorage
+        const storedData = obtenerDatosDelLocalStorage();
+        const sentMessages = storedData ? storedData.sentMessages || [] : [];
+        if (storedPhoneNumber && storedPhoneNumber.trim() !== "" && sentMessages.length < 3) {
+            // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
+            envioDatosWhatsApp(storedPhoneNumber);
+        } else {
+            console.log("Número de teléfono no válido o ya se han enviado los mensajes.");
+        }
 
-
-
-
-
-
-function enviarEmailAjax(email) {
-
-    const body = new FormData();
-    const emailDataModal1= email.value;
-    var url = window.location.href;
-    const id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
-    body.append("id_ser", id_ser);
-    body.append("email", emailDataModal1);
-    // Enviar la solicitud POST al servidor
-    fetch("./public/message/Controller/process.php", {
-        method: "POST",
-        body: body,
-    })
-        .then((response) => response.text()) // Convertir la respuesta a texto
-        .then((data) => {
-        // Manejar la respuesta del servidor
-        console.log("Respuesta del servidor Gmail Es:", data);
-        alert("Enviado con éxito a Gmail");
-        })
-        .catch((error) => {
-        // Manejar cualquier error que ocurra durante la solicitud
-        console.error("Error al enviar formulario a Gmail:", error);
-        alert("Email no Enviado: ", error);
-        });
-    
-
-}
+        // Verificar si se recuperó un correo válido desde el LocalStorage
+        const storedDataEmail = obtenerDatosDelLocalStorage();
+        const sentMessagesEmail = storedDataEmail ? storedDataEmail.sentMessages || [] : [];
+        if (storedEmail && storedEmail.trim() !== "" && sentMessagesEmail.length < 3) {
+            // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
+            enviarDatosCorreo(storedEmail);
+        } else {
+            console.log("correo no válido o ya se han enviado los mensajes.");
+        }
+    };
 </script>
