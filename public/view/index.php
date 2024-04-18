@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <?php
 
 $fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified'];
