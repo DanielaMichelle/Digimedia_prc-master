@@ -298,7 +298,26 @@
             }
         }
     }, options);
-    observer.observe(anuncioServicio);
+    //instaciar and call Method and see that Modal
+    function metodosAction(){
+        if(localStorage.getItem("correoData") == null){
+            observer.observe(anuncioServicio);
+        }else{
+            observer.disconnect();
+        }
+    }
+    metodosAction();
+    nameSpaceThat = setInterval(metodosAction, 1000);//almacenar la funcion en vari-to-use
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+            clearInterval(nameSpaceThat);
+            console.log("This Function is Dead");
+        } else {
+            // Reactivar la verificación cuando la página vuelve a estar visible
+            nameSpaceThat = setInterval(metodosAction, 1000); 
+            console.log("Activamos this Function")
+        }
+    });
 
 
     // Cerrar modal click afuera

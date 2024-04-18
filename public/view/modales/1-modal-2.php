@@ -306,6 +306,7 @@
         threshold: 0.01,
     };
     let ejecutado = false;
+    
     let observer = new IntersectionObserver(function(entries) {
         for (const entry of entries) {
             if (entry.isIntersecting && !ejecutado) {
@@ -314,7 +315,30 @@
             }
         }
     }, options);
-    observer.observe(anuncioServicio);
+    //instaciar and call Method and see that Modal
+    function metodos(){
+        if(localStorage.getItem("correoData") == null){
+            observer.observe(anuncioServicio);
+        }else{
+            observer.disconnect();
+        }
+    }
+    metodos();
+    nameSpace = setInterval(metodos, 1000);//almacenar la funcion en vari-to-use
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+            clearInterval(nameSpace);
+            console.log("This Function is Dead");
+        } else {
+            // Reactivar la verificación cuando la página vuelve a estar visible
+            nameSpace = setInterval(metodos, 1000); 
+            console.log("Activamos this Function")
+        }
+    });
+
+
+    
+    
 
 
     // Cerrar modal click afuera

@@ -261,13 +261,36 @@
 
         validarDatos_lost();
 
+        veriLocalManas();
+
+
         btnCerrarLa_3.addEventListener('click', () => {
             overflow_los.classList.add('oculto_des')
             container_des.classList.add('oculto_des')
         });
+        intervaloVerificacions = setInterval(veriLocalManas, 1000);//almacenar la funcion en vari-to-use
+
     
         
     });
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+            clearInterval(intervaloVerificacions);
+            console.log("This Function is Dead");
+        } else {
+            // Reactivar la verificación cuando la página vuelve a estar visible
+            intervaloVerificacions = setInterval(veriLocalManas, 1000); 
+            console.log("Activamos this Function")
+        }
+    });
+    function veriLocalManas(){
+        if(localStorage.getItem("correoData") == null){
+            window.addEventListener('scroll', scrollmedn);
+        } else {
+        // Si "correoData" está presente en localStorage, remueve el event listener
+            window.removeEventListener('scroll', scrollmedn);
+        }
+    }
     function validarDatos_lost() {
         const formMain = document.querySelector("#formMain_lost");
         formMain.addEventListener("submit", (e) => {

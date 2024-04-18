@@ -324,11 +324,33 @@
             container_des.classList.add('oculto_des')
         });
 
-        window.addEventListener('scroll', scrollmedn);
-        validarDatos_lost()
+        veriLocalMana();
+
+        validarDatos_lost();
+        intervaloVerificacion = setInterval(veriLocalMana, 1000);//almacenar la funcion en vari-to-use
+
 
 
     });
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+            clearInterval(intervaloVerificacion);
+            console.log("This Function is Dead");
+        } else {
+            // Reactivar la verificación cuando la página vuelve a estar visible
+            intervaloVerificacion = setInterval(veriLocalMana, 1000); 
+            console.log("Activamos this Function")
+        }
+    });
+    
+    function veriLocalMana(){
+        if(localStorage.getItem("correoData") == null){
+            window.addEventListener('scroll', scrollmedn);
+        } else {
+        // Si "correoData" está presente en localStorage, remueve el event listener
+            window.removeEventListener('scroll', scrollmedn);
+        }
+    }
 
     function validarDatos_lost() {
         const formMain = document.querySelector("#formMain_lost");
