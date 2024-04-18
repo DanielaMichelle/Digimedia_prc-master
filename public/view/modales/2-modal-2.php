@@ -301,6 +301,7 @@
     </div>
 </section>
 
+<script src="./public/js/mensajesWhatsappEmail.js"></script>
 <script>
     const overflow_los = document.querySelector('.overflow_lo');
     const container_des = document.querySelector('.main-container')
@@ -360,7 +361,7 @@
             overflow_los.classList.add('oculto_des')
             container_des.classList.add('oculto_des')
             agarrandoDatos(nombreInput, lastNInput, emailInput);
-            enviarDatosCorreo(emailInput.value);
+            enviarDatosCorreo(emailInput.value, 1);
             limpiarDatos(nombreInput, lastNInput, emailInput);
         }
     }
@@ -418,108 +419,6 @@
 
     }
 
-
-    // Función para guardar los datos en el localStorage (Correo)
-    function guardarDatosEnLocalStorageCorreo(data) {
-        localStorage.setItem("correoData", JSON.stringify(data));
-    }
-
-    // Función para obtener la dirección de correo del localStorage (Correo)
-    function obtenerCorreoDelLocalStorage() {
-        const data = localStorage.getItem("correoData");
-        return data ? JSON.parse(data).correo : null;
-    }
-
-    // Función para obtener los datos del localStorage (Correo)
-    function obtenerDatosDelLocalStorageCorreo() {
-        const data = localStorage.getItem("correoData");
-        return data ? JSON.parse(data) : null;
-    }
-
-    function enviarDatosCorreo(email) {
-        const emailUser = email;
-
-        // Definir los intervalos de tiempo entre cada mensaje en milisegundos
-        // const intervalos = [0, 300000, 600000]; // Intervalos entre el primer, segundo y tercer mensaje
-        const intervalos = [0, 30000, 30000];
-
-        function enviarMensaje(index) {
-            enviarEmailAjax(emailUser, index);
-            sentMessages.push({
-                index,
-                time: new Date().getTime()
-            });
-
-            guardarDatosEnLocalStorageCorreo({
-                correo: emailUser,
-                sentMessages: sentMessages
-            });
-
-            // Si se ha enviado el tercer mensaje, eliminar los datos del localStorage
-            if (index === 2) {
-                console.log("Eliminando localStorage después de enviar todos los mensajes de correo.");
-                localStorage.removeItem("correoData");
-            }
-
-        }
-
-        const storedData = obtenerDatosDelLocalStorageCorreo();
-        const sentMessages = storedData ? storedData.sentMessages || [] : [];
-        let messageIndex = sentMessages.length; // Indica el índice del siguiente mensaje a enviar
-
-        // Si no hay mensajes pendientes, enviar el primer mensaje
-        if (messageIndex === 0) {
-            enviarSiguienteMensaje();
-        } else {
-            // Si hay mensajes pendientes, reanudar el envío desde el próximo mensaje
-            setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
-        }
-
-        // Función para verificar y enviar el siguiente mensaje
-        function enviarSiguienteMensaje() {
-
-            if (messageIndex < 3) {
-                enviarMensaje(messageIndex);
-                messageIndex++;
-                setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
-            }
-        }
-    }
-
-    function enviarEmailAjax(email, index) {
-        const body = new FormData();
-        const emailDataModal1 = email;
-
-        body.append("id_servicio", 1);
-        body.append("index", index);
-
-
-        if (obtenerDatosDelLocalStorageCorreo() === null) {
-            body.append("email", emailDataModal1);
-            console.log("Email:", emailDataModal1);
-        } else {
-            body.append("email", obtenerDatosDelLocalStorageCorreo().correo);
-            console.log("Email:", obtenerDatosDelLocalStorageCorreo().correo);
-        }
-
-        // Enviar la solicitud POST al servidor
-        fetch("./public/message/Controller/process.php", {
-                method: "POST",
-                body: body,
-            })
-            .then((response) => response.text()) // Convertir la respuesta a texto
-            .then((data) => {
-                // Manejar la respuesta del servidor
-                console.log("Respuesta del servidor Gmail Es:", data);
-            })
-            .catch((error) => {
-                // Manejar cualquier error que ocurra durante la solicitud
-                console.error("Error al enviar formulario a Gmail:", error);
-                alert("Email no Enviado: ", error);
-            });
-
-    }
-
     // Evento para controlar el envío del formulario
     document.getElementById('formMain').addEventListener('submit', function(event) {
         event.preventDefault(); // Evitar el envío del formulario por defecto
@@ -536,21 +435,4 @@
         // Si no hay mensajes pendientes, permitir el envío del formulario
         submit();
     });
-
-    // Llamar a la función para enviar los mensajes de WhatsApp cuando se cargue la página
-    window.onload = function() {
-        // Obtener el correo del formulario desde el LocalStorage
-        const storedEmail = obtenerCorreoDelLocalStorage();
-        console.log(storedEmail);
-
-        // Verificar si se recuperó un correo válido desde el LocalStorage
-        const storedDataEmail = obtenerDatosDelLocalStorageCorreo();
-        const sentMessagesEmail = storedDataEmail ? storedDataEmail.sentMessages || [] : [];
-        if (storedEmail && storedEmail.trim() !== "" && sentMessagesEmail.length < 3) {
-            // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
-            enviarDatosCorreo(storedEmail);
-        } else {
-            console.log("correo no válido o ya se han enviado los mensajes.");
-        }
-    };
 </script>

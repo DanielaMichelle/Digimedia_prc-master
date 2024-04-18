@@ -144,7 +144,7 @@ include_once './public/include/html_head.php';
 
     </div>
 
-    <script src="./public/js/mensajesWhatsapp.js"></script>
+    <script src="./public/js/mensajesWhatsappEmail.js"></script>
     <script>
         const form = document.querySelector("#formulario");
 
