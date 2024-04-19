@@ -18,7 +18,6 @@ searchIcon.addEventListener('click', () => {
 document.addEventListener("keyup", e => {
     if (e.target.matches('.search-input')) {
         if (e.key === "Escape") e.target.value = ""
-
         document.querySelectorAll('.question').forEach(pregunta => {
             pregunta.textContent.toLowerCase().includes(e.target.value.toLowerCase()) ?
                 pregunta.classList.remove('filtro') :

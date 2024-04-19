@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <?php
 //I'm the God Dog
 $fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified'];
