@@ -21,7 +21,7 @@
     
     <!-- <link rel="preload" as="font" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
     
-    <script src="https://kit.fontawesome.com/0ee4e706bf.js" crossorigin="anonymous"></script>
+    <script async src="https://kit.fontawesome.com/0ee4e706bf.js" crossorigin="anonymous"></script>
 
      <!-- Fuente Poppins cdn:-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +35,9 @@
     <!-- image preload -->
     <link rel="preload" as="image" href="./public/img/hero-image2.webp">
 
+    <!-- OPTIMIZAR IMAGEN MOVIL-->
+    <link rel="preload" href="./public/img/hero-image3-mobile_11zon.webp" as="image" type="image/webp"  importance="high">
+    <link rel="preload" href="./public/img/hero-image3-tablet.webp" as="image" type="image/webp" importance="high" >
 
     <!-- Si hay valores en $fileCSS, lo recorrera y colocara cada valor en un en enlace de abajo -->
     <?php foreach($fileCSS as $key => $filename) :?>
@@ -43,7 +46,7 @@
 
 
      <!-- JS NUBE -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
     <!-- GOGGLE ANALITYCS -->
     <script>

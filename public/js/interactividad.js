@@ -11,7 +11,6 @@ const constinerServicioMainTop = document.querySelector(".interactivo-top")
 const textoServicioMainTop = document.querySelector(".interactivo-top .nuestros-servicios-text-interactivo");
 const imgServicioMainTop = document.querySelector(".interactivo-top .nuestros-servicios-img-interactivo img");
 
-
 const constinerServicioMainBottom = document.querySelector(".interactivo-bottom")
 const textoServicioMainBottom = document.querySelector(".interactivo-bottom .nuestros-servicios-text-interactivo");
 const imgServicioMainBottom = document.querySelector(".interactivo-bottom .nuestros-servicios-img-interactivo img");
