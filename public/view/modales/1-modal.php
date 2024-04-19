@@ -442,88 +442,17 @@
         const storedDataEmail = obtenerDatosDelLocalStorageCorreo();
         const sentMessagesEmail = storedDataEmail ? storedDataEmail.sentMessages || [] : [];
 
-<<<<<<< HEAD
-
-
-
-
-
-// Función para enviar el correo electrónico al servidor
-
-
-let iterador_1 = 0;
-function enviarEmail_1(email){
-    if (!almacenarCorreoEnLocalStorage_12(email)) {
-            alert("No se almaceno");
-            return;
-        }
-    enviarCorreoAlServidor_12(email,0).then(() => {
-            console.log("Envio Correcto 1");
-          
-        }).catch((err) => {
-            console.error("Error al enviar el correo:", err);
-        });
-    setTimeout(() => {
-        enviarCorreoAlServidor_12(email,1).then(() => {
-                console.log("Envio Correcto 2");
-                
-            }).catch((err) => {
-                console.error("Error al enviar el correo:", err);
-            });
-        }, 10000);
-    setTimeout(() => {
-        enviarCorreoAlServidor_12(email,2).then(() => {
-                console.log("Envio Correcto 3");
-               
-                localStorage.removeItem("correoValores");
-            }).catch((err) => {
-                console.error("Error al enviar el correo:", err);
-            });
-        }, 50000);
-}
-=======
         if (sentMessages.length >= 1 && sentMessages.length < 3) {
             alert("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
             return;
         }
->>>>>>> 07af7dc0eb72221b8379ae2bb4baa7c239d9898d
 
         if (sentMessagesEmail.length >= 1 && sentMessagesEmail.length < 3) {
             alert("Debes esperar a que se completen los mensajes de correo antes de enviar otro formulario.");
             return;
         }
 
-<<<<<<< HEAD
-function almacenarCorreoEnLocalStorage(correo) {
-    const obj = {
-        "correo": correo,
-        "tiempo": Date.now()
-    };
-    localStorage.setItem("correoValores", JSON.stringify(obj));
-    return true; // Devuelve true si se almacena correctamente
-}
-
-function enviarCorreoAlServidor_1(email) {
-    const body = new FormData();
-    var url = window.location.href;
-    const id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
-    body.append("id_ser", id_ser);
-    body.append("email", email);
-    body.append("iterador", iterador_1);
-
-    console.log(email);
-    return fetch("./public/message/Controller/process.php", {
-        method: "POST",
-        body: body,
-    })
-    .then((response) => response.text())
-    .then(console.log)
-    .catch((err) => {
-        console.error("Error en la solicitud fetch:", err);
-        throw err; // Rechazar la promesa para manejar el error externamente
-=======
         // Si no hay mensajes pendientes, permitir el envío del formulario
         submit();
->>>>>>> 07af7dc0eb72221b8379ae2bb4baa7c239d9898d
     });
 </script>

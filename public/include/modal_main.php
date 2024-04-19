@@ -347,87 +347,12 @@
     });
 
 
-<<<<<<< HEAD
-//De aqui para abajo validas todos los campos del formulario con expresiones regulares
-function validarDatos() {
-    const formMain = document.querySelector(".modal-main #formMain");
-    formMain.addEventListener("submit", (e) => {
-        e.preventDefault();
-        datos();
-    })
-}
-
-function datos() {
-    const objRegex = {
-        telefono: /^9\d{2}\s?\d{3}\s?\d{3}$/, //validar que tenga 9 caracteres
-        gmail: /^[\w.-]+@gmail\.com$/ //validar la estructura de un correo electrónico
-    };
-
-    const nombreInput = document.querySelector('.modal-main #name');
-    const telefonoInput = document.querySelector('.modal-main #phone');
-    const emailInput = document.querySelector('.modal-main #email');
-
-    // Hacer que los 9 números esten juntos
-    const telefono = telefonoInput.value.replace(/\s/g, '');
-    const email = emailInput.value.trim();
-    const indexService = document.querySelector(".modal-main #service").value;
-
-    const telefonoValido = objRegex.telefono.test(telefono);
-    const emailValido = objRegex.gmail.test(email);
-
-
-    if (nombreInput.value === '') alert('El nombre no debe estar vacio')
-
-    if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos y debe empezar con 9")
-
-    if (!emailValido) alert("Debe de ingresar un correo valido.")
-
-    //validacion del servicio
-    const service = document.querySelector(".modal-main #service")
-    if (service.value === '') alert('Seleccione un servicio por favor.')
-
-    if (nombreInput.value != '' && telefonoValido && emailValido && service.value != '') {
-        // alert("Todos los campos son correctos.")
-        modalContainer.style.display = 'none';
-        agarrandoDatos(nombreInput, telefonoInput, emailInput, service);
-        envioDatosWhatsApp(telefono, indexService);
-        enviarEmail_modal_main(emailInput.value,indexService);
-        limpiarDatos(nombreInput, telefonoInput, emailInput, service);
-    }
-}
-
-
-function limpiarDatos(nombre, telefono, email, service) {
-    nombre.value = "";
-    telefono.value = "";
-    email.value = "";
-    service.value = "";
-}
-
-
-function agarrandoDatos(nombre, telefono, email, service) {
-    const form = new FormData();
-    form.append('nombre', nombre.value)
-    form.append('telefono', telefono.value)
-    form.append('email', email.value)
-    form.append('service', service.value)
-
-    enviandoDatosServer(form)
-}
-
-//Enviando datos al servidor:
-function enviandoDatosServer(form) {
-    fetch("./app/trigger/person1.php?action=ADD", {
-            method: 'POST',
-            body: form
-=======
     //De aqui para abajo validas todos los campos del formulario con expresiones regulares
     function validarDatos() {
         const formMain = document.querySelector(".modal-main #formMain");
         formMain.addEventListener("submit", (e) => {
             e.preventDefault();
             datos();
->>>>>>> 07af7dc0eb72221b8379ae2bb4baa7c239d9898d
         })
     }
 
