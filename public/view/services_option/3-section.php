@@ -278,7 +278,7 @@
         text-align: center;
         display: flex;
         justify-content: center;
-        top: -1em;
+        height: 100%;
     }
     
     .img_div {
@@ -305,8 +305,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(65% + 5px);
-        height: calc(65% + 20px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services3/icon3_1.webp');
         background-size: contain;
@@ -319,8 +319,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(70% + 5px);
-        height: calc(70% + 20px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services3/icon3_2.webp');
         background-size: contain;
@@ -333,8 +333,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(70% + 5px);
-        height: calc(70% + 20px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services3/icon3_3.webp');
         background-size: contain;
@@ -347,8 +347,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(70% + 5px);
-        height: calc(70% + 20px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services3/icon3_4.webp');
         background-size: contain;
@@ -381,7 +381,7 @@
 
     .textos {
         width: 100%;
-        height: 71%;
+        height: 75%;
         background: transparent;
         text-align: center;
         padding: 2% 13px;
@@ -438,12 +438,12 @@
 
         .textos h4 {
             background: transparent;
-            font-size: 3vw;
+            font-size: 2.6vw;
         }
 
         .textos p {
             position: relative;
-            font-size: 1.5vw;
+            font-size: 1.4vw;
             top: -37px;
         }
 
@@ -523,7 +523,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
         }
 
         #controls label:hover {
@@ -534,7 +534,7 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background: url("./public/img/dder.png") no-repeat;
 
             background-size: 50px;
 
@@ -549,7 +549,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/ere.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -705,7 +705,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .4;
+            
         }
 
         #controls label:hover {
@@ -716,14 +716,14 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background: url("./public/img/dder.png") no-repeat;
 
             background-size: 50px;
 
             display: flex;
             z-index: 100;
             position: absolute;
-            right: -10px;
+            right: 0;
             top: -250px;
         }
 
@@ -731,7 +731,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/ere.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -768,6 +768,14 @@
             right: 27%;
             top: -.1%;
         }
+        .textos h4 {
+            background: transparent;
+            font-size: 2.1vw;
+        }
+
+        .textos p {
+            font-size: 1.1vw;
+        }
     }
 
     @media (min-width:930px) AND (max-width:1020px) {
@@ -781,6 +789,14 @@
         .img_div {
             left: 24%;
             right: 27%;
+        }
+        .textos h4 {
+            background: transparent;
+            font-size: 2vw;
+        }
+
+        .textos p {
+            font-size: 1vw;
         }
     }
 
@@ -909,7 +925,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
 
         }
 
@@ -921,7 +937,7 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background: url("./public/img/dder.png") no-repeat;
 
             background-size: 50px;
 
@@ -936,7 +952,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/ere.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -979,8 +995,8 @@
         }
         .img_div{
             top: 1%;
-            width: 120px;
-            height: 120px;
+            width: 110px;
+            height: 110px;
         }
         .grid_item {
             padding-bottom: 30px;
@@ -1001,14 +1017,14 @@
         }
 
         .textos p {
-            font-size: 2.7vw;
+            font-size: 2.4vw;
             position: relative;
             align-self: flex-end;
             top: -45px;
         }
 
         .grid_item {
-            height: 450px;
+            height: 460px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -1094,7 +1110,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
 
         }
 
@@ -1106,7 +1122,7 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background: url("./public/img/dder.png") no-repeat;
 
             background-size: 50px;
 
@@ -1121,7 +1137,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/ere.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -1281,7 +1297,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
 
         }
 
@@ -1293,7 +1309,7 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background: url("./public/img/dder.png") no-repeat;
 
             background-size: 50px;
 
@@ -1308,7 +1324,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/ere.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;

@@ -281,7 +281,7 @@
         text-align: center;
         display: flex;
         justify-content: center;
-        top: -1em;
+        height: 100%;
     }
 
     .img_div {
@@ -308,8 +308,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(70% + 5px);
-        height: calc(70% + 20px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services4/icon4_1.webp');
         background-size: contain;
@@ -322,8 +322,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(70% + 5px);
-        height: calc(70% + 20px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services4/icon4_2.webp');
         background-size: contain;
@@ -336,8 +336,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(70% + 5px);
-        height: calc(70% + 20px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services4/icon4_3.webp');
         background-size: contain;
@@ -350,8 +350,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(62% + 5px);
-        height: calc(60% + 20px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services4/icon4_4.webp');
         background-size: contain;
@@ -441,12 +441,12 @@
 
         .textos h4 {
             background: transparent;
-            font-size: 3vw;
+            font-size: 2.7vw;
         }
 
         .textos p {
             position: relative;
-            font-size: 1.5vw;
+            font-size: 1.4vw;
             top: -37px;
         }
 
@@ -526,7 +526,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
         }
 
         #controls label:hover {
@@ -537,10 +537,10 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background: url("./public/img/laverda.png") no-repeat;
 
             background-size: 50px;
-
+            
             display: flex;
             z-index: 100;
             position: absolute;
@@ -552,7 +552,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/laverdaddis.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -590,6 +590,7 @@
             left: 24%;
             right: 27%;
         }
+       
     }
 
     @media (min-width:680px) AND (max-width:820px) {
@@ -597,6 +598,7 @@
             left: 28%;
             right: 32%;
         }
+
     }
 
     @media (min-width:820px) AND (max-width:1150px) {
@@ -635,11 +637,11 @@
 
         .textos h4 {
             background: transparent;
-            font-size: 2.5vw;
+            font-size: 2.2vw;
         }
 
         .textos p {
-            font-size: 1.2vw;
+            font-size: 1.1vw;
         }
 
         #slider {
@@ -710,25 +712,27 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .4;
+            
+           
         }
 
         #controls label:hover {
             opacity: 1;
+            
         }
 
         #slide1:checked~#controls label:nth-child(2),
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
-
+            background:  url("./public/img/laverda.png") no-repeat;
+            
             background-size: 50px;
-
+            color: yellow;
             display: flex;
             z-index: 100;
             position: absolute;
-            right: -10px;
+            right: 0;
             top: -250px;
         }
 
@@ -736,7 +740,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/laverdaddis.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -773,6 +777,14 @@
             right: 27%;
             top: -.1%;
         }
+        .textos h4 {
+            background: transparent;
+            font-size: 2vw;
+        }
+
+        .textos p {
+            font-size: 1.1vw;
+        }
     }
 
     @media (min-width:930px) AND (max-width:1020px) {
@@ -786,6 +798,18 @@
         .img_div {
             left: 24%;
             right: 27%;
+        }
+        .textos {         
+            font-size: 1vw;
+        }
+
+        .textos h4 {
+            background: transparent;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .textos p {      
+            font-size: .76em;
         }
     }
 
@@ -916,7 +940,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
 
         }
 
@@ -928,7 +952,7 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background:  url("./public/img/laverda.png") no-repeat;
 
             background-size: 50px;
 
@@ -943,7 +967,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/laverdaddis.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -987,8 +1011,8 @@
 
         .img_div {
             top: 1%;
-            width: 120px;
-            height: 120px;
+            width: 110px;
+            height: 110px;
         }
 
         .grid_item {
@@ -1010,7 +1034,7 @@
         }
 
         .textos p {
-            font-size: 2.7vw;
+            font-size: 2.4vw;
             position: relative;
             align-self: flex-end;
             top: -45px;
@@ -1103,7 +1127,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
 
         }
 
@@ -1115,7 +1139,7 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background:  url("./public/img/laverda.png") no-repeat;
 
             background-size: 50px;
 
@@ -1130,7 +1154,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/laverdaddis.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -1294,7 +1318,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
 
         }
 
@@ -1306,7 +1330,7 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background:  url("./public/img/laverda.png") no-repeat;
 
             background-size: 50px;
 
@@ -1321,7 +1345,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/laverdaddis.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -1390,9 +1414,7 @@
     }
 
     @media screen and (max-width: 1150px) {
-        .control1 {
-            right: 2px;
-        }
+        
 
         .control4 {
             left: 7px;
@@ -1511,10 +1533,10 @@
         </div>
     </div>
     <div id="controls">
-        <label class="control1" for="slide1"></label>
+        <label for="slide1"></label>
         <label for="slide2"></label>
         <label for="slide3"></label>
-        <label class="control4" for="slide4"></label>
+        <label for="slide4"></label>
     </div>
     <div id="bulets">
         <label for="slide1"></label>

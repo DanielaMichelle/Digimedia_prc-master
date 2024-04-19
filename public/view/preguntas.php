@@ -13,8 +13,7 @@ include_once './public/include/html_head.php';
     <div class="banner-image2" id="banner2" style="height: 50vh;">
         <div class="contenedor-principal2">
             <div class="letrs_xst mx-auto text-center">
-                <p class="fa">Preguntas</p>
-                <p class="fa">Frecuentes</p>
+                <p class="fa">Preguntas <br> Frecuentes</p>
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@
         font-family: "Poppins", sans-serif;
         font-weight: 600;
         font-style: normal;
-        color: #50B0E6;;
+        color: #50B0E6;
         padding: 19px;
         font-size: 2.4vw;
     }
@@ -268,6 +268,8 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
+        padding: 0;
+        
 
 
     }
@@ -277,8 +279,9 @@
         width: 100%;
         text-align: center;
         display: flex;
+        height: 100%;
         justify-content: center;
-        top: -1em;
+        
     }
     
     .img_div {
@@ -305,8 +308,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(65% + 2px);
-        height: calc(65% + 2px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services1/icon1-2.webp');
         background-size: contain;
@@ -319,8 +322,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(65% + 1px);
-        height: calc(65% + 1px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services1/icon2-2.webp');
         background-size: contain;
@@ -333,8 +336,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(65% + 1px);
-        height: calc(65% + 1px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services1/icon3-2.webp');
         background-size: contain;
@@ -347,8 +350,8 @@
         content: '';
         position: absolute;
         margin: auto;
-        width: calc(65% + 1px);
-        height: calc(65% + 1px);
+        width: 80px;
+        height: 80px;
 
         background-image: url('./public/img/servis_wepb/services1/icon4-2.webp');
         background-size: contain;
@@ -438,12 +441,12 @@
 
         .textos h4 {
             background: transparent;
-            font-size: 3vw;
+            font-size: 2.7vw;
         }
 
         .textos p {
             position: relative;
-            font-size: 1.5vw;
+            font-size: 1.4vw;
             top: -37px;
         }
 
@@ -523,7 +526,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
         }
 
         #controls label:hover {
@@ -534,7 +537,7 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background: url("./public/img/laves.png") no-repeat;
 
             background-size: 50px;
 
@@ -549,7 +552,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/nopes.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -630,11 +633,11 @@
 
         .textos h4 {
             background: transparent;
-            font-size: 2.5vw;
+            font-size: 2.2vw;
         }
 
         .textos p {
-            font-size: 1.2vw;
+            font-size: 1.1vw;
         }
 
         #slider {
@@ -705,7 +708,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .4;
+            
         }
 
         #controls label:hover {
@@ -716,14 +719,14 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background: url("./public/img/laves.png") no-repeat;
 
             background-size: 50px;
 
             display: flex;
             z-index: 100;
             position: absolute;
-            right: -10px;
+            right: 0;
             top: -250px;
         }
 
@@ -731,7 +734,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/nopes.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -909,7 +912,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
 
         }
 
@@ -921,7 +924,7 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background: url("./public/img/laves.png") no-repeat;
 
             background-size: 50px;
 
@@ -936,7 +939,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/nopes.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -979,8 +982,8 @@
         }
         .img_div{
             top: 1%;
-            width: 120px;
-            height: 120px;
+            width: 110px;
+            height: 110px;
         }
         .grid_item {
             padding-bottom: 30px;
@@ -1001,7 +1004,7 @@
         }
 
         .textos p {
-            font-size: 2.7vw;
+            font-size: 2.4vw;
             position: relative;
             align-self: flex-end;
             top: -45px;
@@ -1094,7 +1097,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
 
         }
 
@@ -1106,7 +1109,7 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background: url("./public/img/laves.png") no-repeat;
 
             background-size: 50px;
 
@@ -1121,7 +1124,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/nopes.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
@@ -1281,7 +1284,7 @@
             height: 50px;
             width: 50px;
             transition: opacity 0.2s ease-out;
-            opacity: .7;
+            
 
         }
 
@@ -1293,7 +1296,7 @@
         #slide2:checked~#controls label:nth-child(3),
         #slide3:checked~#controls label:nth-child(4),
         #slide4:checked~#controls label:nth-child(1) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271228.png) no-repeat;
+            background: url("./public/img/laves.png") no-repeat;
 
             background-size: 50px;
 
@@ -1308,7 +1311,7 @@
         #slide2:checked~#controls label:nth-last-child(4),
         #slide3:checked~#controls label:nth-last-child(3),
         #slide4:checked~#controls label:nth-last-child(2) {
-            background: url(https://cdn-icons-png.flaticon.com/512/271/271220.png) no-repeat;
+            background: url("./public/img/nopes.png") no-repeat;
             background-size: 50px;
             display: flex;
             z-index: 100;
