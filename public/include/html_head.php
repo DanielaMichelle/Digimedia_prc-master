@@ -35,6 +35,9 @@
     <!-- image preload -->
     <link rel="preload" as="image" href="./public/img/hero-image2.webp">
 
+    <!-- OPTIMIZAR IMAGEN MOVIL-->
+    <link rel="preload" href="./public/img/hero-image3-mobile_11zon.webp" as="image" type="image/webp"  importance="high">
+    <link rel="preload" href="./public/img/hero-image3-tablet.webp" as="image" type="image/webp" importance="high" >
 
     <!-- Si hay valores en $fileCSS, lo recorrera y colocara cada valor en un en enlace de abajo -->
     <?php foreach($fileCSS as $key => $filename) :?>
