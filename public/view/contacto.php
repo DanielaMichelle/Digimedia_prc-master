@@ -144,7 +144,7 @@ include_once './public/include/html_head.php';
 
     </div>
 
-    <script src="./public/js/mensajesWhatsapp.js"></script>
+    <script src="./public/js/mensajesWhatsappEmail.js"></script>
     <script>
         const form = document.querySelector("#formulario");
 
@@ -198,7 +198,7 @@ include_once './public/include/html_head.php';
             formData.append('estado', 0);
 
             enviarFormData(formData);
-            enviarEmail_modal_main(emailPerson_2.value,servicio_2);
+            // enviarEmail_modal_main(emailPerson_2.value,servicio_2);
 
 
             let servicioNumber;
@@ -211,8 +211,8 @@ include_once './public/include/html_head.php';
             } else if (servicio == 'Branding y desing') {
                 servicioNumber = '3';
             }
-            // envioDatosWhatsApp(numero);
             envioDatosWhatsApp(numero, servicioNumber);
+            enviarDatosCorreo(emailPerson_2.value, servicioNumber);
         }
 
         function vaciarDatos() {
@@ -249,84 +249,6 @@ include_once './public/include/html_head.php';
                 });
         }
 
-        // Función para guardar los datos en el localStorage
-        function guardarDatosEnLocalStorage(data) {
-            localStorage.setItem("whatsappData", JSON.stringify(data));
-        }
-
-        // Función para obtener el número de teléfono del localStorage
-        function obtenerNumeroTelefonoDelLocalStorage() {
-            const data = localStorage.getItem("whatsappData");
-            return data ? JSON.parse(data).phoneNumber : null;
-        }
-
-
-        // Función para obtener el index del servicio del localStorage
-        function obtenerIndexDelServicioDelLocalStorage() {
-            const data = localStorage.getItem("whatsappData");
-            return data ? JSON.parse(data).service : null;
-        }
-
-        // Función para obtener los datos del localStorage
-        function obtenerDatosDelLocalStorage() {
-            const data = localStorage.getItem("whatsappData");
-            return data ? JSON.parse(data) : null;
-        }
-
-        // Función para enviar los mensajes de WhatsApp
-        function envioDatosWhatsApp(num, indexService) {
-            const phone = "51" + num;
-            console.log("Enviando... mensajes a WhatsApp para el número:", phone);
-
-            // Definir los intervalos de tiempo entre cada mensaje en milisegundos
-            const intervalos = [0, 300000, 600000]; // Intervalos entre el primer, segundo y tercer mensaje
-
-            // Función para enviar un mensaje y actualizar el localStorage
-            function enviarMensaje(index) {
-                sendWsApi(mensajesWtsp[parseInt(indexService)][index], imagenesWtsp[parseInt(indexService)][index], phone);
-                console.log("Mensaje", index + 1, "enviado.");
-                sentMessages.push({
-                    index,
-                    time: new Date().getTime(),
-                });
-                guardarDatosEnLocalStorage({
-                    phoneNumber: num,
-                    sentMessages: sentMessages,
-                    service: indexService,
-                });
-
-
-                // Si se ha enviado el tercer mensaje, eliminar los datos del localStorage
-                if (index === 2) {
-                    console.log("Eliminando localStorage después de enviar todos los mensajes.");
-                    localStorage.removeItem("whatsappData");
-                }
-            }
-
-            // Función para verificar y enviar el siguiente mensaje
-            function enviarSiguienteMensaje() {
-                if (messageIndex < mensajesWtsp[0].length) {
-                    enviarMensaje(messageIndex);
-                    messageIndex++;
-                    setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
-                }
-            }
-
-            // Verificar si hay mensajes pendientes en el localStorage y continuar enviándolos
-            const storedData = obtenerDatosDelLocalStorage();
-            const sentMessages = storedData ? storedData.sentMessages || [] : [];
-            let messageIndex = sentMessages.length; // Indica el índice del siguiente mensaje a enviar
-
-            // Si no hay mensajes pendientes, enviar el primer mensaje
-            if (messageIndex === 0) {
-                enviarSiguienteMensaje();
-            } else {
-                // Si hay mensajes pendientes, reanudar el envío desde el próximo mensaje
-                setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
-            }
-        }
-
-
         // Evento para controlar el envío del formulario
         document.getElementById('formulario').addEventListener('submit', function(event) {
             event.preventDefault(); // Evitar el envío del formulario por defecto
@@ -344,27 +266,6 @@ include_once './public/include/html_head.php';
             submit();
         });
 
-        // Llamar a la función para enviar los mensajes de WhatsApp cuando se cargue la página
-        window.onload = function() {
-            // Obtener el número de teléfono del formulario desde el LocalStorage
-            const storedPhoneNumber = obtenerNumeroTelefonoDelLocalStorage();
-
-            // Obtener elindex del servicio del formulario desde el LocalStorage
-            const storedIndexService = obtenerIndexDelServicioDelLocalStorage();
-
-
-            // Verificar si se recuperó un número de teléfono válido desde el LocalStorage
-            const storedData = obtenerDatosDelLocalStorage();
-            const sentMessages = storedData ? storedData.sentMessages || [] : [];
-            if (storedPhoneNumber && storedPhoneNumber.trim() !== "" && sentMessages.length < 3) {
-                // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
-                envioDatosWhatsApp(storedPhoneNumber, storedIndexService);
-            } else {
-                console.log("Número de teléfono no válido o ya se han enviado los mensajes.");
-            }
-        };
-
-
         // Interactividad de botones
         const panelHorario = document.querySelector(".botones-contacto .horario");
         const horarioBtn = document.querySelector(".botones-contacto .horario figure");
@@ -374,72 +275,6 @@ include_once './public/include/html_head.php';
             panelHorario.classList.toggle("horario--abierto");
         })
 
-       
-        // Función para enviar el correo electrónico al servidor
-
-
-
-        function enviarEmail_modal_main(email,servi){
-            if (!almacenarCorreoEnLocalStorage(email)) {
-                    alert("No se almaceno");
-                    return;
-                }
-            enviarCorreoAlServidor_modal_main(email,0,servi).then(() => {
-                    console.log("Envio Correcto 1");
-                    
-                }).catch((err) => {
-                    console.error("Error al enviar el correo:", err);
-                });
-            setTimeout(() => {
-                enviarCorreoAlServidor_modal_main(email,1,servi).then(() => {
-                        console.log("Envio Correcto 2");
-                        
-                    }).catch((err) => {
-                        console.error("Error al enviar el correo:", err);
-                    });
-                }, 10000);
-            setTimeout(() => {
-                enviarCorreoAlServidor_modal_main(email,2,servi).then(() => {
-                        console.log("Envio Correcto 3");
-                        
-                        localStorage.removeItem("correoValores");
-                    }).catch((err) => {
-                        console.error("Error al enviar el correo:", err);
-                    });
-                }, 50000);
-        }
-
-
-        function almacenarCorreoEnLocalStorage(correo) {
-            const obj = {
-                "correo": correo,
-                "tiempo": Date.now()
-            };
-            localStorage.setItem("correoValores", JSON.stringify(obj));
-            return true; // Devuelve true si se almacena correctamente
-        }
-
-        function enviarCorreoAlServidor_modal_main(email,ite,servici) {
-            const body = new FormData();
-            
-            console.log("servicios: "+servici)
-            body.append("id_ser", 0);
-            body.append("email", email);
-            body.append("service", servici);
-            body.append("iterador", ite);
-
-            console.log(email);
-            return fetch("./public/message/Controller/process.php", {
-                method: "POST",
-                body: body,
-            })
-            .then((response) => response.text())
-            .then(console.log)
-            .catch((err) => {
-                console.error("Error en la solicitud fetch:", err);
-                throw err; // Rechazar la promesa para manejar el error externamente
-            });
-        }
     </script>
 </body>
 

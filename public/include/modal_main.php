@@ -1,278 +1,280 @@
+
 <style>
-.modal-main-background {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    z-index: 1050;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-
-.modal-main {
-    background-color: rgba(194, 7, 158, 0.7);
-    width: 70%;
-    color: white;
-    padding: 2rem;
-    border-radius: 40px;
-    text-align: center;
-    position: relative;
-
-}
-
-.modal-main figure {
-    position: absolute;
-    right: -5px;
-    top: -10px;
-    background-color: rgb(239 21 150);
-    width: 40px;
-    height: 40px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 3px solid white;
-
-    i {
-        font-size: x-large;
+    .modal-main-background {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        z-index: 1050;
+        justify-content: center;
+        align-items: center;
+        display: none;
     }
-
-    i:hover {
-        cursor: pointer;
-    }
-}
-
-.modal-main p {
-    font-size: 2vw;
-    font-style: italic;
-    position: relative;
-    margin-bottom: 8px;
-}
-
-
-.modal-main .form-inputs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2vw;
-    row-gap: 1vw;
-}
-
-.modal-main .form-inputs .form-group {
-    text-align: start;
-}
-
-.modal-main .form-inputs .form-group #service {
-    border-radius: 50px;
-    padding-left: 24px;
-    font-size: 20px;
-}
-
-.modal-main .form-inputs .form-group input,
-.modal-main .form-inputs .form-group .dropdown a {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 50px;
-    color: rgb(77 76 76);
-    font-size: 20px;
-}
-
-.modal-main .form-inputs .form-group input::placeholder {
-    color: rgb(77 76 76);
-    font-size: 20px;
-}
-
-.modal-main .form-inputs .form-group label {
-    text-transform: uppercase;
-    font-weight: 100;
-    letter-spacing: 3px;
-    padding-left: 28px;
-    margin-bottom: 12px;
-}
-
-.modal-main .form-inputs .form-group .dropdown a,
-.modal-main .form-inputs .form-group .dropdown ul li a {
-    background: white;
-    color: rgb(77 76 76);
-    font-size: 20px;
-    width: 100%;
-    text-align: start;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-style: normal;
-}
-
-.modal-main .form-inputs .form-group .dropdown ul {
-    width: 100%;
-    border-radius: 20px;
-}
-
-.modal-main .form-inputs .form-group .dropdown a::after {
-    color: black;
-    border-top: 0.5em solid;
-}
-
-.modal-main button {
-    font-size: 23px;
-    margin-top: 1rem;
-    padding: 12px 50px;
-    width: fit-content;
-    border: none;
-    color: white;
-    font-weight: 600;
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 5px;
-    background: rgb(233, 133, 151);
-    background: linear-gradient(129deg, rgba(233, 133, 151, 1) 0%, rgba(233, 133, 151, 1) 34%, rgba(216, 22, 221, 1) 100%);
-}
-
-.modal-main button:hover {
-    cursor: pointer;
-}
-
-@media (max-width: 1024px) {
-
-
 
     .modal-main {
-        width: 80vw;
-        padding: 1rem
+        background-color: rgba(194, 7, 158, 0.7);
+        width: 70%;
+        color: white;
+        padding: 2rem;
+        border-radius: 40px;
+        text-align: center;
+        position: relative;
+
     }
 
-    .modal-main h3 {
-        font-size: 4vw;
-        padding: 1.3vw;
-        margin: 0;
-        padding: 0;
+    .modal-main figure {
+        position: absolute;
+        right: -5px;
+        top: -10px;
+        background-color: rgb(239 21 150);
+        width: 40px;
+        height: 40px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 3px solid white;
+
+        i {
+            font-size: x-large;
+        }
+
+        i:hover {
+            cursor: pointer;
+        }
     }
 
     .modal-main p {
-        font-size: 3vw;
-        font-size: 18px;
+        font-size: 2vw;
+        font-style: italic;
+        position: relative;
+        margin-bottom: 8px;
     }
 
-    .modal-main button {
-        font-size: 16px;
-        padding: 0 50px;
-        height: 43px;
+
+    .modal-main .form-inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2vw;
+        row-gap: 1vw;
+    }
+
+    .modal-main .form-inputs .form-group {
+        text-align: start;
+    }
+
+    .modal-main .form-inputs .form-group #service {
+        border-radius: 50px;
+        padding-left: 24px;
+        font-size: 20px;
+    }
+
+    .modal-main .form-inputs .form-group input,
+    .modal-main .form-inputs .form-group .dropdown a {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 50px;
+        color: rgb(77 76 76);
+        font-size: 20px;
+    }
+
+    .modal-main .form-inputs .form-group input::placeholder {
+        color: rgb(77 76 76);
+        font-size: 20px;
+    }
+
+    .modal-main .form-inputs .form-group label {
+        text-transform: uppercase;
+        font-weight: 100;
+        letter-spacing: 3px;
+        padding-left: 28px;
         margin-bottom: 12px;
     }
 
-    .modal-main .form-inputs {
-        row-gap: 0vw;
-    }
-
-    .modal-main .form-inputs .form-group label {
-        font-size: 12px;
-    }
-
-    .modal-main .form-inputs .form-group #service {
-        font-size: 12px;
-    }
-
-
-    .modal-main .form-inputs .form-group input,
-    .modal-main .form-inputs .form-group .dropdown a {
-        padding: 0px 24px;
-        height: 43px;
-        font-size: 12px;
-    }
-
-    .modal-main .form-inputs .form-group input::placeholder {
-        font-size: 12px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .modal-main .form-inputs .form-group label {
-        margin-bottom: 4px;
-    }
-
     .modal-main .form-inputs .form-group .dropdown a,
     .modal-main .form-inputs .form-group .dropdown ul li a {
-        font-size: 12px;
-    }
-}
-
-
-
-@media (max-width: 768px) {
-
-    .modal-main {
-        width: 70vw;
-        padding: 1rem;
+        background: white;
+        color: rgb(77 76 76);
+        font-size: 20px;
+        width: 100%;
+        text-align: start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-style: normal;
     }
 
-    .modal-main .form-inputs {
-        grid-template-columns: 1fr;
+    .modal-main .form-inputs .form-group .dropdown ul {
+        width: 100%;
+        border-radius: 20px;
     }
 
-    .modal-main .form-inputs .form-group input,
-    .modal-main .form-inputs .form-group .dropdown a {
-        height: 36px;
+    .modal-main .form-inputs .form-group .dropdown a::after {
+        color: black;
+        border-top: 0.5em solid;
     }
 
     .modal-main button {
-        height: 36px;
-        padding: 0 25px;
+        font-size: 23px;
+        margin-top: 1rem;
+        padding: 12px 50px;
+        width: fit-content;
+        border: none;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 5px;
+        background: rgb(233, 133, 151);
+        background: linear-gradient(129deg, rgba(233, 133, 151, 1) 0%, rgba(233, 133, 151, 1) 34%, rgba(216, 22, 221, 1) 100%);
+    }
+
+    .modal-main button:hover {
+        cursor: pointer;
+    }
+
+    @media (max-width: 1024px) {
+
+
+
+        .modal-main {
+            width: 80vw;
+            padding: 1rem
+        }
+
+        .modal-main h3 {
+            font-size: 4vw;
+            padding: 1.3vw;
+            margin: 0;
+            padding: 0;
+        }
+
+        .modal-main p {
+            font-size: 3vw;
+            font-size: 18px;
+        }
+
+        .modal-main button {
+            font-size: 16px;
+            padding: 0 50px;
+            height: 43px;
+            margin-bottom: 12px;
+        }
+
+        .modal-main .form-inputs {
+            row-gap: 0vw;
+        }
+
+        .modal-main .form-inputs .form-group label {
+            font-size: 12px;
+        }
+
+        .modal-main .form-inputs .form-group #service {
+            font-size: 12px;
+        }
+
+
+        .modal-main .form-inputs .form-group input,
+        .modal-main .form-inputs .form-group .dropdown a {
+            padding: 0px 24px;
+            height: 43px;
+            font-size: 12px;
+        }
+
+        .modal-main .form-inputs .form-group input::placeholder {
+            font-size: 12px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .modal-main .form-inputs .form-group label {
+            margin-bottom: 4px;
+        }
+
+        .modal-main .form-inputs .form-group .dropdown a,
+        .modal-main .form-inputs .form-group .dropdown ul li a {
+            font-size: 12px;
+        }
+    }
+
+
+
+    @media (max-width: 768px) {
+
+        .modal-main {
+            width: 70vw;
+            padding: 1rem;
+        }
+
+        .modal-main .form-inputs {
+            grid-template-columns: 1fr;
+        }
+
+        .modal-main .form-inputs .form-group input,
+        .modal-main .form-inputs .form-group .dropdown a {
+            height: 36px;
+        }
+
+        .modal-main button {
+            height: 36px;
+            padding: 0 25px;
+
+        }
+
+        .modal-main h3 {
+            font-size: 3.5vw;
+            margin-top: 8px;
+
+        }
+
+        .modal-main p {
+            font-size: 16px;
+        }
+
+        .modal-main .form-inputs .form-group #service {
+            font-size: 10px;
+        }
+
+        .modal-main .form-inputs .form-group input::placeholder {
+            font-size: 10px;
+        }
+
+
+        .modal-main .form-inputs .form-group .dropdown a,
+        .modal-main .form-inputs .form-group .dropdown ul li a {
+            font-size: 10px;
+        }
+
+        .modal-main .form-inputs .form-group label {
+            font-size: 10px;
+        }
 
     }
 
-    .modal-main h3 {
-        font-size: 3.5vw;
-        margin-top: 8px;
+    @media (max-width: 425px) {
+        .modal-main {
+            border-radius: 15px;
+        }
 
+        .modal-main h3 {
+            font-size: 4vw;
+        }
+
+        .modal-main p {
+            font-size: 14px;
+        }
+
+        .modal-main .form-inputs .form-group label {
+            font-size: 8px;
+        }
+
+        .modal-main button {
+            font-size: 14px;
+        }
     }
-
-    .modal-main p {
-        font-size: 16px;
-    }
-
-    .modal-main .form-inputs .form-group #service {
-        font-size: 10px;
-    }
-
-    .modal-main .form-inputs .form-group input::placeholder {
-        font-size: 10px;
-    }
-
-
-    .modal-main .form-inputs .form-group .dropdown a,
-    .modal-main .form-inputs .form-group .dropdown ul li a {
-        font-size: 10px;
-    }
-
-    .modal-main .form-inputs .form-group label {
-        font-size: 10px;
-    }
-
-}
-
-@media (max-width: 425px) {
-    .modal-main {
-        border-radius: 15px;
-    }
-
-    .modal-main h3 {
-        font-size: 4vw;
-    }
-
-    .modal-main p {
-        font-size: 14px;
-    }
-
-    .modal-main .form-inputs .form-group label {
-        font-size: 8px;
-    }
-
-    .modal-main button {
-        font-size: 14px;
-    }
-}
 </style>
+
 
 <div class="modal-main-background">
     <div class="modal-main">
@@ -300,8 +302,7 @@
                 <!--//Correo//-->
                 <div class="form-group">
                     <label for="email">Correo Electrónico</label>
-                    <input type="text" class="form-control" placeholder="hola@sitioincreible.com.ar" name="email"
-                        id="email">
+                    <input type="text" class="form-control" placeholder="hola@sitioincreible.com.ar" name="email" id="email">
                     <p class="err-msg"></p>
                 </div>
 
@@ -323,36 +324,30 @@
     </div>
 </div>
 
-
-<!-- JS bootstrap 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
-</script>-->
-
-<script src="./public/js/mensajesWhatsapp.js"></script>
-
+<script src="./public/js/mensajesWhatsappEmail.js"></script>
 <script>
-const btnCerrar = document.querySelector('.btn-cerrar');
-const modalContainer = document.querySelector('.modal-main-background');
-const btnForm = document.querySelector(".go-button");
-const btnHero = document.querySelector(".hero-buttom");
+    const btnCerrar = document.querySelector('.btn-cerrar');
+    const modalContainer = document.querySelector('.modal-main-background');
+    const btnForm = document.querySelector(".go-button");
+    const btnHero = document.querySelector(".hero-buttom");
 
-// Abre el modal al pulsar el botón del hero
-btnHero.addEventListener('click', () => {
-    if (localStorage.getItem("whatsappData")) {
+    // Abre el modal al pulsar el botón del hero
+    btnHero.addEventListener('click', () => {
+        if (localStorage.getItem("whatsappData")) {
+            modalContainer.style.display = 'none';
+        } else {
+            modalContainer.style.display = 'flex';
+            validarDatos();
+        }
+    });
+
+    // Agregar evento al botón de cerrar
+    btnCerrar.addEventListener('click', () => {
         modalContainer.style.display = 'none';
-    } else {
-        modalContainer.style.display = 'flex';
-        validarDatos();
-    }
-});
-
-// Agregar evento al botón de cerrar
-btnCerrar.addEventListener('click', () => {
-    modalContainer.style.display = 'none';
-});
+    });
 
 
+<<<<<<< HEAD
 //De aqui para abajo validas todos los campos del formulario con expresiones regulares
 function validarDatos() {
     const formMain = document.querySelector(".modal-main #formMain");
@@ -425,199 +420,109 @@ function enviandoDatosServer(form) {
     fetch("./app/trigger/person1.php?action=ADD", {
             method: 'POST',
             body: form
+=======
+    //De aqui para abajo validas todos los campos del formulario con expresiones regulares
+    function validarDatos() {
+        const formMain = document.querySelector(".modal-main #formMain");
+        formMain.addEventListener("submit", (e) => {
+            e.preventDefault();
+            datos();
+>>>>>>> 07af7dc0eb72221b8379ae2bb4baa7c239d9898d
         })
-        .then(res => res.json())
-        .then(console.log)
-        .catch(err => console.log(err))
-}
+    }
+
+    function datos() {
+        const objRegex = {
+            telefono: /^9\d{2}\s?\d{3}\s?\d{3}$/, //validar que tenga 9 caracteres
+            gmail: /^[\w.-]+@gmail\.com$/ //validar la estructura de un correo electrónico
+        };
+
+        const nombreInput = document.querySelector('.modal-main #name');
+        const telefonoInput = document.querySelector('.modal-main #phone');
+        const emailInput = document.querySelector('.modal-main #email');
+
+        // Hacer que los 9 números esten juntos
+        const telefono = telefonoInput.value.replace(/\s/g, '');
+        const email = emailInput.value.trim();
+        const indexService = document.querySelector(".modal-main #service").value;
+
+        const telefonoValido = objRegex.telefono.test(telefono);
+        const emailValido = objRegex.gmail.test(email);
 
 
+        if (nombreInput.value === '') alert('El nombre no debe estar vacio')
 
-// Función para guardar los datos en el localStorage
-function guardarDatosEnLocalStorage(data) {
-    localStorage.setItem("whatsappData", JSON.stringify(data));
-}
+        if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos")
 
-// Función para obtener el número de teléfono del localStorage
-function obtenerNumeroTelefonoDelLocalStorage() {
-    const data = localStorage.getItem("whatsappData");
-    return data ? JSON.parse(data).phoneNumber : null;
-}
+        if (!emailValido) alert("Debe de ingresar un correo valido.")
 
-// Función para obtener el index del servicio del localStorage
-function obtenerIndexDelServicioDelLocalStorage() {
-    const data = localStorage.getItem("whatsappData");
-    return data ? JSON.parse(data).service : null;
-}
+        //validacion del servicio
+        const service = document.querySelector(".modal-main #service")
+        if (service.value === '') alert('Seleccione un servicio por favor.')
 
-// Función para obtener los datos del localStorage
-function obtenerDatosDelLocalStorage() {
-    const data = localStorage.getItem("whatsappData");
-    return data ? JSON.parse(data) : null;
-}
-
-// Función para enviar los mensajes de WhatsApp
-function envioDatosWhatsApp(num, indexService) {
-    const phone = "51" + num;
-    console.log("Enviando... mensajes a WhatsApp para el número:", phone);
-
-    // Definir los intervalos de tiempo entre cada mensaje en milisegundos
-    const intervalos = [0, 5000, 10000]; // Intervalos entre el primer, segundo y tercer mensaje
-
-    // Función para enviar un mensaje y actualizar el localStorage
-    function enviarMensaje(index) {
-        sendWsApi(mensajesWtsp[parseInt(indexService)][index], imagenesWtsp[parseInt(indexService)][index], phone);
-        console.log("Mensaje", index + 1, "enviado.");
-        sentMessages.push({
-            index,
-            time: new Date().getTime(),
-        });
-        guardarDatosEnLocalStorage({
-            phoneNumber: num,
-            sentMessages: sentMessages,
-            service: indexService,
-        });
-
-
-        // Si se ha enviado el tercer mensaje, eliminar los datos del localStorage
-        if (index === 2) {
-            console.log("Eliminando localStorage después de enviar todos los mensajes.");
-            localStorage.removeItem("whatsappData");
+        if (nombreInput.value != '' && telefonoValido && emailValido && service.value != '') {
+            alert("Todos los campos son correctos.")
+            modalContainer.style.display = 'none';
+            agarrandoDatos(nombreInput, telefonoInput, emailInput, service);
+            envioDatosWhatsApp(telefono, indexService);
+            enviarDatosCorreo(emailInput.value, indexService);
+            limpiarDatos(nombreInput, telefonoInput, emailInput, service);
         }
     }
 
-    // Función para verificar y enviar el siguiente mensaje
-    function enviarSiguienteMensaje() {
-        if (messageIndex < mensajesWtsp[0].length) {
-            enviarMensaje(messageIndex);
-            messageIndex++;
-            setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
-        }
+
+    function limpiarDatos(nombre, telefono, email, service) {
+        nombre.value = "";
+        telefono.value = "";
+        email.value = "";
+        service.value = "";
     }
 
-    // Verificar si hay mensajes pendientes en el localStorage y continuar enviándolos
-    const storedData = obtenerDatosDelLocalStorage();
-    const sentMessages = storedData ? storedData.sentMessages || [] : [];
-    let messageIndex = sentMessages.length; // Indica el índice del siguiente mensaje a enviar
 
-    // Si no hay mensajes pendientes, enviar el primer mensaje
-    if (messageIndex === 0) {
-        enviarSiguienteMensaje();
-    } else {
-        // Si hay mensajes pendientes, reanudar el envío desde el próximo mensaje
-        setTimeout(enviarSiguienteMensaje, intervalos[messageIndex]);
-    }
-}
+    function agarrandoDatos(nombre, telefono, email, service) {
+        const form = new FormData();
+        form.append('nombre', nombre.value)
+        form.append('telefono', telefono.value)
+        form.append('email', email.value)
+        form.append('service', service.value)
 
-
-// Evento para controlar el envío del formulario
-document.querySelector('.modal-main #formMain').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar el envío del formulario por defecto
-
-    // Verificar si hay mensajes pendientes en el localStorage
-    const storedData = obtenerDatosDelLocalStorage();
-    const sentMessages = storedData ? storedData.sentMessages || [] : [];
-    if (sentMessages.length >= 1 && sentMessages.length < 3) {
-        alert("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
-        return;
+        enviandoDatosServer(form)
     }
 
-    // Si no hay mensajes pendientes, permitir el envío del formulario
-    this.submit();
-});
-
-
-
-
-// Llamar a la función para enviar los mensajes de WhatsApp cuando se cargue la página
-window.onload = function() {
-
-    // Obtener el número de teléfono del formulario desde el LocalStorage
-    const storedPhoneNumber = obtenerNumeroTelefonoDelLocalStorage();
-
-    // Obtener elindex del servicio del formulario desde el LocalStorage
-    const storedIndexService = obtenerIndexDelServicioDelLocalStorage();
-
-
-    // Verificar si se recuperó un número de teléfono válido desde el LocalStorage
-    const storedData = obtenerDatosDelLocalStorage();
-    const sentMessages = storedData ? storedData.sentMessages || [] : [];
-    if (storedPhoneNumber && storedPhoneNumber.trim() !== "" && sentMessages.length < 3) {
-        // Llamar a la función para enviar los mensajes de WhatsApp con el número recuperado
-        envioDatosWhatsApp(storedPhoneNumber, storedIndexService);
-    } else {
-        console.log("Número de teléfono no válido o ya se han enviado los mensajes.");
+    //Enviando datos al servidor:
+    function enviandoDatosServer(form) {
+        fetch("./app/trigger/person1.php?action=ADD", {
+                method: 'POST',
+                body: form
+            })
+            .then(res => res.json())
+            .then(console.log)
+            .catch(err => console.log(err))
     }
-};
 
+    // Evento para controlar el envío del formulario
+    document.querySelector('.modal-main #formMain').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
 
-
-
-// Función para enviar el correo electrónico al servidor
-
-
-
-function enviarEmail_modal_main(email,servi){
-    if (!almacenarCorreoEnLocalStorage(email)) {
-            alert("No se almaceno");
+        // Verificar si hay mensajes pendientes en el localStorage
+        const storedData = obtenerDatosDelLocalStorage();
+        const sentMessages = storedData ? storedData.sentMessages || [] : [];
+        if (sentMessages.length >= 1 && sentMessages.length < 3) {
+            alert("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
             return;
         }
-    enviarCorreoAlServidor_modal_main(email,0,servi).then(() => {
-            console.log("Envio Correcto 1");
-            
-        }).catch((err) => {
-            console.error("Error al enviar el correo:", err);
-        });
-    setTimeout(() => {
-        enviarCorreoAlServidor_modal_main(email,1,servi).then(() => {
-                console.log("Envio Correcto 2");
-                
-            }).catch((err) => {
-                console.error("Error al enviar el correo:", err);
-            });
-        }, 10000);
-    setTimeout(() => {
-        enviarCorreoAlServidor_modal_main(email,2,servi).then(() => {
-                console.log("Envio Correcto 3");
-                
-                localStorage.removeItem("correoValores");
-            }).catch((err) => {
-                console.error("Error al enviar el correo:", err);
-            });
-        }, 50000);
-}
 
 
-function almacenarCorreoEnLocalStorage(correo) {
-    const obj = {
-        "correo": correo,
-        "tiempo": Date.now()
-    };
-    localStorage.setItem("correoValores", JSON.stringify(obj));
-    return true; // Devuelve true si se almacena correctamente
-}
+        // Verificar si hay mensajes pendientes en el localStorage (correo)
+        const storedDataEmail = obtenerDatosDelLocalStorageCorreo();
+        const sentMessagesEmail = storedDataEmail ? storedDataEmail.sentMessages || [] : [];
+        if (sentMessagesEmail.length >= 1 && sentMessagesEmail.length < 3) {
+            alert("Debes esperar a que se completen los mensajes de correo antes de enviar otro formulario.");
+            return;
+        }
 
-function enviarCorreoAlServidor_modal_main(email,ite,servici) {
-    const body = new FormData();
-    
-    console.log("servicios: "+servici)
-    body.append("id_ser", 0);
-    body.append("email", email);
-    body.append("service", servici);
-    body.append("iterador", ite);
-
-    console.log(email);
-    return fetch("./public/message/Controller/process.php", {
-        method: "POST",
-        body: body,
-    })
-    .then((response) => response.text())
-    .then(console.log)
-    .catch((err) => {
-        console.error("Error en la solicitud fetch:", err);
-        throw err; // Rechazar la promesa para manejar el error externamente
+        // Si no hay mensajes pendientes, permitir el envío del formulario
+        this.submit();
     });
-}
-
-
+ 
 </script>
