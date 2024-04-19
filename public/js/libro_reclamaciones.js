@@ -18,18 +18,15 @@ function obteniendoDatosInputsYValidaciones(){
     const email = document.getElementById("email")
     const celular = document.getElementById("celular")
 
-
     const direccion = document.getElementById("direccion")
     const distrito = document.getElementById("distrito")
     const ciudad = document.getElementById("ciudad")
     const tipoReclamo = document.getElementById("tipo-reclamo")
 
-
     const servicioContratado = document.getElementById("servicio-contratado")
     const reclamoPerson = document.getElementById("cual-reclamo-person")
     const checkReclamoForm = document.getElementById("check-reclamo-form")
     const aceptaPoliticaPrivacidad = document.getElementById("acepta-politica-privacidad")
-
 
     //validaciones:
     if(nombre.value === '') return alert("Debe de rellenar el nombre")
@@ -41,7 +38,7 @@ function obteniendoDatosInputsYValidaciones(){
     if(!objRegex.gmail.test(email.value)) return alert("Debe de colocar un correo valido")
     if(!objRegex.telefono.test(celular.value)) return alert("Debe de rellenar el numero de celular correctamente")
 
- 
+
     if(direccion.value === '') return alert("Debe de colocar una direccion")
     if(distrito.value === '') return alert("Debe de colocar un distrito")
     if(ciudad.value === '') return alert("Debe de colocar una ciudad")
@@ -57,12 +54,10 @@ function obteniendoDatosInputsYValidaciones(){
     preparacionInputs(nombre, apellido, documento, numeroDocumento, email, 
         celular, direccion, distrito, ciudad, tipoReclamo, servicioContratado, reclamoPerson, 
         checkReclamoForm, aceptaPoliticaPrivacidad)
-
-        
+      
     limpiarDatos(nombre, apellido, documento, numeroDocumento, email, celular, direccion, 
         distrito, ciudad, tipoReclamo, servicioContratado, reclamoPerson, checkReclamoForm, aceptaPoliticaPrivacidad)
 }
-
 
 function preparacionInputs(nombre, apellido, documento, numeroDocumento, email, celular, direccion, 
     distrito, ciudad, tipoReclamo, servicioContratado, reclamoPerson, checkReclamoForm, aceptaPoliticaPrivacidad){
@@ -86,7 +81,6 @@ function preparacionInputs(nombre, apellido, documento, numeroDocumento, email, 
     enviandoDatosServidorInputs(form)
 };
 
-
 function enviandoDatosServidorInputs(form){
 
     fetch("../../../app/trigger/libroReclamacion.php?action=ADD", {
@@ -105,18 +99,14 @@ function limpiarDatos(nombre, apellido, documento, numeroDocumento, email, celul
     apellido.value = "";
     documento.value = "";
     numeroDocumento.value = "";
-
     email.value = "";
     celular.value = "";
     direccion.value = "";
     distrito.value = "";
-
     ciudad.value = "";
     tipoReclamo.value = "";
     servicioContratado.value = "";
     reclamoPerson.value = "";
-
     checkReclamoForm.checked = false;
     aceptaPoliticaPrivacidad.checked = false;
 }
-
