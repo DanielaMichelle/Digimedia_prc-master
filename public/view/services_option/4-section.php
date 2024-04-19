@@ -1011,8 +1011,8 @@
 
         .img_div {
             top: 1%;
-            width: 120px;
-            height: 120px;
+            width: 110px;
+            height: 110px;
         }
 
         .grid_item {
@@ -1034,7 +1034,7 @@
         }
 
         .textos p {
-            font-size: 2.7vw;
+            font-size: 2.4vw;
             position: relative;
             align-self: flex-end;
             top: -45px;

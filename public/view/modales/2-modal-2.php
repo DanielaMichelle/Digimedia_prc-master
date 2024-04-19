@@ -214,7 +214,7 @@
         }
 
         .btn_close_2 .close-modal_2 {
-            font-size: 2.5em;
+            font-size: 3em;
         }
     }
 

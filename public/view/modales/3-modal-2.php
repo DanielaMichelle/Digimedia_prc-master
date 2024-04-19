@@ -170,6 +170,15 @@
         width: 89%;
         font-size: 9.2px;
     }
+    .btn_close_3 .close-modal_3{
+        width: 100%;
+        font-size: 3em;
+        background: transparent;
+        border: none;
+        text-align: left;
+        position: relative;
+        
+    }
 }
 @media (min-width:0px) AND (max-width:300px){
     .main-container{

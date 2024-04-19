@@ -381,7 +381,7 @@
 
     .textos {
         width: 100%;
-        height: 71%;
+        height: 75%;
         background: transparent;
         text-align: center;
         padding: 2% 13px;
@@ -995,8 +995,8 @@
         }
         .img_div{
             top: 1%;
-            width: 120px;
-            height: 120px;
+            width: 110px;
+            height: 110px;
         }
         .grid_item {
             padding-bottom: 30px;
@@ -1017,14 +1017,14 @@
         }
 
         .textos p {
-            font-size: 2.7vw;
+            font-size: 2.4vw;
             position: relative;
             align-self: flex-end;
             top: -45px;
         }
 
         .grid_item {
-            height: 450px;
+            height: 460px;
             display: flex;
             flex-direction: column;
             justify-content: center;
