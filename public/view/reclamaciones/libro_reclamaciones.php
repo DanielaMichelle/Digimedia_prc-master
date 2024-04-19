@@ -5,6 +5,7 @@
 $title = '.:: DigiMedia ::.';
 
 $fileCSS    = ['libro_reclamaciones'];
+$fileJS     = ['libro_reclamaciones'];
 
 include_once './public/include/html_head.php';
 ?>
@@ -142,7 +143,6 @@ include_once './public/include/html_head.php';
     </div>
 
     
-    <script src="../../js/libro_reclamaciones.js"></script>
 
 </body>
 

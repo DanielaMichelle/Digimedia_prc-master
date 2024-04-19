@@ -15,6 +15,8 @@ searchIcon.addEventListener('click', () => {
     searchInput.focus();
 });
 
+
+
 document.addEventListener("keyup", e => {
     if (e.target.matches('.search-input')) {
         if (e.key === "Escape") e.target.value = ""
