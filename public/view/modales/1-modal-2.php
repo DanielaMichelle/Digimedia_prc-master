@@ -1,3 +1,4 @@
+
 <style>
     .modal2 {
         width: 40rem;
@@ -281,6 +282,7 @@
     </div>
 </div>
 
+<script src="./public/js/mensajesWhatsappEmail.js"></script>
 <script>
     const modal = document.getElementById('modal2_desarrollo');
     const anuncioServicio = document.querySelector("#anuncio-servicio");
@@ -304,6 +306,7 @@
         threshold: 0.01,
     };
     let ejecutado = false;
+    
     let observer = new IntersectionObserver(function(entries) {
         for (const entry of entries) {
             if (entry.isIntersecting && !ejecutado) {
@@ -312,7 +315,30 @@
             }
         }
     }, options);
-    observer.observe(anuncioServicio);
+    //instaciar and call Method and see that Modal
+    function metodos(){
+        if(localStorage.getItem("correoData") == null){
+            observer.observe(anuncioServicio);
+        }else{
+            observer.disconnect();
+        }
+    }
+    metodos();
+    nameSpace = setInterval(metodos, 1000);//almacenar la funcion en vari-to-use
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+            clearInterval(nameSpace);
+            console.log("This Function is Dead");
+        } else {
+            // Reactivar la verificación cuando la página vuelve a estar visible
+            nameSpace = setInterval(metodos, 1000); 
+            console.log("Activamos this Function")
+        }
+    });
+
+
+    
+    
 
 
     // Cerrar modal click afuera
@@ -350,7 +376,7 @@
         if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
             modal.style.display = "none";
             catchData(nameInput, lastNameInput, emailInput);
-            enviarEmail_12(emailInput.value);
+            enviarDatosCorreo(emailInput.value, 0);
             cleanData(nameInput, lastNameInput, emailInput);
         }
     }
@@ -381,168 +407,22 @@
         email.value = "";
     }
 
-   /* let iterador_12 = 0;
-let timeoutIds = []; // Almacenar los IDs de los setTimeouts activos
-let funcionesPendientes = 0; // Contador de funciones pendientes
 
-// Escuchar el evento beforeunload para limpiar el localStorage antes de abandonar la página
-window.addEventListener("beforeunload", function(event) {
-    if (funcionesPendientes > 0) {
-        event.preventDefault();
-        event.returnValue = ''; // Necesario para mostrar el mensaje de confirmación en algunos navegadores
-    } else {
-        localStorage.removeItem("correoValores");
-    }
-});
+    // Evento para controlar el envío del formulario
+    document.getElementById('formMain').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
 
-function enviarEmail_12(email) {
-    // Guardar datos del formulario en localStorage antes de enviarlos
-    almacenarCorreoEnLocalStorage(email);
+        // Verificar si hay mensajes pendientes en el localStorage (correo)
+        const storedDataEmail = obtenerDatosDelLocalStorageCorreo();
+        const sentMessagesEmail = storedDataEmail ? storedDataEmail.sentMessages || [] : [];
 
-    // Incrementar el contador de funciones pendientes
-    funcionesPendientes += 3;
-
-    const timeout1 = setTimeout(() => {
-        enviarCorreoAlServidor_12(email, 1)
-            .then(() => {
-                console.log("Envío Correcto 1");
-                iterador_12++;
-                console.log(iterador_12);
-                // Decrementar el contador de funciones pendientes cuando se completa
-                funcionesPendientes--;
-            })
-            .catch((err) => {
-                console.error("Error al enviar el correo:", err);
-                // Decrementar el contador de funciones pendientes incluso en caso de error
-                funcionesPendientes--;
-            });
-    }, 0); // Se ejecuta inmediatamente
-
-    const timeout2 = setTimeout(() => {
-        enviarCorreoAlServidor_12(email, 2)
-            .then(() => {
-                console.log("Envío Correcto 2");
-                iterador_12++;
-                console.log(iterador_12);
-                funcionesPendientes--;
-            })
-            .catch((err) => {
-                console.error("Error al enviar el correo:", err);
-                funcionesPendientes--;
-            });
-    }, 10000);
-
-    const timeout3 = setTimeout(() => {
-        enviarCorreoAlServidor_12(email, 3)
-            .then(() => {
-                console.log("Envío Correcto 3");
-                iterador_12 = 0;
-                console.log(iterador_12);
-                funcionesPendientes--;
-                // Limpiar el localStorage solo cuando todas las funciones han finalizado
-                if (funcionesPendientes === 0) {
-                    localStorage.removeItem("correoValores");
-                }
-            })
-            .catch((err) => {
-                console.error("Error al enviar el correo:", err);
-                funcionesPendientes--;
-            });
-    }, 50000);
-
-    // Almacenar los IDs de los setTimeouts activos
-    timeoutIds = [timeout1, timeout2, timeout3];
-}
-
-function almacenarCorreoEnLocalStorage(correo) {
-    const obj = {
-        "correo": correo,
-        "tiempo": Date.now()
-    };
-    localStorage.setItem("correoValores", JSON.stringify(obj));
-    return true; // Devuelve true si se almacena correctamente
-}
-
-function enviarCorreoAlServidor_12(email, iteracion) {
-    const body = new FormData();
-    var url = window.location.href;
-    const id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
-    body.append("id_ser", id_ser);
-    body.append("email", email);
-    body.append("iterador", (iteracion-1));
-    console.log("ui: " + id_ser);
-    console.log(email);
-    return fetch("./public/message/Controller/process.php", {
-            method: "POST",
-            body: body,
-        })
-        .then((response) => response.text())
-        .then(console.log)
-        .catch((err) => {
-            console.error("Error en la solicitud fetch:", err);
-            throw err; // Rechazar la promesa para manejar el error externamente
-        });
-}
-*/
-
-function enviarEmail_12(email){
-    if (!almacenarCorreoEnLocalStorage_12(email)) {
-            alert("No se almaceno");
+        if (sentMessagesEmail.length >= 1 && sentMessagesEmail.length < 3) {
+            alert("Debes esperar a que se completen los mensajes de correo antes de enviar otro formulario.");
             return;
         }
-    enviarCorreoAlServidor_12(email,0).then(() => {
-            console.log("Envio Correcto 1");
-          
-        }).catch((err) => {
-            console.error("Error al enviar el correo:", err);
-        });
-    setTimeout(() => {
-        enviarCorreoAlServidor_12(email,1).then(() => {
-                console.log("Envio Correcto 2");
-                
-            }).catch((err) => {
-                console.error("Error al enviar el correo:", err);
-            });
-        }, 10000);
-    setTimeout(() => {
-        enviarCorreoAlServidor_12(email,2).then(() => {
-                console.log("Envio Correcto 3");
-               
-                localStorage.removeItem("correoValores");
-            }).catch((err) => {
-                console.error("Error al enviar el correo:", err);
-            });
-        }, 50000);
-}
 
-
-function almacenarCorreoEnLocalStorage_12(correo) {
-    const obj = {
-        "correo": correo,
-        "tiempo": Date.now()
-    };
-    localStorage.setItem("correoValores", JSON.stringify(obj));
-    return true; // Devuelve true si se almacena correctamente
-}
-
-function enviarCorreoAlServidor_12(email,ite) {
-    const body = new FormData();
-    var url = window.location.href;
-    const id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
-    body.append("id_ser", id_ser);
-    body.append("email", email);
-    body.append("iterador", ite);
-
-    console.log(email);
-    return fetch("./public/message/Controller/process.php", {
-        method: "POST",
-        body: body,
-    })
-    .then((response) => response.text())
-    .then(console.log)
-    .catch((err) => {
-        console.error("Error en la solicitud fetch:", err);
-        throw err; // Rechazar la promesa para manejar el error externamente
+        // Si no hay mensajes pendientes, permitir el envío del formulario
+        submit();
     });
-}
+
 </script>

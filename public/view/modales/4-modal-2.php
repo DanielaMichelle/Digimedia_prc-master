@@ -276,6 +276,7 @@
     </div>
 </div>
 
+<script src="./public/js/mensajesWhatsappEmail.js"></script>
 <script>
     const modal = document.getElementById("modal2_branding");
     const anuncioServicio = document.querySelector("#anuncio-servicio");
@@ -297,7 +298,26 @@
             }
         }
     }, options);
-    observer.observe(anuncioServicio);
+    //instaciar and call Method and see that Modal
+    function metodosAction(){
+        if(localStorage.getItem("correoData") == null){
+            observer.observe(anuncioServicio);
+        }else{
+            observer.disconnect();
+        }
+    }
+    metodosAction();
+    nameSpaceThat = setInterval(metodosAction, 1000);//almacenar la funcion en vari-to-use
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+            clearInterval(nameSpaceThat);
+            console.log("This Function is Dead");
+        } else {
+            // Reactivar la verificación cuando la página vuelve a estar visible
+            nameSpaceThat = setInterval(metodosAction, 1000); 
+            console.log("Activamos this Function")
+        }
+    });
 
 
     // Cerrar modal click afuera
@@ -335,10 +355,8 @@
         if (nameInput.value != '' && lastNameInput.value != '' && emailValido) {
             modal.style.display = "none";
             catchData(nameInput, lastNameInput, emailInput);
-            enviarEmail_44(emailInput.value);
+            enviarDatosCorreo(emailInput.value, 3);
             cleanData(nameInput, lastNameInput, emailInput);
-            
-            // console.log(emailInput.value);
         }
     }
 
@@ -368,73 +386,20 @@
         email.value = "";
     }
 
+    // Evento para controlar el envío del formulario
+    document.getElementById('formMain').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
 
-let iterador4 = 0;
-//servicios mensajeria
-function enviarEmail_44(email){
-    if (!almacenarCorreoEnLocalStorage(email)) {
-            alert("No se almaceno");
+        // Verificar si hay mensajes pendientes en el localStorage (correo)
+        const storedDataEmail = obtenerDatosDelLocalStorageCorreo();
+        const sentMessagesEmail = storedDataEmail ? storedDataEmail.sentMessages || [] : [];
+
+        if (sentMessagesEmail.length >= 1 && sentMessagesEmail.length < 3) {
+            alert("Debes esperar a que se completen los mensajes de correo antes de enviar otro formulario.");
             return;
         }
-    enviarCorreoAlServidor_44(email).then(() => {
-            console.log("Envio Correcto 1");
-            iterador4 ++;
-            console.log(iterador4);
-        }).catch((err) => {
-            console.error("Error al enviar el correo:", err);
-        });
-    setTimeout(() => {
-        enviarCorreoAlServidor_44(email).then(() => {
-                console.log("Envio Correcto 2");
-                iterador4 ++;
-                console.log(iterador4);
-            }).catch((err) => {
-                console.error("Error al enviar el correo:", err);
-            });
-        }, 10000);
-    setTimeout(() => {
-        enviarCorreoAlServidor_44(email).then(() => {
-                console.log("Envio Correcto 3");
-                iterador4 = 0;
-                console.log(iterador4);
-                localStorage.removeItem("correoValores");
-            }).catch((err) => {
-                console.error("Error al enviar el correo:", err);
-            });
-        }, 50000);
-}
 
-
-function almacenarCorreoEnLocalStorage(correo) {
-    const obj = {
-        "correo": correo,
-        "tiempo": Date.now()
-    };
-    localStorage.setItem("correoValores", JSON.stringify(obj));
-    return true; // Devuelve true si se almacena correctamente
-}
-
-function enviarCorreoAlServidor_44(email) {
-    const body = new FormData();
-    
-    var url = window.location.href;
-    const id_ser  = url.split('servicios/brading-desing/')[1];
-    
-    body.append("id_ser", id_ser);
-    body.append("email", email);
-    body.append("iterador", iterador4);
-
-    console.log(email);
-    return fetch("./public/message/Controller/process.php", {
-        method: "POST",
-        body: body,
-    })
-    .then((response) => response.text())
-    .then(console.log)
-    .catch((err) => {
-        console.error("Error en la solicitud fetch:", err);
-        throw err; // Rechazar la promesa para manejar el error externamente
+        // Si no hay mensajes pendientes, permitir el envío del formulario
+        submit();
     });
-}
-
 </script>
