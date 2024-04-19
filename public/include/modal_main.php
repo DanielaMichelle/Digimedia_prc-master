@@ -383,7 +383,7 @@ function datos() {
 
     if (nombreInput.value === '') alert('El nombre no debe estar vacio')
 
-    if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos")
+    if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos y debe empezar con 9")
 
     if (!emailValido) alert("Debe de ingresar un correo valido.")
 

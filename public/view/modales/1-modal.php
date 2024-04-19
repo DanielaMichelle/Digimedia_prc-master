@@ -555,20 +555,20 @@ window.onload = function() {
 // Función para enviar el correo electrónico al servidor
 
 
-
+let iterador_1 = 0;
 function enviarEmail_1(email){
-    if (!almacenarCorreoEnLocalStorage(email)) {
+    if (!almacenarCorreoEnLocalStorage_12(email)) {
             alert("No se almaceno");
             return;
         }
-    enviarCorreoAlServidor_1(email,0).then(() => {
+    enviarCorreoAlServidor_12(email,0).then(() => {
             console.log("Envio Correcto 1");
-            
+          
         }).catch((err) => {
             console.error("Error al enviar el correo:", err);
         });
     setTimeout(() => {
-        enviarCorreoAlServidor_1(email,1).then(() => {
+        enviarCorreoAlServidor_12(email,1).then(() => {
                 console.log("Envio Correcto 2");
                 
             }).catch((err) => {
@@ -576,9 +576,9 @@ function enviarEmail_1(email){
             });
         }, 10000);
     setTimeout(() => {
-        enviarCorreoAlServidor_1(email,2).then(() => {
+        enviarCorreoAlServidor_12(email,2).then(() => {
                 console.log("Envio Correcto 3");
-                
+               
                 localStorage.removeItem("correoValores");
             }).catch((err) => {
                 console.error("Error al enviar el correo:", err);
@@ -596,13 +596,13 @@ function almacenarCorreoEnLocalStorage(correo) {
     return true; // Devuelve true si se almacena correctamente
 }
 
-function enviarCorreoAlServidor_1(email,ite) {
+function enviarCorreoAlServidor_1(email) {
     const body = new FormData();
     var url = window.location.href;
     const id_ser  = url.split('servicios/diseno-desarrollo-web/')[1];
     body.append("id_ser", id_ser);
     body.append("email", email);
-    body.append("iterador", ite);
+    body.append("iterador", iterador_1);
 
     console.log(email);
     return fetch("./public/message/Controller/process.php", {
