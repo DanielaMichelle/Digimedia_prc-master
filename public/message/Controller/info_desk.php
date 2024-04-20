@@ -600,47 +600,11 @@ function SendMessage($menssage, $imagenes_main, $title)
                                         style=\"Margin:0;padding-bottom:5px;padding-top:20px;padding-left:20px;padding-right:20px\">
                                         <h2
                                             style=\"Margin:0;line-height:26px;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:22px;font-style:normal;font-weight:normal;color:#a601b8\">
-                                            <strong>¡MAXIMIZA TU PRESENCIA ONLINE!</strong></h2>
+                                            <strong>".$title."</strong></h2>
                                         </td>
                                     </tr>
                                     <tr style=\"border-collapse:collapse\">
-                                        <td align=\"left\"
-                                        style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\">
-                                        <!-- <p
-                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
-                                            Hola, <strong><span style=\"color:#a601b8\">|FNAME|</span></strong></p>
-                                        <p
-                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
-                                            <br></p> -->
-                                        <p
-                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
-                                            ¿Deseas una página más<strong><span style=\"color:#3865e3\"> interactiva y
-                                                didáctica</span></strong>?<br><br>En <strong><span
-                                                style=\"color:#a601b8\">DIGI</span><span
-                                                style=\"color:#3865e3\">MEDIA</span></strong>&nbsp;te ayudaremos<span
-                                            style=\"color:#a601b8\"> <strong>impulsar tu éxito</strong></span> digital con
-                                            beneficios exclusivos:</p>
-                                        <ol>
-                                            <li
-                                            style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px\">
-                                            <p
-                                                style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
-                                                Aumento de visibilidad y tráfico web garantizado.</p>
-                                            </li>
-                                            <li
-                                            style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px\">
-                                            <p
-                                                style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
-                                                Experiencia del usuario excepcional que convierte<span style=\"color:#3865E3\">
-                                                </span>visitantes en clientes leales.</p>
-                                            </li>
-                                        </ol>
-                                        <p
-                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
-                                            ¡Construye una plataforma de impacto con nosotros y <span
-                                            style=\"color:#a601b8\"><strong>haz que tu negocio</strong></span> <strong><span
-                                                style=\"color:#a601b8\">brille en la WEB</span></strong>!</p>
-                                        </td>
+                                        ".$mensaje2."
                                     </tr>
                                     </table>
                                 </td>
@@ -671,7 +635,7 @@ function SendMessage($menssage, $imagenes_main, $title)
                                     width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">
                                     <tr style=\"border-collapse:collapse\">
                                         <td align=\"center\" style=\"padding:0;Margin:0;font-size:0px\"><img class=\"adapt-img\"
-                                            src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggZAozhvwXsX_KVF_unYAOXhUspbAuw03Gkouv51yzLaGHdmhzW-0nw63eD99WV7nywIIUBcy75xO2XCWG3KxosXfty7Kr0XUOpWeMXzNYaNhasB4j6sQQogbEsxvlfhrOXSgYmjv67ioEGowFeV2tl6-b568yNZVXvSaqHmZDcwpPb5bwm-MJPXoKvid7/s16000/flyer-modal-1-2.jpg\"
+                                            src=". $imagenes_main ."
                                             alt
                                             style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\"
                                             width=\"560\"></td>
@@ -836,6 +800,45 @@ function SendMessage($menssage, $imagenes_main, $title)
 
     return $mensages_main;
 }
+
+/* Lo esta en el cuerpo del Mensaje eras esto:
+ <td align=\"left\"
+                                        style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\">
+                                        <!-- <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                            Hola, <strong><span style=\"color:#a601b8\">|FNAME|</span></strong></p>
+                                        <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                            <br></p> -->
+                                        <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                            ¿Deseas una página más<strong><span style=\"color:#3865e3\"> interactiva y
+                                                didáctica</span></strong>?<br><br>En <strong><span
+                                                style=\"color:#a601b8\">DIGI</span><span
+                                                style=\"color:#3865e3\">MEDIA</span></strong>&nbsp;te ayudaremos<span
+                                            style=\"color:#a601b8\"> <strong>impulsar tu éxito</strong></span> digital con
+                                            beneficios exclusivos:</p>
+                                        <ol>
+                                            <li
+                                            style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px\">
+                                            <p
+                                                style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                                Aumento de visibilidad y tráfico web garantizado.</p>
+                                            </li>
+                                            <li
+                                            style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px\">
+                                            <p
+                                                style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                                Experiencia del usuario excepcional que convierte<span style=\"color:#3865E3\">
+                                                </span>visitantes en clientes leales.</p>
+                                            </li>
+                                        </ol>
+                                        <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                            ¡Construye una plataforma de impacto con nosotros y <span
+                                            style=\"color:#a601b8\"><strong>haz que tu negocio</strong></span> <strong><span
+                                                style=\"color:#a601b8\">brille en la WEB</span></strong>!</p>
+                                        </td>*/
 
 ?>
 
