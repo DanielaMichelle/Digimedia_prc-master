@@ -83,6 +83,12 @@
                     <span>Modal marketing</span>
                 </a>
             </li>
+            <li>
+                <a href="/Digimedia_prc-master/public/view/secciones-admin/modal-usuario.php">
+                    <ion-icon name="duplicate-outline"></ion-icon>
+                    <span>Usuarios</span>
+                </a>
+            </li>
         </ul>
     </nav>
 
