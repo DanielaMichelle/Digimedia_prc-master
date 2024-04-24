@@ -66,98 +66,51 @@ $title = [
 $menssage = [
     // Desarrollo y Diseño
     [
-        "¿Estás cansado de enfrentar problemas con tu sitio web que afectan el crecimiento de tu negocio?  En Digimedia, no solo creamos sitios web, ¡forjamos plataformas de impacto! 📈.
-                                
-        ¿Por qué elegir nuestro servicio de desarrollo web? 🚀
-        📌Diseño impactante con resultados asombrosos
-        📌Experiencia del usuario que deja huella
-                            
-        *Estamos emocionados de ser tu socio en tu próximo éxito online. Si estás listo para un desarrollo web que marque la diferencia, ¡contáctanos ahora!*",
-
-        "¿Quieres hacer *crecer tus ventas* en el mundo digital? En Digimedia te garantizamos el mejor servicio de diseño y desarrollo web para que puedas potenciarte en el mundo digital con nuestros beneficios exclusivos 🙌🏼:
-            
-        - Aumento de visibilidad y tráfico web.
-        - Sitios web altamente personalizados con herramientas seguras.",
-
-        "*¿Deseas una página más interactiva y didáctica?*🤯 en Digimedia te ayudaremos impulsar tu éxito digital con beneficios exclusivos:
-                        
-        1️⃣ Aumento de visibilidad y tráfico web garantizado.
-        2️⃣ Experiencia del usuario excepcional que convierte visitantes en clientes leales.
-                                    
-        ¡Construye una plataforma de impacto con nosotros y haz que tu negocio brille en la web!🚀"
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">¿Estás cansado de enfrentar problemas con tu sitio web que afectan el crecimiento de tu negocio? En Digimedia, no solo creamos sitios web, ¡forjamos plataformas de impacto!📈.</p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">¿Por qué elegir nuestro servicio de desarrollo web? 🚀 </p><ul style=\"Margin:0;padding:0\"><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;margin-left:0;color:#3F3D3D;font-size:14px;list-style: none\">📌 Diseño impactante con resultados asombrosos </li><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px;list-style:none\">📌 Experiencia del usuario que deja huella </li></ul><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">*Estamos emocionados de ser tu socio en tu próximo éxito online. Si estás listo para un desarrollo web que marque la diferencia, ¡contáctanos ahora!* </p></td>",
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">¿Quieres hacer <strong><span style=\"color:#3865e3\">crecer tus ventas</span></strong> en el mundo digital? En Digimedia te garantizamos el mejor servicio de diseño y desarrollo web para que puedas potenciarte en el mundo digital con nuestros beneficios exclusivos 🙌🏼:</p><ul style=\"Margin:0;padding-left:20px\"><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;margin-left:0;color:#3F3D3D;font-size:14px;list-style: none\">- Aumento de visibilidad y tráfico web. </li><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px;list-style:none\">- Sitios web altamente personalizados con herramientas seguras. </li></ul></td>",
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\"> ¿Deseas una página más <strong> <a href='https://www.digimediamkt.com/' style=\"color:#3865e3;text-decoration:none\"> TRIPLIQUE TUS VENTAS</span></strong>?<br><br> En <strong><span style=\"color:#a601b8\">DIGI</span> <span style=\"color:#3865e3\">MEDIA</span></strong>&nbsp;te ayudaremos<span style=\"color:#a601b8\"> <strong>impulsar tu éxito</strong></span> digital con beneficios exclusivos:</p><ol><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\"> Aumento de visibilidad y tráfico web garantizado.</p></li><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px\"> <p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\"> Experiencia del usuario excepcional que convierte<span style=\"color:#3865E3\"> </span>visitantes en clientes leales.</p></li></ol><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">¡Construye una plataforma de impacto con nosotros y <span style=\"color:#a601b8\"><strong>haz que tu negocio</strong></span> <strong><span style=\"color:#a601b8\">brille en la WEB</span></strong>!</p></td>"
     ],
     // Gestión de Redes Sociales
     [
-        "¿Tus redes sociales no generan interacciones? En DigiMedia, estamos comprometidos en potenciar tu presencia en línea a través de la *gestión de redes sociales*. Al confiarnos la administración de tus plataformas digitales, experimentarás un aumento significativo en la visibilidad y participación de tu marca.                     
-                
-        Nuestros *beneficios exclusivos*:
-        🚀 Potenciación de tu presencia digital.
-        🚀 Contenido estratégico y de valor.
-                                
-        *¡Transformemos juntos tu presencia digital! ¡Háznoslo saber!*",
+    
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">¿Tus redes sociales no generan interacciones? En DigiMedia, estamos comprometidos en potenciar tu presencia en línea a través de la <em>gestión de redes sociales</em>. Al confiarnos la administración de tus plataformas digitales, experimentarás un aumento significativo en la visibilidad y participación de tu marca. </p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">Nuestros <em>*beneficios exclusivos*</em>:</p><ul style=\"Margin:0;padding:0\"><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;margin-left:0;color:#3F3D3D;font-size:14px;list-style: none\">🚀 Potenciación de tu presencia digital. </li><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px;list-style:none\">🚀 Contenido estratégico y de valor. </li></ul><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\"><strong>¡Transformemos juntos tu presencia digital! ¡Háznoslo saber!</strong></p></td>",
 
-        "¿Quieres tener contenido de calidad? Deja la gestión de tus redes sociales en manos expertas con Digimedia y haz crecer tu negocio de la mejor manera con nuestros beneficios exclusivos 📈.
-                
-        - Planificación y organización de contenidos.
-        - Análisis de resultados con informes mensuales.",
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">¿Quieres tener contenido de calidad? Deja la gestión de tus redes sociales en manos expertas con Digimedia y haz crecer tu negocio de la mejor manera con nuestros beneficios exclusivos 📈:</p><ul style=\"Margin:0;padding-left:20px\"><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;margin-left:0;color:#3F3D3D;font-size:14px;list-style: none\">- Planificación y organización de contenidos. </li><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px;list-style:none\">- Análisis de resultados con informes mensuales. </li></ul></td>",
         
-        "¿Buscas contenido de alto impacto? Confía en los especialistas de Digimedia Marketing para gestionar tus redes sociales y lleva tu negocio al siguiente nivel con nuestro servicio de Gestión Redes Sociales.
-                
-        *✅ Diseño estratégico y calendario de contenido en redes.*
-        *✅ Análisis de desempeño con reportes mensuales y más!!*"
+       
+
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">¿Buscas contenido de alto impacto? Confía en los especialistas de Digimedia Marketing para gestionar tus redes sociales y lleva tu negocio al siguiente nivel con nuestro servicio de Gestión Redes Sociales. </p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\"><strong>✅ Diseño estratégico y calendario de contenido en redes.</strong></p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\"><strong>✅ Análisis de desempeño con reportes mensuales y más!!</strong></p></td>"
+
     ],
     // Marketing y Gestión Digital
     [
-        "En DigiMedia Marketing, estamos comprometidos en el mejor desarrollo en *marketing  digital*. Tendremos el placer de armar estrategias que promuevan tu marca a través de diferentes entornos digitales.
-                
-        ¿Las estrategias que planteas no logran los objetivos de tu empresa?, entonces adquiere nuestro servicio con *beneficios exclusivos*🙌:
-                
-        📌Mejorar tu visibilidad online
-        📌Vínculo de lealtad con los clientes 
+        
                             
-        *¡No te quedes atrás en la era digital y transforma tu marca con soluciones innovadoras! Contáctanos y que comience tu presencia digital.",
+        
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">En DigiMedia Marketing, estamos comprometidos en el mejor desarrollo en <em>*marketing digital*</em>. Tendremos el placer de armar estrategias que promuevan tu marca a través de diferentes entornos digitales. </p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">¿Las estrategias que planteas no logran los objetivos de tu empresa?, entonces adquiere nuestro servicio con <em>*beneficios exclusivos*</em>🙌:</p><ul style=\"Margin:0;padding:0\"><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;margin-left:0;color:#3F3D3D;font-size:14px;list-style: none\">📌 Mejorar tu visibilidad online </li><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px;list-style:none\">📌 Vínculo de lealtad con los clientes </li></ul><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\"><strong>¡No te quedes atrás en la era digital y transforma tu marca con soluciones innovadoras! Contáctanos y que comience tu presencia digital.</strong></p></td>"
+        ,
+       
+
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">¿Quieres tener las mejores estrategias online de marketing? En Digimedia somos expertos dominando el mundo digital y juntos potenciaremos tu presencia digital. </p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">Con nosotros podrás:</p><ul style=\"Margin:0;padding-left:20px\"><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;margin-left:0;color:#3F3D3D;font-size:14px;list-style: none\">- Vínculo de lealtad con los clientes </li><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px;list-style:none\">- Desarrollar publicidad en línea </li></ul></td>"
+        ,
         
         
-        "¿Quieres tener las mejores estrategias online de marketing? 
-        En Digimedia somos expertos dominando el mundo digital y juntos potenciaremos tu presencia digital. 
-                
-        Con nosotros podrás:
-        -Vínculo de lealtad con los clientes 
-        -Desarrollar publicidad en línea",
-        
-        
-        "¿Quieres tener las mejores estrategias de marketing digital? 💻 Obtén mayores ganancias digitalizando tu negocio junto a Digimedia Marketing💰📈. Con el servicio de marketing y gestión digital podrás tener: 
-                
-        ✅ Estrategias digitales personalizadas.
-        ✅ Mejor rendimiento de tu presupuesto.
-                
-        Comunícate con nosotros/responde este mensaje para obtener más información y comienza a ver resultados. "
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">¿Quieres tener las mejores estrategias de marketing digital? 💻 Obtén mayores ganancias digitalizando tu negocio junto a Digimedia Marketing 💰📈. Con el servicio de marketing y gestión digital podrás tener:</p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\"><strong>✅ Estrategias digitales personalizadas.</strong></p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\"><strong>✅ Mejor rendimiento de tu presupuesto.</strong></p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;margin-top:15px\">Comunícate con nosotros/responde este mensaje para obtener más información y comienza a ver resultados. </p></td>"
     ],
     // Branding y Diseño
     [
-        "¿Sientes que tu negocio no se diferencia del resto? ¡Haz que tu marca sea inolvidable!  
-        En DigiMedia, estamos preparados para llevar la identidad de tu marca a otro nivel. Somos especialistas en crear *diseños irresistibles y branding* cautivador.
-                                
-        Adquiere nuestros beneficios exclusivos 🚀:               
-        📌 Diferenciación y Reconocimiento
-                                
-        *Prepárate para darle un giro a tu negocio con todos nuestros beneficios ¡Contacte con nosotros!*",
+        
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">¿Sientes que tu negocio no se diferencia del resto? ¡Haz que tu marca sea inolvidable! </p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">En DigiMedia, estamos preparados para llevar la identidad de tu marca a otro nivel. Somos especialistas en crear *diseños irresistibles y branding* cautivador.</p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">Adquiere nuestros beneficios exclusivos 🚀:</p><ul style=\"Margin:0;padding:0\"><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;margin-left:0;color:#3F3D3D;font-size:14px;list-style: none;margin-bottom:15px\">📌 Diferenciación y Reconocimiento </li></ul><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\"><em>Prepárate para darle un giro a tu negocio con todos nuestros beneficios ¡Contacte con nosotros!</em></p></td>"        
+        ,
         
         
-        "¿Quieres destacar entre tu competencia? Con Digimedia podrás tener una marca sólida gracias a nuestro servicio de Branding y diseño que te ayudarán a ser reconocida entre tus clientes 🚀.
-                
-        - Desarrollo en identidad visual de tu marca
-        - Originalidad en conceptos de marca",
+
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">¿Quieres destacar entre tu competencia? Con Digimedia podrás tener una marca sólida gracias a nuestro servicio de Branding y diseño que te ayudarán a ser reconocida entre tus clientes 🚀. </p><ul style=\"Margin:0;padding-left:20px\"><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;margin-left:0;color:#3F3D3D;font-size:14px;list-style: none\">- Desarrollo en identidad visual de tu marca </li><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px;list-style:none\">- Originalidad en conceptos de marca </li></ul></td>"
+        ,
         
         
-        "En Digimedia garantizamos crear experiencias visuales impactante y memorables para que puedas conectar con tu audiencia, nuestro servicio de Branding y diseño que te ayudarán a lograr esto 🚀
-                
-        Nuestros beneficios:
-                
-        - Originalidad en conceptos de marca 
-        - Construcción de confianza y credibilidad
-                
-        ¡Sé parte del mundo digital y potencia tu marca con nosotros! 🙌🏼"
+
+        "<td align=\"left\" style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">En Digimedia garantizamos crear experiencias visuales impactantes y memorables para que puedas conectar con tu audiencia, nuestro servicio de Branding y diseño te ayudarán a lograr esto 🚀. </p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px;Margin-bottom:15px\">Nuestros beneficios:</p><ul style=\"Margin:0;padding-left:20px\"><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;margin-left:0;color:#3F3D3D;font-size:14px;list-style: none\">- Originalidad en conceptos de marca </li><li style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px;list-style:none\">- Construcción de confianza y credibilidad </li></ul><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">¡Sé parte del mundo digital y potencia tu marca con nosotros! 🙌🏼 </p></td>"
     ]
 ];
 
@@ -169,43 +122,676 @@ function SendMessage($menssage, $imagenes_main, $title)
     $mensaje2 = nl2br($menssage);
     $mensages_main = "
         
-        <!DOCTYPE html>
-        <html>
+        
+
+        <!DOCTYPE html
+        PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
+        <html dir=\"ltr\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" lang=\"und\"
+        style=\"padding:0;Margin:0\">
+
         <head>
-            <title>Ejemplo</title>
-            <meta charset=\"UTF-8\">
-            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-            <style>
-            @media only screen and (max-width: 600px) {
-                table[width=\"70%\"] {
-                    width: 90% !important; /* Cambia el ancho del contenedor al 90% en dispositivos móviles */
-                }
-            }
+        <meta charset=\"UTF-8\">
+        <meta content=\"width=device-width, initial-scale=1\" name=\"viewport\">
+        <meta name=\"x-apple-disable-message-reformatting\">
+        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+        <meta content=\"telephone=no\" name=\"format-detection\">
+        <title>Email-DigiMedia</title><!--[if (mso 16)]>
+            <style type=\"text/css\">
+            a {text-decoration: none;}
             </style>
+            <![endif]--><!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]--><!--[if gte mso 9]>
+        <xml>
+            <o:OfficeDocumentSettings>
+            <o:AllowPNG></o:AllowPNG>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]--><!--[if !mso]>
+        <link href=\"https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i\" rel=\"stylesheet\"><!--<![endif]-->
+
+        <style type=\"text/css\">
+            #outlook a {
+            padding: 0;
+            }
+
+            .ExternalClass {
+            width: 100%;
+            }
+
+            .ExternalClass,
+            .ExternalClass p,
+            .ExternalClass span,
+            .ExternalClass font,
+            .ExternalClass td,
+            .ExternalClass div {
+            line-height: 100%;
+            }
+
+            .es-button {
+            mso-style-priority: 100 !important;
+            text-decoration: none !important;
+            }
+
+            a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+            }
+
+            .es-desk-hidden {
+            display: none;
+            float: left;
+            overflow: hidden;
+            width: 0;
+            max-height: 0;
+            line-height: 0;
+            mso-hide: all;
+            }
+
+            .es-button-border:hover a.es-button,
+            .es-button-border:hover button.es-button {
+            background: #3498db !important;
+            }
+
+            .es-button-border:hover {
+            border-color: #42d159 #42d159 #42d159 #42d159 !important;
+            background: #3498db !important;
+            }
+
+            td .es-button-border:hover a.es-button-1713563321876 {
+            background: #C302AD !important;
+            }
+
+            td .es-button-border-1713563321902:hover {
+            background: #C302AD !important;
+            }
+
+            @media only screen and (max-width:600px) {
+
+            p,
+            ul li,
+            ol li,
+            a {
+                line-height: 150% !important
+            }
+
+            h1,
+            h2,
+            h3,
+            h1 a,
+            h2 a,
+            h3 a {
+                line-height: 120% !important
+            }
+
+            h1 {
+                font-size: 26px !important;
+                text-align: center
+            }
+
+            h2 {
+                font-size: 24px !important;
+                text-align: center
+            }
+
+            h3 {
+                font-size: 20px !important;
+                text-align: center
+            }
+
+            .es-header-body h1 a,
+            .es-content-body h1 a,
+            .es-footer-body h1 a {
+                font-size: 26px !important
+            }
+
+            .es-header-body h2 a,
+            .es-content-body h2 a,
+            .es-footer-body h2 a {
+                font-size: 24px !important
+            }
+
+            .es-header-body h3 a,
+            .es-content-body h3 a,
+            .es-footer-body h3 a {
+                font-size: 20px !important
+            }
+
+            .es-menu td a {
+                font-size: 13px !important
+            }
+
+            .es-header-body p,
+            .es-header-body ul li,
+            .es-header-body ol li,
+            .es-header-body a {
+                font-size: 13px !important
+            }
+
+            .es-content-body p,
+            .es-content-body ul li,
+            .es-content-body ol li,
+            .es-content-body a {
+                font-size: 14px !important
+            }
+
+            .es-footer-body p,
+            .es-footer-body ul li,
+            .es-footer-body ol li,
+            .es-footer-body a {
+                font-size: 13px !important
+            }
+
+            .es-infoblock p,
+            .es-infoblock ul li,
+            .es-infoblock ol li,
+            .es-infoblock a {
+                font-size: 11px !important
+            }
+
+            *[class=\"gmail-fix\"] {
+                display: none !important
+            }
+
+            .es-m-txt-c,
+            .es-m-txt-c h1,
+            .es-m-txt-c h2,
+            .es-m-txt-c h3 {
+                text-align: center !important
+            }
+
+            .es-m-txt-r,
+            .es-m-txt-r h1,
+            .es-m-txt-r h2,
+            .es-m-txt-r h3 {
+                text-align: right !important
+            }
+
+            .es-m-txt-l,
+            .es-m-txt-l h1,
+            .es-m-txt-l h2,
+            .es-m-txt-l h3 {
+                text-align: left !important
+            }
+
+            .es-m-txt-r img,
+            .es-m-txt-c img,
+            .es-m-txt-l img {
+                display: inline !important
+            }
+
+            .es-button-border {
+                display: block !important
+            }
+
+            a.es-button,
+            button.es-button {
+                font-size: 14px !important;
+                display: block !important;
+                border-left-width: 0px !important;
+                border-right-width: 0px !important
+            }
+
+            .es-btn-fw {
+                border-width: 10px 0px !important;
+                text-align: center !important
+            }
+
+            .es-adaptive table,
+            .es-btn-fw,
+            .es-btn-fw-brdr,
+            .es-left,
+            .es-right {
+                width: 100% !important
+            }
+
+            .es-content table,
+            .es-header table,
+            .es-footer table,
+            .es-content,
+            .es-footer,
+            .es-header {
+                width: 100% !important;
+                max-width: 600px !important
+            }
+
+            .es-adapt-td {
+                display: block !important;
+                width: 100% !important
+            }
+
+            .adapt-img {
+                width: 100% !important;
+                height: auto !important
+            }
+
+            .es-m-p0 {
+                padding: 0px !important
+            }
+
+            .es-m-p0r {
+                padding-right: 0px !important
+            }
+
+            .es-m-p0l {
+                padding-left: 0px !important
+            }
+
+            .es-m-p0t {
+                padding-top: 0px !important
+            }
+
+            .es-m-p0b {
+                padding-bottom: 0 !important
+            }
+
+            .es-m-p20b {
+                padding-bottom: 20px !important
+            }
+
+            .es-mobile-hidden,
+            .es-hidden {
+                display: none !important
+            }
+
+            tr.es-desk-hidden,
+            td.es-desk-hidden,
+            table.es-desk-hidden {
+                width: auto !important;
+                overflow: visible !important;
+                float: none !important;
+                max-height: inherit !important;
+                line-height: inherit !important
+            }
+
+            tr.es-desk-hidden {
+                display: table-row !important
+            }
+
+            table.es-desk-hidden {
+                display: table !important
+            }
+
+            td.es-desk-menu-hidden {
+                display: table-cell !important
+            }
+
+            .es-menu td {
+                width: 1% !important
+            }
+
+            table.es-table-not-adapt,
+            .esd-block-html table {
+                width: auto !important
+            }
+
+            table.es-social {
+                display: inline-block !important
+            }
+
+            table.es-social td {
+                display: inline-block !important
+            }
+
+            .es-desk-hidden {
+                display: table-row !important;
+                width: auto !important;
+                overflow: visible !important;
+                max-height: inherit !important
+            }
+            }
+
+            @media screen and (max-width:384px) {
+            .mail-message-content {
+                width: 414px !important
+            }
+            }
+        </style>
         </head>
-        <body>
-            <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
-                <tr>
-                    <td align=\"center\">
-                        <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"background: rgb(228, 236, 237); width: 70%; box-shadow: 1px 2px 3px 2px black;\">
-                            <tr>
-                                <td align=\"center\">
-                                    <h1 style=\"color: rgb(20, 20, 18); font-size: 3vw; margin-top: 0;padding: 5%;\">" . $title . "</h1>
-                                    <p style=\"font-size: 2vw; padding: 5%; text-align: left;\">" . $mensaje2 . "</p>
-                                    <img src=" . $imagenes_main . " style=\"width: 90%; height: auto;\">
+
+        <body
+        style=\"width:100%;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0\">
+        <div dir=\"ltr\" class=\"es-wrapper-color\" lang=\"und\" style=\"background-color:#F6F6F6\"><!--[if gte mso 9]>
+                    <v:background xmlns:v=\"urn:schemas-microsoft-com:vml\" fill=\"t\">
+                        <v:fill type=\"tile\" color=\"#f6f6f6\"></v:fill>
+                    </v:background>
+                <![endif]-->
+            <table class=\"es-wrapper\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\"
+            style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#F6F6F6\">
+            <tr style=\"border-collapse:collapse\">
+                <td valign=\"top\" style=\"padding:0;Margin:0\">
+                <table cellpadding=\"0\" cellspacing=\"0\" class=\"es-content\" align=\"center\"
+                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%\">
+                    <tr style=\"border-collapse:collapse\">
+                    <td align=\"center\" style=\"padding:0;Margin:0\">
+                        <table bgcolor=\"transparent\" class=\"es-content-body\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\"
+                        style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px\">
+                        <tr style=\"border-collapse:collapse\">
+                            <td align=\"left\"
+                            style=\"Margin:0;padding-top:10px;padding-bottom:10px;padding-left:20px;padding-right:20px\">
+                            <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\"
+                                style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">
+                                <tr style=\"border-collapse:collapse\">
+                                <td align=\"center\" valign=\"top\" style=\"padding:0;Margin:0;width:560px\">
+                                    <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\"
+                                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">
+                                    <tr style=\"border-collapse:collapse\">
+                                        <td class=\"es-infoblock es-m-txt-c\" align=\"left\"
+                                        style=\"padding:0;Margin:0;line-height:14px;font-size:12px;color:#CCCCCC\">
+                                        <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:14px;color:#CCCCCC;font-size:12px\">
+                                            <br></p>
+                                        </td>
+                                    </tr>
+                                    </table>
                                 </td>
-                            </tr>
+                                </tr>
+                            </table>
+                            </td>
+                        </tr>
                         </table>
                     </td>
-                </tr>
+                    </tr>
+                </table>
+                <table class=\"es-content\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\"
+                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%\">
+                    <tr style=\"border-collapse:collapse\">
+                    <td align=\"center\" style=\"padding:0;Margin:0\">
+                        <table class=\"es-content-body\"
+                        style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px\"
+                        cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"transparent\" align=\"center\">
+                        <tr style=\"border-collapse:collapse\">
+                            <td align=\"left\"
+                            style=\"Margin:0;padding-top:15px;padding-bottom:15px;padding-left:20px;padding-right:20px\">
+                            <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\"
+                                style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">
+                                <tr style=\"border-collapse:collapse\">
+                                <td valign=\"top\" align=\"center\" style=\"padding:0;Margin:0;width:560px\">
+                                    <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\"
+                                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">
+                                    <tr style=\"border-collapse:collapse\">
+                                        <td align=\"center\" style=\"padding:0;Margin:0;font-size:0px\"><a target=\"_blank\"
+                                            href=\"https://www.digimediamkt.com/\"
+                                            style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#2CB543;font-size:14px\"><img
+                                            src=\"https://blogger.googleusercontent.com/img/a/AVvXsEjcmc7kSTRsnel32Fyg5rV8z28_DaZ2Ico4pYiVFWbgyKf22Slq9XolsU5iqEZ0oWxic9KGcBtpluSw983ziDUsL0BvGuLiVc8zYgI4bNYuBgkGlI3_BfCMxJrA1ux_MwBpJwz9bIN5KTIIcywFk4tuN-Q6nBbKQVQYi_dF_kDb6hTzV7Ke-k4a35wohz4C=w655-h169\"
+                                            alt=\"Logo Digimedia\"
+                                            style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\"
+                                            width=\"189\" title=\"Logo Digimedia\"></a></td>
+                                    </tr>
+                                    </table>
+                                </td>
+                                </tr>
+                            </table>
+                            </td>
+                        </tr>
+                        </table>
+                    </td>
+                    </tr>
+                </table>
+                <table class=\"es-content\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\"
+                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%\">
+                    <tr style=\"border-collapse:collapse\">
+                    <td align=\"center\" style=\"padding:0;Margin:0\">
+                        <table class=\"es-content-body\"
+                        style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px\"
+                        cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"transparent\" align=\"center\">
+                        <tr style=\"border-collapse:collapse\">
+                            <td align=\"left\" bgcolor=\"#ffffff\"
+                            style=\"padding:0;Margin:0;padding-bottom:15px;background-color:#ffffff\">
+                            <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\"
+                                style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">
+                                <tr style=\"border-collapse:collapse\">
+                                <td valign=\"top\" align=\"center\" style=\"padding:0;Margin:0;width:600px\">
+                                    <table
+                                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-position:center bottom;background-color:#ffffff;border-radius:5px\"
+                                    width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\">
+                                    <tr style=\"border-collapse:collapse\">
+                                        <td class=\"es-m-txt-l\" align=\"left\"
+                                        style=\"Margin:0;padding-bottom:5px;padding-top:20px;padding-left:20px;padding-right:20px\">
+                                        <h2
+                                            style=\"Margin:0;line-height:26px;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:22px;font-style:normal;font-weight:normal;color:#a601b8\">
+                                            <strong>".$title."</strong></h2>
+                                        </td>
+                                    </tr>
+                                    <tr style=\"border-collapse:collapse\">
+                                        ".$mensaje2."
+                                    </tr>
+                                    </table>
+                                </td>
+                                </tr>
+                            </table>
+                            </td>
+                        </tr>
+                        </table>
+                    </td>
+                    </tr>
+                </table>
+                <table class=\"es-footer\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\"
+                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top\">
+                    <tr style=\"border-collapse:collapse\">
+                    <td align=\"center\" style=\"padding:0;Margin:0\">
+                        <table class=\"es-footer-body\"
+                        style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px\"
+                        cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#FFFFFF\" align=\"center\">
+                        <tr style=\"border-collapse:collapse\">
+                            <td align=\"left\" bgcolor=\"#ffffff\"
+                            style=\"Margin:0;padding-top:5px;padding-bottom:20px;padding-left:20px;padding-right:20px;background-color:#ffffff\">
+                            <table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\"
+                                style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">
+                                <tr style=\"border-collapse:collapse\">
+                                <td valign=\"top\" align=\"center\" style=\"padding:0;Margin:0;width:560px\">
+                                    <table
+                                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-position:center top\"
+                                    width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">
+                                    <tr style=\"border-collapse:collapse\">
+                                        <td align=\"center\" style=\"padding:0;Margin:0;font-size:0px\"><img class=\"adapt-img\"
+                                            src=". $imagenes_main ."
+                                            alt
+                                            style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\"
+                                            width=\"560\"></td>
+                                    </tr>
+                                    </table>
+                                </td>
+                                </tr>
+                            </table>
+                            </td>
+                        </tr>
+                        </table>
+                    </td>
+                    </tr>
+                </table>
+                <table class=\"es-footer\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\"
+                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top\">
+                    <tr style=\"border-collapse:collapse\">
+                    <td align=\"center\" style=\"padding:0;Margin:0\">
+                        <table class=\"es-footer-body\"
+                        style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px\"
+                        cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#FFFFFF\" align=\"center\">
+                        <tr style=\"border-collapse:collapse\">
+                            <td align=\"left\" bgcolor=\"#ffffff\" style=\"padding:0;Margin:0;background-color:#ffffff\">
+                            <table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\"
+                                style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">
+                                <tr style=\"border-collapse:collapse\">
+                                <td valign=\"top\" align=\"center\" style=\"padding:0;Margin:0;width:600px\">
+                                    <table
+                                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-position:center top\"
+                                    width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">
+                                    <tr style=\"border-collapse:collapse\">
+                                        <td align=\"left\"
+                                        style=\"Margin:0;padding-top:10px;padding-bottom:10px;padding-left:20px;padding-right:20px\">
+                                        <span class=\"es-button-border-1713563321902 es-button-border\"
+                                            style=\"border-style:solid;border-color:#2cb543;background:#a601b8;border-width:0px;display:inline-block;border-radius:7px;width:auto\"><a
+                                            href=\"https://www.digimediamkt.com/\" class=\"es-button es-button-1713563321876\"
+                                            target=\"_blank\"
+                                            style=\"mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;display:inline-block;background:#a601b8;border-radius:7px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center;padding:10px 25px 10px 25px;mso-padding-alt:0;mso-border-alt:10px solid #a601b8\">Contáctanos</a></span>
+                                        </td>
+                                    </tr>
+                                    <tr style=\"border-collapse:collapse\">
+                                        <td class=\"es-m-txt-c\" align=\"left\"
+                                        style=\"Margin:0;padding-top:10px;padding-bottom:10px;padding-left:20px;padding-right:20px\">
+                                        <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px\">
+                                            <strong>Gracias por elegir a<span style=\"color:#a601b8\"> DIGI</span><span
+                                                style=\"color:#3865E3\">MEDIA.</span></strong></p>
+                                        </td>
+                                    </tr>
+                                    </table>
+                                </td>
+                                </tr>
+                            </table>
+                            </td>
+                        </tr>
+                        </table>
+                    </td>
+                    </tr>
+                </table>
+                <table class=\"es-footer\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\"
+                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top\">
+                    <tr style=\"border-collapse:collapse\">
+                    <td align=\"center\" style=\"padding:0;Margin:0\">
+                        <table class=\"es-footer-body\"
+                        style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px\"
+                        cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#FFFFFF\" align=\"center\">
+                        <tr style=\"border-collapse:collapse\">
+                            <td
+                            style=\"Margin:0;padding-top:5px;padding-bottom:20px;padding-left:20px;padding-right:20px;background-color:transparent\"
+                            bgcolor=\"transparent\" align=\"left\">
+                            <!--[if mso]><table style=\"width:560px\" cellpadding=\"0\" cellspacing=\"0\"><tr><td style=\"width:270px\" valign=\"top\"><![endif]-->
+                            <table class=\"es-left\" cellspacing=\"0\" cellpadding=\"0\" align=\"left\"
+                                style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left\">
+                                <tr style=\"border-collapse:collapse\">
+                                <td valign=\"top\" align=\"center\" style=\"padding:0;Margin:0;width:270px\">
+                                    <table
+                                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-position:center top\"
+                                    width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">
+                                    <tr style=\"border-collapse:collapse\">
+                                        <td class=\"es-m-txt-c\" align=\"left\"
+                                        style=\"padding:0;Margin:0;padding-top:5px;padding-bottom:15px\">
+                                        <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:14px;color:#999999;font-size:14px\">
+                                            <br></p>
+                                        <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:14px;color:#999999;font-size:14px\">
+                                            Síguenos en nuestras Redes Oficiales</p>
+                                        </td>
+                                    </tr>
+                                    </table>
+                                </td>
+                                </tr>
+                            </table>
+                            <!--[if mso]></td><td style=\"width:20px\"></td><td style=\"width:270px\" valign=\"top\"><![endif]-->
+                            <table class=\"es-right\" cellspacing=\"0\" cellpadding=\"0\" align=\"right\"
+                                style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right\">
+                                <tr style=\"border-collapse:collapse\">
+                                <td align=\"left\" style=\"padding:0;Margin:0;width:270px\">
+                                    <table
+                                    style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-position:center top\"
+                                    width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">
+                                    <tr style=\"border-collapse:collapse\">
+                                        <td class=\"es-m-txt-c\" align=\"right\"
+                                        style=\"padding:0;Margin:0;padding-top:5px;padding-bottom:5px;font-size:0\">
+                                        <table class=\"es-table-not-adapt es-social\" cellspacing=\"0\" cellpadding=\"0\"
+                                            style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">
+                                            <tr style=\"border-collapse:collapse\">
+                                            <td valign=\"top\" align=\"center\" style=\"padding:0;Margin:0;padding-right:10px\"><a
+                                                target=\"_blank\" href=\"https://www.facebook.com/DigiMedia.Marketing1\"
+                                                style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#FFFFFF;font-size:14px\"><img
+                                                    title=\"Facebook\"
+                                                    src=\"https://fiinfrl.stripocdn.email/content/assets/img/social-icons/logo-colored/facebook-logo-colored.png\"
+                                                    alt=\"Fb\" width=\"32\" height=\"32\"
+                                                    style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\"></a>
+                                            </td>
+                                            <td valign=\"top\" align=\"center\" style=\"padding:0;Margin:0;padding-right:10px\"><a
+                                                target=\"_blank\" href=\"https://www.instagram.com/digimediamkt/\"
+                                                style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#FFFFFF;font-size:14px\"><img
+                                                    title=\"Instagram\"
+                                                    src=\"https://fiinfrl.stripocdn.email/content/assets/img/social-icons/logo-colored/instagram-logo-colored.png\"
+                                                    alt=\"Inst\" width=\"32\" height=\"32\"
+                                                    style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\"></a>
+                                            </td>
+                                            <td valign=\"top\" align=\"center\" style=\"padding:0;Margin:0;padding-right:10px\"><a
+                                                target=\"_blank\" href=\"https://www.linkedin.com/in/digimedia-marketing/\"
+                                                style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#FFFFFF;font-size:14px\"><img
+                                                    title=\"LinkedIn\"
+                                                    src=\"https://fiinfrl.stripocdn.email/content/assets/img/social-icons/logo-colored/linkedin-logo-colored.png\"
+                                                    alt=\"In\" width=\"32\" height=\"32\"
+                                                    style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\"></a>
+                                            </td>
+                                            <td valign=\"top\" align=\"center\" style=\"padding:0;Margin:0\"><a target=\"_blank\"
+                                                href=\"https://www.youtube.com/@digimediamarketing2636\"
+                                                style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#FFFFFF;font-size:14px\"><img
+                                                    title=\"YouTube\"
+                                                    src=\"https://fiinfrl.stripocdn.email/content/assets/img/social-icons/logo-colored/youtube-logo-colored.png\"
+                                                    alt=\"Yt\" width=\"32\" height=\"32\"
+                                                    style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\"></a>
+                                            </td>
+                                            </tr>
+                                        </table>
+                                        </td>
+                                    </tr>
+                                    </table>
+                                </td>
+                                </tr>
+                            </table><!--[if mso]></td></tr></table><![endif]-->
+                            </td>
+                        </tr>
+                        </table>
+                    </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
             </table>
-        </body>    
-        </html>
+        </div>
+        </body>
 
+        </html>
         ";
 
     return $mensages_main;
 }
+
+/* Lo esta en el cuerpo del Mensaje eras esto:
+ <td align=\"left\"
+                                        style=\"padding:0;Margin:0;padding-top:10px;padding-left:20px;padding-right:20px\">
+                                        <!-- <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                            Hola, <strong><span style=\"color:#a601b8\">|FNAME|</span></strong></p>
+                                        <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                            <br></p> -->
+                                        <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                            ¿Deseas una página más<strong><span style=\"color:#3865e3\"> interactiva y
+                                                didáctica</span></strong>?<br><br>En <strong><span
+                                                style=\"color:#a601b8\">DIGI</span><span
+                                                style=\"color:#3865e3\">MEDIA</span></strong>&nbsp;te ayudaremos<span
+                                            style=\"color:#a601b8\"> <strong>impulsar tu éxito</strong></span> digital con
+                                            beneficios exclusivos:</p>
+                                        <ol>
+                                            <li
+                                            style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px\">
+                                            <p
+                                                style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                                Aumento de visibilidad y tráfico web garantizado.</p>
+                                            </li>
+                                            <li
+                                            style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;Margin-bottom:15px;margin-left:0;color:#3F3D3D;font-size:14px\">
+                                            <p
+                                                style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                                Experiencia del usuario excepcional que convierte<span style=\"color:#3865E3\">
+                                                </span>visitantes en clientes leales.</p>
+                                            </li>
+                                        </ol>
+                                        <p
+                                            style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:17px;color:#3F3D3D;font-size:14px\">
+                                            ¡Construye una plataforma de impacto con nosotros y <span
+                                            style=\"color:#a601b8\"><strong>haz que tu negocio</strong></span> <strong><span
+                                                style=\"color:#a601b8\">brille en la WEB</span></strong>!</p>
+                                        </td>*/
 
 ?>
 
