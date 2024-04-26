@@ -301,7 +301,7 @@
     </div>
 </section>
 
-<script src="./public/js/mensajesWhatsappEmail.js"></script>
+<script src="./public/js/mensajesWhatsappEmail-minified.js" async></script>
 <script>
     const overflow_los = document.querySelector('.overflow_lo');
     const container_des = document.querySelector('.main-container')

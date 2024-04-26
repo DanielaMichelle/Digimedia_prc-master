@@ -47,7 +47,7 @@ $fileJS = isset($fileJS) ? $fileJS : [];
     <!-- JS NUBE -->
     <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous" async></script>
 
 
     <!-- Servicio desing 1 GOGLE ANALITYCS-->
@@ -80,7 +80,7 @@ $fileJS = isset($fileJS) ? $fileJS : [];
     <!-- js local -->
     <?php foreach ($fileJS as $key => $filename): ?>
         <!-- Al colocarlo como module, puedes importar funciones y clases en otros archivos -->
-        <script defer type="module" src="./public/js/<?= str_replace(".", "/", $filename); ?>.js"></script>
+        <script async type="module" src="./public/js/<?= str_replace(".", "/", $filename); ?>.js"></script>
     <?php endforeach ?>
 
 
