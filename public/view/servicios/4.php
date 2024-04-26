@@ -1,5 +1,5 @@
 <section class="hero_dising hero-servicios">
-    <div class="lara"><img class="hero-branding-img" src="./public/img/branding.webp" alt="branding"></div>
+    <div class="lara"><img rel="preload" as="image" class="hero-branding-img" src="./public/img/branding.webp" alt="branding"></div>
     <div class="container-hero">
         <div>
             <h1>Branding y diseño</h1>

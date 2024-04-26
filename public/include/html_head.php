@@ -16,8 +16,11 @@
     <base href="http://localhost/Digimedia_prc-master/">
 
      <!-- Css de la nube, osea cdn: -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" defer> -->
+    <!-- <link rel="stylesheet" href="./public/css/bootstrap.css"> -->
+
+
     
     <!-- <link rel="preload" as="font" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
     
@@ -64,7 +67,7 @@
     <!-- js local -->
     <?php foreach($fileJS as $key => $filename) :?>
         <!-- Al colocarlo como module, puedes importar funciones y clases en otros archivos -->
-        <script defer type="module" src="./public/js/<?= str_replace(".", "/", $filename);?>.js"></script>
+        <script async type="module" src="./public/js/<?= str_replace(".", "/", $filename);?>.js"></script>
     <?php endforeach ?>
 
 

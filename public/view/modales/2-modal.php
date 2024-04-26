@@ -412,7 +412,7 @@
 </div>
 
 
-<script src="./public/js/mensajesWhatsappEmail.js"></script>
+<script src="./public/js/mensajesWhatsappEmail-minified.js" async></script>
 <script>
     //const desktopContact = document.querySelector('.desktop-contact');
     const contenedorForm = document.querySelector('.contenedor-form');

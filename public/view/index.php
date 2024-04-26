@@ -2,9 +2,72 @@
 <html lang="en">
 <?php
 //I'm the God Dog
-$fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified'];
+$fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified', 'bootstrap'];
 include_once './public/include/html_head.php';
 ?>
+
+<style>
+    .hero {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        background: -webkit-linear-gradient(to right,
+                rgb(167 41 189 / 62%),
+                rgba(170, 43, 193, 0.62),
+                rgba(249, 54, 204, 0.5)),
+            url("./public/img/hero-image3.webp");
+        background: linear-gradient(to right,
+                rgb(167 41 189 / 62%),
+                rgba(170, 43, 193, 0.62),
+                rgba(249, 54, 204, 0.5)),
+            url("./public/img/hero-image3.webp");
+        background-repeat: no-repeat;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        background-position-y: center;
+        background-size: cover;
+    }
+    
+    
+    @media screen and (max-width: 426px) {
+        .hero {
+            height: 85vh;
+            background: -webkit-linear-gradient(to right,
+                    rgb(167 41 189 / 62%),
+                    rgba(170, 43, 193, 0.62),
+                    rgba(249, 54, 204, 0.5)),
+                url("./public/img/hero-image3-mobile-.webp");
+            background: linear-gradient(to right,
+                    rgb(167 41 189 / 62%),
+                    rgba(170, 43, 193, 0.62),
+                    rgba(249, 54, 204, 0.5)),
+                url("./public/img/hero-image3-mobile.webp");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-position-y: 4rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .hero {
+            background: -webkit-linear-gradient(to right,
+                    rgb(167 41 189 / 62%),
+                    rgba(170, 43, 193, 0.62),
+                    rgba(249, 54, 204, 0.5)),
+                url("./public/img/hero-image3-tablet.webp");
+            background: linear-gradient(to right,
+                    rgb(167 41 189 / 62%),
+                    rgba(170, 43, 193, 0.62),
+                    rgba(249, 54, 204, 0.5)),
+                url("./public/img/hero-image3-tablet.webp");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position-y: 4rem;
+        }
+    }
+</style>
 
 <body>
     <?php include_once './public/assets/header.php' ?>
@@ -19,25 +82,16 @@ include_once './public/include/html_head.php';
             </div>
             <ul class="hero-media">
                 <li class="nav-item">
-                    <a class="social-icon-hero" target="_blank"
-                        href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name"
-                        title="Linkedin!" aria-label="Nuestro Linkedin.."><i id="hero-icon-linkeding"
-                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="social-icon-hero" target="_blank" href="https://pe.linkedin.com/in/digimedia-marketing?trk=public_post_feed-actor-name" title="Linkedin!" aria-label="Nuestro Linkedin.."><i id="hero-icon-linkeding" class="fa-brands fa-linkedin-in"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="social-icon-hero" target="_blank" href="https://www.instagram.com/digimediamkt/"
-                        title="Instagram!" aria-label="Nuestro Instagram.."><i id="hero-icon-instagram"
-                            class="fa-brands fa-instagram"></i></a>
+                    <a class="social-icon-hero" target="_blank" href="https://www.instagram.com/digimediamkt/" title="Instagram!" aria-label="Nuestro Instagram.."><i id="hero-icon-instagram" class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="social-icon-hero" target="_blank" href="https://www.youtube.com/@digimediamarketing2636"
-                        title="Youtube!" aria-label="Nuestro Youtube.."><i id="hero-icon-youtube"
-                            class="fa-brands fa-youtube"></i></a>
+                    <a class="social-icon-hero" target="_blank" href="https://www.youtube.com/@digimediamarketing2636" title="Youtube!" aria-label="Nuestro Youtube.."><i id="hero-icon-youtube" class="fa-brands fa-youtube"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="social-icon-hero" target="_blank" href="https://www.facebook.com/DigiMedia.Marketing1"
-                        title="Facebook!" aria-label="Nuestro Facebook.."><i id="hero-icon-facebook"
-                            class="fa-brands fa-facebook"></i></a>
+                    <a class="social-icon-hero" target="_blank" href="https://www.facebook.com/DigiMedia.Marketing1" title="Facebook!" aria-label="Nuestro Facebook.."><i id="hero-icon-facebook" class="fa-brands fa-facebook"></i></a>
                 </li>
             </ul>
         </div>
@@ -99,10 +153,10 @@ include_once './public/include/html_head.php';
         </div>
 
         <div class="nuestros-servicios-text-bottom interactivo-bottom">
-                <p class="nuestros-servicios-text-interactivo">bottom</p>
-                <figure class="nuestros-servicios-img-interactivo">
-                    <img src="" alt="desarrollo y diseño web">
-                </figure>
+            <p class="nuestros-servicios-text-interactivo">bottom</p>
+            <figure class="nuestros-servicios-img-interactivo">
+                <img src="" alt="desarrollo y diseño web">
+            </figure>
         </div>
 
     </section>
@@ -140,7 +194,7 @@ include_once './public/include/html_head.php';
 
 
     <?php include_once './public/include/section_maps.php' ?>
-    <script defer src="./public/js/interactividad.js"></script>
+    <script src="./public/js/interactividad-minified.js" async></script>
     <?php include_once './public/assets/footer.php' ?>
 
 </body>

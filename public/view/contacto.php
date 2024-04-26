@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 
-$fileCSS = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified', 'contactos'];
+$fileCSS = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified', 'contactos', 'bootstrap'];
 include_once './public/include/html_head.php';
 ?>
 
@@ -61,10 +61,10 @@ include_once './public/include/html_head.php';
                                 <select class="form-control" name="servicio" id="servicio">
                                     <option selected disabled value="" class="form-control">Selecciona
                                     </option>
-                                    <option value="Desing y desarrollo web">Diseño y desarollo web</option>
-                                    <option value="Gestion de redes sociales">Gestion de redes sociales</option>
+                                    <option value="Desing y desarrollo web">Diseño y Desarollo Web</option>
+                                    <option value="Gestion de redes sociales">Gestión de Redes Sociales</option>
                                     <option value="Marketing Digital">Marketing Digital</option>
-                                    <option value="Branding y desing">Branding y diseño</option>
+                                    <option value="Branding y desing">Branding y Diseño</option>
                                 </select>
                                 <small></small>
                             </div>
@@ -144,7 +144,7 @@ include_once './public/include/html_head.php';
 
     </div>
 
-    <script src="./public/js/mensajesWhatsappEmail.js"></script>
+    <script src="./public/js/mensajesWhatsappEmail-minified.js" async></script>
     <script>
         const form = document.querySelector("#formulario");
 

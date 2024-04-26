@@ -1,5 +1,5 @@
 <section class="hero_dising hero-servicios">
-    <div class="lara"><img class="hero-desarrollo-img" src="./public/img/ds_web2.webp" alt="Diseno y desarrollo"></div>
+    <div class="lara"><img rel="preload" as="image" class="hero-desarrollo-img" src="./public/img/ds_web2.webp" alt="Diseno y desarrollo"></div>
     <div class="container-hero">
         <div>
             <h1>Diseño y desarrollo web</h1>

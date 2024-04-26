@@ -155,7 +155,7 @@ include_once './public/include/html_head.php';
         </div>
     </main>
 
-    <script src="./public/js/preguntas.js"></script>
+    <script src="./public/js/preguntas.js" async></script>
 
 
     <!-- Panel de horario y whatsapp -->

@@ -370,7 +370,7 @@
     </div>
 </div>
 
-<script src="./public/js/mensajesWhatsappEmail.js"></script>
+<script src="./public/js/mensajesWhatsappEmail-minified.js" async></script>
 <script>
 const btnCerrar = document.querySelector('.btn-cerrar');
 const modalContainer = document.querySelector('.modal-main-background')

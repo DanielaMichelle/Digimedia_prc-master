@@ -1,5 +1,5 @@
 <section class="hero_dising hero-servicios">
-    <div class="lara"><img class="hero-social-media-img" src="./public/img/redes-sociales-banner3.webp" alt=""></div>
+    <div class="lara"><img rel="preload" as="image" class="hero-social-media-img" src="./public/img/redes-sociales-banner3.webp" alt=""></div>
     <div class="container-hero">
         <div>
             <h1>Gestión de redes sociales</h1>

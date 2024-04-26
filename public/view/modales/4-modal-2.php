@@ -276,7 +276,7 @@
     </div>
 </div>
 
-<script src="./public/js/mensajesWhatsappEmail.js"></script>
+<script src="./public/js/mensajesWhatsappEmail-minified.js" async></script>
 <script>
     const modal = document.getElementById("modal2_branding");
     const anuncioServicio = document.querySelector("#anuncio-servicio");

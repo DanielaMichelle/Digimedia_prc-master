@@ -253,8 +253,22 @@
   padding: 20px;
 }
 
+
+.container-form #servicio:focus-visible,
+.container-form .form-control:focus-visible {
+  outline: none;
+  border: 3px solid #c1e6fc;
+  border-radius: 50px;
+}
+
+.container-form #mensaje:focus-visible {
+  outline: none;
+  border: 3px solid #c1e6fc;
+}
+
 .container-form #servicio {
   padding-left: 2rem;
+  padding-top: 6px;
 }
 
 .container-form .dist {
