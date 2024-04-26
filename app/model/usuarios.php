@@ -19,4 +19,25 @@ class ModeloUsuarios {
         return $res->get_result()->fetch_all(MYSQLI_ASSOC);
         
     }
+    public static function rolBack($Data = []) {
+
+
+        $rol =  Db::querys('SELECT rol FROM usuarios WHERE usuario = ?', [ $Data['email'] ]); 
+
+        
+
+        return $rol;
+
+    }
+    public static function delete($id){
+
+        [ $err, $res ] =  Db::query('DELETE FROM usuarios WHERE id = ?', [$id]); 
+
+        if($err) {
+            return false;
+        }
+
+        return $res->affected_rows > 0;
+        
+    }
 }

@@ -31,5 +31,33 @@
                 return [$th->getMessage(), null];
             }
         }
-
+        public static function querys($query, $params = []) {
+            if (self::$instancia == false) {
+                self::$instancia = true;
+                self::conexion();
+            }
+        
+            try {
+                $stmt = self::$conexion->prepare($query);
+        
+                if (count($params)) {
+                    $types = str_repeat("s", count($params));
+                    $stmt->bind_param($types, ...$params);
+                }
+        
+                if ($stmt->execute()) {
+                    $result = $stmt->get_result(); 
+                    $row = $result->fetch_assoc(); 
+        
+                    if ($row) {
+                        return [null, $row['rol']];
+                    } else {
+                        return [null, null]; 
+                    }
+                }
+            } catch (\Throwable $th) {
+                return [$th->getMessage(), null];
+            }
+        }
+        
     }

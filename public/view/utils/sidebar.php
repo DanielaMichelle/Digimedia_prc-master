@@ -84,7 +84,7 @@
                 </a>
             </li>
             <li>
-                <a href="/Digimedia_prc-master/public/view/secciones-admin/modal-usuario.php">
+                <a id="enlace">
                     <ion-icon name="duplicate-outline"></ion-icon>
                     <span>Usuarios</span>
                 </a>
@@ -123,6 +123,30 @@
     </div>
 
 </div>
+<script>
+    const emailLober = document.querySelector(".email");
+    var valor = localStorage.getItem('rol');
+    let enla = document.getElementById('enlace')
+    function dose(){
+        
+        let namesdf = "";
+        if(valor==1){
+            enla.setAttribute("href", "/Digimedia_prc-master/public/view/secciones-admin/modal-usuario.php");
+            namesdf = "Administrador Alegre";
+        }else{
+            enla.setAttribute("href", "/Digimedia_prc-master/public/view/secciones-admin/modal-reader.php");
+            namesdf = "Usuario";
+        }
+        emailLober.textContent = namesdf;
+
+    }
+    dose();
+  
+</script>
+<!-- Tu código HTML aquí... -->
+
+
+
 
 
 

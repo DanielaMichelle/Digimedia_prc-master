@@ -10,7 +10,9 @@
 </head>
 
 <body>
-    <?php require_once ("./public/view/utils/sidebar.php"); ?>
+    <?php require_once ("./public/view/utils/sidebar.php");
+    echo json_encode(['mensaje' => 'Datos procesados en PHP con éxito']);
+    ?>
 
     <main>
         <h1>Seccion principal</h1>
@@ -120,7 +122,7 @@
 
 
     </script> 
-
+   
 
     <?php require_once ("./public/view/utils/enlacesDatatables.php"); ?>
 

@@ -54,7 +54,7 @@ include_once './public/include/html_head.php';
 
 
   <script>
-
+    
     const formulario_mensaje = document.getElementById('formulario_mensaje')
     const formulario = document.getElementById('formulario')
 
@@ -71,9 +71,19 @@ include_once './public/include/html_head.php';
           if (!res.estado) {
             formulario_mensaje.removeAttribute('style')
             formulario_mensaje.textContent = res.mensaje
+          
             setTimeout(() => formulario_mensaje.setAttribute('style', 'display:none'), 1500)
           } else {
-            location.reload()
+            if(res.rol === "Administrador"){
+              localStorage.setItem('rol',1);
+              console.log(res.rol);
+              location.reload()
+            }else if(res.rol === "Usuario"){
+              localStorage.setItem('rol',0);
+              console.log(res.rol);
+              location.reload()
+            }
+              
           }
         })
 

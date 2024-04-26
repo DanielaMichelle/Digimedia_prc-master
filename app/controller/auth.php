@@ -33,6 +33,10 @@
                 'email' => $email,
                 'password' => $password
             ]);
+            $rol = ModelAuth::rolBack([
+                'email' => $email,
+                'password' => $password
+            ]);
 
             if( $usuario == null ) {
                 exit(json_encode([
@@ -49,10 +53,11 @@
             }
 
             $_SESSION['id'] = $usuario['id'];
-
+            $valorDeRol = $rol[1];
             echo json_encode([
                 'estado' => true,
-                'mensaje' => 'exito al ingresar'
+                'mensaje' => 'exito al ingresar',
+                'rol' => $valorDeRol
             ]);
 
         }
