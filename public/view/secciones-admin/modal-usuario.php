@@ -168,16 +168,6 @@
                     }
                     
                 }
-
-                /*else if (action == 'editar') {
-
-                    const formData = new FormData()
-                    formData.append('estado', button.getAttribute('data-estado') == 0 ? 1 : 0)
-
-                    fetch(`./app/trigger/intranet.php?action=UPDATE_STATUS&id=${id}`, { method: 'POST', body: formData })
-                        .then(res => res.json())
-                        .then(dataRender)
-                }*/
             }
         })
         const dataRender = () => {
@@ -193,29 +183,15 @@
                     <td>${data.usuario}</td>
                     <td>${data.rol}</td>
                     <td><button data-action="eliminar" class="btnEliminar"  style="border:none;margin-right:50px;" aria-describedby="eliminar"><i class="fa-solid fa-trash" style="color: #65e6cc;"></i></button>
-                    <button data-action="editar"  style="border:none;" aria-describedby="editar"><i class="fa-solid fa-pen-to-square" style="color: #e6659d;"></i></button></td>
+                    <button data-action="editar" style="border:none;" aria-describedby="editar"><i class="fa-solid fa-pen-to-square" style="color: #e6659d;"></i></button></td>
                 </tr>
             `
-                    }).join('')/*;
-                
-                    document.querySelectorAll('.btnEliminar').forEach(btn => {
-                        btn.addEventListener('click', () => {
-                            // Lógica para eliminar la fila
-                            console.log("Hola 1");
-                            const rowId = btn.closest('tr').getAttribute('data-id');
-                            // Llamar a una función para eliminar la fila con el ID `rowId`
-                            console.log(rowId);
-                            const body = new FormData();
-                            body.append("idEliminar",rowId);
-
-                            fetch('')
-                        });
-                    });*/
+                    }).join('')
                 })
                
         };
 
-        
+        dataRender();
 
 
     </script>
@@ -227,6 +203,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../../js/js-admin.js"></script>
+    
 </body>
 
 </html>
