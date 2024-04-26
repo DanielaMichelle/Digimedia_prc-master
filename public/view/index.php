@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 //I'm the God Dog
-$fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified', 'bootstrap'];
+$fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified'];
 include_once './public/include/html_head.php';
 ?>
 
@@ -12,7 +12,7 @@ include_once './public/include/html_head.php';
         height: 100vh;
         position: relative;
         overflow: hidden;
-        background: -webkit-linear-gradient(to right,
+/*         background: -webkit-linear-gradient(to right,
                 rgb(167 41 189 / 62%),
                 rgba(170, 43, 193, 0.62),
                 rgba(249, 54, 204, 0.5)),
@@ -21,7 +21,7 @@ include_once './public/include/html_head.php';
                 rgb(167 41 189 / 62%),
                 rgba(170, 43, 193, 0.62),
                 rgba(249, 54, 204, 0.5)),
-            url("./public/img/hero-image3.webp");
+            url("./public/img/hero-image3.webp"); */
         background-repeat: no-repeat;
         font-family: "Poppins", sans-serif;
         font-style: normal;
@@ -33,7 +33,7 @@ include_once './public/include/html_head.php';
     @media screen and (max-width: 426px) {
         .hero {
             height: 85vh;
-            background: -webkit-linear-gradient(to right,
+/*             background: -webkit-linear-gradient(to right,
                     rgb(167 41 189 / 62%),
                     rgba(170, 43, 193, 0.62),
                     rgba(249, 54, 204, 0.5)),
@@ -42,7 +42,7 @@ include_once './public/include/html_head.php';
                     rgb(167 41 189 / 62%),
                     rgba(170, 43, 193, 0.62),
                     rgba(249, 54, 204, 0.5)),
-                url("./public/img/hero-image3-mobile.webp");
+                url("./public/img/hero-image3-mobile.webp"); */
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -52,7 +52,7 @@ include_once './public/include/html_head.php';
 
     @media screen and (max-width: 768px) {
         .hero {
-            background: -webkit-linear-gradient(to right,
+/*             background: -webkit-linear-gradient(to right,
                     rgb(167 41 189 / 62%),
                     rgba(170, 43, 193, 0.62),
                     rgba(249, 54, 204, 0.5)),
@@ -61,7 +61,7 @@ include_once './public/include/html_head.php';
                     rgb(167 41 189 / 62%),
                     rgba(170, 43, 193, 0.62),
                     rgba(249, 54, 204, 0.5)),
-                url("./public/img/hero-image3-tablet.webp");
+                url("./public/img/hero-image3-tablet.webp"); */
             background-repeat: no-repeat;
             background-position: center;
             background-position-y: 4rem;
