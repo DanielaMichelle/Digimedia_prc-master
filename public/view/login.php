@@ -74,22 +74,31 @@ include_once './public/include/html_head.php';
           
             setTimeout(() => formulario_mensaje.setAttribute('style', 'display:none'), 1500)
           } else {
-            if(res.rol === "Administrador"){
-              localStorage.setItem('rol',1);
-              console.log(res.rol);
-              location.reload()
-            }else if(res.rol === "Usuario"){
-              localStorage.setItem('rol',0);
-              console.log(res.rol);
-              location.reload()
+            let data = {
+              usuario:formulario.email.value,
+              contrasena:formulario.password.value,
             }
+            localStorage.setItem('identida',JSON.stringify(data));
+            location.reload()
+            /*if(res.rol === "Administrador"){
+              //localStorage.setItem('rol',1);
+              console.log(res.rol);
+              window.mr98127$q = 1;
+              
+            }else if(res.rol === "Usuario"){
+              //localStorage.setItem('rol',0);
+              console.log(res.rol);
+              window.mr98127$q = 0;
+              location.reload()
+            }*/
+            
               
           }
         })
 
     })
 
-
+    
   </script>
 </body>
 

@@ -154,25 +154,26 @@ const dataRender = () => {
             body: bodyFats,
           })
             .then((res) => res.json())
-            .then((Data = []) => {
-              Data.map((data) => {
-                console.log(data.rol);
-                console.log(data.id);
-                console.log(data.contrasena);
-                console.log(data.usuario);
-                console.log(data.nombre);
-                const ServisOptions = document.querySelector(".selectorDmi");
-                const ids = document.querySelector(".inputText");
-                const names = document.getElementById("name2");
-                const user = document.getElementById("usuario2");
-                const passw = document.getElementById("pass2");
+            .then((data) => {
+              const userData = data[0];
+              console.log(userData);
+              console.log(userData.rol);
+              console.log(userData.id);
+              console.log(userData.contrasena);
+              console.log(userData.usuario);
+              console.log(userData.nombre);
+              const ServisOptions = document.querySelector(".selectorDmi");
+              const ids = document.querySelector(".inputText");
+              const names = document.getElementById("name2");
+              const user = document.getElementById("usuario2");
+              const passw = document.getElementById("pass2");
 
-                ServisOptions.value = data.rol;
-                ids.textContent = data.id;
-                names.value = data.nombre;
-                user.value = data.usuario;
-                passw.value = data.contrasena;
-                /*const textos = [];
+              ServisOptions.value = userData.rol;
+              ids.textContent = userData.id;
+              names.value = userData.nombre;
+              user.value = userData.usuario;
+              passw.value = userData.contrasena;
+              /*const textos = [];
                             let i =0;
                             celdas.forEach(celda => {
                                 console.log(celda.textContent);
@@ -191,7 +192,6 @@ const dataRender = () => {
                                 input.value = textos[e];
                                 e++; // Asignar el valor que desees aquí
                             });*/
-              });
             })
             .catch((error) => {
               // Manejas cualquier error que ocurra durante la solicitud fetch
