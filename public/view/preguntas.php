@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 
-$fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified', 'preguntas'];
+$fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified', 'preguntas', 'bootstrap-faq'];
 include_once './public/include/html_head.php';
 ?>
 

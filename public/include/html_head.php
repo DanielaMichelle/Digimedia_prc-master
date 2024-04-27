@@ -44,7 +44,7 @@
 
     <!-- Si hay valores en $fileCSS, lo recorrera y colocara cada valor en un en enlace de abajo -->
     <?php foreach($fileCSS as $key => $filename) :?>
-        <link rel="stylesheet" href="./public/css/<?= str_replace(".", "/", $filename) ;?>.css">
+        <link rel="stylesheet" href="./public/css/<?= str_replace(".", "/", $filename) ;?>.css" defer>
     <?php endforeach ?>
 
 

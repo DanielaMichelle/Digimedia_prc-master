@@ -4,13 +4,6 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background: -webkit-linear-gradient(
-      to right,
-      rgb(167 41 189 / 62%),
-      rgba(170, 43, 193, 0.62),
-      rgba(249, 54, 204, 0.5)
-    ),
-    url(../img/hero-image3.webp);
   background: linear-gradient(
       to right,
       rgb(167 41 189 / 62%),
@@ -477,13 +470,6 @@
   /* Hero */
 
   .hero {
-    background: -webkit-linear-gradient(
-        to right,
-        rgb(167 41 189 / 62%),
-        rgba(170, 43, 193, 0.62),
-        rgba(249, 54, 204, 0.5)
-      ),
-      url(../img/hero-image3-tablet.webp);
     background: linear-gradient(
         to right,
         rgb(167 41 189 / 62%),
@@ -546,13 +532,6 @@
   /* Hero */
   .hero {
     height: 85vh;
-    background: -webkit-linear-gradient(
-        to right,
-        rgb(167 41 189 / 62%),
-        rgba(170, 43, 193, 0.62),
-        rgba(249, 54, 204, 0.5)
-      ),
-      url(../img/hero-image3-mobile.webp);
     background: linear-gradient(
         to right,
         rgb(167 41 189 / 62%),
