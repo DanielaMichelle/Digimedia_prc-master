@@ -23,4 +23,18 @@ class ControllerUsuarios {
         return ModeloUsuarios::get();
         
     }
+    public static function getMost($id){
+
+        return ModeloUsuarios::getShow($id);
+        
+    }
+    public static function update_status(){
+        $id     = isset($_POST['id']) ? $_POST['id'] : null;
+        $user = isset($_POST['user']) ? $_POST['user'] : null;
+        $pass = isset($_POST['pass']) ? $_POST['pass'] : null;
+        $name = isset($_POST['name']) ? $_POST['name'] : null;
+        $rol = isset($_POST['rol']) ? $_POST['rol'] : null;
+        return ModeloUsuarios::update_status( $id, $user,$pass,$name,$rol); 
+    }
+    
 }
