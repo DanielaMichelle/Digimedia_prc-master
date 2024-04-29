@@ -80,17 +80,7 @@ include_once './public/include/html_head.php';
             }
             localStorage.setItem('identida',JSON.stringify(data));
             location.reload()
-            /*if(res.rol === "Administrador"){
-              //localStorage.setItem('rol',1);
-              console.log(res.rol);
-              window.mr98127$q = 1;
-              
-            }else if(res.rol === "Usuario"){
-              //localStorage.setItem('rol',0);
-              console.log(res.rol);
-              window.mr98127$q = 0;
-              location.reload()
-            }*/
+            
             
               
           }
