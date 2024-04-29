@@ -4,7 +4,7 @@
 <?php
 $title = '.:: DigiMedia ::.';
 
-$fileCSS    = ['libro_reclamaciones', 'bootstrap'];
+$fileCSS    = ['libro_reclamaciones', 'bootstrap-libro-reclamaciones'];
 $fileJS     = ['libro_reclamaciones'];
 
 include_once './public/include/html_head.php';
