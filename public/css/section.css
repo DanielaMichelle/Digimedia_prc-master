@@ -4,7 +4,7 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
-/*   background: -webkit-linear-gradient(
+  /*   background: -webkit-linear-gradient(
       to right,
       rgb(167 41 189 / 62%),
       rgba(170, 43, 193, 0.62),
@@ -113,16 +113,15 @@
   margin: 0;
   position: absolute;
   background: rgb(248, 54, 204);
-  background: linear-gradient(
-    90deg,
-    rgba(248, 54, 204, 0.022846638655462215) 13%,
-    rgba(248, 54, 145, 0.5858718487394958) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(248, 54, 204, 0.022846638655462215) 13%,
+      rgba(248, 54, 145, 0.5858718487394958) 100%);
 
   div {
     display: flex;
     justify-content: center;
     width: 100%;
+
     h1 {
       color: white;
       font-size: 6vw;
@@ -174,6 +173,7 @@
   letter-spacing: 2px;
   font-size: 14px;
 }
+
 .contacto--map__container .map {
   height: 20rem;
   width: 100%;
@@ -196,6 +196,7 @@
 .contacto--map__container .map-bottom div figure {
   width: 25px;
   height: 25px;
+
   img {
     width: 100%;
     height: 100%;
@@ -435,6 +436,7 @@
 }
 
 @media screen and (max-width: 1135px) {
+
   /* CONTACTO */
   .contacto {
     grid-template-columns: 1fr 1fr;
@@ -446,6 +448,7 @@
 }
 
 @media screen and (max-width: 1024px) {
+
   /* Hero Servicios */
   .hero-servicios .container-hero div h1 {
     letter-spacing: 12px;
@@ -454,7 +457,8 @@
 
 @media screen and (max-width: 768px) {
   .form {
-    flex-direction: column; /* Cambio de dirección a columna en pantallas pequeñas */
+    flex-direction: column;
+    /* Cambio de dirección a columna en pantallas pequeñas */
   }
 
   .cont_form_img img {
@@ -466,7 +470,8 @@
 
   .cont_form_data .cont_form_sect {
     width: 100%;
-    margin-left: 0; /* Eliminar el margen izquierdo en pantallas pequeñas */
+    margin-left: 0;
+    /* Eliminar el margen izquierdo en pantallas pequeñas */
   }
 
   .enviar {
@@ -477,20 +482,16 @@
   /* Hero */
 
   .hero {
-    background: -webkit-linear-gradient(
-        to right,
+/*     background: -webkit-linear-gradient(to right,
         rgb(167 41 189 / 62%),
         rgba(170, 43, 193, 0.62),
-        rgba(249, 54, 204, 0.5)
-      ),
+        rgba(249, 54, 204, 0.5)),
       url(../img/hero-image3-tablet.webp);
-    background: linear-gradient(
-        to right,
+    background: linear-gradient(to right,
         rgb(167 41 189 / 62%),
         rgba(170, 43, 193, 0.62),
-        rgba(249, 54, 204, 0.5)
-      ),
-      url(../img/hero-image3-tablet.webp);
+        rgba(249, 54, 204, 0.5)),
+      url(../img/hero-image3-tablet.webp); */
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 4rem;
@@ -543,23 +544,20 @@
 }
 
 @media screen and (max-width: 426px) {
+
   /* Hero */
   .hero {
     height: 85vh;
-    background: -webkit-linear-gradient(
-        to right,
+/*     background: -webkit-linear-gradient(to right,
         rgb(167 41 189 / 62%),
         rgba(170, 43, 193, 0.62),
-        rgba(249, 54, 204, 0.5)
-      ),
+        rgba(249, 54, 204, 0.5)),
       url(../img/hero-image3-mobile.webp);
-    background: linear-gradient(
-        to right,
+    background: linear-gradient(to right,
         rgb(167 41 189 / 62%),
         rgba(170, 43, 193, 0.62),
-        rgba(249, 54, 204, 0.5)
-      ),
-      url(../img/hero-image3-mobile.webp);
+        rgba(249, 54, 204, 0.5)),
+      url(../img/hero-image3-mobile.webp); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -723,6 +721,7 @@
   width: 100%;
   height: 250px;
 }
+
 .cont {
   width: 100%;
   display: flex;
@@ -742,6 +741,7 @@
 .lara {
   overflow: hidden;
 }
+
 .hero_dising .lara img {
   width: 100%;
   height: 100%;
