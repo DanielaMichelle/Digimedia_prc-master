@@ -254,6 +254,7 @@
                 .then((res) => res.json())
                 .then((res) => {
                 dataRender();
+                window.location.reload();
                 console.log(res);
                 })
                 .catch((err) => console.log(err));
@@ -298,6 +299,7 @@
                     </tr>
                 `;
                 }).join("");
+                
             
                 document.querySelectorAll(".btnEditar").forEach((btn) => {
                     btn.addEventListener("click", () => {
@@ -339,6 +341,7 @@
                     });
                 });
             });
+        
         };
 
         dataRender();

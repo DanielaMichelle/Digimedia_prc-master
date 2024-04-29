@@ -74,11 +74,12 @@ include_once './public/include/html_head.php';
           
             setTimeout(() => formulario_mensaje.setAttribute('style', 'display:none'), 1500)
           } else {
-            let data = {
-              usuario:formulario.email.value,
-              contrasena:formulario.password.value,
+            if(res.rol == "Administrador"){
+              localStorage.setItem('manage_view$rpa',"incritect12349$aq");
+            }else if(res.rol == "Usuario"){
+              localStorage.setItem('manage_view$rpa',"miniDERS12349$aq");
             }
-            localStorage.setItem('identida',JSON.stringify(data));
+            
             location.reload()
             
             

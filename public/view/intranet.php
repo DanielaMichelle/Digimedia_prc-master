@@ -116,7 +116,7 @@
         document.getElementById('logout').addEventListener('click', ()=> {
             fetch('./app/trigger/logout.php')
                 .then( res => res.json() )
-                .then( ()=> location.reload() )
+                .then( ()=> location.reload(),localStorage.removeItem("manage_view$rpa"))
         })
 
 
@@ -126,7 +126,7 @@
    
     //var valor = localStorage.getItem("rol");
     //let enla = document.getElementById("enlace");
-    if (localStorage.getItem("identida")) {
+    /*if (localStorage.getItem("identida")) {
         console.log("hola");
         const vor = localStorage.getItem("identida");
         let vo = JSON.parse(vor);
@@ -156,7 +156,7 @@
                 // Manejas cualquier error que ocurra durante la solicitud fetch
             console.error("Error al obtener los datos:", error);
         });
-    }
+    }*/
     
     
     </script>

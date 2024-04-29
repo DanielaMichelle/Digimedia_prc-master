@@ -146,18 +146,19 @@
 </div>
 <script>
   const emailLober = document.querySelector(".email");
-  var valor = localStorage.getItem("rolen");
+  var valor = localStorage.getItem("manage_view$rpa");
   let enla = document.getElementById("enlace");
  
   function dose() {
     let namesdf = "";
-    if (valor == 12209378) {
+    
+    if (valor == "incritect12349$aq") {
       enla.setAttribute(
         "href",
         "/Digimedia_prc-master/public/view/secciones-admin/modal-usuario.php"
       );
       namesdf = "Administrador Alegre";
-    } else {
+    } else if(valor == "miniDERS12349$aq"){
       enla.setAttribute(
         "href",
         "/Digimedia_prc-master/public/view/secciones-admin/modal-reader.php"
