@@ -155,8 +155,8 @@
     </main>
     <script>
         const objRegex_lost = {
-            pass: /^(?=.*\d{6,})\S+$/,
-        };
+            pass: /^(?!.*\s).*.{6,}$/,
+        };//resistencia Nazari
         document.addEventListener("DOMContentLoaded", function () {
             dataRender();
             waitToGo();
