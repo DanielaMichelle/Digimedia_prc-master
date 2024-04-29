@@ -45,13 +45,12 @@
 
                     tableBody.innerHTML = Data.map(data => {
                         return `
-        <tr data-id="${data.id}">
-            <td>${data.id}</td>
-            <td>${data.nombre}</td>
-            <td>${data.telefono}</td>
-            <td>${data.email}</td>
-        </tr>
-    `
+                        <tr data-id="${data.id}">
+                            <td>${data.id}</td>
+                            <td>${data.nombre}</td>
+                            <td>${data.telefono}</td>
+                            <td>${data.email}</td>
+                        </tr>`
                     }).join('')
 
                 })

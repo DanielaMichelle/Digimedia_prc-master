@@ -13,7 +13,7 @@
     <?php require_once ("../utils/sidebar.php"); ?>
 
     <main>
-        <h1>Seccion: Usuarios</h1>
+        <h1>Seccion para leer usuarios</h1>
 
         <div class="content-table">
 
@@ -64,10 +64,6 @@
 
 
     <?php require_once ("../utils/enlacesDatatables.php"); ?>
-
-    <!-- Script para el sidebar -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../../js/js-admin.js"></script>
 </body>
 

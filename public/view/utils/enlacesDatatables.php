@@ -13,6 +13,10 @@
 
 <script src="../../js/datosDatatables.js"></script> 
 <script src="./public/js/datosDatatables.js"></script>
+ 
+    <!-- Script para el sidebar -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <!-- Esto de aqui sirve para definir los botones (excel, pdf, etc) sin la necesidad de descargarlo-->
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>

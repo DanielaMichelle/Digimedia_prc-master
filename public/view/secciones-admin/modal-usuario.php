@@ -7,16 +7,14 @@
     <?php require_once ("../utils/enlacesCss.php"); ?>
     <link rel="stylesheet" href="../../css/desing-admin.css">
     <title>.:: Digimedia ::.</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
 </head>
 
 <body>
-    <script src="https://kit.fontawesome.com/0ee4e706bf.js" crossorigin="anonymous"></script>
     <?php require_once ("../utils/sidebar.php"); ?>
 
     <main>
-        <h1>Seccion: Usuarios</h1>
+        <h1>Seccion Creacion de Usuarios</h1>
 
         
 
@@ -153,6 +151,7 @@
 
         </div>
     </main>
+    
     <script>
         const objRegex_lost = {
             pass: /^(?!.*\s).*.{6,}$/,
@@ -348,13 +347,8 @@
         
 
     </script>
-<?php require_once ("../utils/enlacesDatatables.php"); ?>
-
-    <!-- Script para el sidebar -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <?php require_once ("../utils/enlacesDatatables.php"); ?>
     <script src="../../js/js-admin.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!--<script src="../../../public/js/viewInteractiveUser.js"></script>
     
 </body>
