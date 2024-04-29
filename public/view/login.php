@@ -74,22 +74,22 @@ include_once './public/include/html_head.php';
           
             setTimeout(() => formulario_mensaje.setAttribute('style', 'display:none'), 1500)
           } else {
-            if(res.rol === "Administrador"){
-              localStorage.setItem('rol',1);
-              console.log(res.rol);
-              location.reload()
-            }else if(res.rol === "Usuario"){
-              localStorage.setItem('rol',0);
-              console.log(res.rol);
-              location.reload()
+            if(res.rol == "Administrador"){
+              localStorage.setItem('manage_view$rpa',"incritect12349$aq");
+            }else if(res.rol == "Usuario"){
+              localStorage.setItem('manage_view$rpa',"miniDERS12349$aq");
             }
+            
+            location.reload()
+            
+            
               
           }
         })
 
     })
 
-
+    
   </script>
 </body>
 

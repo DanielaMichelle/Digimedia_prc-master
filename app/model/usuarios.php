@@ -19,6 +19,19 @@ class ModeloUsuarios {
         return $res->get_result()->fetch_all(MYSQLI_ASSOC);
         
     }
+    public static function getShow($id){
+
+        [ $err, $res ] =  Db::query('SELECT * FROM usuarios where id=?',[$id]); 
+
+        if( $err ) {
+            return [];
+        }
+
+        return $res->get_result()->fetch_all(MYSQLI_ASSOC);
+        
+
+        
+    }
     public static function rolBack($Data = []) {
 
 
@@ -32,6 +45,17 @@ class ModeloUsuarios {
     public static function delete($id){
 
         [ $err, $res ] =  Db::query('DELETE FROM usuarios WHERE id = ?', [$id]); 
+
+        if($err) {
+            return false;
+        }
+
+        return $res->affected_rows > 0;
+        
+    }
+    public static function update_status($id, $user,$pass,$name,$rol){
+
+        [ $err, $res ] =  Db::query('UPDATE usuarios SET usuario = ?, contrasena = ?, nombre = ?, rol = ? WHERE id = ?', [ $user,$pass,$name,$rol, $id ]); 
 
         if($err) {
             return false;

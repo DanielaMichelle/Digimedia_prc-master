@@ -32,7 +32,15 @@ if ($action == 'GET') {
 
 }else if( $action == 'DELETE' ) {
     echo json_encode( ControllerUsuarios::delete() );
-} 
+}else if($action == 'Mostrar'){
+    if (isset($_POST['id'])){
+        $id = $_POST['id'];
+    } 
+
+    echo json_encode( ControllerUsuarios::getMost($id) );
+}else if( $action == 'UPDATE' ) {
+    echo json_encode( ControllerUsuarios::update_status() );
+}
 
 
 

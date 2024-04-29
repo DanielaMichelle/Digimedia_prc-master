@@ -49,4 +49,14 @@
             // return "INSERT INTO contactanos ({$columns}) VALUES ({$params})";
             
         }
+        public static function Roles($Data = []) {
+
+
+            $rol =  Db::querys('SELECT rol FROM usuarios WHERE usuario = ?', [ $Data['email'] ]); 
+
+            
+
+            return $rol;
+ 
+        }
     }
