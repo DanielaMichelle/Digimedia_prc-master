@@ -7,14 +7,13 @@
     <?php require_once ("../utils/enlacesCss.php"); ?>
     <link rel="stylesheet" href="../../css/desing-admin.css">
     <title>.:: Digimedia ::.</title>
-    
 </head>
 
 <body>
     <?php require_once ("../utils/sidebar.php"); ?>
 
     <main>
-        <h1>Seccion Creacion de Usuarios</h1>
+        <h1>Seccion: Usuarios</h1>
 
         
 
@@ -151,7 +150,6 @@
 
         </div>
     </main>
-    
     <script>
         const objRegex_lost = {
             pass: /^(?!.*\s).*.{6,}$/,
@@ -293,8 +291,9 @@
                         <td>${data.nombre}</td>
                         <td>${data.usuario}</td>
                         <td>${data.rol}</td>
-                        <td><button data-action="eliminar" class="btnEliminar"  style="border:none;margin-right:50px;" aria-describedby="eliminar"><i class="fa-solid fa-trash" style="color: #65e6cc;"></i></button>
-                        <button data-action="editar" type="button" class="btn mb-3 btnEditar btn-show" data-bs-toggle="modal" data-bs-target="#staticBackdrop_2" style="border:none;" aria-describedby="editar"><i class="fa-solid fa-pen-to-square" style="color: #e6659d;"></i></button></td>
+                        <td><button data-action="eliminar" class="btnEliminar"  style="border:none;margin-right:50px;color:red;" aria-describedby="eliminar"><ion-icon name="trash-outline"></ion-icon></button>
+
+                        <button data-action="editar" type="button" class="btn mb-3 btnEditar btn-show" data-bs-toggle="modal" data-bs-target="#staticBackdrop_2" style="border:none;margin-top:10px;color:aqua;" aria-describedby="editar"><ion-icon name="create-outline"></ion-icon></button></td>
                     </tr>
                 `;
                 }).join("");
@@ -347,9 +346,9 @@
         
 
     </script>
-    <?php require_once ("../utils/enlacesDatatables.php"); ?>
+<?php require_once ("../utils/enlacesDatatables.php"); ?>
+    <!-- Script para el sidebar -->
     <script src="../../js/js-admin.js"></script>
-    <!--<script src="../../../public/js/viewInteractiveUser.js"></script>
     
 </body>
 
