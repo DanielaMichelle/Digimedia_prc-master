@@ -12,6 +12,16 @@
             return $res->get_result()->fetch_assoc();
  
         }
+        public static function rolBack($Data = []) {
+
+
+            $rol =  Db::querys('SELECT rol FROM usuarios WHERE usuario = ?', [ $Data['email'] ]); 
+
+            
+
+            return $rol;
+ 
+        }
     }
 
     //el correo no existe

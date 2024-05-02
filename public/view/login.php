@@ -54,7 +54,7 @@ include_once './public/include/html_head.php';
 
 
   <script>
-
+    
     const formulario_mensaje = document.getElementById('formulario_mensaje')
     const formulario = document.getElementById('formulario')
 
@@ -71,15 +71,25 @@ include_once './public/include/html_head.php';
           if (!res.estado) {
             formulario_mensaje.removeAttribute('style')
             formulario_mensaje.textContent = res.mensaje
+          
             setTimeout(() => formulario_mensaje.setAttribute('style', 'display:none'), 1500)
           } else {
+            if(res.rol == "Administrador"){
+              localStorage.setItem('manage_view$rpa',"incritect12349$aq");
+            }else if(res.rol == "Usuario"){
+              localStorage.setItem('manage_view$rpa',"miniDERS12349$aq");
+            }
+            
             location.reload()
+            
+            
+              
           }
         })
 
     })
 
-
+    
   </script>
 </body>
 

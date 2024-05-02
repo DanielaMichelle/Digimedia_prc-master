@@ -13,7 +13,7 @@
     <?php require_once ("../utils/sidebar.php"); ?>
 
     <main>
-        <h1>Seccion: Web design and development</h1>
+        <h1>Seccion para leer usuarios</h1>
 
         <div class="content-table">
 
@@ -22,8 +22,7 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">NOMBRE</th>
-                        <th scope="col">EMAIL</th>
-                        <th scope="col">TELEFONO</th>
+                        <th scope="col">USUARIO</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody"></tbody>
@@ -36,10 +35,12 @@
 
     <script>
 
+
+
         const tableBody = document.getElementById('tableBody');
 
         const dataRender = () => {
-            fetch('../../../app/trigger/person2.php?action=GET')
+            fetch('../../../app/trigger/modal-usuario.php?action=GET')
                 .then(res => res.json())
                 .then((Data = []) => {
 
@@ -48,8 +49,7 @@
                 <tr data-id="${data.id}">
                     <td>${data.id}</td>
                     <td>${data.nombre}</td>
-                    <td>${data.email}</td>
-                    <td>${data.telefono}</td>
+                    <td>${data.usuario}</td>
                 </tr>
             `
                     }).join('')
@@ -58,7 +58,6 @@
         };
 
         dataRender();
-
 
 
     </script>

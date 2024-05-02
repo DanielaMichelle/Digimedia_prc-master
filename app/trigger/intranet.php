@@ -24,6 +24,9 @@
     else if( $action == 'ADD' ) {
         echo json_encode( ControllerIntranet::add() );
     }
+    else if( $action == 'Roles' ) {
+        ControllerIntranet::Roles();
+    }
     
  
     //

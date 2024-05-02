@@ -30,4 +30,24 @@
             return ModelIntranet::add( $columns, $params, $values ); 
             
         }
+        public static function Roles () {
+            
+            $email = $_POST['user'];
+            $password = $_POST['con'];
+            $rol =  ModelIntranet::Roles([
+                'email' => $email,
+                'password' => $password
+            ]);
+            if( $rol == null ) {
+                exit(json_encode([
+                    'estado' => false,
+                    'mensaje' => 'La cuenta no existe'
+                ]));
+            }
+            $valorDeRol = $rol[1];
+            echo json_encode([
+                'rol' => $valorDeRol
+            ]);
+        }
+            
     }

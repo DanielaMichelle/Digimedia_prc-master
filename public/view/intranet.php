@@ -10,7 +10,9 @@
 </head>
 
 <body>
-    <?php require_once ("./public/view/utils/sidebar.php"); ?>
+    <?php require_once ("./public/view/utils/sidebar.php");
+    echo json_encode(['mensaje' => 'Datos procesados en PHP con éxito']);
+    ?>
 
     <main>
         <h1>Seccion principal</h1>
@@ -114,13 +116,52 @@
         document.getElementById('logout').addEventListener('click', ()=> {
             fetch('./app/trigger/logout.php')
                 .then( res => res.json() )
-                .then( ()=> location.reload() )
+                .then( ()=> location.reload(),localStorage.removeItem("manage_view$rpa"))
         })
 
 
 
-    </script> 
+    </script>
+    <script>
+   
+    //var valor = localStorage.getItem("rol");
+    //let enla = document.getElementById("enlace");
+    /*if (localStorage.getItem("identida")) {
+        console.log("hola");
+        const vor = localStorage.getItem("identida");
+        let vo = JSON.parse(vor);
+        const use = vo.usuario;
+        const con = vo.contrasena;
+        const bodymany = new FormData();
+        bodymany.append("user", use);
+        bodymany.append("con", con);
 
+        fetch("./app/trigger/intranet.php?action=Roles", { method: "POST", body: bodymany })
+        .then((res) => res.json())
+        .then((res) => {
+            console.log(res);
+            console.log(res.rol);
+            let namesdf = "";
+            if(res.rol === "Administrador"){
+                namesdf = "Administrador Alegre";
+                localStorage.setItem('rolen',12209378);        
+            }else if(res.rol === "Usuario"){
+                namesdf = "Usuario";
+                localStorage.setItem('rolen',8826830921);
+            }
+            emailLober.textContent = namesdf;
+            
+        })
+        .catch((error) => {
+                // Manejas cualquier error que ocurra durante la solicitud fetch
+            console.error("Error al obtener los datos:", error);
+        });
+    }*/
+    
+    
+    </script>
+    
+   
 
     <?php require_once ("./public/view/utils/enlacesDatatables.php"); ?>
 
