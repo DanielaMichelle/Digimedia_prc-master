@@ -2,12 +2,42 @@
 <html lang="en">
 <?php
 //I'm the God Dog
-$fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified', 'bootstrap-index'];
+$fileCSS    = ['index', 'style', 'inicio-minified', 'section-minified', 'bootstrap-index', 'header', 'footer'];
 include_once './public/include/html_head.php';
 ?>
-
 <style>
-    .hero{width:100%;height:100vh;position:relative;overflow:hidden;background:linear-gradient(to right,rgb(167 41 189 / 62%),rgb(170 43 193 / .62),rgb(249 54 204 / .5)),url(./public/img/hero-image3.webp);background-repeat:no-repeat;font-family:"Poppins",sans-serif;font-style:normal;background-position-y:center;background-size:cover}@media screen and (max-width:426px){.hero{height:85vh;background:linear-gradient(to right,rgb(167 41 189 / 62%),rgb(170 43 193 / .62),rgb(249 54 204 / .5)),url(./public/img/hero-image3-mobile.webp);background-repeat:no-repeat;background-position:center;background-size:cover;background-position-y:4rem}}@media screen and (max-width:768px){.hero{background:linear-gradient(to right,rgb(167 41 189 / 62%),rgb(170 43 193 / .62),rgb(249 54 204 / .5)),url(./public/img/hero-image3-tablet.webp);background-repeat:no-repeat;background-position:center;background-position-y:4rem}}
+    .hero {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(to right, rgb(167 41 189 / 62%), rgb(170 43 193 / .62), rgb(249 54 204 / .5)), url(./public/img/hero-image3.webp);
+        background-repeat: no-repeat;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        background-position-y: center;
+        background-size: cover
+    }
+
+    @media screen and (max-width:768px) {
+        .hero {
+            background: linear-gradient(to right, rgb(167 41 189 / 62%), rgb(170 43 193 / .62), rgb(249 54 204 / .5)), url(./public/img/hero-image3-tablet.webp);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position-y: 3rem
+        }
+    }
+
+    @media screen and (max-width:426px) {
+        .hero {
+            height: 85vh;
+            background: linear-gradient(to right, rgb(167 41 189 / 62%), rgb(170 43 193 / .62), rgb(249 54 204 / .5)), url(./public/img/hero-image3-mobile2.webp);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-position-y: 2rem
+        }
+    }
 </style>
 
 <body>
@@ -139,5 +169,4 @@ include_once './public/include/html_head.php';
     <?php include_once './public/assets/footer.php' ?>
 
 </body>
-
 </html>

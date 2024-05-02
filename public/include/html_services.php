@@ -30,19 +30,16 @@ $fileJS = isset($fileJS) ? $fileJS : [];
     <!-- Fuente Poppins cdn:-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Fuente Open Sans cdn:-->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
 
     <!-- Si hay valores en $fileCSS, lo recorrera y colocara cada valor en un en enlace de abajo -->
-    <?php foreach ($fileCSS as $key => $filename): ?>
-        <link rel="stylesheet" href="./public/css/<?= str_replace(".", "/", $filename); ?>.css">
+    <?php foreach ($fileCSS as $key => $filename) : ?>
+        <link rel="preload" href="./public/css/<?= str_replace(".", "/", $filename); ?>.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="./public/css/<?= str_replace(".", "/", $filename); ?>.css"></noscript>
     <?php endforeach ?>
-
 
     <!-- JS NUBE -->
     <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
