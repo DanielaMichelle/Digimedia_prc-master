@@ -53,6 +53,8 @@
             }
 
             $_SESSION['id'] = $usuario['id'];
+            $_SESSION['rol'] = $usuario['rol'];
+            $_SESSION['name'] = $usuario['nombre'];
             $valorDeRol = $rol[1];
             echo json_encode([
                 'estado' => true,

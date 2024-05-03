@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php require_once ("./public/view/utils/enlacesCss.php"); ?>
+    <?php require_once ("./public/view/utils/enlacesCss.php");
+    ?>
     <link rel="stylesheet" href="./public/css/desing-admin.css">
     <title>.:: Digimedia ::.</title>
 </head>
 
 <body>
-    <?php require_once ("./public/view/utils/sidebar.php");
+    <?php require_once ("./public/view/utils/sidebar_user.php");
     //echo json_encode(['mensaje' => 'Datos procesados en PHP con éxito']);
     ?>
 
@@ -122,6 +123,7 @@
 
 
     </script>
+    
     
    
 
