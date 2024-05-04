@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-//I'm the God Dog
-$fileCSS    = ['index', 'style', 'inicio-minified', 'section-minified', 'bootstrap-index', 'header', 'footer'];
-include_once './public/include/html_head.php';
-?>
+
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     .hero {
         width: 100%;
         height: 100vh;
@@ -19,12 +21,42 @@ include_once './public/include/html_head.php';
         background-size: cover
     }
 
+    /* hero Redes Sociales */
+    .hero .hero-media {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-self: flex-end;
+        padding-right: 6rem;
+        gap: 16px;
+    }
+
+    .hero .hero-media .social-icon-hero {
+        color: #ffffff;
+    }
+
+    .hero .hero-media .social-icon-hero .fa-brands {
+        font-size: 2rem;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .hero .hero-media .social-icon-hero .fa-brands:hover {
+        transform: scale(1.3);
+    }
+
     @media screen and (max-width:768px) {
         .hero {
             background: linear-gradient(to right, rgb(167 41 189 / 62%), rgb(170 43 193 / .62), rgb(249 54 204 / .5)), url(./public/img/hero-image3-tablet.webp);
             background-repeat: no-repeat;
             background-position: center;
             background-position-y: 3rem
+        }
+
+        /* Hero Redes Sociales */
+        .hero .hero-media {
+            padding-right: 10vw;
         }
     }
 
@@ -34,11 +66,34 @@ include_once './public/include/html_head.php';
             background: linear-gradient(to right, rgb(167 41 189 / 62%), rgb(170 43 193 / .62), rgb(249 54 204 / .5)), url(./public/img/hero-image3-mobile2.webp);
             background-repeat: no-repeat;
             background-position: center;
-            background-size: cover;
+            background-size: 31rem;
             background-position-y: 2rem
         }
+
+        .hero .hero-media .social-icon-hero .fa-brands {
+            font-size: 22px;
+        }
+
+        /* Hero Redes Sociales */
+        .hero .hero-media {
+            display: flex;
+            flex-direction: row;
+            padding-right: 0;
+            justify-self: center;
+        }
     }
+
+
 </style>
+
+<?php
+//I'm the God Dog
+$fileCSS    = ['style', 'inicio-minified', 'bootstrap-index', 'header', 'section-minified'];
+include_once './public/include/html_head_index.php';
+?>
+
+<link rel="preload" href="./public/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="./public/css/footer.css"></noscript>
 
 <body>
     <?php include_once './public/assets/header.php' ?>
@@ -169,4 +224,5 @@ include_once './public/include/html_head.php';
     <?php include_once './public/assets/footer.php' ?>
 
 </body>
+
 </html>

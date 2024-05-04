@@ -56,31 +56,6 @@
   transform: scale(1.05);
 }
 
-/* hero Redes Sociales */
-.hero .hero-media {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  justify-self: flex-end;
-  padding-right: 6rem;
-  gap: 16px;
-}
-
-.hero .hero-media .social-icon-hero {
-  color: #ffffff;
-}
-
-.hero .hero-media .social-icon-hero .fa-brands {
-  font-size: 2rem;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.hero .hero-media .social-icon-hero .fa-brands:hover {
-  transform: scale(1.3);
-}
-
 /* Hero Servicios */
 .hero-servicios .container-hero {
   width: 100%;
@@ -485,11 +460,6 @@
     font-size: 14px;
   }
 
-  /* Hero Redes Sociales */
-  .hero .hero-media {
-    padding-right: 10vw;
-  }
-
   /* Contacto */
   .contacto {
     grid-template-columns: 1fr;
@@ -547,21 +517,6 @@
     font-size: 12px;
     margin: 0 auto;
     margin-top: 3rem;
-  }
-
-  .hero .hero-media .social-icon-hero .fa-brands {
-    font-size: 22px;
-  }
-
-  /* Hero Redes Sociales */
-  .hero .hero-media {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    padding: 0;
-    align-self: flex-end;
-    padding-bottom: 5rem;
-    gap: 20px;
   }
 
   /* Contacto */
