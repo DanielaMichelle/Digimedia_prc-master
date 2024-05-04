@@ -5,12 +5,12 @@
     if( isset($_SESSION['id']) ){
         
         //echo ("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  aaaaaaaaaa ".$_SESSION['rol']);
-        if($_SESSION['rol'] == 'Administrador'){
-           // echo ("Estas el princial intranet");
-           //$names = $_SESSION['name'];
-            include_once './public/view/intranet.php';
+        if($_SESSION['rol'] == 'Usuario'){
+            //echo ("Estas el princial intranet");
+            include_once './public/view/intranet_user.php';
         }
     } 
     else {
         header('Location: login.php');
     } 
+

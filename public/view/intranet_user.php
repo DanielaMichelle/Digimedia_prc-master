@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php require_once ("./public/view/utils/enlacesCss.php"); ?>
+    <?php require_once ("./public/view/utils/enlacesCss.php");
+    ?>
     <link rel="stylesheet" href="./public/css/desing-admin.css">
     <title>.:: Digimedia ::.</title>
 </head>
 
 <body>
-    <?php require_once ("./public/view/utils/sidebar.php");
+    <?php require_once ("./public/view/utils/sidebar_user.php");
     //echo json_encode(['mensaje' => 'Datos procesados en PHP con éxito']);
     ?>
 
@@ -33,7 +34,7 @@
                         <th scope="col">Fecha</th>
                         <th scope="col">Hora</th>
                         <th scope="col">ESTADO</th>
-                        <th scope="col">ACCION</th>
+                        
                     </tr>
                 </thead>
                 <tbody id="tableBody"></tbody>
@@ -48,34 +49,7 @@
 
         const tableBody = document.getElementById('tableBody')
 
-        tableBody.addEventListener('click', e => {
-            const button = e.target.closest('button')
-
-            if (button) {
-                const tr = button.closest('tr')
-
-                const id = tr.getAttribute('data-id')
-                const action = button.getAttribute('data-action')
-
-                if (action == 'eliminar') {
-                    tr.remove()
-
-                    fetch(`./app/trigger/intranet.php?action=DELETE&id=${id}`)
-                        .then(res => res.json())
-                        .then(console.log)
-                }
-
-                else if (action == 'canbiarEstado') {
-
-                    const formData = new FormData()
-                    formData.append('estado', button.getAttribute('data-estado') == 0 ? 1 : 0)
-
-                    fetch(`./app/trigger/intranet.php?action=UPDATE_STATUS&id=${id}`, { method: 'POST', body: formData })
-                        .then(res => res.json())
-                        .then(dataRender)
-                }
-            }
-        })
+       
         
         const dataRender = () => {
             fetch('./app/trigger/intranet.php?action=GET')
@@ -99,10 +73,7 @@
                     <td>
                         <span>${data.estado == 0 ? 'pendiente' : 'Atendido'}</span>
                     </td>
-                    <td>
-                        <button data-action="eliminar" class="btn btn-danger">Eliminar</button>
-                        ${data.estado == 0 ? `<button data-action="canbiarEstado" data-estado="${data.estado}" class="btn btn-warning">Cambiar</button>` : ''}
-                    </td>
+                    
                 </tr>
             `
                     }).join('')
@@ -122,6 +93,7 @@
 
 
     </script>
+    
     
    
 
