@@ -3,7 +3,7 @@
 <?php
 //I'm the God Dog
 $fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'section-minified', 'bootstrap-index'];
-include_once './public/include/html_head.php';
+include_once './public/include/html_head_index.php';
 ?>
 
 <style>
@@ -136,6 +136,8 @@ include_once './public/include/html_head.php';
 
     <?php include_once './public/include/section_maps.php' ?>
     <script src="./public/js/interactividad-minified.js" async></script>
+    <script src="https://kit.fontawesome.com/0ee4e706bf.js" crossorigin="anonymous"></script>
+    <!-- <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
     <?php include_once './public/assets/footer.php' ?>
 
 </body>
