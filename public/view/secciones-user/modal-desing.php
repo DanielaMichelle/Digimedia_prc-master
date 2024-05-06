@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <?php require_once ("../utils/sidebar.php"); ?>
+    <?php require_once ("../utils/sidebar_user.php"); ?>
 
     <main>
-        <h1>Seccion para leer usuarios</h1>
+        <h1>Seccion: Modal Desing</h1>
 
         <div class="content-table">
 
@@ -22,7 +22,8 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">NOMBRE</th>
-                        <th scope="col">USUARIO</th>
+                        <th scope="col">APELLIDO</th>
+                        <th scope="col">EMAIL</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody"></tbody>
@@ -35,12 +36,10 @@
 
     <script>
 
-
-
         const tableBody = document.getElementById('tableBody');
 
         const dataRender = () => {
-            fetch('../../../app/trigger/modal-usuario.php?action=GET')
+            fetch('../../../app/trigger/modal-desing.php?action=GET')
                 .then(res => res.json())
                 .then((Data = []) => {
 
@@ -49,7 +48,8 @@
                 <tr data-id="${data.id}">
                     <td>${data.id}</td>
                     <td>${data.nombre}</td>
-                    <td>${data.usuario}</td>
+                    <td>${data.apellido}</td>
+                    <td>${data.correo}</td>
                 </tr>
             `
                     }).join('')
@@ -59,7 +59,7 @@
 
         dataRender();
 
-
+//hola nuevo cambio
     </script>
 
 
