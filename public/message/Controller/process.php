@@ -13,7 +13,7 @@ $idServicio= $_POST["id_servicio"];
 $index = $_POST["index"];
 $email = $_POST["email"];
 
-$mensaje = SendMessage($menssage[$idServicio][$index],$imagenes_main[$idServicio][$index],$title[$idServicio][$index]);
+$mensaje = SendMessage($menssage[$idServicio][$index],$imagenes_main[$idServicio][$index],$titleweb[$idServicio][$index]);
 $respuesta = mainController::funcionName($title[$idServicio][$index],$email,$mensaje);
 echo $respuesta;
 
