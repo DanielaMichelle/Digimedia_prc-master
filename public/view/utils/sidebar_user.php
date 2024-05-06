@@ -18,14 +18,14 @@
   <nav class="navegacion">
     <ul>
       <li>
-        <a id="inbox" href="/Digimedia_prc-master/intranet.php">
+        <a id="inbox" href="/Digimedia_prc-master/intranet_user.php">
           <ion-icon name="star-outline"></ion-icon>
           <span>Section Main</span>
         </a>
       </li>
       <li>
         <a
-          href="/Digimedia_prc-master/public/view/secciones-admin/conocer-personas.php"
+          href="/Digimedia_prc-master/public/view/secciones-user/conocer-personas.php"
         >
           <ion-icon name="duplicate-outline"></ion-icon>
           <span>Meeting people</span>
@@ -33,7 +33,7 @@
       </li>
       <li>
         <a
-          href="/Digimedia_prc-master/public/view/secciones-admin/potenciar-web.php"
+          href="/Digimedia_prc-master/public/view/secciones-user/potenciar-web.php"
         >
           <ion-icon name="duplicate-outline"></ion-icon>
           <span>Boost your website</span>
@@ -41,7 +41,7 @@
       </li>
       <li>
         <a
-          href="/Digimedia_prc-master/public/view/secciones-admin/person-campanas.php"
+          href="/Digimedia_prc-master/public/view/secciones-user/person-campanas.php"
         >
           <ion-icon name="duplicate-outline"></ion-icon>
           <span>Exploit content</span>
@@ -49,7 +49,7 @@
       </li>
       <li>
         <a
-          href="/Digimedia_prc-master/public/view/secciones-admin/contenido-redes.php"
+          href="/Digimedia_prc-master/public/view/secciones-user/contenido-redes.php"
         >
           <ion-icon name="duplicate-outline"></ion-icon>
           <span>Elevate campaigns</span>
@@ -57,7 +57,7 @@
       </li>
       <li>
         <a
-          href="/Digimedia_prc-master/public/view/secciones-admin/disenar-camino-futuro.php"
+          href="/Digimedia_prc-master/public/view/secciones-user/disenar-camino-futuro.php"
         >
           <ion-icon name="duplicate-outline"></ion-icon>
           <span>Design your path</span>
@@ -65,7 +65,7 @@
       </li>
       <li>
         <a
-          href="/Digimedia_prc-master/public/view/secciones-admin/libro_reclamaciones.php"
+          href="/Digimedia_prc-master/public/view/secciones-user/libro_reclamaciones.php"
         >
           <ion-icon name="duplicate-outline"></ion-icon>
           <span>Terms and reclaims</span>
@@ -73,7 +73,7 @@
       </li>
       <li>
         <a
-          href="/Digimedia_prc-master/public/view/secciones-admin/modal-branding.php"
+          href="/Digimedia_prc-master/public/view/secciones-user/modal-branding.php"
         >
           <ion-icon name="duplicate-outline"></ion-icon>
           <span>Modal branding</span>
@@ -81,7 +81,7 @@
       </li>
       <li>
         <a
-          href="/Digimedia_prc-master/public/view/secciones-admin/modal-desing.php"
+          href="/Digimedia_prc-master/public/view/secciones-user/modal-desing.php"
         >
           <ion-icon name="duplicate-outline"></ion-icon>
           <span>Modal desing</span>
@@ -89,7 +89,7 @@
       </li>
       <li>
         <a
-          href="/Digimedia_prc-master/public/view/secciones-admin/modal-gestion.php"
+          href="/Digimedia_prc-master/public/view/secciones-user/modal-gestion.php"
         >
           <ion-icon name="duplicate-outline"></ion-icon>
           <span>Modal gestion</span>
@@ -97,14 +97,14 @@
       </li>
       <li>
         <a
-          href="/Digimedia_prc-master/public/view/secciones-admin/modal-marketing.php"
+          href="/Digimedia_prc-master/public/view/secciones-user/modal-marketing.php"
         >
           <ion-icon name="duplicate-outline"></ion-icon>
           <span>Modal marketing</span>
         </a>
       </li>
       <li>
-        <a id="enlace" href="/Digimedia_prc-master/public/view/secciones-admin/modal-usuario.php">
+        <a id="enlace" href="/Digimedia_prc-master/public/view/secciones-user/modal-reader.php">
           <ion-icon name="duplicate-outline"></ion-icon>
           <span>Usuarios</span>
         </a>
@@ -137,11 +137,10 @@
         <div class="nombre-email">
           <!-- Nombre admin: -->
           <span class="nombre">Bienvenido</span>
-          <span class="email">Administrador</span>
+          <span class="email">Usuario</span>
         </div>
         <ion-icon name="ellipsis-vertical-outline"></ion-icon>
       </div>
     </div>
   </div>
 </div>
-

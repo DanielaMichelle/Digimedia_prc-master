@@ -4,11 +4,13 @@
 
 $fileCSS    = ['index', 'style', 'inicio-minified', 'header', 'footer', 'login', 'bootstrap-login'];
 include_once './public/include/html_head.php';
+require_once ("utils/enlacesCss.php"); 
 ?>
 
 
 <body>
   <div class="container-principal">
+    <a class="btn btn-primary" href="#" role="button" style="position: absolute;left:10px;top:10px"><i class="fa-regular fa-circle-left"></i></a>
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-xl-9 mx-auto">
@@ -73,17 +75,8 @@ include_once './public/include/html_head.php';
             formulario_mensaje.textContent = res.mensaje
           
             setTimeout(() => formulario_mensaje.setAttribute('style', 'display:none'), 1500)
-          } else {
-            if(res.rol == "Administrador"){
-              localStorage.setItem('manage_view$rpa',"incritect12349$aq");
-            }else if(res.rol == "Usuario"){
-              localStorage.setItem('manage_view$rpa',"miniDERS12349$aq");
-            }
-            
-            location.reload()
-            
-            
-              
+          } else { 
+            location.reload() 
           }
         })
 

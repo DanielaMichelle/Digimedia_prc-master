@@ -313,12 +313,12 @@
                         .then((res) => res.json())
                         .then((data) => {
                             const userData = data[0];
-                            console.log(userData);
-                            console.log(userData.rol);
-                            console.log(userData.id);
-                            console.log(userData.contrasena);
-                            console.log(userData.usuario);
-                            console.log(userData.nombre);
+                            //console.log(userData);
+                            //console.log(userData.rol);
+                            //console.log(userData.id);
+                            //console.log(userData.contrasena);
+                            //console.log(userData.usuario);
+                            //console.log(userData.nombre);
                             const ServisOptions = document.querySelector(".selectorDmi");
                             const ids = document.querySelector(".inputText");
                             const names = document.getElementById("name2");

@@ -101,7 +101,7 @@
 
         const telefonoValido = objRegex.telefono.test(telefono);
         const emailValido = objRegex.gmail.test(email);
-
+        //let variAlternerText = "";
 
         if (nombreInput.value === '') alert('El nombre no debe estar vacio')
 
@@ -112,7 +112,8 @@
         //validacion del servicio
         const service = document.querySelector(".modal-main #service")
         if (service.value === '') alert('Seleccione un servicio por favor.')
-
+        
+        
         if (nombreInput.value != '' && telefonoValido && emailValido && service.value != '') {
             alert("Todos los campos son correctos.")
             modalContainer.style.display = 'none';
@@ -132,12 +133,19 @@
     }
 
 
-    function agarrandoDatos(nombre, telefono, email, service) {
+    function agarrandoDatos(nombre, telefono, email, service) {  
+        let variAlternerText= "";
+        if(service.value == '0') variAlternerText= "Diseño y Desarrollo Web";
+        else if(service.value == '1') variAlternerText= "Gestión de Redes Sociales";
+        else if(service.value == '2') variAlternerText= "Marketing y Gestión Digital";
+        else if(service.value == '3') variAlternerText= "Branding y Diseño";
+        else variAlternerText= "Diseño y Desarrollo Web";
+
         const form = new FormData();
         form.append('nombre', nombre.value)
         form.append('telefono', telefono.value)
         form.append('email', email.value)
-        form.append('service', service.value)
+        form.append('service', variAlternerText)
 
         enviandoDatosServer(form)
     }

@@ -83,7 +83,7 @@ function preparacionInputs(nombre, apellido, documento, numeroDocumento, email, 
 
 function enviandoDatosServidorInputs(form){
 
-    fetch("../../../app/trigger/libroReclamacion.php?action=ADD", {
+    fetch("./app/trigger/libroReclamacion.php?action=ADD", {
         method: "POST",
         body: form
     })

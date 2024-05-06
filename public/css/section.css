@@ -1,23 +1,4 @@
 /* SECTION PRINCIPAL */
-.hero {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(
-      to right,
-      rgb(167 41 189 / 62%),
-      rgba(170, 43, 193, 0.62),
-      rgba(249, 54, 204, 0.5)
-    ),
-    url(../img/hero-image3.webp);
-  background-repeat: no-repeat;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  background-position-y: center;
-  background-size: cover;
-}
-
 .container-hero {
   position: relative;
   width: 100%;
@@ -73,31 +54,6 @@
 .hero-buttom:hover {
   cursor: pointer;
   transform: scale(1.05);
-}
-
-/* hero Redes Sociales */
-.hero .hero-media {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  justify-self: flex-end;
-  padding-right: 6rem;
-  gap: 16px;
-}
-
-.hero .hero-media .social-icon-hero {
-  color: #ffffff;
-}
-
-.hero .hero-media .social-icon-hero .fa-brands {
-  font-size: 2rem;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.hero .hero-media .social-icon-hero .fa-brands:hover {
-  transform: scale(1.3);
 }
 
 /* Hero Servicios */
@@ -469,7 +425,7 @@
 
   /* Hero */
 
-  .hero {
+  /* .hero {
     background: linear-gradient(
         to right,
         rgb(167 41 189 / 62%),
@@ -480,7 +436,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 4rem;
-  }
+  } */
 
   .container-hero .hero-text {
     padding: 0px 20vw 0px 16%;
@@ -504,11 +460,6 @@
     font-size: 14px;
   }
 
-  /* Hero Redes Sociales */
-  .hero .hero-media {
-    padding-right: 10vw;
-  }
-
   /* Contacto */
   .contacto {
     grid-template-columns: 1fr;
@@ -530,20 +481,6 @@
 
 @media screen and (max-width: 426px) {
   /* Hero */
-  .hero {
-    height: 85vh;
-    background: linear-gradient(
-        to right,
-        rgb(167 41 189 / 62%),
-        rgba(170, 43, 193, 0.62),
-        rgba(249, 54, 204, 0.5)
-      ),
-      url(../img/hero-image3-mobile.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-position-y: 4rem;
-  }
 
   .container-hero {
     display: grid;
@@ -580,21 +517,6 @@
     font-size: 12px;
     margin: 0 auto;
     margin-top: 3rem;
-  }
-
-  .hero .hero-media .social-icon-hero .fa-brands {
-    font-size: 22px;
-  }
-
-  /* Hero Redes Sociales */
-  .hero .hero-media {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    padding: 0;
-    align-self: flex-end;
-    padding-bottom: 5rem;
-    gap: 20px;
   }
 
   /* Contacto */
