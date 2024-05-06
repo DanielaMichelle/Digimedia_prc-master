@@ -10,7 +10,7 @@ require_once ("utils/enlacesCss.php");
 
 <body>
   <div class="container-principal">
-    <a class="btn btn-primary" href="#" role="button" style="position: absolute;left:10px;top:10px"><i class="fa-regular fa-circle-left"></i></a>
+  <a class="btn btn-primary border-0" href="index.php" role="button" style="position: absolute; left: 10px; top: 10px; background-color: transparent; color: inherit; text-decoration: none;"><i class="fa-regular fa-circle-left fa-2xl"></i></a>
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-xl-9 mx-auto">
