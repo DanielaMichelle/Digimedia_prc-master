@@ -71,17 +71,7 @@ if ($action == 'GET') {
             $aceptaPoliticaPrivacidad
         )
         );
-
-    } else if ($action == 'DELETE') {
-        $id = isset($_GET['id']) ? $_GET['id'] : null;
-        if ($id) {
-            echo json_encode(ControllerlibroReclamacion::delete($id));
-        } else {
-            echo json_encode(["error" => "No se proporcionó el ID del elemento a eliminar"]);
-        }
-    } else {
-        echo json_encode('Faltan parámetros en la solicitud.');
-    }
+    } 
 
 }
 
