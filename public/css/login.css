@@ -44,9 +44,15 @@
 .d-grid button:hover {
   background: #5e348d;
 }
+.fa-circle-left {
+  color: #ffffff; /* Color blanco */
+}
 @media (max-width: 920px) {
   .image-reference {
     display: none;
+  }
+  .fa-circle-left {
+    color: #000000;
   }
 }
 .butonSub {
