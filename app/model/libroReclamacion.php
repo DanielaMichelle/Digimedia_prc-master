@@ -9,7 +9,7 @@ class ModelolibroReclamacion {
     }
 
     public static function get(){
-        [ $err, $res ] =  Db::query('SELECT * FROM libroReclamacion'); 
+        [ $err, $res ] =  Db::query('SELECT * FROM libroreclamacion'); 
 
         if( $err ) {
             return [];
