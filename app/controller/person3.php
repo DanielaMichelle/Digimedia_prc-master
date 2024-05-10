@@ -21,4 +21,8 @@ class ControllerPerson3 {
         return ModeloPerson3::get();
         
     }
+    public static function delete(){
+        $id = isset($_GET['id']) ? $_GET['id'] : null;
+        return ModeloPerson3::delete( $id ); 
+    }
 }

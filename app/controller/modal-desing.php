@@ -20,4 +20,8 @@ class ControllerModalDesing {
         return ModeloDesing::get();
         
     }
+    public static function delete(){
+        $id = isset($_GET['id']) ? $_GET['id'] : null;
+        return ModeloDesing::delete( $id ); 
+    }
 }

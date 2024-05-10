@@ -24,6 +24,10 @@ if ($action == 'GET') {
     } else {
         echo json_encode('Faltan parámetros en la solicitud.');
     }
+}else if ($action == 'DELETE') {
+
+    echo json_encode( ControllerPerson4::delete() );
+
 }
 
 

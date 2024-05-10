@@ -14,7 +14,26 @@
 
     <main>
         <h1>Seccion: Terms and reclaims</h1>
+        
 
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmar</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Estas Seguro de Eliminar El registro?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary confirm">Eliminar</button>
+                </div>
+                </div>
+            </div>
+        </div>
         <div class="content-table">
 
             <table id="example" class="table table-striped" style="width:100%">
@@ -35,6 +54,7 @@
                         <th scope="col">RECLAMO PERSONA</th>
                         <th scope="col">ACEPTAR TERMINOS 1</th>
                         <th scope="col">ACEPTAR TERMINO 2</th>
+                        <th scope="col">ACCION</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody"></tbody>
@@ -48,7 +68,29 @@
     <script>
 
         const tableBody = document.getElementById('tableBody');
+        tableBody.addEventListener('click', e => {
+            const button = e.target.closest('button');
+            const confirm = document.querySelector('.confirm');
+            confirm.addEventListener('click',function(){
+                if (button) {
+                    const tr = button.closest('tr')
 
+                    const id = tr.getAttribute('data-id')
+                    const action = button.getAttribute('data-action')
+
+                    if (action == 'delete') {
+                        tr.remove()
+
+                        fetch(`../../../app/trigger/libroReclamacion.php?action=DELETE&id=${id}`)
+                            .then(res => res.json())
+                            .then(console.log)
+                    }
+
+                    location.reload();
+                }
+            })
+            
+        })
         const dataRender = () => {
             fetch('../../../app/trigger/libroReclamacion.php?action=GET')
                 .then(res => res.json())
@@ -72,6 +114,9 @@
                     <td>${data.reclamoPerson}</td>
                     <td>${data.checkReclamoForm}</td>
                     <td>${data.aceptaPoliticaPrivacidad}</td>
+                    <td>
+                        <button type="button" data-action="delete" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</button>
+                    </td>
                 </tr>
             `
                     }).join('')

@@ -19,4 +19,15 @@ class ModeloGestion {
         return $res->get_result()->fetch_all(MYSQLI_ASSOC);
         
     }
+    public static function delete($id){
+
+        [ $err, $res ] =  Db::query('DELETE FROM modalgestion WHERE id = ?', [$id]); 
+
+        if($err) {
+            return false;
+        }
+
+        return $res->affected_rows > 0;
+        
+    }
 }

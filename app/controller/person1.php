@@ -20,4 +20,8 @@ class ControllerPerson1 {
         return ModeloPerson1::get();
         
     }
+    public static function delete(){
+        $id = isset($_GET['id']) ? $_GET['id'] : null;
+        return ModeloPerson1::delete( $id ); 
+    }
 }

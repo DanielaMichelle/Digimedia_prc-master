@@ -73,6 +73,10 @@ if ($action == 'GET') {
         );
     } 
 
+} else if ($action == 'DELETE') {
+
+    echo json_encode( ControllerlibroReclamacion::delete() );
+
 }
 
 

@@ -22,8 +22,14 @@ if ($action == 'GET') {
         $controller = new ControllerPerson3(); // Instancia de ControllerPerson1
         echo json_encode($controller->add($nombre, $email, $telefono)); // Llamada al método add() en la instancia
     } 
-    } else {
+    else {
         echo json_encode('Faltan parámetros en la solicitud.');
+    }
+    
+}else if ($action == 'DELETE') {
+
+    echo json_encode( ControllerPerson3::delete() );
+
 }
 
 

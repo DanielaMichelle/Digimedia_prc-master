@@ -25,6 +25,10 @@ if ($action == 'GET') {
         echo json_encode('Faltan parámetros en la solicitud.');
     }
 
+}else if ($action == 'DELETE') {
+
+    echo json_encode( ControllerModalMarketing::delete() );
+
 }
 
 

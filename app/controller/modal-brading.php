@@ -20,4 +20,8 @@ class ControllerModalBranding {
         return ModeloBranding::get();
         
     }
+    public static function delete(){
+        $id = isset($_GET['id']) ? $_GET['id'] : null;
+        return ModeloBranding::delete( $id ); 
+    }
 }

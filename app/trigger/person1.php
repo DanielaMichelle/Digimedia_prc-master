@@ -27,6 +27,11 @@ if ($action == 'GET') {
     }
 
 }
+ else if ($action == 'DELETE') {
+
+    echo json_encode( ControllerPerson1::delete() );
+
+}
 
 
 
